@@ -27,6 +27,18 @@
   .blue-link {
     color: rgb(0, 166, 255);
   }
+  .blur-2xl {
+    filter: blur(70px);
+  }
+  .blur-3xl {
+    filter: blur(80px);
+  }
+  .blur-4xl {
+    filter: blur(90px);
+  }
+  .blur-5xl {
+    filter: blur(100px);
+  }
   .primary-button {
     display: flex;
     align-items: center;
