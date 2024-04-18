@@ -9,8 +9,20 @@
   .inter-fonts {
     font-family: var(--inter-fonts);
   }
-  .bricolage-fonts {
-    font-family: var(--bricolage-fonts);
+  .leading-11 {
+    line-height: 2.7rem;
+  }
+  .leading-12 {
+    line-height: 3rem;
+  }
+  .leading-13 {
+    line-height: 3.4rem;
+  }
+  .leading-14 {
+    line-height: 3.8rem;
+  }
+  .leading-15 {
+    line-height: 4rem;
   }
   .blue-link {
     color: rgb(0, 166, 255);
@@ -19,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 20px;
     font-weight: 600;
     border: 1px solid black;
@@ -31,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 20px;
     font-weight: 600;
     border: 1px solid white;
@@ -44,13 +56,12 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Inter:wght@100..900&display=swap");
 
 :root {
   --background-color: #000;
   --text-color: #fff;
   --inter-fonts: "Inter", sans-serif;
-  --bricolage-fonts: "Bricolage Grotesque", sans-serif;
 }
 
 * {

@@ -5,13 +5,15 @@ import logo from "../../public/hexta-studio.svg";
 export const Navbar = () => {
   return (
     <>
-      <nav className="navbar flex items-center justify-between p-7">
-        <div className="navbar-header flex items-center justify-center gap-4">
+      <nav className="flex items-center justify-between navbar p-7">
+        <div className="flex items-center justify-center gap-4 navbar-header">
           <Image src={logo} width={40} height={40} alt="HextaUI" />
-          <span className="text-xl bricolage-fonts font-bold">HextaUI</span>
+          <span className="text-xl font-bold bricolage-fonts max-[350px]:hidden">
+            HextaUI
+          </span>
         </div>
-        <div className="navbar-links flex items-center justify-center max-sm:hidden">
-          <ul className="flex items-center list-none gap-5 text-sm">
+        <div className="flex items-center justify-center navbar-links max-sm:hidden">
+          <ul className="flex items-center gap-5 text-sm list-none">
             <li>
               <Link href="/components" className="opacity-75 hover:opacity-100">
                 Components
