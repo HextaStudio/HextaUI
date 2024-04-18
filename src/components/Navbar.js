@@ -7,7 +7,7 @@ export const Navbar = () => {
     <>
       <nav className="navbar flex items-center justify-between p-7">
         <div className="navbar-header flex items-center justify-center gap-4">
-          <Image src={logo} width={40} height={40} />
+          <Image src={logo} width={40} height={40} alt="HextaUI" />
           <span className="text-xl bricolage-fonts font-bold">HextaUI</span>
         </div>
         <div className="navbar-links flex items-center justify-center max-sm:hidden">
