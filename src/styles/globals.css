@@ -12,6 +12,9 @@
   .bricolage-fonts {
     font-family: var(--bricolage-fonts);
   }
+  .blue-link {
+    color: rgb(0, 166, 255);
+  }
   .primary-button {
     display: flex;
     align-items: center;
