@@ -38,6 +38,10 @@
     background-color: white;
     color: black;
     border-radius: 10px;
+    transition: 0.2s ease all;
+    &:hover {
+      filter: brightness(90%);
+    }
   }
   .secondary-button {
     display: flex;
@@ -46,13 +50,27 @@
     font-size: 14px;
     padding: 10px 20px;
     font-weight: 600;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.215);
     color: white;
     border-radius: 10px;
+    transition: 0.2s ease all;
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: rgba(255, 255, 255, 0.064);
     }
+  }
+
+  .step1 {
+    background-color: rgba(5, 0, 8, 0.227);
+    border: 1px solid hsla(0, 0%, 100%, 0.05);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    position: relative;
+    background-image: radial-gradient(
+      hsla(0, 0%, 100%, 0.1) 1px,
+      transparent 0
+    );
+    max-width: 100%;
+    height: auto;
   }
 }
 
