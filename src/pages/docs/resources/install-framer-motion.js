@@ -1,5 +1,5 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/pages/components/CodeBlock";
+import { CodeBlock } from "@/components/CodeBlock";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const framerMotionInstallation = () => {
