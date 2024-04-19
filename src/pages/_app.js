@@ -14,30 +14,30 @@ import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  useEffect(() => {
-    hljs.registerLanguage("javascript", javascript);
-    hljs.registerLanguage("bash", bash);
-    hljs.registerLanguage("scss", scss);
-    hljs.registerLanguage("css", css);
-    hljs.registerLanguage("html", xml);
-    hljs.registerLanguage("xml", xml);
-  }, []);
+  // useEffect(() => {
+  //   hljs.registerLanguage("javascript", javascript);
+  //   hljs.registerLanguage("bash", bash);
+  //   hljs.registerLanguage("scss", scss);
+  //   hljs.registerLanguage("css", css);
+  //   hljs.registerLanguage("html", xml);
+  //   hljs.registerLanguage("xml", xml);
+  // }, []);
 
-  useEffect(() => {
-    hljs.highlightAll({ detectLanguage: true });
-  }, []);
+  // useEffect(() => {
+  //   hljs.highlightAll({ detectLanguage: true });
+  // }, []);
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      hljs.highlightAll({ detectLanguage: true });
-    };
+  // useEffect(() => {
+  //   const handleRouteChange = () => {
+  //     hljs.highlightAll({ detectLanguage: true });
+  //   };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
+  //   router.events.on("routeChangeComplete", handleRouteChange);
 
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", handleRouteChange);
+  //   };
+  // }, [router.events]);
 
   return (
     <>
