@@ -41,9 +41,17 @@ export const Sidebar = () => {
             <li>
               <Link
                 className="text-sm transition-all opacity-60 hover:opacity-90 "
-                href="/docs/resources/install-tailwind"
+                href="/docs/resources/install-gsap"
               >
-                Add utilities
+                Install GSAP
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-sm transition-all opacity-60 hover:opacity-90 "
+                href="/docs/resources/install-framer-motion"
+              >
+                Install Framer Motion
               </Link>
             </li>
           </ul>
