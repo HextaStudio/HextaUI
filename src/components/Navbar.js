@@ -9,6 +9,9 @@ export const Navbar = ({ docs }) => {
         className={`flex bg-transparent items-center justify-between px-10 py-4 navbar  ${
           docs && "ml-auto max-w-7xl "
         }`}
+        style={{
+          borderBottom: "1px solid #ffffff20",
+        }}
       >
         <div className="flex items-center justify-center gap-4 navbar-header">
           <Image src={logo} width={35} height={35} alt="HextaUI" />
