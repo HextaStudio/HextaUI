@@ -91,6 +91,7 @@
 :root {
   --background-color: #000;
   --text-color: #fff;
+  color-scheme: dark;
   --inter-fonts: "Inter", sans-serif;
 }
 
