@@ -128,7 +128,7 @@ html {
 pre,
 code {
   overflow-x: auto;
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 code::-webkit-scrollbar {
@@ -147,11 +147,11 @@ pre {
   border: 1px solid rgba(255, 255, 255, 0.064);
   padding: 16px;
   margin: 10px 0;
-  max-width: calc(90vw - 10rem);
-  min-width: calc(80vw - 10rem);
+  /* max-width: calc(90vw - 10rem);   */
+  /* min-width: calc(80vw - 10rem); */
+  /* width: 100%; */
+  max-width: 90dvw;
   border-radius: 10px;
-  width: 100%;
-  font-size: 13pt;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
@@ -181,47 +181,47 @@ code {
 
 @media screen and (max-width: 640px) {
   pre {
-    max-width: 80vw;
-    min-width: 70vw;
+    max-width: 90dvw;
+    /* min-width: 70vw; */
   }
 }
 
 .preview-container {
-  max-width: calc(90vw - 10rem);
-  min-width: calc(80vw - 10rem);
-  width: 100%;
+  /* max-width: calc(90vw - 10rem); */
+  /* min-width: calc(80vw - 10rem); */
+  /* width: 100%; */
+  max-width: 90dvw;
 }
 
 @media screen and (max-width: 640px) {
   .preview-container {
-    max-width: 80vw;
-    min-width: 70vw;
+    max-width: 90dvw;
   }
 }
 
 table {
-  max-width: calc(90vw - 10rem);
+  /* max-width: calc(90vw - 10rem);
   min-width: calc(80vw - 10rem);
-  width: 100%;
+  width: 100%; */
+  max-width: 90dvw;
 }
 
 @media screen and (max-width: 640px) {
   table {
-    max-width: 80vw;
-    min-width: 70vw;
+    max-width: 90dvw;
   }
 }
 
 .component-card {
-  max-width: calc(90vw - 10rem);
+  /* max-width: calc(90vw - 10rem);
   min-width: calc(80vw - 10rem);
-  width: 100%;
+  width: 100%; */
+  max-width: 90dvw;
 }
 
 @media screen and (max-width: 640px) {
   .component-card {
-    max-width: 80vw;
-    min-width: 70vw;
+    max-width: 90dvw;
   }
 }
 
