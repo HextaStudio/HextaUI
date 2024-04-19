@@ -144,7 +144,7 @@ pre {
   overflow-x: auto;
   background: #23232331;
   border: 1px solid rgba(255, 255, 255, 0.064);
-  padding: 15px;
+  padding: 16px;
   margin: 10px 0;
   max-width: calc(90vw - 10rem);
   min-width: calc(80vw - 10rem);
@@ -156,6 +156,21 @@ pre {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   font-family: var(--code-fonts) !important;
 }
+table {
+  border-radius: 16px !important;
+  td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  th {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 code {
   font-family: var(--code-fonts) !important;
   border-radius: 7px;
