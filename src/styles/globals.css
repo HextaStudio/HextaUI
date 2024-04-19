@@ -241,7 +241,7 @@ table {
 
 .footer-div {
   width: calc(100% - 16rem);
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     width: 100%;
   }
 }
