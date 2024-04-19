@@ -7,6 +7,9 @@ export const Footer = ({ docs }) => {
     <>
       <footer
         className={`flex flex-wrap items-center  p-10 footer gap-7 grow justify-between  className="max-lg:ml-auto" `}
+        style={{
+          borderTop: "1px solid #ffffff20",
+        }}
       >
         <div className={`flex flex-col gap-2 footer-section1 `}>
           <div className={`flex items-center gap-4`}>
