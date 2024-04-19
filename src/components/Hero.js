@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-5 py-48 overflow-x-hidden text-center px-7 hero step1">
+      <div className="flex flex-col items-center justify-center gap-5 py-40 overflow-x-hidden text-center px-7 hero step1">
         <div
           className="absolute w-20 -rotate-45 opacity-45 left-16 blur-3xl white-ray"
           style={{
