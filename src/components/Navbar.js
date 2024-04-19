@@ -14,10 +14,12 @@ export const Navbar = ({ docs }) => {
         }}
       >
         <div className="flex items-center justify-center gap-4 navbar-header">
-          <Image src={logo} width={35} height={35} alt="HextaUI" />
-          <span className="text-md font-bold bricolage-fonts max-[350px]:hidden">
-            HextaUI
-          </span>
+          <Link href="/" className="flex items-center justify-center gap-4 ">
+            <Image src={logo} width={35} height={35} alt="HextaUI" />
+            <span className="text-md font-bold bricolage-fonts max-[350px]:hidden">
+              HextaUI
+            </span>
+          </Link>
         </div>
         <div className="flex items-center justify-center navbar-links max-sm:hidden">
           <ul className="flex items-center gap-5 text-sm list-none">
