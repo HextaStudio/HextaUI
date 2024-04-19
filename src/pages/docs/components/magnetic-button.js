@@ -65,7 +65,7 @@ const magneticButton = () => {
           <div className="flex flex-col gap-4 py-10 preview">
             <div>
               <h3 className="h3">Preview</h3>
-              <div className="flex items-center justify-center w-full my-3 border border-white border-opacity-10 rounded-2xl preview h-72">
+              <div className="flex items-center justify-center my-3 border border-white border-opacity-10 rounded-2xl preview-container h-72">
                 <MagneticLinkPreview>
                   <button className="py-3 font-bold text-black bg-white px-7 rounded-xl">
                     Hover me
@@ -149,8 +149,8 @@ import React from "react";`}
           </div>
           <div>
             <h3 className="h3">Props</h3>
-            <div className="py-4 overflow-auto">
-              <table className="w-full text-left divide-y divide-gray-200 table-auto whitespace-nowrap">
+            <div className="py-4 overflow-x-auto">
+              <table className="text-left break-all divide-y divide-gray-200 table-auto whitespace-break-words">
                 <thead>
                   <tr className="border border-white border-opacity-10">
                     <th className="px-4 py-2">Prop</th>
