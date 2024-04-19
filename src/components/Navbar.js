@@ -6,13 +6,13 @@ export const Navbar = ({ docs }) => {
   return (
     <>
       <nav
-        className={`flex  items-center justify-between p-6 navbar  bg-black  ${
+        className={`flex bg-transparent items-center justify-between px-10 py-4 navbar  ${
           docs && "ml-auto max-w-7xl "
         }`}
       >
         <div className="flex items-center justify-center gap-4 navbar-header">
-          <Image src={logo} width={40} height={40} alt="HextaUI" />
-          <span className="text-xl font-bold bricolage-fonts max-[350px]:hidden">
+          <Image src={logo} width={35} height={35} alt="HextaUI" />
+          <span className="text-md font-bold bricolage-fonts max-[350px]:hidden">
             HextaUI
           </span>
         </div>
