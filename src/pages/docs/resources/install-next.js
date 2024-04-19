@@ -12,7 +12,7 @@ const installNext = () => {
             <div>
               <h3 className="h3">Create new project</h3>
               <CodeBlock
-                lang="shell"
+                lang="bash"
                 filename="bash"
                 code={`npx create-next-app@latest`}
               />
@@ -21,7 +21,7 @@ const installNext = () => {
               <h3 className="h3">On installation You'll see these prompts</h3>
               <CodeBlock
                 filename="bash"
-                lang="shell"
+                lang="bash"
                 code={`What is your project named? my-app
 Would you like to use TypeScript? No / Yes
 Would you like to use ESLint? No / Yes
@@ -36,7 +36,7 @@ What import alias would you like configured? @/*
             <div>
               <h3 className="h3">Start the app</h3>
               <CodeBlock
-                lang="shell"
+                lang="bash"
                 filename="bash"
                 code={`cd my-app
 npm run dev`}
