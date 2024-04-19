@@ -5,7 +5,7 @@ import logo from "../../public/hexta-studio.svg";
 export const Footer = () => {
   return (
     <>
-      <footer className="flex items-center justify-between p-10 footer">
+      <footer className="flex flex-wrap items-center justify-between p-10 footer gap-7">
         <div className="flex flex-col gap-2 footer-section1">
           <div className="flex items-center gap-4 ">
             <Image src={logo} width={40} height={40} alt="HextaUI" />
