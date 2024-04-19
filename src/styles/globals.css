@@ -183,7 +183,7 @@ code {
 }
 
 .footer-div {
-  width: calc(100% - 19rem);
+  width: calc(100% - 16rem);
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
