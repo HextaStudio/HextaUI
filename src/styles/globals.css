@@ -147,6 +147,7 @@ pre {
   padding: 15px;
   margin: 10px 0;
   max-width: calc(90vw - 10rem);
+  min-width: calc(80vw - 10rem);
   border-radius: 10px;
   width: 100%;
   font-size: 13pt;
@@ -163,6 +164,7 @@ code {
 @media screen and (max-width: 640px) {
   pre {
     max-width: 80vw;
+    min-width: 70vw;
   }
 }
 
