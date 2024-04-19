@@ -4,8 +4,10 @@ export const Sidebar = () => {
   return (
     <>
       <aside
-        className="z-10 flex flex-col gap-4 p-10 bg-black border-r-2 sidebar border-zinc-900 min-h-dvh max-lg:hidden"
+        className="z-10 flex flex-col gap-4 p-10 bg-black border-r-2 sidebar min-h-dvh max-lg:hidden"
         style={{
+          borderRight: "1px solid #ffffff20",
+
           minWidth: "16rem",
         }}
       >
