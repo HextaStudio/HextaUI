@@ -146,7 +146,7 @@ pre {
   border: 1px solid rgba(255, 255, 255, 0.064);
   padding: 15px;
   margin: 10px 0;
-  max-width: calc(80vw - 10rem);
+  max-width: calc(90vw - 10rem);
   border-radius: 10px;
   width: 100%;
   font-size: 13pt;
@@ -162,7 +162,7 @@ code {
 }
 @media screen and (max-width: 640px) {
   pre {
-    max-width: 77vw;
+    max-width: 80vw;
   }
 }
 
@@ -173,4 +173,9 @@ code {
   &:hover {
     background-color: rgba(255, 255, 255, 0.105);
   }
+}
+
+.sidebar.fixed {
+  position: fixed;
+  top: 0;
 }

@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/hexta-studio.svg";
 
-export const Navbar = () => {
+export const Navbar = ({ docs }) => {
   return (
     <>
-      <nav className="flex items-center justify-between p-10 navbar">
+      <nav
+        className={`flex items-center justify-between p-10 navbar ${
+          docs && "ml-auto max-w-7xl "
+        }`}
+      >
         <div className="flex items-center justify-center gap-4 navbar-header">
           <Image src={logo} width={40} height={40} alt="HextaUI" />
           <span className="text-xl font-bold bricolage-fonts max-[350px]:hidden">

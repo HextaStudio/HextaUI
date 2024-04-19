@@ -3,9 +3,9 @@ import Link from "next/link";
 export const Sidebar = () => {
   return (
     <>
-      <aside className="sticky top-0 flex flex-col h-full gap-4 p-10 border-r-2 border-zinc-900 sidebar min-h-dvh max-sm:hidden max-w-80">
+      <aside className="sticky top-0 flex flex-col gap-4 p-10 border-r-2 w-2xl sidebar border-zinc-900 min-h-dvh max-xl:hidden">
         <div className="sidebar-section">
-          <p className="text-sm font-bold uppercase">PINNED</p>
+          <p className="text-sm font-bold uppercase">INFO</p>
           <ul>
             <li>
               <span className="text-sm opacity-60">Stay updated </span>
