@@ -36,7 +36,7 @@ export const DocsLayout = ({ children }) => {
         <aside ref={sidebarRef}>
           <Sidebar />
         </aside>
-        <main className="flex justify-center flex-grow p-10">{children}</main>
+        <main className="flex flex-grow p-10">{children}</main>
       </div>
       <div
         className="footer-div"
