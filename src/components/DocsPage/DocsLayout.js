@@ -32,7 +32,7 @@ export const DocsLayout = ({ children }) => {
       <div ref={navbarRef}>
         <Navbar />
       </div>
-      <div className="flex">
+      <div className="flex justify-center">
         <aside ref={sidebarRef}>
           <Sidebar />
         </aside>
