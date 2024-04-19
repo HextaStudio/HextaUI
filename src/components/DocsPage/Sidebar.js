@@ -67,7 +67,10 @@ export const Sidebar = () => {
           <p className="text-sm font-bold uppercase">All Components</p>
           <ul>
             <li>
-              <Link className="text-sm opacity-60" href="#">
+              <Link
+                className="text-sm opacity-60"
+                href="/docs/components/magnetic-button"
+              >
                 Magnetic button
               </Link>
             </li>
