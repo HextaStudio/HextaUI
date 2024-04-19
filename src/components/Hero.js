@@ -24,7 +24,7 @@ export const Hero = () => {
           </p>
         </div>
         <div className="flex flex-wrap gap-2 hero-buttons">
-          <Link href="/" className="primary-button grow">
+          <Link href="/components" className="primary-button grow">
             Browse Components
           </Link>
           <Link href="/" className="secondary-button grow">
