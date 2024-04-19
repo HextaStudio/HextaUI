@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import React from "react";
 
+import { NextSeo } from "next-seo";
+
 function MagneticLinkPreview({ children }) {
   const magnetic = useRef(null);
 

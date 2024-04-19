@@ -1,6 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { NextSeo } from "next-seo";
 
 const framerMotionInstallation = () => {
   const { scrollYProgress } = useScroll();
