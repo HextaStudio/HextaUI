@@ -5,11 +5,11 @@ import logo from "../../public/hexta-studio.svg";
 export const Footer = () => {
   return (
     <>
-      <footer className="footer flex items-center justify-between p-7">
-        <div className="footer-section1 flex gap-2 flex-col">
-          <div className=" flex items-center  gap-4">
+      <footer className="flex items-center justify-between p-10 footer">
+        <div className="flex flex-col gap-2 footer-section1">
+          <div className="flex items-center gap-4 ">
             <Image src={logo} width={40} height={40} alt="HextaUI" />
-            <span className="text-xl bricolage-fonts font-bold">HextaUI</span>
+            <span className="text-xl font-bold bricolage-fonts">HextaUI</span>
           </div>
           <p className="text-sm">
             <span className="opacity-30">A product by </span>{" "}
@@ -33,7 +33,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="footer-section2">
-          <ul className="flex list-none flex-col gap-2 text-sm">
+          <ul className="flex flex-col gap-2 text-sm list-none">
             <li>
               <Link href="#" className="opacity-75 hover:opacity-100">
                 Components
