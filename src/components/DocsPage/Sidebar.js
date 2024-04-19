@@ -3,7 +3,12 @@ import Link from "next/link";
 export const Sidebar = () => {
   return (
     <>
-      <aside className="sticky top-0 flex flex-col gap-4 p-10 border-r-2 w-2xl sidebar border-zinc-900 min-h-dvh max-xl:hidden">
+      <aside
+        className="flex flex-col gap-4 p-10 border-r-2 sidebar border-zinc-900 min-h-dvh max-lg:hidden"
+        style={{
+          minWidth: "16rem",
+        }}
+      >
         <div className="sidebar-section">
           <p className="text-sm font-bold uppercase">INFO</p>
           <ul>
