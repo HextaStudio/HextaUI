@@ -5,7 +5,7 @@ import logo from "../../public/hexta-studio.svg";
 export const Navbar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between navbar p-7">
+      <nav className="flex items-center justify-between p-10 navbar">
         <div className="flex items-center justify-center gap-4 navbar-header">
           <Image src={logo} width={40} height={40} alt="HextaUI" />
           <span className="text-xl font-bold bricolage-fonts max-[350px]:hidden">
