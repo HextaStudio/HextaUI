@@ -6,12 +6,10 @@ export const Footer = ({ docs }) => {
   return (
     <>
       <footer
-        className={`flex flex-wrap items-center justify-between p-10 footer gap-7 ${
-          docs && "ml-auto max-w-7xl "
-        }`}
+        className={`flex flex-wrap items-center  p-10 footer gap-7 grow justify-between  className="max-lg:ml-auto" `}
       >
-        <div className="flex flex-col gap-2 footer-section1">
-          <div className="flex items-center gap-4">
+        <div className={`flex flex-col gap-2 footer-section1 `}>
+          <div className={`flex items-center gap-4`}>
             <Image src={logo} width={40} height={40} alt="HextaUI" />
             <span className="text-xl font-bold bricolage-fonts">HextaUI</span>
           </div>
