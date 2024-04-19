@@ -156,6 +156,7 @@ pre {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   font-family: var(--code-fonts) !important;
 }
+
 table {
   border-radius: 16px !important;
   td {
@@ -176,8 +177,35 @@ code {
   border-radius: 7px;
   font-size: 17px;
 }
+
 @media screen and (max-width: 640px) {
   pre {
+    max-width: 80vw;
+    min-width: 70vw;
+  }
+}
+
+.preview-container {
+  max-width: calc(90vw - 10rem);
+  min-width: calc(80vw - 10rem);
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .preview-container {
+    max-width: 80vw;
+    min-width: 70vw;
+  }
+}
+
+table {
+  max-width: calc(90vw - 10rem);
+  min-width: calc(80vw - 10rem);
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  table {
     max-width: 80vw;
     min-width: 70vw;
   }
