@@ -1,11 +1,11 @@
-import { Layout } from "@/components/Layout";
+import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 
 const components = () => {
   return (
     <>
-      <Layout docs>
+      <DocsLayout>
         <main className="relative"></main>
-      </Layout>
+      </DocsLayout>
     </>
   );
 };
