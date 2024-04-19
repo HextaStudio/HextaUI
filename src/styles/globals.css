@@ -39,6 +39,21 @@
   .blur-5xl {
     filter: blur(100px);
   }
+
+  .h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+    padding: 5px 0;
+    line-height: 1.2rem;
+  }
+  .h1 {
+    font-size: 3.052rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 3rem;
+  }
+
   .primary-button {
     display: flex;
     align-items: center;
@@ -86,13 +101,15 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 :root {
-  --background-color: #000;
-  --text-color: #fff;
   color-scheme: dark;
+  --background-color: #000;
+  --code-background-color: rgba(255, 255, 255, 0.057);
+  --text-color: #fff;
   --inter-fonts: "Inter", sans-serif;
+  --code-fonts: "JetBrains Mono", monospace;
 }
 
 * {
@@ -107,4 +124,53 @@ html {
   color: var(--text-color);
   background-color: var(--background-color);
   overflow-x: hidden;
+}
+pre,
+code {
+  overflow-x: auto;
+}
+
+code::-webkit-scrollbar {
+  background: transparent;
+  height: 3px;
+}
+
+code::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+pre {
+  overflow-x: auto;
+  background: #23232331;
+  border: 1px solid rgba(255, 255, 255, 0.064);
+  padding: 15px;
+  margin: 10px 0;
+  max-width: calc(80vw - 10rem);
+  border-radius: 10px;
+  width: 100%;
+  font-size: 13pt;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  font-family: var(--code-fonts) !important;
+}
+code {
+  font-family: var(--code-fonts) !important;
+  border-radius: 7px;
+  font-size: 17px;
+}
+@media screen and (max-width: 640px) {
+  pre {
+    max-width: 77vw;
+  }
+}
+
+.copy-to-clipboard-button {
+  padding: 5px;
+  border-radius: 3px;
+  transition: all ease 0.2s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.105);
+  }
 }
