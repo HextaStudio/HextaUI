@@ -8,12 +8,13 @@ import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import scss from "highlight.js/lib/languages/scss";
 import shell from "highlight.js/lib/languages/shell";
+import bash from "highlight.js/lib/languages/bash";
 import xml from "highlight.js/lib/languages/xml";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     hljs.registerLanguage("javascript", javascript);
-    hljs.registerLanguage("shell", shell);
+    hljs.registerLanguage("bash", bash);
     hljs.registerLanguage("scss", scss);
     hljs.registerLanguage("css", css);
     hljs.registerLanguage("html", xml);
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    hljs.highlightAll({ detectLanguage: false });
+    hljs.highlightAll({ detectLanguage: true });
   }, []);
 
   return (
