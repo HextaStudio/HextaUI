@@ -181,3 +181,10 @@ code {
   position: fixed;
   top: 0;
 }
+
+.footer-div {
+  width: calc(100% - 19rem);
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
