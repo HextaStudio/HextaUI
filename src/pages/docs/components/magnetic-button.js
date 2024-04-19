@@ -65,7 +65,12 @@ const magneticButton = () => {
           <div className="flex flex-col gap-4 py-10 preview">
             <div>
               <h3 className="h3">Preview</h3>
-              <div className="flex items-center justify-center my-3 border border-white border-opacity-10 rounded-2xl preview-container h-72">
+              <div
+                className="flex items-center justify-center my-3 border border-white border-opacity-10 rounded-2xl preview-container"
+                style={{
+                  height: "35rem",
+                }}
+              >
                 <MagneticLinkPreview>
                   <button className="py-3 font-bold text-black bg-white px-7 rounded-xl">
                     Hover me
