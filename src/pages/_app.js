@@ -7,11 +7,13 @@ import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import scss from "highlight.js/lib/languages/scss";
-import shell from "highlight.js/lib/languages/shell";
 import bash from "highlight.js/lib/languages/bash";
 import xml from "highlight.js/lib/languages/xml";
 
+import { useRouter } from "next/router";
+
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   useEffect(() => {
     hljs.registerLanguage("javascript", javascript);
     hljs.registerLanguage("bash", bash);
@@ -24,6 +26,18 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     hljs.highlightAll({ detectLanguage: true });
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      hljs.highlightAll({ detectLanguage: true });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
