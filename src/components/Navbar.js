@@ -6,7 +6,7 @@ export const Navbar = ({ docs }) => {
   return (
     <>
       <nav
-        className={`flex items-center justify-between p-10 navbar ${
+        className={`flex items-center justify-between p-10 navbar  ${
           docs && "ml-auto max-w-7xl "
         }`}
       >
