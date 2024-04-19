@@ -2,6 +2,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 
 import Link from "next/link";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 const CardComponent = ({ component }) => {
   return (
@@ -39,12 +40,37 @@ const components = () => {
       title: "Magnetic Button",
       description:
         " A button that follows mouse cursor within specific range around button.",
-      url: "magnetic-url",
+      url: "magnetic-button",
       image: "https://i.imgur.com/tCNsXzc.gif",
     },
   ];
   return (
     <>
+      <NextSeo
+        title="Components - HextaUI ✨"
+        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        openGraph={{
+          url: "https://hextaui.vercel.app",
+          title: "Components - HextaUI ✨",
+          description:
+            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "Components - HextaUI ✨",
+              type: "image/png",
+            },
+          ],
+          siteName: "Components - HextaUI ✨",
+        }}
+        twitter={{
+          handle: "@HextaStudio",
+          site: "@HextaStudio",
+          cardType: "summary_large_image",
+        }}
+      />
       <DocsLayout>
         <main>
           <h1 className="h1 max-sm:text-4xl">Gorgeous , Zero Effort</h1>

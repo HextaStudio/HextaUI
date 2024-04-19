@@ -1,9 +1,35 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
+import { NextSeo } from "next-seo";
 
 const InstallTailwind = () => {
   return (
     <>
+      <NextSeo
+        title="Install Tailwind CSS - HextaUI ✨"
+        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        openGraph={{
+          url: "https://hextaui.vercel.app/docs/resources/install-tailwind",
+          title: "Install Tailwind CSS - HextaUI ✨",
+          description:
+            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "Install Tailwind CSS - HextaUI ✨",
+              type: "image/png",
+            },
+          ],
+          siteName: "Install Tailwind CSS - HextaUI ✨",
+        }}
+        twitter={{
+          handle: "@HextaStudio",
+          site: "@HextaStudio",
+          cardType: "summary_large_image",
+        }}
+      />
       <DocsLayout>
         <main>
           <h1 className="h1">Install Tailwind CSS</h1>

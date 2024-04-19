@@ -53,13 +53,38 @@ function MagneticLinkPreview({ children }) {
 const magneticButton = () => {
   return (
     <>
+      <NextSeo
+        title="Magnetic Button - HextaUI ✨"
+        description="A button that follows mouse cursor within specific range around the button"
+        openGraph={{
+          url: "https://hextaui.vercel.app/docs/components/magnetic-button",
+          title: "Magnetic Button - HextaUI ✨",
+          description:
+            "A button that follows mouse cursor within specific range around the button",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "Magnetic Button - HextaUI ✨",
+              type: "image/png",
+            },
+          ],
+          siteName: "Magnetic Button - HextaUI ✨",
+        }}
+        twitter={{
+          handle: "@HextaStudio",
+          site: "@HextaStudio",
+          cardType: "summary_large_image",
+        }}
+      />
       <DocsLayout>
         <main>
           <div className="header">
             <h1 className="h1">Magnetic Button</h1>
             <p className="opacity-80">
               A button that follows mouse cursor within specific range around
-              button.
+              the button.
             </p>
           </div>
           <div className="flex flex-col gap-4 py-10 preview">

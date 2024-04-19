@@ -8,6 +8,31 @@ const framerMotionInstallation = () => {
 
   return (
     <>
+      <NextSeo
+        title="Install Framer Motion - HextaUI ✨"
+        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        openGraph={{
+          url: "https://hextaui.vercel.app/docs/resources/install-framer-motion",
+          title: "Install Framer Motion - HextaUI ✨",
+          description:
+            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "Install Framer Motion - HextaUI ✨",
+              type: "image/png",
+            },
+          ],
+          siteName: "Install Framer Motion - HextaUI ✨",
+        }}
+        twitter={{
+          handle: "@HextaStudio",
+          site: "@HextaStudio",
+          cardType: "summary_large_image",
+        }}
+      />
       <DocsLayout>
         <main>
           <h1 className="h1">Install Framer Motion</h1>

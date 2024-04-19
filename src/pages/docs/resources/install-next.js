@@ -1,9 +1,36 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 
+import { NextSeo } from "next-seo";
+
 const installNext = () => {
   return (
     <>
+      <NextSeo
+        title="Install Next Js - HextaUI ✨"
+        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        openGraph={{
+          url: "https://hextaui.vercel.app/docs/resources/install-next",
+          title: "Install Next Js - HextaUI ✨",
+          description:
+            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "Install Next Js - HextaUI ✨",
+              type: "image/png",
+            },
+          ],
+          siteName: "Install Next Js - HextaUI ✨",
+        }}
+        twitter={{
+          handle: "@HextaStudio",
+          site: "@HextaStudio",
+          cardType: "summary_large_image",
+        }}
+      />
       <DocsLayout>
         <main>
           <h1 className="h1">Install Next Js</h1>
