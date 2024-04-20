@@ -245,3 +245,15 @@ table {
     width: 100%;
   }
 }
+
+h1,
+h3 {
+  background: linear-gradient(
+    to bottom,
+    white 40%,
+    rgba(255, 255, 255, 0.407) 100%
+  ) !important;
+  padding: 6px 0;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
