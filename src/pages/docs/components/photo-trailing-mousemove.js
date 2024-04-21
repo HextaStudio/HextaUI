@@ -97,13 +97,13 @@ const photoTrailingOnMousemove = () => {
         title="Photo Trailing on MouseMove - HextaUI ✨"
         description="An Awesome mouse move effect combined with image gallery for creative UI"
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/components/magnetic-button",
+          url: "https://hextaui.vercel.app/docs/components/photo-trailing-mousemove",
           title: "Photo Trailing on MouseMove - HextaUI ✨",
           description:
             "An Awesome mouse move effect combined with image gallery for creative UI",
           images: [
             {
-              url: "https://i.imgur.com/xlCPzQc.png",
+              url: "https://i.imgur.com/AehlLPi.png",
               width: 1920,
               height: 1080,
               alt: "Photo Trailing on MouseMove - HextaUI ✨",

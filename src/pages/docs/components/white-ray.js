@@ -36,13 +36,13 @@ const whiteRay = () => {
         title="White Ray - HextaUI ✨"
         description="A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/components/magnetic-button",
+          url: "https://hextaui.vercel.app/docs/components/white-ray",
           title: "White Ray - HextaUI ✨",
           description:
             "A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page.",
           images: [
             {
-              url: "https://i.imgur.com/xlCPzQc.png",
+              url: "https://i.imgur.com/8WI7KNg.png",
               width: 1920,
               height: 1080,
               alt: "White Ray - HextaUI ✨",

@@ -65,7 +65,7 @@ const magneticButton = () => {
             "A button that follows mouse cursor within specific range around the button",
           images: [
             {
-              url: "https://i.imgur.com/xlCPzQc.png",
+              url: "https://i.imgur.com/r33EUoh.png",
               width: 1920,
               height: 1080,
               alt: "Magnetic Button - HextaUI ✨",
