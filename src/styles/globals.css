@@ -144,17 +144,42 @@ pre {
   overflow-x: auto;
   background: #23232331;
   border: 1px solid rgba(255, 255, 255, 0.064);
+  border-top: none;
   padding: 16px;
-  margin: 10px 0;
+  margin: -1px 0 20px 0;
   /* max-width: calc(90vw - 10rem);   */
   /* min-width: calc(80vw - 10rem); */
   /* width: 100%; */
   max-width: 60dvw;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   font-family: "Fira Mono", monospace;
+}
+
+.codeblock-header {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  background: #23232331;
+  border: 1px solid rgba(255, 255, 255, 0.064);
+  padding: 16px;
+  /* max-width: calc(90vw - 10rem);   */
+  /* min-width: calc(80vw - 10rem); */
+  /* width: 100%; */
+  max-width: 60dvw;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  font-family: "Fira Mono", monospace;
+}
+@media screen and (max-width: 900px) {
+  .codeblock-header {
+    max-width: 90dvw;
+    /* min-width: 70vw; */
+  }
 }
 
 table {
