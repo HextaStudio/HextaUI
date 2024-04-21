@@ -149,7 +149,7 @@ pre {
   /* max-width: calc(90vw - 10rem);   */
   /* min-width: calc(80vw - 10rem); */
   /* width: 100%; */
-  max-width: 90dvw;
+  max-width: 60dvw;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
@@ -176,7 +176,7 @@ code {
   border-radius: 7px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   pre {
     max-width: 90dvw;
     /* min-width: 70vw; */
@@ -187,10 +187,10 @@ code {
   /* max-width: calc(90vw - 10rem); */
   /* min-width: calc(80vw - 10rem); */
   /* width: 100%; */
-  max-width: 90dvw;
+  max-width: 60dvw;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .preview-container {
     max-width: 90dvw;
   }
@@ -200,10 +200,10 @@ table {
   /* max-width: calc(90vw - 10rem);
   min-width: calc(80vw - 10rem);
   width: 100%; */
-  max-width: 90dvw;
+  max-width: 60dvw;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   table {
     max-width: 90dvw;
   }
@@ -213,10 +213,10 @@ table {
   /* max-width: calc(90vw - 10rem);
   min-width: calc(80vw - 10rem);
   width: 100%; */
-  max-width: 90dvw;
+  max-width: 60dvw;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   .component-card {
     max-width: 90dvw;
   }
