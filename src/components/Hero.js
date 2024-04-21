@@ -1,15 +1,30 @@
 import Link from "next/link";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 export const Hero = () => {
+  const whiteRayRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(whiteRayRef.current, {
+      transform: "translateY(0) rotate(-70deg)",
+      delay: 1,
+      duration: 2,
+      ease: "circ.out",
+    });
+  }, []);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-5 py-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40">
         <div
-          className="absolute w-20 -rotate-45 opacity-45 left-16 blur-3xl white-ray"
+          className="absolute w-20 -rotate-45 opacity-45 left-16 blur-4xl white-ray"
+          ref={whiteRayRef}
           style={{
             height: "40rem",
             top: "-4rem",
-            transform: "rotate(-60deg)",
+            transform: "rotate(-70deg) translateY(-30rem)",
             background: "white",
           }}
         ></div>
