@@ -53,7 +53,7 @@ export const Sidebar = () => {
           <ul className="flex flex-col gap-[3px]">
             <li>
               <Link
-                className="text-sm transition-all opacity-60 hover:opacity-90 "
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                 href="/docs/resources/install-next"
               >
                 Install Next.js
@@ -61,7 +61,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="text-sm transition-all opacity-60 hover:opacity-90 "
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                 href="/docs/resources/install-tailwind"
               >
                 Install Tailwind CSS
@@ -69,7 +69,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="text-sm transition-all opacity-60 hover:opacity-90 "
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                 href="/docs/resources/install-gsap"
               >
                 Install GSAP
@@ -77,7 +77,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="text-sm transition-all opacity-60 hover:opacity-90 "
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                 href="/docs/resources/install-framer-motion"
               >
                 Install Framer Motion
@@ -89,7 +89,7 @@ export const Sidebar = () => {
           <p className="text-sm font-bold uppercase">All Components</p>
           <ul className="flex flex-col gap-[3px]">
             {componentLinks.map((link, index) => (
-              <li>
+              <li key={index}>
                 <Link
                   className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                   href={`/docs/components/${link.url}`}

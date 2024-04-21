@@ -152,11 +152,7 @@ import React from "react";`}
           <div>
             <small>
               This component was inspired by{" "}
-              <Link
-                className="blue-link"
-                Link
-                href="https://codepen.io/Hyperplexed"
-              >
+              <Link className="blue-link" href="https://codepen.io/Hyperplexed">
                 Hyperplexed
               </Link>
             </small>

@@ -77,7 +77,7 @@ const photoTrailingOnMousemove = () => {
     return (
       <>
         {images.map((image, index) => (
-          <Image
+          <img
             src={image}
             width={1920}
             height={1080}
