@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 
 import { useEffect, useRef, useState } from "react";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
