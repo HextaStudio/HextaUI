@@ -20,7 +20,7 @@ const CardComponent = ({ component }) => {
       </div>
       <div className="flex flex-col justify-between h-1/3">
         <div className="flex flex-col py-3">
-          <h4 className="text-lg font-semibold">{component.title}</h4>
+          <h4 className="text-lg font-semibold h3">{component.title}</h4>
           <p className="text-sm opacity-80">{component.description}</p>
         </div>
         <Link
@@ -57,6 +57,12 @@ const components = () => {
       url: "photo-trailing-mousemove",
       image: "https://i.imgur.com/68A1mEf.gif",
     },
+    {
+      title: "Water Drop Effect",
+      description: "Beautiful water drop effect using grids and AnimeJs",
+      url: "water-drop-effect",
+      image: "https://i.imgur.com/LdLMgXa.gif",
+    },
   ];
   return (
     <>
@@ -87,7 +93,9 @@ const components = () => {
       />
       <DocsLayout>
         <main>
-          <h1 className="h1 max-sm:text-4xl">Gorgeous , Zero Effort</h1>
+          <h1 className="h1 max-sm:text-4xl">
+            Gorgeous Components, Zero Effort
+          </h1>
           <p className="text-sm opacity-70">
             Just copy and paste our prebuilt components
           </p>

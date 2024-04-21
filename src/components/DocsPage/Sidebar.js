@@ -14,6 +14,10 @@ export const Sidebar = () => {
       name: "Photo Trailing Effect",
       url: "photo-trailing-mousemove",
     },
+    {
+      name: "Water Drop Effect",
+      url: "water-drop-effect",
+    },
   ];
   return (
     <>
@@ -42,7 +46,7 @@ export const Sidebar = () => {
         </div>
         <div className="sidebar-section">
           <p className="text-sm font-bold uppercase">Resources</p>
-          <ul>
+          <ul className="flex flex-col gap-[3px]">
             <li>
               <Link
                 className="text-sm transition-all opacity-60 hover:opacity-90 "
@@ -79,11 +83,11 @@ export const Sidebar = () => {
         </div>
         <div className="sidebar-section">
           <p className="text-sm font-bold uppercase">All Components</p>
-          <ul>
+          <ul className="flex flex-col gap-[3px]">
             {componentLinks.map((link, index) => (
               <li>
                 <Link
-                  className="text-sm transition-all opacity-60 hover:opacity-90 "
+                  className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
                   href={`/docs/components/${link.url}`}
                 >
                   {link.name}
