@@ -61,6 +61,7 @@
     font-size: 14px;
     padding: 10px 20px;
     font-weight: 600;
+    width: fit-content;
     border: 1px solid black;
     background-color: white;
     color: black;
@@ -77,6 +78,7 @@
     font-size: 14px;
     padding: 10px 20px;
     font-weight: 600;
+    width: fit-content;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 10px;
@@ -100,6 +102,7 @@
     height: auto;
   }
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap");
 
 :root {
@@ -230,4 +233,18 @@ h3 {
   padding: 6px 0;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+.bento-col {
+  background: #13121436;
+  top: 0;
+  transition: all 0.2s ease;
+  margin: -45px !important;
+}
+
+.hero-demo {
+  max-height: 15rem;
+  max-width: 90%;
+  overflow: hidden;
+  margin: 40px 0;
 }

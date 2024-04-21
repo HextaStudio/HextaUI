@@ -5,17 +5,9 @@ import anime from "animejs";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 
-const waterDropEffect = () => {
-  const WaterDropGridPreview = () => {
-    return (
-      <div className="relative grid px-8 py-12 place-content-center">
-        <DotGrid />
-      </div>
-    );
-  };
-
-  const GRID_WIDTH = 40;
-  const GRID_HEIGHT = 40;
+export const WaterDropGridPreview = ({ width, height }) => {
+  const GRID_WIDTH = width || 40;
+  const GRID_HEIGHT = height || 40;
 
   const DotGrid = () => {
     const handleDotClick = (e) => {
@@ -47,7 +39,7 @@ const waterDropEffect = () => {
       for (let j = 0; j < GRID_HEIGHT; j++) {
         dots.push(
           <div
-            className="p-2 transition-colors rounded-full group cursor-crosshair hover:bg-slate-600"
+            className="p-2 transition-colors rounded-full group hover:bg-slate-600"
             data-index={index}
             key={`${i}-${j}`}
           >
@@ -71,7 +63,13 @@ const waterDropEffect = () => {
       </div>
     );
   };
-
+  return (
+    <div className="relative grid px-8 py-12 place-content-center">
+      <DotGrid />
+    </div>
+  );
+};
+const waterDropEffect = () => {
   return (
     <>
       <NextSeo

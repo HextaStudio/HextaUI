@@ -7,48 +7,47 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 
+export const HackerTextEffectPreview = ({ text }) => {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const textRef = useRef(null);
+
+  let interval = null;
+
+  useEffect(() => {
+    if (textRef.current) {
+      textRef.current.onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.text[index];
+              }
+
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.text.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+      };
+    }
+  }, []);
+  return (
+    <p ref={textRef} className="h1" data-text={text?.uppercase || "HEXTA UI"}>
+      {text?.uppercase || "HEXTA UI"}
+    </p>
+  );
+};
 const hackerTextEffect = () => {
-  const HackerTextEffectPreview = () => {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const textRef = useRef(null);
-
-    let interval = null;
-
-    useEffect(() => {
-      if (textRef.current) {
-        textRef.current.onmouseover = (event) => {
-          let iteration = 0;
-
-          clearInterval(interval);
-
-          interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-              .split("")
-              .map((letter, index) => {
-                if (index < iteration) {
-                  return event.target.dataset.text[index];
-                }
-
-                return letters[Math.floor(Math.random() * 26)];
-              })
-              .join("");
-
-            if (iteration >= event.target.dataset.text.length) {
-              clearInterval(interval);
-            }
-
-            iteration += 1 / 3;
-          }, 30);
-        };
-      }
-    }, []);
-    return (
-      <p ref={textRef} className="h1" data-text="HEXTA UI">
-        HOVER ME
-      </p>
-    );
-  };
-
   return (
     <>
       <NextSeo

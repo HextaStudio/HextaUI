@@ -7,7 +7,7 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 
-function MagneticLinkPreview({ children }) {
+export const MagneticLinkPreview = ({ children }) => {
   const magnetic = useRef(null);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ function MagneticLinkPreview({ children }) {
   }, []);
 
   return React.cloneElement(children, { ref: magnetic });
-}
+};
 
 const magneticButton = () => {
   return (
