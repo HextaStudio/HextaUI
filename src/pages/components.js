@@ -27,7 +27,7 @@ const CardComponent = ({ component }) => {
           href={`/docs/components/${component.url}`}
           className="secondary-button"
         >
-          Check out
+          Use this Component
         </Link>
       </div>
     </div>
