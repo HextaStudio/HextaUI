@@ -63,6 +63,12 @@ const components = () => {
       url: "water-drop-effect",
       image: "https://i.imgur.com/LdLMgXa.gif",
     },
+    {
+      title: "Hacker Text Effect",
+      description: "A really cool Hacker Text effect when hovered on text.",
+      url: "hacker-text-effect",
+      image: "https://i.imgur.com/011GWuU.gif",
+    },
   ];
   return (
     <>

@@ -18,6 +18,10 @@ export const Sidebar = () => {
       name: "Water Drop Effect",
       url: "water-drop-effect",
     },
+    {
+      name: "Hacker Text Effect",
+      url: "hacker-text-effect",
+    },
   ];
   return (
     <>
