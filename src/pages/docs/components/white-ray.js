@@ -112,10 +112,7 @@ import React from "react";`}
       <p className="h1">HextaUI</p>
     </div>
   );
-};
-
-            
-            `}
+};`}
             />
           </div>
         </main>
