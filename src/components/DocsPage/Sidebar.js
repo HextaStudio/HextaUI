@@ -1,6 +1,20 @@
 import Link from "next/link";
 
 export const Sidebar = () => {
+  const componentLinks = [
+    {
+      name: "Magnetic Button",
+      url: "magnetic-button",
+    },
+    {
+      name: "White Ray",
+      url: "white-ray",
+    },
+    {
+      name: "Photo Trailing Effect",
+      url: "photo-trailing-mousemove",
+    },
+  ];
   return (
     <>
       <aside
@@ -66,22 +80,16 @@ export const Sidebar = () => {
         <div className="sidebar-section">
           <p className="text-sm font-bold uppercase">All Components</p>
           <ul>
-            <li>
-              <Link
-                className="text-sm opacity-60"
-                href="/docs/components/magnetic-button"
-              >
-                Magnetic button
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-sm opacity-60"
-                href="/docs/components/white-ray"
-              >
-                White Ray
-              </Link>
-            </li>
+            {componentLinks.map((link, index) => (
+              <li>
+                <Link
+                  className="text-sm transition-all opacity-60 hover:opacity-90 "
+                  href={`/docs/components/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </aside>

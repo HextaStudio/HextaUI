@@ -7,7 +7,7 @@ import { NextSeo } from "next-seo";
 const CardComponent = ({ component }) => {
   return (
     <div className="w-full p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">
-      <div className="h-60">
+      <div className="h-[25rem]">
         <Image
           className="object-cover w-full h-full border border-white border-opacity-10"
           src={component.image}
@@ -49,6 +49,13 @@ const components = () => {
         "A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page.",
       url: "white-ray",
       image: "https://i.imgur.com/Fva7GVG.png",
+    },
+    {
+      title: "Photo Trailing Effect",
+      description:
+        "An Awesome mouse move effect combined with image gallery for creative UI",
+      url: "photo-trailing-mousemove",
+      image: "https://i.imgur.com/68A1mEf.gif",
     },
   ];
   return (
