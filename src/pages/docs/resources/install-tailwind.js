@@ -33,7 +33,9 @@ const InstallTailwind = () => {
       <DocsLayout>
         <main>
           <h1 className="h1">Install Tailwind CSS</h1>
-          <p className="opacity-80">Install Tailwind CSS with Next.js</p>
+          <p className="text-sm opacity-80">
+            Install Tailwind CSS with Next.js
+          </p>
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Create Next.Js Project</h3>

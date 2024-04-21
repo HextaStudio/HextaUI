@@ -84,7 +84,7 @@ const magneticButton = () => {
         <main>
           <div className="header">
             <h1 className="h1">Magnetic Button</h1>
-            <p className="opacity-80">
+            <p className="text-sm opacity-80">
               A button that follows mouse cursor within specific range around
               the button.
             </p>

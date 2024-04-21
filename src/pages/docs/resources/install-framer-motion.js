@@ -37,7 +37,7 @@ const framerMotionInstallation = () => {
       <DocsLayout>
         <main>
           <h1 className="h1">Install Framer Motion</h1>
-          <p className="opacity-80">
+          <p className="text-sm opacity-80">
             Install and setup Framer Motion animation library
           </p>
           <div className="flex flex-col gap-4 py-10">

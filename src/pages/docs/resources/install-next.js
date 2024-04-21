@@ -34,7 +34,9 @@ const installNext = () => {
       <DocsLayout>
         <main>
           <h1 className="h1">Install Next Js</h1>
-          <p className="opacity-80">Install Next js with Create Next App CLI</p>
+          <p className="text-sm opacity-80">
+            Install Next js with Create Next App CLI
+          </p>
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Create new project</h3>
