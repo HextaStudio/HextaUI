@@ -4,6 +4,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { NextSeo } from "next-seo";
 
@@ -228,6 +229,18 @@ return (
 );
 };`}
             />
+          </div>
+          <div>
+            <small>
+              This component was inspired by{" "}
+              <Link
+                href="https://bridget.pictures/"
+                className="blue-link"
+                target="_blank"
+              >
+                bridget.pictures
+              </Link>
+            </small>
           </div>
         </main>
       </DocsLayout>
