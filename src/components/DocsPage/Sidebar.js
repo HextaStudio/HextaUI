@@ -74,6 +74,14 @@ export const Sidebar = () => {
                 Magnetic button
               </Link>
             </li>
+            <li>
+              <Link
+                className="text-sm opacity-60"
+                href="/docs/components/white-ray"
+              >
+                White Ray
+              </Link>
+            </li>
           </ul>
         </div>
       </aside>
