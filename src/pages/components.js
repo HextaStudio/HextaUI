@@ -6,7 +6,7 @@ import { NextSeo } from "next-seo";
 
 const CardComponent = ({ component }) => {
   return (
-    <div className="p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">
+    <div className="w-full p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">
       <div className="h-60">
         <Image
           className="object-cover w-full h-full border border-white border-opacity-10"
@@ -43,6 +43,13 @@ const components = () => {
       url: "magnetic-button",
       image: "https://i.imgur.com/tCNsXzc.gif",
     },
+    {
+      title: "White Ray",
+      description:
+        "A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page.",
+      url: "white-ray",
+      image: "https://i.imgur.com/Fva7GVG.png",
+    },
   ];
   return (
     <>
@@ -75,8 +82,7 @@ const components = () => {
         <main>
           <h1 className="h1 max-sm:text-4xl">Gorgeous , Zero Effort</h1>
           <p className="text-sm opacity-70">
-            Just copy and paste our prebuilt components in your website and make
-            your website look awesome!
+            Just copy and paste our prebuilt components
           </p>
           <div className="flex flex-col gap-4 py-10">
             <div>
