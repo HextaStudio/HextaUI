@@ -17,7 +17,7 @@ export const CodeBlock = ({ code, lang, filename }) => {
           <small
             style={{
               padding: "3px 6px",
-              fontFamily: "monospace",
+              fontFamily: "Fira Mono",
               fontSize: "13px",
               background: "#ffffff10",
               borderRadius: "5px",
