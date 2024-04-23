@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const PricingCards = () => {
@@ -71,14 +72,15 @@ const PricingCards = () => {
             Free to use forever
           </li>
         </ul>
-        <button
+        <Link
+          href="/components"
           className="flex mt-5 secondary-button"
           style={{
             width: "100%",
           }}
         >
-          Get Started
-        </button>
+          Browse Components
+        </Link>
       </div>
       {/* Card 2 */}
       <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white relative shadow-md rounded-2xl grow  ">
@@ -165,14 +167,15 @@ const PricingCards = () => {
             Pause or cancel anytime
           </li>
         </ul>
-        <button
+        <Link
+          href="https://cal.com/preetsuthar/20min"
           className="mt-5 primary-button"
           style={{
             width: "100%",
           }}
         >
-          Get Started
-        </button>
+          Book A Call
+        </Link>
       </div>
       {/* Card 3 */}
       <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white shadow-md rounded-2xl border-opacity-10 grow ">
@@ -270,14 +273,15 @@ const PricingCards = () => {
             SEO Optimization
           </li>
         </ul>
-        <button
+        <Link
+          href="https://cal.com/preetsuthar/20min"
           className="mt-5 secondary-button"
           style={{
             width: "100%",
           }}
         >
-          Get Started
-        </button>
+          Book A Call
+        </Link>
       </div>
     </div>
   );
