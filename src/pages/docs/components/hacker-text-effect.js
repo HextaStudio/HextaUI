@@ -59,7 +59,7 @@ const hackerTextEffect = () => {
           description: "A really cool Hacker Text effect when hovered on text.",
           images: [
             {
-              url: "https://i.imgur.com/FFjJIbo.pngp",
+              url: "https://i.imgur.com/FFjJIbo.png",
               width: 1920,
               height: 1080,
               alt: "Hacker Text Effect - HextaUI ✨",
