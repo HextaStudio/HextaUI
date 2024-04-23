@@ -11,6 +11,10 @@ export const Sidebar = () => {
       url: "white-ray",
     },
     {
+      name: "Text Reveal v1",
+      url: "text-reveal-v1",
+    },
+    {
       name: "Photo Trailing Effect",
       url: "photo-trailing-mousemove",
     },
