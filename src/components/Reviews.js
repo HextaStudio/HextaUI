@@ -5,7 +5,8 @@ export const Reviews = () => {
   return (
     <>
       <div>
-        <Tweet id="1782653978683072684" className="text-left" />
+        <Tweet id="1782653978683072684" />
+        <Tweet id="1782680701067776207" />
       </div>
       <div>
         <small>
