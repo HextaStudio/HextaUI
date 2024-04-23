@@ -248,3 +248,22 @@ h3 {
   overflow: hidden;
   margin: 40px 0;
 }
+.react-tweet-theme {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left !important;
+  padding: 1rem;
+  .tweet-header_authorFollow__w_j4h {
+    display: none !important;
+  }
+  .tweet-actions_actions__UDw7H {
+    display: none;
+  }
+  .tweet-replies_replies__PUxl8 {
+    display: none;
+  }
+  .tweet-info_info__ll_kH {
+    display: none;
+  }
+}

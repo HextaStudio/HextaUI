@@ -3,9 +3,8 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
-import { MagneticLinkPreview } from "@/pages/docs/components/magnetic-button";
 import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
+import { Reviews } from "./Reviews";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -130,22 +129,11 @@ export const Hero = () => {
             Pricing
           </Link>
         </div>
-        <div className="border border-white my-7 hero-demo rounded-2xl border-opacity-10">
-          <div className="bento-col">
-            <WaterDropGridPreview width={50} height={10} />
-          </div>
-        </div>
-        <MagneticLinkPreview>
-          <Link
-            className="secondary-button"
-            href="/docs/components/magnetic-button"
-          >
-            Copy paste This
-          </Link>
-        </MagneticLinkPreview>
         <div>
           <TextRevealV1Preview />
-          {/* <TextReveal /> */}
+        </div>
+        <div>
+          <Reviews />
         </div>
       </div>
     </>
