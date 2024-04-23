@@ -45,9 +45,9 @@ export const TextRevealV1Preview = () => {
     <>
       <div
         ref={textRef}
-        className="max-w-[50rem] h-[100dvh] items-center flex justify-center"
+        className="max-w-[60rem] h-[100dvh] items-center flex justify-center"
       >
-        <p className="text-[3.6rem] max-[680px]:text-5xl max-[480px]:text-4xl max-[380px]:text-[2.2rem] max-[380px]:leading-[2rem] font-semibold tracking-tighter leading-[3.1rem] text-left">
+        <p className="text-[3.6rem] max-[680px]:text-5xl max-[480px]:text-4xl max-[380px]:text-[2.2rem] max-[380px]:leading-[2rem] font-semibold tracking-tighter leading-[3.6rem] text-left">
           {words.map((word, index) => (
             <span className="opacity-10 textSpan" ref={textSpanRef} key={index}>
               {word}{" "}
