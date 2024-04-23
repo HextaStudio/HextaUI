@@ -32,10 +32,10 @@ export const Hero = () => {
           }}
         ></div>
         <div className="hero-content">
-          <h1 className="max-w-4xl font-extrabold tracking-tighter text-7xl bricolage-fonts leading-15 max-sm:text-5xl max-sm:leading-none ">
+          <h1 className="max-w-6xl font-extrabold tracking-tighter leading-tighter text-8xl bricolage-fonts max-[1163px]:text-7xl max-[1163px]:max-w-4xl max-[590px]:text-6xl max-[500px]:text-5xl">
             Gorgeous Web Components, Zero Effort
           </h1>
-          <p className="max-w-2xl py-4 mx-auto text-sm leading-5 opacity-80">
+          <p className="max-w-2xl py-4 mx-auto leading-5 text-md opacity-70">
             Elevate your projects with stunning, modern components. Simply copy
             and paste these responsive, beautiful elements for instant
             awesomeness.
