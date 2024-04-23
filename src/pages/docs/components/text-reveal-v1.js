@@ -15,7 +15,7 @@ export const TextRevealV1Preview = () => {
   const textSpanRef = useRef(null);
 
   const text =
-    "In HextaUI everything is made with Blocks so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
+    "In HextaUI everything is component based so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
   const words = text.split(" ");
 
   useEffect(() => {
@@ -128,7 +128,7 @@ gsap.registerPlugin(ScrollTrigger);`}
     const textSpanRef = useRef(null);
 
     const text =
-        "In HextaUI everything is made with Blocks so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
+        "In HextaUI everything is component based so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
     const words = text.split(" ");
 
     useEffect(() => {
