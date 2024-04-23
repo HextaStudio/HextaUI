@@ -47,7 +47,7 @@ export const TextRevealV1Preview = () => {
         ref={textRef}
         className="max-w-[60rem] h-[100dvh] items-center flex justify-center"
       >
-        <p className="text-[3.3rem] max-[776px]:text-4xl max-[776px]:leading-[2.7rem] max-[480px]:text-3xl max-[480px]:leading-[2rem]  max-[380px]:text-[2rem] max-[380px]:leading-[2rem] font-semibold tracking-tighter leading-[3.7rem] text-left">
+        <p className="text-[3.3rem] max-[776px]:text-4xl max-[776px]:leading-[2.7rem] max-[480px]:text-3xl max-[480px]:leading-[2rem]  max-[380px]:text-[2rem] max-[380px]:leading-[2rem] max-[330px]:text-[1.7rem] font-semibold tracking-tighter leading-[3.7rem] text-left">
           {words.map((word, index) => (
             <span className="opacity-10 textSpan" ref={textSpanRef} key={index}>
               {word}{" "}
@@ -158,9 +158,9 @@ gsap.registerPlugin(ScrollTrigger);`}
         <>
         <div
             ref={textRef}
-            className="max-w-[80rem] h-[80dvh] items-center flex justify-center"
+            className="max-w-[60rem] h-[100dvh] items-center flex justify-center"
         >
-            <p className="text-[3.2rem] max-[680px]:text-5xl max-[480px]:text-4xl max-[380px]:text-[2.4rem] font-semibold tracking-tighter leading-[3.1rem] text-left">
+         <p className="text-[3.3rem] max-[776px]:text-4xl max-[776px]:leading-[2.7rem] max-[480px]:text-3xl max-[480px]:leading-[2rem]  max-[380px]:text-[2rem] max-[380px]:leading-[2rem] max-[330px]:text-[1.7rem] font-semibold tracking-tighter leading-[3.7rem] text-left">
                 {words.map((word, index) => (
                     <span className="opacity-10 textSpan" ref={textSpanRef} key={index}>
                         {word}{" "} 
