@@ -76,7 +76,7 @@ const waterDropEffect = () => {
         title="Water Drop Effect - HextaUI ✨"
         description="Beautiful water drop effect using grids and AnimeJs"
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/components/photo-trailing-mousemove",
+          url: "https://ui.hextastudio.in/docs/components/photo-trailing-mousemove",
           title: "Water Drop Effect - HextaUI ✨",
           description: "Beautiful water drop effect using grids and AnimeJs",
           images: [

@@ -13,7 +13,7 @@ const framerMotionInstallation = () => {
         title="Install Framer Motion - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/resources/install-framer-motion",
+          url: "https://ui.hextastudio.in/docs/resources/install-framer-motion",
           title: "Install Framer Motion - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

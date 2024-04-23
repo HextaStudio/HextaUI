@@ -10,7 +10,7 @@ const installNext = () => {
         title="Install Next Js - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/resources/install-next",
+          url: "https://ui.hextastudio.in/docs/resources/install-next",
           title: "Install Next Js - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

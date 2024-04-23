@@ -54,7 +54,7 @@ const hackerTextEffect = () => {
         title="Hacker Text Effect - HextaUI ✨"
         description="A really cool Hacker Text effect when hovered on text."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/components/hacker-text-effect",
+          url: "https://ui.hextastudio.in/docs/components/hacker-text-effect",
           title: "Hacker Text Effect - HextaUI ✨",
           description: "A really cool Hacker Text effect when hovered on text.",
           images: [

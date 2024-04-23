@@ -84,7 +84,7 @@ const components = () => {
         title="Components - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
         openGraph={{
-          url: "https://hextaui.vercel.app",
+          url: "https://ui.hextastudio.in",
           title: "Components - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

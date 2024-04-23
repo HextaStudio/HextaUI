@@ -9,7 +9,7 @@ const InstallTailwind = () => {
         title="Install Tailwind CSS - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/resources/install-tailwind",
+          url: "https://ui.hextastudio.in/docs/resources/install-tailwind",
           title: "Install Tailwind CSS - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

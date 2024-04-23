@@ -9,7 +9,7 @@ const gsapInstallation = () => {
         title="Install GSAP - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/resources/install-gsap",
+          url: "https://ui.hextastudio.in/docs/resources/install-gsap",
           title: "Install GSAP - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

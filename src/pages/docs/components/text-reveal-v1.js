@@ -66,7 +66,7 @@ const textRevealV1 = () => {
         title="Text Reveal v1"
         description="An Awesome Text Reveal animated effect on Scrolling"
         openGraph={{
-          url: "https://hextaui.vercel.app/docs/components/text-reveal-v1",
+          url: "https://ui.hextastudio.in/docs/components/text-reveal-v1",
           title: "Text Reveal v1",
           description: "An Awesome Text Reveal animated effect on Scrolling",
           images: [
