@@ -254,6 +254,11 @@ h3 {
   align-items: flex-start;
   text-align: left !important;
   padding: 1rem;
+  .tweet-container_article__0ERPK {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   .tweet-header_authorFollow__w_j4h {
     display: none !important;
   }
