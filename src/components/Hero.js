@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
 import { Reviews } from "./Reviews";
 import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
+import PricingCards from "./PricingCards";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -136,8 +137,17 @@ export const Hero = () => {
         <div>
           <TextRevealV1Preview />
         </div>
-        <div>
+        <div className="mt-[1rem]">
+          <h3 className="text-4xl font-bold tracking-tighter">
+            Our Wall of Love
+          </h3>
           <Reviews />
+        </div>
+        <div className="mt-[7rem]">
+          <h3 className="mb-[-2rem] text-4xl font-bold tracking-tighter">
+            Ready to work together?
+          </h3>
+          <PricingCards />
         </div>
       </div>
     </>
