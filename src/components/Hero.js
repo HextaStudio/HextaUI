@@ -21,7 +21,7 @@ export const Hero = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-5 pt-[12rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40 relative">
+      <div className="flex flex-col items-center justify-center gap-5 pt-[15rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40 relative">
         <div className="absolute top-[1.8rem] right-[-1.8rem] opacity-65 max-[891px]:right-[-10rem] max-[750px]:hidden">
           <WaterDropGridPreview width={25} height={10} />
         </div>
@@ -45,7 +45,7 @@ export const Hero = () => {
             awesomeness.
           </p>
         </div>{" "}
-        <div className="text-neutral-500 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9999]">
+        <div className="text-neutral-500 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9]">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ export const Hero = () => {
             GSAP
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 hero-buttons z-[9999]">
+        <div className="flex flex-wrap gap-2 hero-buttons z-[9]">
           <Link href="/components" className="primary-button grow">
             Browse Components
           </Link>
