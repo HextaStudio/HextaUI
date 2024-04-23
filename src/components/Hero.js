@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
-import { HackerTextEffectPreview } from "@/pages/docs/components/hacker-text-effect";
 import { MagneticLinkPreview } from "@/pages/docs/components/magnetic-button";
+import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -48,7 +48,7 @@ export const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="22"
               height="22"
-              className="flex-shrink-0 stroke-1  text-neutral-500"
+              className="flex-shrink-0 stroke-1 text-neutral-500"
               viewBox="0 0 15 15"
             >
               <path
@@ -78,7 +78,7 @@ export const Hero = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
-              className="flex-shrink-0 stroke-1  t2xt-neutral-500"
+              className="flex-shrink-0 stroke-1 t2xt-neutral-500"
               height="25"
               viewBox="0 0 15 15"
             >
@@ -100,7 +100,7 @@ export const Hero = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="flex-shrink-0 stroke-1  text-neutral-500"
+              className="flex-shrink-0 stroke-1 text-neutral-500"
             >
               <path d="M12 12l-8 -8v16l16 -16v16l-4 -4"></path>
               <path d="M20 12l-8 8l-4 -4"></path>
@@ -143,6 +143,10 @@ export const Hero = () => {
             Copy paste This
           </Link>
         </MagneticLinkPreview>
+        <div>
+          <TextRevealV1Preview />
+          {/* <TextReveal /> */}
+        </div>
       </div>
     </>
   );
