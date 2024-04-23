@@ -6,7 +6,7 @@ export const Navbar = ({ docs }) => {
   return (
     <>
       <nav
-        className={`flex bg-transparent items-center justify-between px-10 py-4 navbar  ${
+        className={`flex bg-black items-center justify-between px-10 py-4 navbar z-[9999999]   ${
           docs && "ml-auto max-w-7xl "
         }`}
         style={{
