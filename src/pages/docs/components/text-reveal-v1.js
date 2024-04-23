@@ -100,7 +100,7 @@ const textRevealV1 = () => {
               <div
                 className="relative flex p-[1rem] justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container"
                 style={{
-                  height: "80rem",
+                  height: "90rem",
                 }}
               >
                 <TextRevealV1Preview />
