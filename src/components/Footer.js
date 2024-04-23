@@ -40,22 +40,30 @@ export const Footer = ({ docs }) => {
         <div className="footer-section2">
           <ul className="flex flex-col gap-2 text-sm list-none">
             <li>
-              <Link href="#" className="opacity-75 hover:opacity-100">
+              <Link href="/components" className="opacity-75 hover:opacity-100">
                 Components
               </Link>
             </li>
             <li>
-              <Link href="#" className="opacity-75 hover:opacity-100">
+              <Link href="/pricing" className="opacity-75 hover:opacity-100">
                 Pricing
               </Link>
             </li>
             <li>
-              <Link href="#" className="opacity-75 hover:opacity-100">
+              <Link
+                href="https://x.com/hextastudio"
+                target="_blank"
+                className="opacity-75 hover:opacity-100"
+              >
                 Twitter
               </Link>
             </li>
             <li>
-              <Link href="#" className="opacity-75 hover:opacity-100">
+              <Link
+                href=" https://discord.gg/EjpmkjJKFU"
+                target="_blank"
+                className="opacity-75 hover:opacity-100"
+              >
                 Discord
               </Link>
             </li>
