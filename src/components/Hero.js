@@ -5,6 +5,7 @@ import gsap from "gsap";
 
 import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
 import { Reviews } from "./Reviews";
+import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -20,7 +21,10 @@ export const Hero = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-5 pt-[12rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40">
+      <div className="flex flex-col items-center justify-center gap-5 pt-[12rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40 relative">
+        <div className="absolute top-[1.8rem] right-[-1.8rem] opacity-65 max-[891px]:right-[-10rem] max-[750px]:hidden">
+          <WaterDropGridPreview width={25} height={10} />
+        </div>
         <div
           className="absolute w-20 -rotate-45 opacity-45 left-16 blur-4xl white-ray"
           ref={whiteRayRef}
@@ -31,17 +35,17 @@ export const Hero = () => {
             background: "white",
           }}
         ></div>
-        <div className="hero-content">
-          <h1 className="max-w-6xl font-extrabold tracking-tighter leading-tighter text-8xl bricolage-fonts max-[1163px]:text-7xl max-[1163px]:max-w-4xl max-[590px]:text-6xl max-[500px]:text-5xl">
+        <div className="relative hero-content">
+          <h1 className="max-w-6xl font-extrabold tracking-tighter leading-tighter text-8xl bricolage-fonts max-[1163px]:text-7xl max-[1163px]:max-w-4xl max-[590px]:text-6xl max-[500px]:text-5xl z-[9999]">
             Gorgeous Web Components, Zero Effort
           </h1>
-          <p className="max-w-2xl py-4 mx-auto leading-5 text-md opacity-70">
+          <p className="z-[9999] max-w-2xl py-4 mx-auto leading-5 text-md opacity-70">
             Elevate your projects with stunning, modern components. Simply copy
             and paste these responsive, beautiful elements for instant
             awesomeness.
           </p>
         </div>{" "}
-        <div className="text-neutral-500 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px]">
+        <div className="text-neutral-500 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9999]">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +125,7 @@ export const Hero = () => {
             GSAP
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 hero-buttons">
+        <div className="flex flex-wrap gap-2 hero-buttons z-[9999]">
           <Link href="/components" className="primary-button grow">
             Browse Components
           </Link>
