@@ -15,7 +15,7 @@ export const TextRevealV1Preview = () => {
   const textSpanRef = useRef(null);
 
   const text =
-    "Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
+    "In HextaUI everything is made with Blocks so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
   const words = text.split(" ");
 
   useEffect(() => {
@@ -45,9 +45,9 @@ export const TextRevealV1Preview = () => {
     <>
       <div
         ref={textRef}
-        className="max-w-[80rem] h-[100dvh] items-center flex justify-center"
+        className="max-w-[50rem] h-[100dvh] items-center flex justify-center"
       >
-        <p className="text-[3.2rem] max-[680px]:text-5xl max-[480px]:text-4xl max-[380px]:text-[2.2rem] max-[380px]:leading-[2rem] font-semibold tracking-tighter leading-[3.1rem] text-left">
+        <p className="text-[3.6rem] max-[680px]:text-5xl max-[480px]:text-4xl max-[380px]:text-[2.2rem] max-[380px]:leading-[2rem] font-semibold tracking-tighter leading-[3.1rem] text-left">
           {words.map((word, index) => (
             <span className="opacity-10 textSpan" ref={textSpanRef} key={index}>
               {word}{" "}
@@ -100,7 +100,7 @@ const textRevealV1 = () => {
               <div
                 className="relative flex p-[1rem] justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container"
                 style={{
-                  height: "90rem",
+                  height: "100rem",
                 }}
               >
                 <TextRevealV1Preview />
@@ -128,7 +128,7 @@ gsap.registerPlugin(ScrollTrigger);`}
     const textSpanRef = useRef(null);
 
     const text =
-        "Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
+        "In HextaUI everything is made with Blocks so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
     const words = text.split(" ");
 
     useEffect(() => {
