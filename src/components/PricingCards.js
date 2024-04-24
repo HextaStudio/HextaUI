@@ -90,7 +90,7 @@ const PricingCards = () => {
         <h3 className="text-xl font-bold ">Custom Components</h3>
         <div>
           <small>pause of cancel anytime</small>
-          <p className="mb-2 text-3xl font-bold">$1,999/mo</p>
+          <p className="mb-2 text-3xl font-bold">$799/mo</p>
         </div>
         <p className="mb-6 text-sm text-gray-500">
           Perfect for attractive and awesome website elements or sections.
