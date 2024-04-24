@@ -150,9 +150,6 @@ export const Hero = () => {
           </h3>
           <PricingCards />
         </div>
-        <div>
-          <FloatingImages />
-        </div>
       </div>
     </>
   );
