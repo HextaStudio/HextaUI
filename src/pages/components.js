@@ -77,6 +77,11 @@ const components = () => {
       url: "hacker-text-effect",
       image: "https://i.imgur.com/011GWuU.gif",
     },
+    {
+      title: "Floating Image Gallery",
+      description: "Beautiful floating image gallery with mouse hover effect.",
+      image: "https://i.imgur.com/011GWuU.gif",
+    },
   ];
   return (
     <>

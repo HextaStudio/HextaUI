@@ -26,6 +26,10 @@ export const Sidebar = () => {
       name: "Hacker Text Effect",
       url: "hacker-text-effect",
     },
+    {
+      name: "Floating Image Gallery",
+      url: "floating-image-gallery",
+    },
   ];
   return (
     <>
