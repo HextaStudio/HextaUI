@@ -60,7 +60,7 @@ export const Footer = ({ docs }) => {
             </li>
             <li>
               <Link
-                href=" https://discord.gg/EjpmkjJKFU"
+                href="https://discord.gg/EjpmkjJKFU"
                 target="_blank"
                 className="opacity-75 hover:opacity-100"
               >
