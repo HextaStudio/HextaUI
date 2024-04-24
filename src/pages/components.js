@@ -80,7 +80,8 @@ const components = () => {
     {
       title: "Floating Image Gallery",
       description: "Beautiful floating image gallery with mouse hover effect.",
-      image: "https://i.imgur.com/011GWuU.gif",
+      url: "floating-image-gallery",
+      image: "https://i.imgur.com/q3VXsq5.gif",
     },
   ];
   return (
