@@ -144,7 +144,7 @@ const floatingImages = () => {
             "Beautiful floating image gallery with mouse hover effect.",
           images: [
             {
-              url: "https://i.imgur.com/FFjJIbo.png",
+              url: "https://i.imgur.com/ibnFiuG.png",
               width: 1920,
               height: 1080,
               alt: "Floating Image Gallery - HextaUI ✨",

@@ -7,7 +7,6 @@ import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
 import { Reviews } from "./Reviews";
 import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
 import PricingCards from "./PricingCards";
-import { FloatingImages } from "./FloatingImages";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
