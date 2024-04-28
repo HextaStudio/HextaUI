@@ -5,31 +5,69 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { NextSeo } from "next-seo";
+import Link from "next/link";
+
+import { useEffect, useState } from "react";
 
 export const InfiniteScrollingTextV1Preview = () => {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const [rotation, setRotation] = useState(0);
+
+  const maxRotation = 8;
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+
+      const midpoint = window.innerWidth / 2;
+
+      const distanceFromMidpoint = Math.abs(e.clientX - midpoint);
+      const rotation = (distanceFromMidpoint / midpoint) * maxRotation;
+
+      setRotation(e.clientX > midpoint ? rotation : -rotation);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <>
-      <main className="relative flex mt-[6rem] overflow-hidden">
+      <div
+        className={`following-tooltip w-[14rem] flex items-center justify-center text-black font-bold px-[3rem] py-[1.4rem] rounded-3xl fixed h-[2rem] bg-white  transition-opacity z-[99] duration-[0.3s] ${
+          isHovered ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          top: `${cursorPosition.y}px`,
+          left: `${cursorPosition.x}px`,
+          transform: `rotateZ(${rotation}deg) translate(-50%, -140%)`,
+        }}
+      >
+        <p>Time to Flex💪</p>
+      </div>
+      <main className="relative flex overflow-hidden w-vw">
         <motion.div
-          className="whitespace-nowrap"
+          className="whitespace-nowrap "
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           animate={{
             x: [0, -1000],
             transition: {
               repeat: Infinity,
-              duration: 10,
+              duration: 30,
               ease: "linear",
             },
           }}
         >
-          <span className="relative  text-white text-[8rem] font-bold pr-[50px]">
-            Let's Get Started - Let's Get Started -
-          </span>
-          <span className="relative m-0 text-white text-[8rem] font-bold pr-[50px]">
-            Let's Get Started - Let's Get Started -
-          </span>
-          <span className="relative m-0 text-white text-[8rem] font-bold pr-[50px]">
-            Let's Get Started - Let's Get Started -
-          </span>
+          <Link href="/components">
+            <span className="relative transition-all hover:text-[#f66a0e] cursor-pointer m-0 text-white text-[8rem] font-[800]  w-full grow">
+              Let's Get Started - Let's Get Started - Let's Get Started - Let's
+              Get Started - Let's Get Started - Let's Get Started -
+            </span>
+          </Link>
         </motion.div>
       </main>
     </>
@@ -97,37 +135,78 @@ const infiniteTextScrollV1 = () => {
               lang="Javascript"
               filename="index.jsx"
               code={`import React from "react";
-import { motion } from "framer-motion";`}
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+`}
             />
             <h3 className="h3">Main Code</h3>
             <CodeBlock
               lang="Javascript"
               filename="index.jsx"
-              code={` <main className="relative flex mt-[6rem] overflow-hidden">
-    <motion.div
-        className="whitespace-nowrap"
-        animate={{
-        x: [1000, 0],
-        transition: {
-            repeat: Infinity,
-            duration: 10,
-            ease: "linear",
-        },
-        }}
-    >
-        <span className="relative  text-white text-[8rem] font-bold pr-[50px]">
-        Let's Get Started - Let's Get Started -
-        </span>
+              code={`export const InfiniteScrollingTextV1 = () => {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const [rotation, setRotation] = useState(0);
 
-        <span className="relative m-0 text-white text-[8rem] font-bold pr-[50px]">
-        Let's Get Started - Let's Get Started -
-        </span
+  const maxRotation = 8;
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+
+      const midpoint = window.innerWidth / 2;
+
+      const distanceFromMidpoint = Math.abs(e.clientX - midpoint);
+      const rotation = (distanceFromMidpoint / midpoint) * maxRotation;
+
+      setRotation(e.clientX > midpoint ? rotation : -rotation);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <>
+      <div
+        className={\`following-tooltip w-[14rem] flex items-center justify-center text-black font-bold px-[3rem] py-[1.4rem] rounded-3xl fixed h-[2rem] bg-white  transition-opacity z-[99] duration-[0.3s] \${
+          isHovered ? "opacity-100" : "opacity-0"
+        }\`}
+        style={{
+          top: \`\${cursorPosition.y}px\`,
+          left: \`\${cursorPosition.x}px\`,
+          transform: \`rotateZ(\${rotation}deg) translate(-50%, -140%)\`,
+        }}
+      >
+        <p>Time to Flex💪</p>
+      </div>
+      <main className="relative flex overflow-hidden w-vw">
+        <motion.div
+          className="whitespace-nowrap "
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          animate={{
+            x: [0, -1000],
+            transition: {
+              repeat: Infinity,
+              duration: 30,
+              ease: "linear",
+            },
+          }}
         >
-        <span className="relative m-0 text-white text-[8rem] font-bold pr-[50px]">
-        Let's Get Started - Let's Get Started -
-        </span>
-    </motion.div>
-</main>`}
+          <Link href="/components">
+            <span className="relative transition-all hover:text-[#f66a0e] cursor-pointer m-0 text-white text-[8rem] font-[800]  w-full grow">
+              Let's Get Started - Let's Get Started - Let's Get Started - Let's
+              Get Started - Let's Get Started - Let's Get Started -
+            </span>
+          </Link>
+        </motion.div>
+      </main>
+    </>
+  );
+};`}
             />
           </div>
         </main>
