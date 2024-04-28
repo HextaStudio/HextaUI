@@ -87,7 +87,7 @@ const infiniteTextScrollV1 = () => {
             "Awesome infinite text scrolling effect using framer-motion",
           images: [
             {
-              url: "https://i.imgur.com/ADz5ef6.png",
+              url: "https://i.imgur.com/54Cncg3.png",
               width: 1920,
               height: 1080,
               alt: "Infinite Text Scroll v1 - HextaUI ✨",
