@@ -7,6 +7,7 @@ import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
 import { Reviews } from "./Reviews";
 import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
 import PricingCards from "./PricingCards";
+import { InfiniteScrollingTextV1Preview } from "@/pages/docs/components/infinite-text-scroll-v1";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -149,6 +150,7 @@ export const Hero = () => {
           </h3>
           <PricingCards />
         </div>
+        <InfiniteScrollingTextV1Preview />
       </div>
     </>
   );
