@@ -1,6 +1,7 @@
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
-
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export const CodeBlock = ({ code, lang, filename }) => {
   const [copyStatus, setCopyStatus] = useState(false);
 
@@ -10,6 +11,7 @@ export const CodeBlock = ({ code, lang, filename }) => {
       setCopyStatus(false);
     }, 2000);
   };
+
   return (
     <div className="my-4">
       <div className="flex items-center justify-between codeblock-header">
@@ -69,9 +71,9 @@ export const CodeBlock = ({ code, lang, filename }) => {
           </div>
         </CopyToClipboard>
       </div>
-      <pre>
-        <code lang={lang}>{code}</code>
-      </pre>
+      <SyntaxHighlighter language={lang} style={vscDarkPlus}>
+        {code}
+      </SyntaxHighlighter>
     </div>
   );
 };
