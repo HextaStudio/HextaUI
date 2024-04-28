@@ -58,7 +58,7 @@ npx tailwindcss init -p`}
             <div>
               <h3 className="h3">Configure your template paths</h3>
               <CodeBlock
-                lang="javascript"
+                lang="jsx"
                 filename="tailwind.config.ts"
                 code={`/** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -94,7 +94,7 @@ module.exports = {
             <div>
               <h3 className="h3">Have fun with Tailwind 🎉</h3>
               <CodeBlock
-                lang="javascript"
+                lang="jsx"
                 filename="index.tsx"
                 code={`export default function Home() {
     return <h1 className="text-3xl font-bold underline">Hello world!</h1>;

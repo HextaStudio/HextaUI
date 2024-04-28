@@ -148,13 +148,13 @@ const photoTrailingOnMousemove = () => {
           <div className="installation">
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`import { useEffect, useRef } from "react";
 import React from "react";`}
             />
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`const PhotoTrailingOnMousemovePreview = () => {
 const images = [

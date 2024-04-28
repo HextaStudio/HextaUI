@@ -48,7 +48,7 @@ const gsapInstallation = () => {
             <div>
               <h3 className="h3">Setup GSAP ScrollTrigger</h3>
               <CodeBlock
-                lang="javascript"
+                lang="jsx"
                 filename="index.tsx"
                 code={`import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -59,7 +59,7 @@ gsap.registerPlugin(ScrollTrigger);`}
             <div>
               <h3 className="h3">GSAP Example</h3>
               <CodeBlock
-                lang="javascript"
+                lang="jsx"
                 filename="index.tsx"
                 code={`import gsap from 'gsap';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

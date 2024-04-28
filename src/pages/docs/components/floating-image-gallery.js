@@ -185,7 +185,7 @@ const floatingImages = () => {
             <CodeBlock lang="bash" filename="bash" code={`npm install gsap`} />
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`import { useRef } from "react";
 import React from "react";
@@ -193,7 +193,7 @@ import gsap from "gsap";`}
             />
             <h3 className="h3">Adding Images</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`const images = {
 floating1:
@@ -212,7 +212,7 @@ floating6:
             />
             <h3 className="h3">Main Code</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`const FloatingImagesGalleryPreview = () => {
   const plane1 = useRef(null);

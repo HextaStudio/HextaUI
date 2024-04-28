@@ -52,7 +52,7 @@ const framerMotionInstallation = () => {
             <div>
               <h3 className="h3">Framer Motion Example</h3>
               <CodeBlock
-                lang="javascript"
+                lang="jsx"
                 filename="index.tsx"
                 code={`import { motion, useScroll, useTransform } from "framer-motion";
 

@@ -83,14 +83,14 @@ const whiteRay = () => {
             <CodeBlock lang="bash" filename="bash" code={`npm install gsap`} />
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import React from "react";`}
             />
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`const WhiteRay = () => {
   const whiteRayRef = useRef(null);

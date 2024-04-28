@@ -112,7 +112,7 @@ const textRevealV1 = () => {
             <CodeBlock lang="bash" filename="bash" code={`npm install gsap`} />
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -121,7 +121,7 @@ import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);`}
             />
             <CodeBlock
-              lang="javascript"
+              lang="jsx"
               filename="index.jsx"
               code={`const TextRevealV1 = () => {
     const textRef = useRef(null);
