@@ -150,7 +150,7 @@ html {
 pre,
 code {
   overflow-x: auto;
-  font-size: 15px !important;
+  font-size: 16px !important;
   font-family: "Fira Mono";
 }
 
@@ -166,11 +166,11 @@ pre::-webkit-scrollbar-thumb {
 
 pre {
   overflow-x: auto;
-  background: #23232331;
+  background: #23232331 !important;
   border: 1px solid rgba(255, 255, 255, 0.064);
   border-top: none;
   padding: 16px;
-  margin: -1px 0 20px 0;
+  margin: -1px 0 20px 0 !important;
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
