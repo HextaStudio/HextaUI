@@ -139,12 +139,6 @@ export const Hero = () => {
         <div>
           <TextRevealV1Preview />
         </div>
-        {/* <div className="mt-[1rem]">
-          <h3 className="text-4xl font-bold tracking-tighter">
-            Our Wall of Love
-          </h3>
-          <Reviews />
-        </div> */}
         <div>
           <BentoGrid />
         </div>
@@ -154,7 +148,9 @@ export const Hero = () => {
           </h3>
           <PricingCards />
         </div>
-        <InfiniteScrollingTextV1Preview />
+        <div className="mt-[7rem]">
+          <InfiniteScrollingTextV1Preview />
+        </div>
       </div>
     </>
   );
