@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
         charset="utf-8"
       ></Script>
       <Script
-        defer
+        async
         src="https://eu.umami.is/script.js"
         data-website-id="de2f88ed-b01d-46df-8a45-e3443a7a69a5"
       ></Script>
