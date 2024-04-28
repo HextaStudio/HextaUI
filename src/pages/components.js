@@ -83,6 +83,12 @@ const components = () => {
       url: "floating-image-gallery",
       image: "https://i.imgur.com/q3VXsq5.gif",
     },
+    {
+      title: "Infinite Text Scroll v1",
+      description: "Awesome infinite text scrolling effect using framer-motion",
+      url: "infinite-text-scroll-v1",
+      image: "https://i.imgur.com/ELc8KPO.gif",
+    },
   ];
   return (
     <>
