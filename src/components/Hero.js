@@ -8,6 +8,7 @@ import { Reviews } from "./Reviews";
 import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
 import PricingCards from "./PricingCards";
 import { InfiniteScrollingTextV1Preview } from "@/pages/docs/components/infinite-text-scroll-v1";
+import { BentoGrid } from "./BentoGrid";
 
 export const Hero = () => {
   const whiteRayRef = useRef(null);
@@ -23,7 +24,7 @@ export const Hero = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-5 pt-[15rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40 relative">
+      <div className="flex flex-col items-center justify-center gap-5 pt-[15rem] pb-56 overflow-x-hidden text-center px-7 hero step1g max-sm:py-40 relative">
         <div className="absolute top-[1.8rem] right-[-1.8rem] opacity-65 max-[891px]:right-[-10rem] max-[750px]:hidden">
           <WaterDropGridPreview width={25} height={10} />
         </div>
@@ -138,11 +139,14 @@ export const Hero = () => {
         <div>
           <TextRevealV1Preview />
         </div>
-        <div className="mt-[1rem]">
+        {/* <div className="mt-[1rem]">
           <h3 className="text-4xl font-bold tracking-tighter">
             Our Wall of Love
           </h3>
           <Reviews />
+        </div> */}
+        <div>
+          <BentoGrid />
         </div>
         <div className="mt-[7rem]">
           <h3 className="mb-[-2rem] text-4xl font-bold tracking-tighter">
