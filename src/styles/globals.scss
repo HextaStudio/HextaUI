@@ -101,6 +101,26 @@
     max-width: 100%;
     height: auto;
   }
+  .step1-bg {
+    background-color: #080808;
+    border: 1px solid hsla(0, 0%, 100%, 0.05);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    position: relative;
+    background-image: radial-gradient(
+      hsla(0, 0%, 100%, 0.1) 1px,
+      transparent 0
+    );
+    max-width: 100%;
+    height: auto;
+  }
+}
+.corner-border {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: #1010102f 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.796) 0px 18px 36px -18px inset;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap");
@@ -271,4 +291,31 @@ h3 {
   .tweet-info_info__ll_kH {
     display: none;
   }
+}
+
+.features-bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "bento-1 bento-1"
+    "bento-2 bento-3";
+  @media screen and (max-width: 620px) {
+    grid-template-areas:
+      "bento-1 bento-1"
+      "bento-2 bento-2"
+      "bento-3 bento-3";
+  }
+}
+
+.feature-bento-1 {
+  grid-area: bento-1;
+  @media screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+}
+.feature-bento-2 {
+  grid-area: bento-2;
+}
+.feature-bento-3 {
+  grid-area: bento-3;
 }
