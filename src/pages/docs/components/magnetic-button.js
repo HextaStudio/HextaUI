@@ -111,14 +111,14 @@ const magneticButton = () => {
             <CodeBlock lang="bash" filename="bash" code={`npm install gsap`} />
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import React from "react";`}
             />
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`export default function MagneticLink({ children }) {
     const magnetic = useRef(null);
@@ -169,7 +169,7 @@ import React from "react";`}
           <div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="home.jsx"
               code={`import MagneticLink from '@/components/MagneticLink';              
 <MagneticLink>

@@ -98,13 +98,13 @@ const hackerTextEffect = () => {
           <div className="installation">
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`import { useEffect, useRef } from "react";
 import React from "react";`}
             />
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`const HackerTextEffectPreview = () => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

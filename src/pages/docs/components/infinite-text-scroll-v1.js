@@ -132,7 +132,7 @@ const infiniteTextScrollV1 = () => {
             />
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`import React from "react";
 import { motion } from "framer-motion";
@@ -141,7 +141,7 @@ import { useEffect, useState } from "react";
             />
             <h3 className="h3">Main Code</h3>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`export const InfiniteScrollingTextV1 = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });

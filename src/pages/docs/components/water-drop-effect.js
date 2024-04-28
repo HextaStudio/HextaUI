@@ -128,12 +128,12 @@ const waterDropEffect = () => {
               />
             </div>
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`import anime from 'animejs';`}
             />
             <CodeBlock
-              lang="Javascript"
+              lang="javascript"
               filename="index.jsx"
               code={`const WaterDropGridPreview = () => {
 return (
