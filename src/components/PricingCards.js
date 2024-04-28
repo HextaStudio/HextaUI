@@ -85,12 +85,12 @@ const PricingCards = () => {
       {/* Card 2 */}
       <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white relative shadow-md rounded-2xl grow  ">
         <small className="absolute top-[-1rem] left-[50%] translate-x-[-50%] px-5 py-1 text-black bg-white rounded-3xl">
-          Recommended
+          Most Popular
         </small>
         <h3 className="text-xl font-bold ">Custom Components</h3>
         <div>
           <small>starts at</small>
-          <p className="mb-2 text-3xl font-bold">$699</p>
+          <p className="mb-2 text-3xl font-bold">$699/m</p>
         </div>
         <p className="mb-6 text-sm text-gray-500">
           Perfect for attractive and awesome website elements or sections.
