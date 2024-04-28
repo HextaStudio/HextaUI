@@ -87,7 +87,7 @@ const components = () => {
       title: "Infinite Text Scroll v1",
       description: "Awesome infinite text scrolling effect using framer-motion",
       url: "infinite-text-scroll-v1",
-      image: "https://i.imgur.com/ELc8KPO.gif",
+      image: "https://i.imgur.com/vIwTOrJ.gif",
     },
   ];
   return (
