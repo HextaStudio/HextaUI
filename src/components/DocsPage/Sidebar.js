@@ -1,15 +1,6 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 
 export const Sidebar = () => {
-  const router = useRouter();
-  const [selectedUrl, setSelectedUrl] = useState("");
-
-  useEffect(() => {
-    setSelectedUrl(router.asPath);
-  }, [router.asPath]);
-
   const componentLinks = [
     {
       name: "Magnetic Button",
@@ -38,6 +29,10 @@ export const Sidebar = () => {
     {
       name: "Floating Image Gallery",
       url: "floating-image-gallery",
+    },
+    {
+      name: "Infinite Text Scroll v1",
+      url: "infinite-text-scroll-v1",
     },
   ];
   return (
@@ -108,11 +103,7 @@ export const Sidebar = () => {
             {componentLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 ${
-                    selectedUrl === `/docs/components/${link.url}`
-                      ? "opacity-100"
-                      : ""
-                  }`}
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
                   href={`/docs/components/${link.url}`}
                 >
                   {link.name}
