@@ -249,10 +249,11 @@ h3 {
     to bottom,
     white 40%,
     rgba(255, 255, 255, 0.407) 100%
-  ) !important;
+  );
   padding: 6px 0;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bento-col {
