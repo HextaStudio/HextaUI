@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://ui.hextastudio.in
-
-# Sitemaps
-Sitemap: https://ui.hextastudio.in/sitemap.xml
