@@ -37,8 +37,8 @@ export const Sidebar = () => {
   ];
   const actionComponentLinks = [
     {
-      name: "Button",
-      url: "button",
+      name: "Buttons",
+      url: "buttons",
     },
   ];
   return (
@@ -125,7 +125,7 @@ export const Sidebar = () => {
               <li key={index}>
                 <Link
                   className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
-                  href={`/docs/components/${link.url}`}
+                  href={`/docs/components/action/${link.url}`}
                 >
                   {link.name}
                 </Link>
