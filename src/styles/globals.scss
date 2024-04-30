@@ -124,6 +124,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 
 :root {
   color-scheme: dark;
@@ -152,6 +153,7 @@ code {
   overflow-x: auto;
   font-size: 16px !important;
   font-family: "Fira Mono";
+  background: transparent !important;
 }
 
 pre::-webkit-scrollbar {
@@ -244,7 +246,8 @@ pre {
 }
 
 h1,
-h3 {
+h2 {
+  font-family: "Bricolage Grotesque";
   background: linear-gradient(
     to bottom,
     white 40%,
