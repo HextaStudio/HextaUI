@@ -35,6 +35,12 @@ export const Sidebar = () => {
       url: "infinite-text-scroll-v1",
     },
   ];
+  const actionComponentLinks = [
+    {
+      name: "Button",
+      url: "button",
+    },
+  ];
   return (
     <>
       <aside
@@ -98,9 +104,24 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="sidebar-section">
-          <p className="text-sm font-bold uppercase">All Components</p>
+          <p className="text-sm font-bold uppercase">Modern Components</p>
           <ul className="flex flex-col gap-[3px]">
             {componentLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
+                  href={`/docs/components/modern/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="sidebar-section">
+          <p className="text-sm font-bold uppercase">Action Components</p>
+          <ul className="flex flex-col gap-[3px]">
+            {actionComponentLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}

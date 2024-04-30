@@ -42,51 +42,51 @@ const components = () => {
       title: "Magnetic Button",
       description:
         " A button that follows mouse cursor within specific range around button.",
-      url: "magnetic-button",
+      url: "modern/magnetic-button",
       image: "https://i.imgur.com/tCNsXzc.gif",
     },
     {
       title: "White Ray",
       description:
         "A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page.",
-      url: "white-ray",
+      url: "modern/white-ray",
       image: "https://i.imgur.com/Fva7GVG.png",
     },
     {
       title: "Text Reveal v1",
       description: "An Awesome Text Reveal animated effect on Scrolling",
-      url: "text-reveal-v1",
+      url: "modern/text-reveal-v1",
       image: "https://i.imgur.com/mh05503.gif",
     },
     {
       title: "Photo Trailing Effect",
       description:
         "An Awesome mouse move effect combined with image gallery for creative UI",
-      url: "photo-trailing-mousemove",
+      url: "modern/photo-trailing-mousemove",
       image: "https://i.imgur.com/68A1mEf.gif",
     },
     {
       title: "Water Drop Effect",
       description: "Beautiful water drop effect using grids and AnimeJs",
-      url: "water-drop-effect",
+      url: "modern/water-drop-effect",
       image: "https://i.imgur.com/LdLMgXa.gif",
     },
     {
       title: "Hacker Text Effect",
       description: "A really cool Hacker Text effect when hovered on text.",
-      url: "hacker-text-effect",
+      url: "modern/hacker-text-effect",
       image: "https://i.imgur.com/011GWuU.gif",
     },
     {
       title: "Floating Image Gallery",
       description: "Beautiful floating image gallery with mouse hover effect.",
-      url: "floating-image-gallery",
+      url: "modern/floating-image-gallery",
       image: "https://i.imgur.com/q3VXsq5.gif",
     },
     {
       title: "Infinite Text Scroll v1",
       description: "Awesome infinite text scrolling effect using framer-motion",
-      url: "infinite-text-scroll-v1",
+      url: "modern/infinite-text-scroll-v1",
       image: "https://i.imgur.com/vIwTOrJ.gif",
     },
   ];
