@@ -2,8 +2,10 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 export const CodeBlock = ({ code, lang, filename }) => {
   const [copyStatus, setCopyStatus] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const onCopyText = () => {
     setCopyStatus(true);
@@ -12,8 +14,21 @@ export const CodeBlock = ({ code, lang, filename }) => {
     }, 2000);
   };
 
+  const handleExpand = () => {
+    setIsExpanded(true);
+  };
+
+  const displayedCode = isExpanded
+    ? code
+    : code.split("\n").slice(0, 10).join("\n");
+  const shouldShowExpandButton = !isExpanded && code.split("\n").length > 15;
+
   return (
-    <div className="my-4">
+    <div
+      className={`my-4 code-block relative ${
+        isExpanded || code.split("\n").length <= 20 ? "expanded" : "collapsed"
+      }`}
+    >
       <div className="flex items-center justify-between codeblock-header">
         {filename && (
           <small
@@ -71,8 +86,17 @@ export const CodeBlock = ({ code, lang, filename }) => {
           </div>
         </CopyToClipboard>
       </div>
+
+      {shouldShowExpandButton && (
+        <button
+          className="absolute top-[15rem] left-[50%] translate-x-[-50%] primary-button"
+          onClick={handleExpand}
+        >
+          Expand
+        </button>
+      )}
       <SyntaxHighlighter language={lang} style={oneDark}>
-        {code}
+        {displayedCode}
       </SyntaxHighlighter>
     </div>
   );

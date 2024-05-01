@@ -328,3 +328,11 @@ h2 {
 .feature-bento-3 {
   grid-area: bento-3;
 }
+
+.code-block.collapsed {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    transparent 100%
+  );
+}
