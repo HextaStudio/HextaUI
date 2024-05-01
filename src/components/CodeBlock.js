@@ -21,12 +21,12 @@ export const CodeBlock = ({ code, lang, filename }) => {
   const displayedCode = isExpanded
     ? code
     : code.split("\n").slice(0, 10).join("\n");
-  const shouldShowExpandButton = !isExpanded && code.split("\n").length > 15;
+  const shouldShowExpandButton = !isExpanded && code.split("\n").length > 10;
 
   return (
     <div
       className={`my-4 code-block relative ${
-        isExpanded || code.split("\n").length <= 20 ? "expanded" : "collapsed"
+        isExpanded || code.split("\n").length <= 10 ? "expanded" : "collapsed"
       }`}
     >
       <div className="flex items-center justify-between codeblock-header">
