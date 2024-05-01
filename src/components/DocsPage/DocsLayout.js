@@ -15,15 +15,21 @@ export const DocsLayout = ({ children }) => {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    const pinSidebar = ScrollTrigger.create({
-      trigger: sidebarRef.current,
-      start: "top top",
-      pin: true,
-      pinSpacing: false,
-    });
+    let pinSidebar;
+
+    if (window.innerWidth > 900) {
+      pinSidebar = ScrollTrigger.create({
+        trigger: sidebarRef.current,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+      });
+    }
 
     return () => {
-      pinSidebar.kill();
+      if (pinSidebar) {
+        pinSidebar.kill();
+      }
     };
   }, []);
 
@@ -33,10 +39,10 @@ export const DocsLayout = ({ children }) => {
         <Navbar />
       </div>
       <div className="flex justify-center">
-        <aside ref={sidebarRef} className="pt-16">
+        <aside className="pt-16">
           <Sidebar />
         </aside>
-        <main className="flex flex-wrap justify-center flex-grow p-10 pt-24">
+        <main className="flex flex-wrap justify-end flex-grow p-10 pt-24">
           {children}
         </main>
       </div>

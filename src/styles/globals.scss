@@ -211,6 +211,7 @@ table,
 .codeblock-header,
 pre {
   max-width: 60dvw;
+  z-index: 2 !important;
   min-width: 60dvw;
 }
 
@@ -221,6 +222,7 @@ pre {
   .codeblock-header,
   pre {
     max-width: 90dvw;
+    z-index: 2 !important;
   }
 }
 
@@ -233,9 +235,12 @@ pre {
   }
 }
 
-.sidebar.fixed {
-  position: fixed;
-  top: 0;
+.docs-sidebar {
+  background-color: black;
+  z-index: 99999;
+  @media screen and (max-width: 900px) {
+    width: 20rem;
+  }
 }
 
 .footer-div {
