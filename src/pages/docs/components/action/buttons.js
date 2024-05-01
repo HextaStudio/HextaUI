@@ -354,7 +354,7 @@ const buttons = () => {
           description: "Collection of multiple buttons with multiple variants.",
           images: [
             {
-              url: "https://i.imgur.com/FFjJIbo.png",
+              url: "https://i.imgur.com/eOlyvkH.png",
               width: 1920,
               height: 1080,
               alt: "Buttons - HextaUI ✨",
