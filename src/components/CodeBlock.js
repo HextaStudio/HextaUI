@@ -1,7 +1,7 @@
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export const CodeBlock = ({ code, lang, filename }) => {
   const [copyStatus, setCopyStatus] = useState(false);
 
@@ -71,7 +71,7 @@ export const CodeBlock = ({ code, lang, filename }) => {
           </div>
         </CopyToClipboard>
       </div>
-      <SyntaxHighlighter language={lang} style={vscDarkPlus}>
+      <SyntaxHighlighter language={lang} style={oneDark}>
         {code}
       </SyntaxHighlighter>
     </div>

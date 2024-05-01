@@ -1,0 +1,7 @@
+{
+  "name": "@hextaui/ui",
+  "version": "1.0.0",
+  "files": [
+    "components"
+  ]
+}

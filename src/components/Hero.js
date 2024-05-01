@@ -3,11 +3,11 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import { TextRevealV1Preview } from "@/pages/docs/components/text-reveal-v1";
+import { TextRevealV1Preview } from "@/pages/docs/components/modern/text-reveal-v1";
 import { Reviews } from "./Reviews";
-import { WaterDropGridPreview } from "@/pages/docs/components/water-drop-effect";
+import { WaterDropGridPreview } from "@/pages/docs/components/modern/water-drop-effect";
 import PricingCards from "./PricingCards";
-import { InfiniteScrollingTextV1Preview } from "@/pages/docs/components/infinite-text-scroll-v1";
+import { InfiniteScrollingTextV1Preview } from "@/pages/docs/components/modern/infinite-text-scroll-v1";
 import { BentoGrid } from "./BentoGrid";
 
 export const Hero = () => {
