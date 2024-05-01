@@ -6,36 +6,47 @@
   .text-balance {
     text-wrap: balance;
   }
+
   .inter-fonts {
     font-family: var(--inter-fonts);
   }
+
   .leading-11 {
     line-height: 2.7rem;
   }
+
   .leading-12 {
     line-height: 3rem;
   }
+
   .leading-13 {
     line-height: 3.4rem;
   }
+
   .leading-14 {
     line-height: 3.8rem;
   }
+
   .leading-15 {
     line-height: 4rem;
   }
+
   .blue-link {
     color: rgb(0, 166, 255);
   }
+
   .blur-2xl {
     filter: blur(70px);
   }
+
   .blur-3xl {
     filter: blur(80px);
   }
+
   .blur-4xl {
     filter: blur(90px);
   }
+
   .blur-5xl {
     filter: blur(100px);
   }
@@ -47,6 +58,7 @@
     padding: 5px 0;
     line-height: 1.2rem;
   }
+
   .h1 {
     font-size: 3.052rem;
     font-weight: 800;
@@ -67,10 +79,12 @@
     color: black;
     border-radius: 10px;
     transition: 0.2s ease all;
+
     &:hover {
       filter: brightness(90%);
     }
   }
+
   .secondary-button {
     display: flex;
     align-items: center;
@@ -83,6 +97,7 @@
     color: white;
     border-radius: 10px;
     transition: 0.2s ease all;
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.064);
     }
@@ -94,27 +109,25 @@
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
     position: relative;
-    background-image: radial-gradient(
-      hsla(0, 0%, 100%, 0.1) 1px,
-      transparent 0
-    );
+    background-image: radial-gradient(hsla(0, 0%, 100%, 0.1) 1px,
+        transparent 0);
     max-width: 100%;
     height: auto;
   }
+
   .step1-bg {
     background-color: #080808;
     border: 1px solid hsla(0, 0%, 100%, 0.05);
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
     position: relative;
-    background-image: radial-gradient(
-      hsla(0, 0%, 100%, 0.1) 1px,
-      transparent 0
-    );
+    background-image: radial-gradient(hsla(0, 0%, 100%, 0.1) 1px,
+        transparent 0);
     max-width: 100%;
     height: auto;
   }
 }
+
 .corner-border {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 1px solid rgba(255, 255, 255, 0.12);
@@ -213,6 +226,7 @@ pre {
 }
 
 @media screen and (max-width: 900px) {
+
   .component-card,
   table,
   .preview-container,
@@ -226,6 +240,7 @@ pre {
   padding: 5px;
   border-radius: 3px;
   transition: all ease 0.2s;
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.105);
   }
@@ -238,6 +253,7 @@ pre {
 
 .footer-div {
   width: calc(100% - 16rem);
+
   @media screen and (max-width: 900px) {
     width: 100%;
   }
@@ -245,11 +261,9 @@ pre {
 
 h1,
 h3 {
-  background: linear-gradient(
-    to bottom,
-    white 40%,
-    rgba(255, 255, 255, 0.407) 100%
-  );
+  background: linear-gradient(to bottom,
+      white 40%,
+      rgba(255, 255, 255, 0.407) 100%);
   padding: 6px 0;
   background-clip: text;
   -webkit-background-clip: text;
@@ -269,26 +283,32 @@ h3 {
   overflow: hidden;
   margin: 40px 0;
 }
+
 .react-tweet-theme {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left !important;
   padding: 1rem;
+
   .tweet-container_article__0ERPK {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
+
   .tweet-header_authorFollow__w_j4h {
     display: none !important;
   }
+
   .tweet-actions_actions__UDw7H {
     display: none;
   }
+
   .tweet-replies_replies__PUxl8 {
     display: none;
   }
+
   .tweet-info_info__ll_kH {
     display: none;
   }
@@ -300,6 +320,7 @@ h3 {
   grid-template-areas:
     "bento-1 bento-1"
     "bento-2 bento-3";
+
   @media screen and (max-width: 620px) {
     grid-template-areas:
       "bento-1 bento-1"
@@ -310,13 +331,33 @@ h3 {
 
 .feature-bento-1 {
   grid-area: bento-1;
+
   @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
   }
 }
+
 .feature-bento-2 {
   grid-area: bento-2;
 }
+
 .feature-bento-3 {
   grid-area: bento-3;
+}
+
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #e5e5e052;
+  background-color: #27272a;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #27272a;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #F66A0E;
+  border-radius: 20px;
 }
