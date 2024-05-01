@@ -62,6 +62,13 @@ export const Sidebar = () => {
       url: "buttons",
     },
   ];
+  const layoutComponentLinks = [
+    {
+      name: "Badges",
+      url: "badges",
+      new: true,
+    },
+  ];
   return (
     <>
       <div
@@ -184,6 +191,21 @@ export const Sidebar = () => {
                 <Link
                   className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
                   href={`/docs/components/action/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>{" "}
+        <div className="sidebar-section">
+          <p className="text-sm font-bold uppercase">Layout Components</p>
+          <ul className="flex flex-col gap-[3px]">
+            {layoutComponentLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
+                  href={`/docs/components/layout/${link.url}`}
                 >
                   {link.name}
                 </Link>
