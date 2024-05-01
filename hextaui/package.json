@@ -1,6 +1,6 @@
 {
   "name": "@hextaui/ui",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "devDependencies": {
     "@babel/core": "^7.24.5",
