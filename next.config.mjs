@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ["i.imgur.com", "images.unsplash.com"],
   },
+  typescript: {
+    enabled: true,
+  },
 };
 
 export default nextConfig;
