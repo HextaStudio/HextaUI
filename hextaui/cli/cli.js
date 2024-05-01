@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const componentName = process.argv[2];
 const componentDir = path.join(__dirname, "components", componentName);
-console.log(componentDir);
 
 if (!fs.existsSync(componentDir)) {
   console.error(`Component '${componentName}' not found.`);
