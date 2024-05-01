@@ -116,10 +116,10 @@ export const Sidebar = () => {
               <span className="text-sm opacity-60">Stay updated </span>
               <Link
                 className="text-sm blue-link"
-                href="https://x.com/hextastudio"
+                href="https://x.com/preetsuthar17"
                 target="_blank"
               >
-                @HextaStudio
+                @preetsuthar17
               </Link>
             </li>
           </ul>
