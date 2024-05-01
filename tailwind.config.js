@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",
+        "glow-blue": "0 0 10px rgba(59, 130, 246, 0.5)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
