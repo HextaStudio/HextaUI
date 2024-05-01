@@ -135,28 +135,40 @@ Enhancement suggestions are tracked as [GitHub issues](/issues).
 
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
+
 ### Your First Code Contribution
 
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
+Interested in making your first code contribution to the project? here's how you can start with - 
 
--->
+- **Setup Development Environment:** Ensure you have all the necessary dependencies and tools installed to work on the project. Refer to the project's README.md file for instructions on setting up your development environment.
+- **Selecting an Issue:** Look for issues labeled "good first issue" or "enhancements" to find tasks suitable for beginners. You can filter the issues list by these labels to identify opportunities for contribution.
+- **Making Changes:** Once you've selected an issue to work on, fork the repository, create a new branch for your changes, and begin coding. Follow the project's coding standards and guidelines, and consider writing tests if applicable.
+- **Submitting a Pull Request:** After making your changes in the code of the issue opened, commit them to your branch and then push it to your forked repository. Then, submit a pull request to the main repository, by providing a clear explanation of the changes which is made by you and referencing the relevant issue.
 
 ### Improving The Documentation
 
-<!-- TODO
-Updating, improving and correcting the documentation
+Contributing to the documentation is a very valuable way to enhance the project. Here's how you can help this project - 
 
--->
+- **Updating Existing Documentation:** Review the current documentation and suggest improvements or corrections where it's needed. Identify outdated information, inaccuracies, or areas that require clarification.(if any)
+- **Adding Missing Documentation:** Identify any gaps in the documentation and contribute new content to address them. Document any new features or changes introduced to the project to ensure users have comprehensive guidance.
+- **Correcting Errors:** If you encounter any errors or inaccuracies in the documentation, take the initiative to correct them. Ensure that the documentation remains accurate, clear, and helpful for users.
+- **Documenting New Features:** Whenever you introduce a new feature or make significant changes to the project, remember to update the documentation accordingly. Provide detailed explanations and usage examples to help users understand the new functionality.
 
 ## Styleguides
 
+The project may have specific style guides to follow, such as guidelines for commit messages. Be sure to adhere to these guidelines when contributing to maintain consistency and readability throughout the project.
+
 ### Commit Messages
 
-<!-- TODO
-
--->
+When making commits to the project, please follow the established guidelines for writing clear, concise and descriptive commit messages. Typically, commit messages should include a short and to the point summary of the changes you made to the project and additional details of the commit if necessary. Consistent and informative commit messages help maintain a clear history of changes and will make collaboration easy with other contributors.
 
 ## Join The Project Team
 
-<!-- TODO -->
+Contributors who demonstrate commitment and expertise may have opportunities to become part of the project team:
+
+- **Contributor Recognition:** Acknowledge and appreciate the contributions of active and valuable contributors to the project. Recognize their efforts through shoutouts, mentions, or contributor spotlights.
+- **Becoming a Core Contributor:** Exceptional contributors may be invited to join the project team as core contributors. Core contributors have additional responsibilities and privileges within the project.
+- **Roles and Responsibilities:** As a core contributor, you'll be involved in various activities such as code review, issue triaging, and community engagement. Familiarize yourself with your roles and responsibilities within the project team and actively participate in its development.
+- **Communication Channels:** Stay connected with other core contributors and project maintainers through communication channels such as chat platforms, mailing lists, or regular meetings. Collaborate effectively with your team members and contribute to the project's success.
+
+These guidelines will help you navigate your journey from making your first contribution to becoming an integral member of the project team.
