@@ -2,9 +2,6 @@
   "name": "hextaui",
   "version": "1.0.0",
   "private": true,
-  "bin": {
-    "install": "./bin/install.js"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
