@@ -1,1 +1,1 @@
-export { Buttons } from "./cli/components/buttons/Buttons";
+export { Button } from "./cli/components/button/Button";
