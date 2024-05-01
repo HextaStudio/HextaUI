@@ -1,5 +1,5 @@
 {
-  "name": "hextastudio",
+  "name": "hextaui",
   "version": "1.0.0",
   "workspaces": [
     "ui"
