@@ -1,5 +1,10 @@
 {
   "name": "@hextaui/ui",
-  "version": "1.0.4",
-  "description": ""
+  "version": "1.0.5",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
+    "babel-loader": "^9.1.3"
+  }
 }
