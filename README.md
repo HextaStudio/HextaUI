@@ -6,7 +6,7 @@ Give a star to HextaUI if you like the components! ⭐
 ## Checklist
 - [x] Modern Components
 - [ ] README.md
-- [ ] Open source Contribution Guide
+- [x] Open source Contribution Guide
 
 ## Resource
 - Check out [this](https://github.com/firstcontributions/first-contributions) awesome contribution guide for you First Contribution. | [click here](https://github.com/firstcontributions/first-contributions)
