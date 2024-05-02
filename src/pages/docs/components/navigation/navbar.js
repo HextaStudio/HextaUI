@@ -427,13 +427,13 @@ const navbar = () => {
         title="Navbar - HextaUI ✨"
         description="Collection of Navbar components with different variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/action/buttons",
+          url: "https://ui.hextastudio.in/docs/components/navigation/navbar",
           title: "Navbar - HextaUI ✨",
           description:
             "Collection of Navbar components with different variants.",
           images: [
             {
-              url: "https://i.imgur.com/T4CpygK.png",
+              url: "https://i.imgur.com/BtOWZYT.png",
               width: 1920,
               height: 1080,
               alt: "Navbar - HextaUI ✨",
