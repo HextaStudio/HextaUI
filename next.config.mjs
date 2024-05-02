@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["react-tweet"],
   images: {
-    domains: ["i.imgur.com", "images.unsplash.com"],
+    domains: ["i.imgur.com", "images.unsplash.com", "source.unsplash.com"],
   },
   typescript: {
     enabled: true,
