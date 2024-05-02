@@ -66,13 +66,16 @@ export const Sidebar = () => {
     {
       name: "Badges",
       url: "badges",
-      new: true,
+    },
+    {
+      name: "Avatars",
+      url: "avatars",
     },
   ];
   return (
     <>
       <div
-        className="fixed left-[1rem] p-[9px] cursor-pointer top-[5.3rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[99]"
+        className="fixed left-[1rem] p-[9px] cursor-pointer top-[5.3rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[99] "
         onClick={toggleSidebar}
       >
         <svg
@@ -90,7 +93,7 @@ export const Sidebar = () => {
         </svg>
       </div>
       <aside
-        className={`z-10 fixed flex flex-col gap-4 p-10 bg-black border-r-2 docs-sidebar min-h-dvh max-[900px]:fixed   ${
+        className={`z-10 fixed flex flex-col gap-4 p-10 bg-black border-r-2 docs-sidebar min-h-dvh max-[900px]:fixed overflow-auto  ${
           sidebarOpen ? "translate-x-0" : "translate-x-[-60rem]"
         } ${!isMobile && "translate-x-[0rem]"}`}
         style={{
@@ -122,7 +125,7 @@ export const Sidebar = () => {
             <li>
               <span className="text-sm opacity-60">Stay updated </span>
               <Link
-                className="text-sm blue-link"
+                className="text-sm blue-link w-fit"
                 href="https://x.com/preetsuthar17"
                 target="_blank"
               >
@@ -132,11 +135,11 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="relative bg-black sidebar-section">
-          <p className="text-sm font-bold uppercase">Resources</p>
+          <p className="text-sm font-bold uppercase mb-[5px]">Resources</p>
           <ul className="flex flex-col gap-[3px]">
             <li>
               <Link
-                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
                 href="/docs/resources/install-next"
               >
                 Install Next.js
@@ -144,7 +147,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
                 href="/docs/resources/install-tailwind"
               >
                 Install Tailwind CSS
@@ -152,7 +155,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
                 href="/docs/resources/install-gsap"
               >
                 Install GSAP
@@ -160,7 +163,7 @@ export const Sidebar = () => {
             </li>
             <li>
               <Link
-                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90"
+                className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
                 href="/docs/resources/install-framer-motion"
               >
                 Install Framer Motion
@@ -169,12 +172,14 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="sidebar-section">
-          <p className="text-sm font-bold uppercase">Modern Components</p>
+          <p className="text-sm font-bold uppercase  mb-[5px]">
+            Modern Components
+          </p>
           <ul className="flex flex-col gap-[3px]">
             {componentLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
                   href={`/docs/components/modern/${link.url}`}
                 >
                   {link.name}
@@ -184,12 +189,14 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="sidebar-section">
-          <p className="text-sm font-bold uppercase">Action Components</p>
+          <p className="text-sm font-bold uppercase  mb-[5px]">
+            Action Components
+          </p>
           <ul className="flex flex-col gap-[3px]">
             {actionComponentLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
                   href={`/docs/components/action/${link.url}`}
                 >
                   {link.name}
@@ -199,12 +206,14 @@ export const Sidebar = () => {
           </ul>
         </div>{" "}
         <div className="sidebar-section">
-          <p className="text-sm font-bold uppercase">Layout Components</p>
+          <p className="text-sm font-bold uppercase  mb-[5px]">
+            Layout Components
+          </p>
           <ul className="flex flex-col gap-[3px]">
             {layoutComponentLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90`}
+                  className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
                   href={`/docs/components/layout/${link.url}`}
                 >
                   {link.name}
