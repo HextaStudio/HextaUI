@@ -238,6 +238,14 @@ pre {
 .docs-sidebar {
   background-color: black;
   z-index: 99999;
+  &::-webkit-scrollbar {
+    background: black;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10rem;
+    background-color: #18181b;
+  }
   @media screen and (max-width: 900px) {
     width: 20rem;
   }
