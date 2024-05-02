@@ -226,7 +226,7 @@ const avatars = () => {
             "Collection of Avatar components with multiple variants.",
           images: [
             {
-              url: "https://i.imgur.com/T4CpygK.png",
+              url: "https://i.imgur.com/Wm4aBoc.png",
               width: 1920,
               height: 1080,
               alt: "Avatars - HextaUI ✨",
