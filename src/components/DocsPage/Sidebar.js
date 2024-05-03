@@ -10,6 +10,7 @@ export const Sidebar = () => {
   const [showDataComponents, setShowDataComponents] = useState(true);
   const [showNavigationComponents, setShowNavigationComponents] =
     useState(true);
+  const [showFeedbackComponents, setShowFeedbackComponents] = useState(true);
 
   const toggleResources = () => {
     setShowResources(!showResources);
@@ -25,6 +26,9 @@ export const Sidebar = () => {
   };
   const toggleNavigationComponents = () => {
     setShowNavigationComponents(!showNavigationComponents);
+  };
+  const toggleFeedbackComponents = () => {
+    setShowFeedbackComponents(!showFeedbackComponents);
   };
 
   const toggleSidebar = () => {
@@ -98,6 +102,12 @@ export const Sidebar = () => {
     {
       name: "Navbar",
       url: "navbar",
+    },
+  ];
+  const feedbackComponentLinks = [
+    {
+      name: "Loaders",
+      url: "loaders",
     },
   ];
   return (
@@ -433,6 +443,57 @@ export const Sidebar = () => {
                   <Link
                     className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
                     href={`/docs/components/navigation/${link.url}`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="sidebar-section">
+          <p
+            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
+            onClick={toggleFeedbackComponents}
+          >
+            Feedback{" "}
+            {showFeedbackComponents ? (
+              <span className="flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
+                  />
+                </svg>
+              </span>
+            ) : (
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
+                  />
+                </svg>
+              </span>
+            )}
+          </p>
+          {showFeedbackComponents && (
+            <ul className="flex flex-col gap-[3px] p-2">
+              {feedbackComponentLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
+                    href={`/docs/components/feedback/${link.url}`}
                   >
                     {link.name}
                   </Link>
