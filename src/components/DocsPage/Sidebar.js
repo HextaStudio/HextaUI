@@ -1,35 +1,11 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showResources, setShowResources] = useState(true);
-  const [showModernComponents, setShowModernComponents] = useState(true);
-  const [showActionComponents, setShowActionComponents] = useState(true);
-  const [showDataComponents, setShowDataComponents] = useState(true);
-  const [showNavigationComponents, setShowNavigationComponents] =
-    useState(true);
-  const [showFeedbackComponents, setShowFeedbackComponents] = useState(true);
-
-  const toggleResources = () => {
-    setShowResources(!showResources);
-  };
-  const toggleModernComponents = () => {
-    setShowModernComponents(!showModernComponents);
-  };
-  const toggleActionComponents = () => {
-    setShowActionComponents(!showActionComponents);
-  };
-  const toggleDataComponents = () => {
-    setShowDataComponents(!showDataComponents);
-  };
-  const toggleNavigationComponents = () => {
-    setShowNavigationComponents(!showNavigationComponents);
-  };
-  const toggleFeedbackComponents = () => {
-    setShowFeedbackComponents(!showFeedbackComponents);
-  };
+  const router = useRouter();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -82,29 +58,19 @@ export const Sidebar = () => {
       url: "infinite-text-scroll-v1",
     },
   ];
-  const actionComponentLinks = [
-    {
-      name: "Buttons",
-      url: "buttons",
-    },
-  ];
   const layoutComponentLinks = [
     {
       name: "Badges",
       url: "badges",
     },
     {
+      name: "Buttons",
+      url: "buttons",
+    },
+    {
       name: "Avatars",
       url: "avatars",
     },
-  ];
-  const navigationComponentLinks = [
-    {
-      name: "Navbar",
-      url: "navbar",
-    },
-  ];
-  const feedbackComponentLinks = [
     {
       name: "Loaders",
       url: "loaders",
@@ -112,6 +78,10 @@ export const Sidebar = () => {
     {
       name: "Toasts",
       url: "toasts",
+    },
+    {
+      name: "Navbar",
+      url: "navbar",
     },
   ];
   return (
@@ -141,8 +111,6 @@ export const Sidebar = () => {
         style={{
           borderRight: "1px solid #ffffff20",
           minWidth: "16rem",
-          // transform:
-          //   isMobile && sidebarOpen ? "translateX(0)" : "translateX(-60rem)",
         }}
       >
         <div
@@ -162,9 +130,7 @@ export const Sidebar = () => {
           </svg>
         </div>
         <div className="relative bg-black sidebar-section">
-          <p className="p-2 text-sm font-bold uppercase rounded-md bg-zinc-900">
-            INFO
-          </p>
+          <p className="p-2 text-sm font-bold uppercase rounded-md">INFO</p>
           <ul className="p-2">
             <li>
               <span className="text-sm opacity-60">Stay updated </span>
@@ -179,332 +145,104 @@ export const Sidebar = () => {
           </ul>
         </div>
         <div className="relative bg-black sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleResources}
-          >
-            Resources{" "}
-            {showResources ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Resources
           </p>
-          {showResources && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              <li>
-                <Link
-                  className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
-                  href="/docs/resources/install-next"
-                >
-                  Install Next.js
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
-                  href="/docs/resources/install-tailwind"
-                >
-                  Install Tailwind CSS
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
-                  href="/docs/resources/install-gsap"
-                >
-                  Install GSAP
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit"
-                  href="/docs/resources/install-framer-motion"
-                >
-                  Install Framer Motion
-                </Link>
-              </li>
-            </ul>
-          )}
+          <ul className="flex flex-col gap-[8px] p-2">
+            <li>
+              <Link
+                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                  router.pathname === `/docs/resources/install-next`
+                    ? "opacity-100"
+                    : "opacity-60"
+                }`}
+                href="/docs/resources/install-next"
+              >
+                Install Next.js
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                  router.pathname === `/docs/resources/install-tailwind`
+                    ? "opacity-100"
+                    : "opacity-60"
+                }`}
+                href="/docs/resources/install-tailwind"
+              >
+                Install Tailwind CSS
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`flex items-center gap-1 text-sm transition-all hover:opacity-90 hover:underline w-fit ${
+                  router.pathname === `/docs/resources/install-gsap`
+                    ? "opacity-100"
+                    : "opacity-60"
+                }`}
+                href="/docs/resources/install-gsap"
+              >
+                Install GSAP
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                  router.pathname === `/docs/resources/install-framer-motion`
+                    ? "opacity-100"
+                    : "opacity-60"
+                }`}
+                href="/docs/resources/install-framer-motion"
+              >
+                Install Framer Motion
+              </Link>
+            </li>
+          </ul>
         </div>
         <div className="sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleModernComponents}
-          >
-            Modern{" "}
-            {showModernComponents ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Modern
           </p>
-          {showModernComponents && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              {componentLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
-                    href={`/docs/components/modern/${link.url}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="flex flex-col gap-[8px] p-2">
+            {componentLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                    router.pathname === `/docs/components/modern/${link.url}`
+                      ? "opacity-100"
+                      : "opacity-60"
+                  }`}
+                  href={`/docs/components/modern/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
+
         <div className="sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleActionComponents}
-          >
-            Action{" "}
-            {showActionComponents ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Layout Components
           </p>
-          {showActionComponents && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              {actionComponentLinks.map((link, index) => (
+          <ul className="flex flex-col gap-[8px] p-2">
+            {layoutComponentLinks
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((link, index) => (
                 <li key={index}>
                   <Link
-                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
-                    href={`/docs/components/action/${link.url}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>{" "}
-        <div className="sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleDataComponents}
-          >
-            Data Display{" "}
-            {showDataComponents ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
-          </p>
-          {showDataComponents && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              {layoutComponentLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
+                    className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                      router.pathname === `/docs/components/layout/${link.url}`
+                        ? "opacity-100"
+                        : "opacity-60"
+                    }`}
                     href={`/docs/components/layout/${link.url}`}
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
-            </ul>
-          )}
-        </div>
-        <div className="sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleNavigationComponents}
-          >
-            Navigation{" "}
-            {showNavigationComponents ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
-          </p>
-          {showNavigationComponents && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              {navigationComponentLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
-                    href={`/docs/components/navigation/${link.url}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-        <div className="sidebar-section">
-          <p
-            className="text-sm font-bold uppercase  mb-[5px] cursor-pointer flex items-center gap-1 justify-between p-2 bg-zinc-900 rounded-md"
-            onClick={toggleFeedbackComponents}
-          >
-            Feedback{" "}
-            {showFeedbackComponents ? (
-              <span className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4z"
-                  />
-                </svg>
-              </span>
-            ) : (
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-                  />
-                </svg>
-              </span>
-            )}
-          </p>
-          {showFeedbackComponents && (
-            <ul className="flex flex-col gap-[3px] p-2">
-              {feedbackComponentLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all opacity-60 hover:opacity-90 w-fit`}
-                    href={`/docs/components/feedback/${link.url}`}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          </ul>
         </div>
       </aside>
     </>
