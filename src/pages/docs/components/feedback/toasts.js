@@ -194,7 +194,7 @@ const Toasts = () => {
           description: "Some awesome toasts component with different variants.",
           images: [
             {
-              url: "https://i.imgur.com/TQAInIK.png",
+              url: "https://i.imgur.com/5P0bFAB.png",
               width: 1920,
               height: 1080,
               alt: "Toasts - HextaUI ✨",
