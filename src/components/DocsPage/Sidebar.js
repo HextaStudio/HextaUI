@@ -83,6 +83,10 @@ export const Sidebar = () => {
       name: "Navbar",
       url: "navbar",
     },
+    {
+      name: "Alert Dialog",
+      url: "alert-dialog",
+    },
   ];
   return (
     <>
@@ -114,7 +118,7 @@ export const Sidebar = () => {
         }}
       >
         <div
-          className="absolute w-fit justify-end items-end ml-auto right-[1rem] p-[9px] cursor-pointer top-[1rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[99999999999]"
+          className="absolute w-fit justify-end items-end ml-auto right-[1rem] p-[9px] cursor-pointer top-[1rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[9999999999]"
           onClick={toggleSidebar}
         >
           <svg
