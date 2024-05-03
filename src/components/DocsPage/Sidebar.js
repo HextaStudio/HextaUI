@@ -78,6 +78,7 @@ export const Sidebar = () => {
     {
       name: "Toasts",
       url: "toasts",
+      new: true,
     },
     {
       name: "Navbar",
@@ -86,6 +87,7 @@ export const Sidebar = () => {
     {
       name: "Alert Dialog",
       url: "alert-dialog",
+      new: true,
     },
   ];
   return (
@@ -242,7 +244,12 @@ export const Sidebar = () => {
                     }`}
                     href={`/docs/components/layout/${link.url}`}
                   >
-                    {link.name}
+                    {link.name}{" "}
+                    {link.new && (
+                      <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
+                        new
+                      </span>
+                    )}
                   </Link>
                 </li>
               ))}
