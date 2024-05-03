@@ -109,6 +109,10 @@ export const Sidebar = () => {
       name: "Loaders",
       url: "loaders",
     },
+    {
+      name: "Toasts",
+      url: "toasts",
+    },
   ];
   return (
     <>
