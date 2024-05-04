@@ -153,11 +153,6 @@ const floatingImages = () => {
           ],
           siteName: "Floating Image Gallery - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

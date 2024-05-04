@@ -39,11 +39,6 @@ const pricing = () => {
           ],
           siteName: "Pricing ✨ - HextaUI",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <Layout>
         <main className="flex flex-col items-center justify-center gap-5 pt-[10rem] pb-56 overflow-x-hidden text-center px-7 hero step1 max-sm:py-40 relative">

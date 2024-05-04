@@ -68,11 +68,6 @@ const hackerTextEffect = () => {
           ],
           siteName: "Hacker Text Effect - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

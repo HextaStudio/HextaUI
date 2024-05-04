@@ -363,11 +363,6 @@ const buttons = () => {
           ],
           siteName: "Buttons - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

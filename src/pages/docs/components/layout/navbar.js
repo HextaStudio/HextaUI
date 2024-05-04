@@ -442,11 +442,6 @@ const navbar = () => {
           ],
           siteName: "Navbar - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

@@ -25,11 +25,6 @@ const installNext = () => {
           ],
           siteName: "Install Next Js - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

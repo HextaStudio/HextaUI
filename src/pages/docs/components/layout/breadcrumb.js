@@ -277,11 +277,6 @@ const breadcrumb = () => {
           ],
           siteName: "Breadcrumb - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

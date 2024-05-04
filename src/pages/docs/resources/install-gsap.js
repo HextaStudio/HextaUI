@@ -24,11 +24,6 @@ const gsapInstallation = () => {
           ],
           siteName: "Install GSAP - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

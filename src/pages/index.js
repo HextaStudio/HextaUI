@@ -24,11 +24,6 @@ export default function Home() {
           ],
           siteName: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <Layout>
         <Hero />

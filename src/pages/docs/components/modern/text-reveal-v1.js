@@ -80,11 +80,6 @@ const textRevealV1 = () => {
           ],
           siteName: "Text Reveal v1",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

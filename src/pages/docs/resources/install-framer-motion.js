@@ -28,11 +28,6 @@ const framerMotionInstallation = () => {
           ],
           siteName: "Install Framer Motion - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

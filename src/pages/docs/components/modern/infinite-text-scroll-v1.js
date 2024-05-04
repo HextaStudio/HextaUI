@@ -96,11 +96,6 @@ const infiniteTextScrollV1 = () => {
           ],
           siteName: "Infinite Text Scroll v1 - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>

@@ -8,6 +8,11 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <NextSeo
+        twitter={{
+          handle: "@preetsuthar17",
+          site: "@preetsuthar17",
+          cardType: "summary_large_image",
+        }}
         additionalMetaTags={[
           {
             property: "keywords",

@@ -112,11 +112,6 @@ const photoTrailingOnMousemove = () => {
           ],
           siteName: "Photo Trailing on MouseMove - HextaUI ✨",
         }}
-        twitter={{
-          handle: "@HextaStudio",
-          site: "@HextaStudio",
-          cardType: "summary_large_image",
-        }}
       />
       <DocsLayout>
         <main>
