@@ -89,6 +89,11 @@ export const Sidebar = () => {
       url: "alert-dialog",
       new: true,
     },
+    {
+      name: "Breadcrumb",
+      url: "breadcrumb",
+      new: true,
+    },
   ];
   return (
     <>
