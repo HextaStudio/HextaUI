@@ -270,7 +270,7 @@ const badges = () => {
         title="Badges - HextaUI ✨"
         description="Collection of multiple badges/chips with multiple variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/action/buttons",
+          url: "https://ui.hextastudio.in/docs/components/layout/badges",
           title: "Badges - HextaUI ✨",
           description:
             "Collection of multiple badges/chips with multiple variants.",

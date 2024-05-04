@@ -427,7 +427,7 @@ const navbar = () => {
         title="Navbar - HextaUI ✨"
         description="Collection of Navbar components with different variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/navigation/navbar",
+          url: "https://ui.hextastudio.in/docs/components/layout/navbar",
           title: "Navbar - HextaUI ✨",
           description:
             "Collection of Navbar components with different variants.",

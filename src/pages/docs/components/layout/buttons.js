@@ -349,7 +349,7 @@ const buttons = () => {
         title="Buttons - HextaUI ✨"
         description="Collection of multiple buttons with multiple variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/action/buttons",
+          url: "https://ui.hextastudio.in/docs/components/layout/buttons",
           title: "Buttons - HextaUI ✨",
           description: "Collection of multiple buttons with multiple variants.",
           images: [

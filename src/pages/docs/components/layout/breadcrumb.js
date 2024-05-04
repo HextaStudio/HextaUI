@@ -262,7 +262,7 @@ const breadcrumb = () => {
         title="Breadcrumb - HextaUI ✨"
         description="Displays the path to the current resource using a hierarchy of links."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/laytou/breadcrumb",
+          url: "https://ui.hextastudio.in/docs/components/layout/breadcrumb",
           title: "Breadcrumb - HextaUI ✨",
           description:
             "Displays the path to the current resource using a hierarchy of links.",

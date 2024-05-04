@@ -97,7 +97,7 @@ const photoTrailingOnMousemove = () => {
         title="Photo Trailing on MouseMove - HextaUI ✨"
         description="An Awesome mouse move effect combined with image gallery for creative UI"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/photo-trailing-mousemove",
+          url: "https://ui.hextastudio.in/docs/components/modern/photo-trailing-mousemove",
           title: "Photo Trailing on MouseMove - HextaUI ✨",
           description:
             "An Awesome mouse move effect combined with image gallery for creative UI",

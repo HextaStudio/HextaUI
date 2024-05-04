@@ -138,7 +138,7 @@ const floatingImages = () => {
         title="Floating Image Gallery - HextaUI ✨"
         description="Beautiful floating image gallery with mouse hover effect."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/hacker-text-effect",
+          url: "https://ui.hextastudio.in/docs/components/modern/hacker-text-effect",
           title: "Floating Image Gallery - HextaUI ✨",
           description:
             "Beautiful floating image gallery with mouse hover effect.",

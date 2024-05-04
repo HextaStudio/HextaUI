@@ -220,7 +220,7 @@ const avatars = () => {
         title="Avatars - HextaUI ✨"
         description="Collection of Avatar components with multiple variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/action/buttons",
+          url: "https://ui.hextastudio.in/docs/components/layout/avatars",
           title: "Avatars - HextaUI ✨",
           description:
             "Collection of Avatar components with multiple variants.",

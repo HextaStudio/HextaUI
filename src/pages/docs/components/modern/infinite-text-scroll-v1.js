@@ -81,7 +81,7 @@ const infiniteTextScrollV1 = () => {
         title="Infinite Text Scroll v1 - HextaUI ✨"
         description="Awesome infinite text scrolling effect using framer-motion"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/hacker-text-effect",
+          url: "https://ui.hextastudio.in/docs/components/modern/hacker-text-effect",
           title: "Infinite Text Scroll v1 - HextaUI ✨",
           description:
             "Awesome infinite text scrolling effect using framer-motion",

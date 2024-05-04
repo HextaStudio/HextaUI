@@ -189,7 +189,7 @@ const Toasts = () => {
         title="Toasts - HextaUI ✨"
         description="Some awesome toasts component with different variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/feedback/toasts",
+          url: "https://ui.hextastudio.in/docs/components/layout/toasts",
           title: "Toasts - HextaUI ✨",
           description: "Some awesome toasts component with different variants.",
           images: [

@@ -254,7 +254,7 @@ const loaders = () => {
         title="Loaders - HextaUI ✨"
         description="Collection of Loaders components with different variants."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/feedback/loaders",
+          url: "https://ui.hextastudio.in/docs/components/layout/loaders",
           title: "Loaders - HextaUI ✨",
           description:
             "Collection of Loaders components with different variants.",

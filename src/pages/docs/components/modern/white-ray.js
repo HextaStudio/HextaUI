@@ -36,7 +36,7 @@ const whiteRay = () => {
         title="White Ray - HextaUI ✨"
         description="A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page."
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/white-ray",
+          url: "https://ui.hextastudio.in/docs/components/modern/white-ray",
           title: "White Ray - HextaUI ✨",
           description:
             "A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page.",
