@@ -64,7 +64,7 @@ const alertDialog = () => {
           description: "              expects a response.",
           images: [
             {
-              url: "https://i.imgur.com/T4CpygK.png",
+              url: "https://i.imgur.com/KKUqpjL.png",
               width: 1920,
               height: 1080,
               alt: "Alert Dialog - HextaUI ✨",

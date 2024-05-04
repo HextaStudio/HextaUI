@@ -268,7 +268,7 @@ const breadcrumb = () => {
             "Displays the path to the current resource using a hierarchy of links.",
           images: [
             {
-              url: "https://i.imgur.com/eOlyvkH.png",
+              url: "https://i.imgur.com/oDya0tl.png",
               width: 1920,
               height: 1080,
               alt: "Breadcrumb - HextaUI ✨",
