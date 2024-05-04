@@ -36,19 +36,20 @@ export const Hero = () => {
             top: "-4rem",
             transform: "rotate(-70deg) translateY(-30rem)",
             background: "white",
+            opacity: 0,
           }}
         ></div>
         <div className="relative hero-content">
-          <h1 className="max-w-6xl font-extrabold tracking-tighter leading-tighter text-8xl bricolage-fonts max-[1163px]:text-7xl max-[1163px]:max-w-4xl max-[590px]:text-6xl max-[500px]:text-5xl z-[9999]">
+          <h1 className="max-w-6xl font-extrabold tracking-tighter leading-tighter text-8xl bricolage-fonts max-[1163px]:text-7xl max-[1163px]:max-w-4xl max-[590px]:text-6xl max-[500px]:text-5xl z-[9999] relative ">
             Gorgeous Web Components, Zero Effort
           </h1>
-          <p className="z-[9999] max-w-2xl py-4 mx-auto leading-5 text-md opacity-70">
+          <p className="z-[9999] max-w-2xl py-4 mx-auto leading-5 text-md opacity-70 relative">
             Elevate your projects with stunning, modern components. Simply copy
             and paste these responsive, beautiful elements for instant
             awesomeness.
           </p>
         </div>{" "}
-        <div className="text-zinc-400 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9]">
+        <div className="text-zinc-400 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9] relative">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

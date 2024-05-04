@@ -344,3 +344,32 @@ h2 {
     transparent 100%
   );
 }
+.hero {
+  position: relative;
+  z-index: 999;
+
+  &::before {
+    z-index: 1;
+    top: 0rem;
+    left: -2rem;
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    background: linear-gradient(rgb(157, 0, 255) 30%, rgb(133, 0, 126));
+    opacity: 70%;
+    filter: blur(150px);
+  }
+  &::after {
+    filter: blur(100px);
+    z-index: 1;
+    top: 0rem;
+    left: 10rem;
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    background: black;
+  }
+}
