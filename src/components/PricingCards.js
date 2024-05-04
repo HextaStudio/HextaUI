@@ -5,7 +5,7 @@ const PricingCards = () => {
   return (
     <div className="flex flex-row items-center justify-center gap-8 mt-[4rem]  max-[915px]:flex-col">
       {/* Card 1 */}
-      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white shadow-md rounded-2xl border-opacity-10 grow ">
+      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white shadow-md rounded-2xl border-opacity-10 grow z-[999]">
         <h3 className="text-xl font-bold ">Existing Components</h3>
         <div>
           <small>Tada ~</small>
@@ -83,7 +83,7 @@ const PricingCards = () => {
         </Link>
       </div>
       {/* Card 2 */}
-      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white relative shadow-md rounded-2xl grow  ">
+      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white relative shadow-md rounded-2xl grow  z-[999]">
         <small className="absolute top-[-1rem] left-[50%] translate-x-[-50%] px-5 py-1 text-black bg-white rounded-3xl">
           Most Popular
         </small>
@@ -178,7 +178,7 @@ const PricingCards = () => {
         </Link>
       </div>
       {/* Card 3 */}
-      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white shadow-md rounded-2xl border-opacity-10 grow ">
+      <div className="flex gap-3 flex-col w-full max-w-[20rem] p-4 text-left bg-black border border-white shadow-md rounded-2xl border-opacity-10 grow z-[999]">
         <h3 className="text-xl font-bold ">Multi Page Website</h3>
         <div>
           <small>starts at</small>

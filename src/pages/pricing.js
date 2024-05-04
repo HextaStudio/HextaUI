@@ -54,10 +54,12 @@ const pricing = () => {
                 background: "white",
               }}
             ></div>
-            <h1 className="max-w-5xl h1 max-sm:text-4xl max-sm:leading-[2.3rem]">
+            <h1 className="max-w-5xl h1 max-sm:text-4xl max-sm:leading-[2.3rem] z-[9999] relative">
               Need custom components or websites? We've got you covered
             </h1>
-            <p className="text-sm opacity-70">Simple pricing, no hidden fees</p>
+            <p className="text-sm opacity-70 z-[9999] relative">
+              Simple pricing, no hidden fees
+            </p>
           </div>
           <div>
             <PricingCards />
