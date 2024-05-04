@@ -27,6 +27,7 @@ export const BentoGrid = () => {
                 height={1080}
                 loading="lazy"
                 placeholder="blur"
+                alt="copy paste awesome components"
               />
             </div>
           </div>
@@ -46,6 +47,7 @@ export const BentoGrid = () => {
                 width={1920}
                 height={1080}
                 loading="lazy"
+                alt="popular choices"
                 placeholder="blur"
               />
             </div>
@@ -67,6 +69,7 @@ export const BentoGrid = () => {
                 width={1920}
                 height={1080}
                 loading="lazy"
+                alt="copy paste awesome components"
                 placeholder="blur"
               />
             </div>
