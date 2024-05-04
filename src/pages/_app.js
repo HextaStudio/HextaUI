@@ -4,14 +4,10 @@ import "@/styles/tokyo-night-dark.css";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { Partytown } from "@builder.io/partytown/react";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <Partytown debug={true} forward={["dataLayer.push"]} />
-      </Head>
       <NextSeo
         title="HextaUI ✨ -  Gorgeous Web Components, Zero Effort"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
@@ -54,11 +50,9 @@ export default function App({ Component, pageProps }) {
       <Script
         src="https://platform.twitter.com/widgets.js"
         charset="utf-8"
-        type="text/partytown"
       ></Script>
       <Script
         async
-        type="text/partytown"
         src="https://eu.umami.is/script.js"
         data-website-id="de2f88ed-b01d-46df-8a45-e3443a7a69a5"
       ></Script>
