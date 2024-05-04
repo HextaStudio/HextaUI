@@ -9,6 +9,7 @@ const installNext = () => {
       <NextSeo
         title="Install Next Js - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/docs/components/resouces/install-next"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/resources/install-next",
           title: "Install Next Js - HextaUI ✨",

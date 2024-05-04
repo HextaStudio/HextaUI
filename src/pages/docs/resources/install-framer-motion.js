@@ -12,6 +12,7 @@ const framerMotionInstallation = () => {
       <NextSeo
         title="Install Framer Motion - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/docs/components/resources/install-framer-motion"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/resources/install-framer-motion",
           title: "Install Framer Motion - HextaUI ✨",

@@ -426,6 +426,7 @@ const navbar = () => {
       <NextSeo
         title="Navbar - HextaUI ✨"
         description="Collection of Navbar components with different variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/navbar"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/navbar",
           title: "Navbar - HextaUI ✨",

@@ -8,6 +8,25 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <NextSeo
+        title="HextaUI ✨ -  Gorgeous Web Components, Zero Effort"
+        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        openGraph={{
+          url: "https://ui.hextastudio.in",
+          title: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
+          description:
+            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
+          images: [
+            {
+              url: "https://i.imgur.com/xlCPzQc.png",
+              width: 1920,
+              height: 1080,
+              alt: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
+              type: "image/png",
+            },
+          ],
+          siteName: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
+        }}
+        canonical="https://ui.hextastudio.in/"
         twitter={{
           handle: "@preetsuthar17",
           site: "@preetsuthar17",

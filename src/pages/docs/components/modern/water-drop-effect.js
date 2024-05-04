@@ -75,8 +75,9 @@ const waterDropEffect = () => {
       <NextSeo
         title="Water Drop Effect - HextaUI ✨"
         description="Beautiful water drop effect using grids and AnimeJs"
+        canonical="https://ui.hextastudio.in/docs/components/modern/water-drop-effect"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/modern/photo-trailing-mousemove",
+          url: "https://ui.hextastudio.in/docs/components/modern/water-drop-effect",
           title: "Water Drop Effect - HextaUI ✨",
           description: "Beautiful water drop effect using grids and AnimeJs",
           images: [

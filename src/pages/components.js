@@ -95,8 +95,9 @@ const components = () => {
       <NextSeo
         title="Components - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/components"
         openGraph={{
-          url: "https://ui.hextastudio.in",
+          url: "https://ui.hextastudio.in/components",
           title: "Components - HextaUI ✨",
           description:
             "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",

@@ -23,6 +23,7 @@ const pricing = () => {
       <NextSeo
         title="Pricing ✨ - HextaUI"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/pricing"
         openGraph={{
           url: "https://ui.hextastudio.in/pricing",
           title: "Pricing ✨ - HextaUI",

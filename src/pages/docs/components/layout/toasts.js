@@ -188,6 +188,7 @@ const Toasts = () => {
       <NextSeo
         title="Toasts - HextaUI ✨"
         description="Some awesome toasts component with different variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/toasts"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/toasts",
           title: "Toasts - HextaUI ✨",

@@ -35,6 +35,7 @@ const whiteRay = () => {
       <NextSeo
         title="White Ray - HextaUI ✨"
         description="A Beautiful animated ray to use in hero component or to use in your next awesome SaaS landing page."
+        canonical="https://ui.hextastudio.in/docs/components/modern/white-ray"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/modern/white-ray",
           title: "White Ray - HextaUI ✨",

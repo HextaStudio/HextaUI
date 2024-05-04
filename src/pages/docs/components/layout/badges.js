@@ -269,6 +269,7 @@ const badges = () => {
       <NextSeo
         title="Badges - HextaUI ✨"
         description="Collection of multiple badges/chips with multiple variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/badges"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/badges",
           title: "Badges - HextaUI ✨",

@@ -8,6 +8,7 @@ export default function Home() {
       <NextSeo
         title="HextaUI ✨ -  Gorgeous Web Components, Zero Effort"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/"
         openGraph={{
           url: "https://ui.hextastudio.in",
           title: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",

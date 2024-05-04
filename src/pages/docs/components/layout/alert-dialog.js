@@ -58,6 +58,7 @@ const alertDialog = () => {
       <NextSeo
         title="Alert Dialog - HextaUI ✨"
         description="A modal dialog that interrupts the user with important content and expects a response."
+        canonical="https://ui.hextastudio.in/docs/components/layout/alert-dialog"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/alert-dialog",
           title: "Alert Dialog - HextaUI ✨",

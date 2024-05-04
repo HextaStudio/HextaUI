@@ -8,6 +8,7 @@ const gsapInstallation = () => {
       <NextSeo
         title="Install GSAP - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        canonical="https://ui.hextastudio.in/docs/components/resources/install-gsap"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/resources/install-gsap",
           title: "Install GSAP - HextaUI ✨",

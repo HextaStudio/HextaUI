@@ -219,6 +219,7 @@ const avatars = () => {
       <NextSeo
         title="Avatars - HextaUI ✨"
         description="Collection of Avatar components with multiple variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/avatars"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/avatars",
           title: "Avatars - HextaUI ✨",

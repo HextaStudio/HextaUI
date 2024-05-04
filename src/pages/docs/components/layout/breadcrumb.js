@@ -261,6 +261,7 @@ const breadcrumb = () => {
       <NextSeo
         title="Breadcrumb - HextaUI ✨"
         description="Displays the path to the current resource using a hierarchy of links."
+        canonical="https://ui.hextastudio.in/docs/components/layout/breadcrumb"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/breadcrumb",
           title: "Breadcrumb - HextaUI ✨",

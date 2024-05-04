@@ -53,6 +53,7 @@ const hackerTextEffect = () => {
       <NextSeo
         title="Hacker Text Effect - HextaUI ✨"
         description="A really cool Hacker Text effect when hovered on text."
+        canonical="https://ui.hextastudio.in/docs/components/modern/hacker-text-effect"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/modern/hacker-text-effect",
           title: "Hacker Text Effect - HextaUI ✨",

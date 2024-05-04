@@ -80,8 +80,9 @@ const infiniteTextScrollV1 = () => {
       <NextSeo
         title="Infinite Text Scroll v1 - HextaUI ✨"
         description="Awesome infinite text scrolling effect using framer-motion"
+        canonical="https://ui.hextastudio.in/docs/components/moder/infinite-text-scroll-v1"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/modern/hacker-text-effect",
+          url: "https://ui.hextastudio.in/docs/components/modern/infnite-text-scroll-v1",
           title: "Infinite Text Scroll v1 - HextaUI ✨",
           description:
             "Awesome infinite text scrolling effect using framer-motion",

@@ -65,6 +65,7 @@ const textRevealV1 = () => {
       <NextSeo
         title="Text Reveal v1"
         description="An Awesome Text Reveal animated effect on Scrolling"
+        canonical="https://ui.hextastudio.in/docs/components/modern/text-reveal-v1"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/modern/text-reveal-v1",
           title: "Text Reveal v1",

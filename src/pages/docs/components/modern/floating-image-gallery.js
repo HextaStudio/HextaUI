@@ -137,8 +137,9 @@ const floatingImages = () => {
       <NextSeo
         title="Floating Image Gallery - HextaUI ✨"
         description="Beautiful floating image gallery with mouse hover effect."
+        canonical="https://ui.hextastudio.in/docs/components/modern/floating-image-gallery"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/modern/hacker-text-effect",
+          url: "https://ui.hextastudio.in/docs/components/modern/floating-image-gallery",
           title: "Floating Image Gallery - HextaUI ✨",
           description:
             "Beautiful floating image gallery with mouse hover effect.",

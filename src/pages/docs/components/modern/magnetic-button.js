@@ -58,6 +58,7 @@ const magneticButton = () => {
       <NextSeo
         title="Magnetic Button - HextaUI ✨"
         description="A button that follows mouse cursor within specific range around the button"
+        canonical="https://ui.hextastudio.in/docs/components/modern/magnetic-button"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/modern/magnetic-button",
           title: "Magnetic Button - HextaUI ✨",

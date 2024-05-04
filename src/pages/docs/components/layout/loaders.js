@@ -253,6 +253,7 @@ const loaders = () => {
       <NextSeo
         title="Loaders - HextaUI ✨"
         description="Collection of Loaders components with different variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/loaders"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/loaders",
           title: "Loaders - HextaUI ✨",
