@@ -359,6 +359,9 @@ h2 {
     background: linear-gradient(rgb(157, 0, 255) 30%, rgb(133, 0, 126));
     opacity: 70%;
     filter: blur(150px);
+    @media screen and (max-width: 730px) {
+      opacity: 50%;
+    }
   }
   &::after {
     filter: blur(100px);
