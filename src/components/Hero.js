@@ -48,13 +48,13 @@ export const Hero = () => {
             awesomeness.
           </p>
         </div>{" "}
-        <div className="text-neutral-500 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9]">
+        <div className="text-zinc-400 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9]">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
               height="22"
-              className="flex-shrink-0 stroke-1 text-neutral-500"
+              className="flex-shrink-0 stroke-1 "
               viewBox="0 0 15 15"
             >
               <path
@@ -106,7 +106,7 @@ export const Hero = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="flex-shrink-0 stroke-1 text-neutral-500"
+              className="flex-shrink-0 stroke-1 "
             >
               <path d="M12 12l-8 -8v16l16 -16v16l-4 -4"></path>
               <path d="M20 12l-8 8l-4 -4"></path>

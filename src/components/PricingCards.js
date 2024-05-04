@@ -11,7 +11,7 @@ const PricingCards = () => {
           <small>Tada ~</small>
           <p className="mb-2 text-3xl font-bold">Free</p>
         </div>
-        <p className="mb-6 text-sm text-gray-500">
+        <p className="mb-6 text-sm text-zinc-300">
           All the components that are free to use for your websites.
         </p>
         <ul className="flex flex-col gap-3 list-none ">
@@ -92,7 +92,7 @@ const PricingCards = () => {
           <small>starts at</small>
           <p className="mb-2 text-3xl font-bold">$699/m</p>
         </div>
-        <p className="mb-6 text-sm text-gray-500">
+        <p className="mb-6 text-sm text-zinc-300">
           Perfect for attractive and awesome website elements or sections.
         </p>
         <ul className="flex flex-col gap-3 list-none ">
@@ -184,7 +184,7 @@ const PricingCards = () => {
           <small>starts at</small>
           <p className="mb-2 text-3xl font-bold">$1,499</p>
         </div>
-        <p className="mb-6 text-sm text-gray-500">
+        <p className="mb-6 text-sm text-zinc-300">
           Best for small businesses and startups that need awesome website.
         </p>
         <ul className="flex flex-col gap-3 list-none ">

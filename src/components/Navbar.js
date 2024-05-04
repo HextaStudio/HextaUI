@@ -15,7 +15,7 @@ export const Navbar = ({ docs }) => {
       >
         <div className="flex items-center justify-center gap-4 navbar-header">
           <Link href="/" className="flex items-center justify-center gap-4 ">
-            <Image src={logo} width={35} height={35} alt="HextaUI" />
+            <Image src={logo} width={35} height={35} alt="HextaUI Logo" />
             <span className="text-md font-bold bricolage-fonts max-[350px]:hidden">
               HextaUI
             </span>

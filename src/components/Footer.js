@@ -17,7 +17,7 @@ export const Footer = ({ docs }) => {
             <span className="text-xl font-bold bricolage-fonts">HextaUI</span>
           </div>
           <p className="text-sm">
-            <span className="opacity-30">A product by </span>{" "}
+            <span className="opacity-60">A product by </span>{" "}
             <Link
               className="blue-link"
               href="https://hextastudio.vercel.app"
@@ -27,7 +27,7 @@ export const Footer = ({ docs }) => {
             </Link>
           </p>
           <p className="text-sm">
-            <span className="opacity-30">Building in public at</span>{" "}
+            <span className="opacity-60">Building in public at</span>{" "}
             <Link
               className="blue-link"
               href="https://x.com/preetsuthar17"
@@ -38,7 +38,7 @@ export const Footer = ({ docs }) => {
           </p>
         </div>
         <div className="footer-section2">
-          <ul className="flex flex-col gap-2 text-sm list-none">
+          <ul className="flex flex-col gap-2 text-[14px] list-none">
             <li>
               <Link href="/components" className="opacity-75 hover:opacity-100">
                 Components
