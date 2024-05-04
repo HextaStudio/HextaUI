@@ -14,6 +14,12 @@ export default function App({ Component, pageProps }) {
           cardType: "summary_large_image",
         }}
         additionalMetaTags={[
+          { property: "dc:creator", content: "Preet Suthar" },
+          { property: "author", content: "Preet Suthar" },
+          {
+            name: "application-name",
+            content: "HextaUI",
+          },
           {
             property: "keywords",
             content:
