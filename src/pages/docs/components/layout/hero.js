@@ -37,7 +37,7 @@ export const SplitHeroPreview = () => {
         <h1 className="text-5xl md:text-6xl font-bold tracking-tighter max-w-[30rem] leading-11">
           Split Hero Section
         </h1>
-        <p className="text-lg opacity-80">
+        <p className="text-sm opacity-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
           justo vel orci fringilla, ac faucibus dolor facilisis.
         </p>
@@ -75,7 +75,7 @@ export const HeroBgImagePreview = () => {
         <h1 className="text-5xl md:text-6xl font-bold tracking-tighter max-w-[30rem] w-full leading-11 text-white ">
           Hero with Background Image
         </h1>
-        <p className="text-lg text-white opacity-80">
+        <p className="text-sm text-white opacity-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
           justo vel orci fringilla.
         </p>
@@ -265,7 +265,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-6xl font-bold tracking-tighter max-w-[30rem] leading-11">
           Split Hero Section
         </h1>
-        <p className="text-lg opacity-80">
+        <p className="text-sm opacity-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
           justo vel orci fringilla, ac faucibus dolor facilisis.
         </p>
@@ -321,7 +321,7 @@ const Hero = () => {
         <h1 className="text-5xl md:text-6xl font-bold tracking-tighter max-w-[30rem] w-full leading-11 text-white ">
           Hero with Background Image
         </h1>
-        <p className="text-lg text-white opacity-80">
+        <p className="text-sm text-white opacity-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
           justo vel orci fringilla.
         </p>
