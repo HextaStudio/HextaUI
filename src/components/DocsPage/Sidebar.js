@@ -78,6 +78,10 @@ export const Sidebar = () => {
     {
       name: "Toasts",
       url: "toasts",
+    },
+    {
+      name: "Footer",
+      url: "footer",
       new: true,
     },
     {
