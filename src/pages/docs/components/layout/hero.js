@@ -173,32 +173,31 @@ const Hero = () => {
   return (
     <>
       <NextSeo
-        title="Navbar - HextaUI ✨"
-        description="Collection of Navbar components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/navbar"
+        title="Hero - HextaUI ✨"
+        description="Collection of Hero components with different variants."
+        canonical="https://ui.hextastudio.in/docs/components/layout/hero"
         openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/navbar",
-          title: "Navbar - HextaUI ✨",
-          description:
-            "Collection of Navbar components with different variants.",
+          url: "https://ui.hextastudio.in/docs/components/layout/hero",
+          title: "Hero - HextaUI ✨",
+          description: "Collection of Hero components with different variants.",
           images: [
             {
-              url: "https://i.imgur.com/BtOWZYT.png",
+              url: "https://i.imgur.com/rkzeMDo.png",
               width: 1920,
               height: 1080,
-              alt: "Navbar - HextaUI ✨",
+              alt: "Hero - HextaUI ✨",
               type: "image/png",
             },
           ],
-          siteName: "Navbar - HextaUI ✨",
+          siteName: "Hero - HextaUI ✨",
         }}
       />
       <DocsLayout>
         <main>
           <div className="header">
-            <h1 className="h1">Navbar</h1>
+            <h1 className="h1">Hero</h1>
             <p className="text-sm opacity-80">
-              Collection of Navbar components with different variants.
+              Collection of Hero components with different variants.
             </p>
           </div>
 
