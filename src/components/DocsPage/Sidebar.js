@@ -87,11 +87,14 @@ export const Sidebar = () => {
     {
       name: "Alert Dialog",
       url: "alert-dialog",
-      new: true,
     },
     {
       name: "Breadcrumb",
       url: "breadcrumb",
+    },
+    {
+      name: "Hero",
+      url: "hero",
       new: true,
     },
   ];
