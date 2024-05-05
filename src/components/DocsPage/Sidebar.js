@@ -85,6 +85,11 @@ export const Sidebar = () => {
       new: true,
     },
     {
+      name: "Charts",
+      url: "charts",
+      new: true,
+    },
+    {
       name: "Navbar",
       url: "navbar",
     },
@@ -99,7 +104,6 @@ export const Sidebar = () => {
     {
       name: "Hero",
       url: "hero",
-      new: true,
     },
   ];
   return (
