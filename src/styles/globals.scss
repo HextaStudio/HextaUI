@@ -178,7 +178,15 @@ pre {
   -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
 }
-
+div::-webkit-scrollbar {
+  background: black;
+  width: 5px;
+  height: 5px;
+}
+div::-webkit-scrollbar-thumb {
+  border-radius: 10rem;
+  background-color: #18181b;
+}
 .codeblock-header {
   display: flex;
   align-items: center;
