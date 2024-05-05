@@ -38,7 +38,13 @@ export const Footer = ({ docs }) => {
             </Link>
           </p>
           <Link href="https://vercel.com">
-            <Image src={vercel} alt="vercel" loading="lazy" />
+            <Image
+              src={vercel}
+              width={150}
+              height={50}
+              alt="vercel"
+              loading="lazy"
+            />
           </Link>
         </div>
         <div className="footer-section2">
