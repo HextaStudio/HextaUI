@@ -11,6 +11,27 @@ export const Reviews = () => {
         <div>
           <Tweet id="1782680701067776207" />
         </div>
+        <div>
+          <Tweet id="1787135072392364394" />
+        </div>
+        <div>
+          <Tweet id="1787091751997440143" />
+        </div>
+        <div>
+          <Tweet id="1787091751997440143" />
+        </div>
+        <div>
+          <Tweet id="1786800646433423488" />
+        </div>
+        <div>
+          <Tweet id="1786800646433423488" />
+        </div>
+        <div>
+          <Tweet id="1785345519033684406" />
+        </div>
+        <div>
+          <Tweet id="1787163815987007863" />
+        </div>
       </div>
 
       <div>
