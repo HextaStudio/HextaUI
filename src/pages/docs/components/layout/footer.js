@@ -586,7 +586,7 @@ const footer = () => {
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
-                <h3 className="h3">Footer with Logo and Social Links</h3>
+                <h3 className="h3">Footer with Language Selector</h3>
                 <div className="relative flex items-end justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[25rem]">
                   <FooterWithLanguageSelector />
                 </div>
