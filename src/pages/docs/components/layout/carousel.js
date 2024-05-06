@@ -485,7 +485,7 @@ const carousel = () => {
             "Collection of multiple carousel with multiple variants.",
           images: [
             {
-              url: "https://i.imgur.com/ngyVLlB.png",
+              url: "https://i.imgur.com/t97FXuj.jpeg",
               width: 1920,
               height: 1080,
               alt: "Carousel - HextaUI ✨",
