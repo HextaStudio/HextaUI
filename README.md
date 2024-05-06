@@ -10,3 +10,4 @@ Give a star to HextaUI if you like the components! ⭐
 
 ## Resource
 - Check out [this](https://github.com/firstcontributions/first-contributions) awesome contribution guide for you First Contribution. | [click here](https://github.com/firstcontributions/first-contributions)
+
