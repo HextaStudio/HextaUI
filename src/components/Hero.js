@@ -49,7 +49,7 @@ export const Hero = () => {
             awesomeness.
           </p>
         </div>{" "}
-        <div className="text-zinc-400 flex-shrink-0 stroke-1 flex gap-5 flex-wrap justify-center mb-[15px] z-[9] relative">
+        <div className="text-zinc-400 flex-shrink-0 stroke-1 flex gap-8 flex-wrap justify-center mb-[15px] z-[9] relative">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ export const Hero = () => {
           <Link href="/components" className="primary-button grow">
             Browse Components
           </Link>
-          <Link href="/" className="secondary-button grow">
+          <Link href="/pricing" className="secondary-button grow">
             Pricing
           </Link>
         </div>
