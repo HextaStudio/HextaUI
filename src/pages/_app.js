@@ -3,7 +3,8 @@ import "@/styles/tokyo-night-dark.css";
 
 import Script from "next/script";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
+
+import "@splidejs/react-splide/css";
 
 export default function App({ Component, pageProps }) {
   return (
