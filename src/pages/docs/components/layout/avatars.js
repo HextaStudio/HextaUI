@@ -276,7 +276,7 @@ const avatars = () => {
                 lang="jsx"
                 filename="jsx"
                 code={`{/* If you're using Next Js */}
-import Image from 'next/image';`}
+import Image from 'next/legacy/image';`}
               />
             </div>
           </div>
