@@ -1,7 +1,6 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
 import logo from "../../public/hexta-studio.svg";
-import vercel from "../../public/vercel.svg";
 
 export const Footer = ({ docs }) => {
   return (
@@ -37,15 +36,6 @@ export const Footer = ({ docs }) => {
               @preetsuthar17
             </Link>
           </p>
-          <Link href="https://vercel.com">
-            <Image
-              src={vercel}
-              width={150}
-              height={50}
-              alt="vercel"
-              loading="lazy"
-            />
-          </Link>
         </div>
         <div className="footer-section2">
           <ul className="flex flex-col gap-2 text-[14px] list-none">
