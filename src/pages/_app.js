@@ -6,8 +6,6 @@ import { NextSeo } from "next-seo";
 
 import "@splidejs/react-splide/css";
 
-export const runtime = "edge";
-
 export default function App({ Component, pageProps }) {
   return (
     <>
