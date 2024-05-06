@@ -98,6 +98,11 @@ export const Sidebar = () => {
       new: true,
     },
     {
+      name: "Tooltip",
+      url: "tooltip",
+      new: true,
+    },
+    {
       name: "Navbar",
       url: "navbar",
     },
