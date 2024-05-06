@@ -90,6 +90,11 @@ export const Sidebar = () => {
       new: true,
     },
     {
+      name: "Carousel",
+      url: "carousel",
+      new: true,
+    },
+    {
       name: "Navbar",
       url: "navbar",
     },
