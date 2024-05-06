@@ -21,7 +21,7 @@ export const Footer = ({ docs }) => {
             <span className="opacity-60">A product by </span>{" "}
             <Link
               className="blue-link"
-              href="https://hextastudio.vercel.app"
+              href="https://hextastudio.in"
               target="_blank"
             >
               HextaStudio
