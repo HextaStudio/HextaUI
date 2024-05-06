@@ -368,7 +368,7 @@ const charts = () => {
       {" "}
       <NextSeo
         title="Charts - HextaUI ✨"
-        description="Collection of multiple charts/chips with multiple variants."
+        description="Collection of multiple charts with multiple variants."
         canonical="https://ui.hextastudio.in/docs/components/layout/charts"
         openGraph={{
           url: "https://ui.hextastudio.in/docs/components/layout/charts",
