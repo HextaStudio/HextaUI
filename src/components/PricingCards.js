@@ -71,6 +71,20 @@ const PricingCards = () => {
             </svg>
             Free to use forever
           </li>
+          <li className="flex gap-1 text-[14px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
+              />
+            </svg>
+            Awesome components
+          </li>
         </ul>
         <Link
           href="/components"
@@ -90,7 +104,7 @@ const PricingCards = () => {
         <h3 className="text-xl font-bold ">Custom Components</h3>
         <div>
           <small>starts at</small>
-          <p className="mb-2 text-3xl font-bold">$699/m</p>
+          <p className="mb-2 text-3xl font-bold">$599</p>
         </div>
         <p className="mb-6 text-sm text-zinc-300">
           Perfect for attractive and awesome website elements or sections.
@@ -122,7 +136,21 @@ const PricingCards = () => {
                 d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
               />
             </svg>
-            Unlimited design development
+            Only development
+          </li>{" "}
+          <li className="flex gap-1 text-[14px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
+              />
+            </svg>
+            Quick response time
           </li>
           <li className="flex gap-1 text-[14px]">
             <svg
@@ -150,21 +178,7 @@ const PricingCards = () => {
                 d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
               />
             </svg>
-            One request at a time
-          </li>
-          <li className="flex gap-1 text-[14px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
-              />
-            </svg>
-            Pause or cancel anytime
+            Best service
           </li>
         </ul>
         <Link
@@ -244,6 +258,7 @@ const PricingCards = () => {
             </svg>
             On call communication
           </li>
+
           <li className="flex gap-1 text-[14px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -256,21 +271,7 @@ const PricingCards = () => {
                 d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
               />
             </svg>
-            One request at a time
-          </li>
-          <li className="flex gap-1 text-[14px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
-              />
-            </svg>
-            SEO Optimization
+            Speed/SEO Optimization
           </li>
         </ul>
         <Link
