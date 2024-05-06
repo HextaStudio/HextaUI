@@ -82,16 +82,19 @@ export const Sidebar = () => {
     {
       name: "Footer",
       url: "footer",
-      new: true,
     },
     {
       name: "Charts",
       url: "charts",
-      new: true,
     },
     {
       name: "Carousel",
       url: "carousel",
+      new: true,
+    },
+    {
+      name: "Menus",
+      url: "menus",
       new: true,
     },
     {
