@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.2",
+    "@splidejs/react-splide": "^0.7.12",
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.1",
     "animejs": "^3.2.2",
