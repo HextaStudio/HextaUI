@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import bento3 from "../../public/assets/bento-3.png";
 import bento2 from "../../public/assets/bento-2.png";
