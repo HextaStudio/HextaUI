@@ -32,6 +32,7 @@
     "mute-stream": "^0.0.8",
     "onetime": "^5.1.2",
     "os-tmpdir": "^1.0.2",
+    "react-icons": "^5.2.1",
     "restore-cursor": "^3.1.0",
     "run-async": "^2.4.1",
     "rxjs": "^6.6.7",
