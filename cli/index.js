@@ -26,7 +26,7 @@ if (process.argv[2] === "add") {
         responseType: "stream",
       })
         .then(function (response) {
-          const dir = path.join(__dirname, "hexta-ui", "components");
+          const dir = path.join(process.cwd(), "hexta-ui", "components");
           fs.mkdirSync(dir, { recursive: true });
           const filePath = path.join(dir, `${answers.component}.js`);
           response.data.pipe(fs.createWriteStream(filePath));
