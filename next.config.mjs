@@ -9,9 +9,6 @@ const nextConfig = {
       "picsum.photos",
     ],
   },
-  typescript: {
-    enabled: true,
-  },
 };
 
 export default nextConfig;

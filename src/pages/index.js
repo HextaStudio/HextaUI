@@ -2,12 +2,7 @@ import { Hero } from "@/components/Hero";
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-
 export default function Home() {
-  const router = useRouter();
- 
   return (
     <>
       <NextSeo
