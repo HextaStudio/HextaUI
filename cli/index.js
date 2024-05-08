@@ -18,7 +18,7 @@ if (process.argv[2] === "add") {
       },
     ])
     .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/pages/docs/components/layout/${answers.component}.js`;
+      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/cli/components/${answers.component}.js`;
 
       axios({
         method: "get",
