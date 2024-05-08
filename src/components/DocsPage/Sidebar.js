@@ -96,7 +96,11 @@ export const Sidebar = () => {
       url: "menus",
       new: true,
     },
-
+    {
+      name: "Toggle",
+      url: "toggle",
+      new: true,
+    },
     {
       name: "Tooltip",
       url: "tooltip",
