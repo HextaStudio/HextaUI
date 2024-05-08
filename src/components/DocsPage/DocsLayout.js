@@ -42,7 +42,7 @@ export const DocsLayout = ({ children }) => {
         <aside className="pt-16">
           <Sidebar />
         </aside>
-        <main className="flex flex-wrap justify-center flex-grow p-10 pt-24 ml-[15rem] max-[900px]:ml-0 max-[900px]:mt-[2rem]">
+        <main className="flex flex-wrap justify-center flex-grow p-10 pt-24 ml-[16rem] max-[900px]:ml-0 max-[900px]:mt-[2rem]">
           {children}
         </main>
       </div>

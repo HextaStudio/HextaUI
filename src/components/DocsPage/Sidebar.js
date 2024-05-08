@@ -58,6 +58,7 @@ export const Sidebar = () => {
       url: "infinite-text-scroll-v1",
     },
   ];
+
   const layoutComponentLinks = [
     {
       name: "Badges",
