@@ -1,11 +1,16 @@
 {
   "name": "@hextastudio/ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "bin": {
-    "hexta-ui": "./index.js"
+    "hexta-ui": "./index.cjs"
   },
+  "scripts": {
+    "build:css": "postcss styles.css -o dist/output.css"
+  },
+  "author": "Preet Suthar",
+  "type": "module",
   "dependencies": {
     "@hextastudio/ui": "^1.0.0",
     "ansi-escapes": "^4.3.2",
@@ -31,6 +36,7 @@
     "mimic-fn": "^2.1.0",
     "mute-stream": "^0.0.8",
     "onetime": "^5.1.2",
+    "ora": "^8.0.1",
     "os-tmpdir": "^1.0.2",
     "react-icons": "^5.2.1",
     "restore-cursor": "^3.1.0",
@@ -46,12 +52,6 @@
     "tslib": "^1.14.1",
     "type-fest": "^0.21.3"
   },
-  "scripts": {
-    "build:css": "postcss styles.css -o dist/output.css"
-  },
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
