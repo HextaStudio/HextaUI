@@ -2,11 +2,27 @@
 const nextConfig = {
   transpilePackages: ["react-tweet"],
   images: {
-    domains: [
-      "i.imgur.com",
-      "images.unsplash.com",
-      "source.unsplash.com",
-      "picsum.photos",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+        pathname: "/*",
+      },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        pathname: "/*",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/*",
+      },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/*",
+      },
     ],
   },
 };
