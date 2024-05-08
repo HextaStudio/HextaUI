@@ -90,18 +90,23 @@ export const Sidebar = () => {
     {
       name: "Carousel",
       url: "carousel",
-      new: true,
     },
     {
       name: "Menus",
       url: "menus",
       new: true,
     },
+
     {
       name: "Tooltip",
       url: "tooltip",
+    },
+    {
+      name: "Typography",
+      url: "typography",
       new: true,
     },
+
     {
       name: "Navbar",
       url: "navbar",
