@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const inquirer = require("inquirer");
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+import path from "path";
+import fs from "fs";
+import axios from "axios";
+import inquirer from "inquirer";
 
 const components = ["Select"];
 
