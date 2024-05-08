@@ -213,7 +213,7 @@ const cards = () => {
             "Collection of multiple reusable card components with props.",
           images: [
             {
-              url: "https://i.imgur.com/L9bkOYd.png",
+              url: "https://i.imgur.com/5S1wN8p.png",
               width: 1920,
               height: 1080,
               alt: "Cards - HextaUI ✨",
