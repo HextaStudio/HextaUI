@@ -205,7 +205,7 @@ export const GroupAvatarPreview = () => {
           </div>
           <div className="avatar">
             <Image
-              src="https://placeholder.co"
+              src="https://placeholder.co/80"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -489,10 +489,13 @@ import Image from 'next/image';`}
   </div>
   <div className="avatar ">
     <Image
-      src="https://placeholder.co"
+      src="https://placeholder.co/80"
       loading="lazy"
       alt="Avatar"
-      quality={100}https://placeholder.co/80="cover"
+      quality={100}
+      width={80}
+      height={80}
+      objectFit="cover"
       placeholder="blur"
       blurDataURL="https://placeholder.co/80"
       className="rounded-full shadow-sm pointer-events-none"
@@ -500,7 +503,7 @@ import Image from 'next/image';`}
   </div>
   <div className="avatar">
     <Image
-      src="https://placeholder.co"
+      src="https://placeholder.co/80"
       loading="lazy"
       alt="Avatar"
       quality={100}
@@ -511,7 +514,7 @@ import Image from 'next/image';`}
       blurDataURLhttps://placeholder.co/80>
   <div className="avatar">
     <Image
-      src="https://placeholder.co"
+      src="https://placeholder.co/80"
       loading="lazy"
       alt="Avatar"
       quality={100}
