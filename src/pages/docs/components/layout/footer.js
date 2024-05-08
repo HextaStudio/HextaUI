@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 export const BasicFooterPreview = () => {
@@ -190,7 +190,10 @@ export const FooterWithLogoAndSocial = () => {
                 src="https://placeholder.co/50"
                 alt="HextaUI Logo"
                 className="h-8 mr-2"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <span className="text-xl font-bold text-white">HextaUI</span>
             </a>
           </div>

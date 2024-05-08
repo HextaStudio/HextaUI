@@ -7,7 +7,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const BasicCarouselPreview = () => {
   const slides = [
@@ -67,7 +67,10 @@ export const BasicCarouselPreview = () => {
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -139,7 +142,10 @@ export const CarouselWithAutoplayPreview = () => {
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -235,7 +241,10 @@ export const CarouselWithCustomControls = () => {
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -309,7 +318,10 @@ export const CarouselWithThumbnails = () => {
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -347,7 +359,10 @@ export const CarouselWithThumbnails = () => {
               src={slide.imageUrl}
               alt={slide.title}
               className="mt-4 rounded-lg"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </SplideSlide>
         ))}
       </Splide>
@@ -418,12 +433,15 @@ export const CarouselWithThumbnailsExample = () => {
                 blurDataURL={slide.imageUrl}
                 height={400}
                 width={700}
-                objectFit="cover"
                 src={slide.imageUrl}
                 alt={slide.title}
                 loading="lazy"
                 className="w-full h-auto mb-4 rounded-lg"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </div>
           </SplideSlide>
         ))}
@@ -458,12 +476,15 @@ export const CarouselWithThumbnailsExample = () => {
               blurDataURL={slide.imageUrl}
               height={400}
               width={700}
-              objectFit="cover"
               src={slide.imageUrl}
               alt={slide.title}
               loading="lazy"
               className="object-cover w-full h-full mt-4 rounded-lg"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover"
+              }} />
           </SplideSlide>
         ))}
       </Splide>

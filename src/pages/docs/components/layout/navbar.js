@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 export const TitleOnlyNavbarPreview = () => {
@@ -62,29 +62,30 @@ export const TitleButtonNavbarPreview = () => {
 };
 
 export const TitleSearchImageNavbarPreview = () => {
-  return (
-    <>
-      <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
-        <div>
-          <p className="text-xl font-bold tracking-tighter">HextaUI</p>
-        </div>
-        <div className="flex items-center justify-center gap-4">
-          <input
-            type="text"
-            className="max-[456px]:hidden px-1 py-2 m-1 text-sm border border-white rounded border-opacity-5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-20 focus:outline-offset-2 text-opacity-90 text-md"
-            placeholder="Search"
-          />
-          <Image
-            src="https://source.unsplash.com/random/35x35"
-            aria-placeholder="blur"
-            alt="logo"
-            loading="lazy"
-            className="flex items-center justify-center rounded-full cursor-pointer"
-          />
-        </div>
-      </nav>
-    </>
-  );
+  return <>
+    <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
+      <div>
+        <p className="text-xl font-bold tracking-tighter">HextaUI</p>
+      </div>
+      <div className="flex items-center justify-center gap-4">
+        <input
+          type="text"
+          className="max-[456px]:hidden px-1 py-2 m-1 text-sm border border-white rounded border-opacity-5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-20 focus:outline-offset-2 text-opacity-90 text-md"
+          placeholder="Search"
+        />
+        <Image
+          src="https://source.unsplash.com/random/35x35"
+          aria-placeholder="blur"
+          alt="logo"
+          loading="lazy"
+          className="flex items-center justify-center rounded-full cursor-pointer"
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
+      </div>
+    </nav>
+  </>;
 };
 
 export const TitleLinksCTANavbarPreview = () => {
@@ -173,51 +174,52 @@ export const TitleLinksNavbarPreview = () => {
 };
 
 export const IconLinksNavbarPreview = () => {
-  return (
-    <>
-      <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
-        <div className="">
-          <Image
-            src="https://placeholder.co/100"
-            aria-placeholder="blur"
-            alt="logo"
-            loading="lazy"
-            className="flex items-center justify-center rounded-full"
-            width={50}
-            height={50}
-          />
-        </div>
-        <div className="flex items-center justify-center">
-          <ul className="flex gap-1 text-md">
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
-                href="#"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
-                href="#"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
+  return <>
+    <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
+      <div className="">
+        <Image
+          src="https://placeholder.co/100"
+          aria-placeholder="blur"
+          alt="logo"
+          loading="lazy"
+          className="flex items-center justify-center rounded-full"
+          width={50}
+          height={50}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
+      </div>
+      <div className="flex items-center justify-center">
+        <ul className="flex gap-1 text-md">
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
+              href="#"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
+              href="#"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </>;
 };
 
 export const TitleSearchButtonNavbarPreview = () => {
@@ -243,61 +245,68 @@ export const TitleSearchButtonNavbarPreview = () => {
 };
 
 export const TitleIconLinksNavbarPreview = () => {
-  return (
-    <>
-      <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
-        <div>
-          <p className="text-xl font-bold tracking-tighter">HextaUI</p>
-        </div>
-        <div className="flex items-center justify-center">
-          <ul className="flex gap-1 text-md">
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
-                href="#"
-              >
-                <Image
-                  src="https://placeholder.co/100"
-                  aria-placeholder="blur"
-                  alt="icon"
-                  loading="lazy"
-                  className="rounded-full w-9 h-9"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
-                href="#"
-              >
-                <Image
-                  src="https://placeholder.co/100"
-                  aria-placeholder="blur"
-                  alt="icon"
-                  loading="lazy"
-                  className="rounded-full w-9 h-9"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
-                href="#"
-              >
-                <Image
-                  src="https://placeholder.co/100"
-                  aria-placeholder="blur"
-                  alt="icon"
-                  loading="lazy"
-                  className="rounded-full w-9 h-9"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
+  return <>
+    <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
+      <div>
+        <p className="text-xl font-bold tracking-tighter">HextaUI</p>
+      </div>
+      <div className="flex items-center justify-center">
+        <ul className="flex gap-1 text-md">
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <Image
+                src="https://placeholder.co/100"
+                aria-placeholder="blur"
+                alt="icon"
+                loading="lazy"
+                className="rounded-full w-9 h-9"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
+            </a>
+          </li>
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <Image
+                src="https://placeholder.co/100"
+                aria-placeholder="blur"
+                alt="icon"
+                loading="lazy"
+                className="rounded-full w-9 h-9"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
+            </a>
+          </li>
+          <li>
+            <a
+              className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
+              href="#"
+            >
+              <Image
+                src="https://placeholder.co/100"
+                aria-placeholder="blur"
+                alt="icon"
+                loading="lazy"
+                className="rounded-full w-9 h-9"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </>;
 };
 
 export const TitleDropdownNavbarPreview = () => {

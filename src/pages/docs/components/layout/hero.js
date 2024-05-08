@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 export const BasicHeroPreview = () => {
@@ -55,7 +55,10 @@ export const SplitHeroPreview = () => {
           src="https://via.placeholder.com/500x400"
           alt="Hero Image"
           className="h-auto max-w-full rounded-lg"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </section>
   );

@@ -3,113 +3,152 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const BasicAvatarPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Default Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-        </div>
-
-        {/* Circular Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="shadow-sm rounded-3xl"
-            pointer-events-none
-          />
-        </div>
-
-        {/* Squared Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-sm shadow-sm pointer-events-none"
-          />
-        </div>
+  return <>
+    <div className="flex flex-wrap items-center gap-4 m-5">
+      {/* Default Avatar */}
+      <div className="avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="rounded-full shadow-sm pointer-events-none"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </div>
-    </>
-  );
+
+      {/* Circular Avatar */}
+      <div className="avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="shadow-sm rounded-3xl"
+          pointer-events-none
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+      </div>
+
+      {/* Squared Avatar */}
+      <div className="avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="rounded-sm shadow-sm pointer-events-none"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+      </div>
+    </div>
+  </>;
 };
 
 export const AvatarWithStatusPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Avatar with Online Status */}
-        <div className="relative avatar">
-          <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-green-500 rounded-full ring ring-white"></span>
-        </div>
-
-        {/* Avatar with Offline Status */}
-        <div className="relative avatar">
-          <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-red-500 rounded-full ring ring-white"></span>
-        </div>
+  return <>
+    <div className="flex flex-wrap items-center gap-4 m-5">
+      {/* Avatar with Online Status */}
+      <div className="relative avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="rounded-full shadow-sm pointer-events-none"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+        <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-green-500 rounded-full ring ring-white"></span>
       </div>
-    </>
-  );
+
+      {/* Avatar with Offline Status */}
+      <div className="relative avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="rounded-full shadow-sm pointer-events-none"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+        <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-red-500 rounded-full ring ring-white"></span>
+      </div>
+    </div>
+  </>;
 };
 
 export const AvatarWithBadgePreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Avatar with Badge */}
-        <div className="relative avatar">
+  return <>
+    <div className="flex flex-wrap items-center gap-4 m-5">
+      {/* Avatar with Badge */}
+      <div className="relative avatar">
+        <Image
+          src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+          loading="lazy"
+          alt="Avatar"
+          quality={100}
+          width={80}
+          height={80}
+          placeholder="blur"
+          blurDataURL="https://placeholder.co/80"
+          className="rounded-full shadow-sm pointer-events-none"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
+        <span className="absolute top-[-2px] right-[-2px] inline-flex items-center justify-center w-7 h-7 text-xs font-bold leading-none ring ring-white text-white bg-red-500 rounded-full">
+          3
+        </span>
+      </div>
+    </div>
+  </>;
+};
+
+export const GroupAvatarPreview = () => {
+  return <>
+    <div className="flex flex-wrap items-center gap-4 m-5">
+      {/* Group Avatar */}
+      <div className="flex -space-x-6 avatar-group">
+        <div className="avatar">
           <Image
             src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
             loading="lazy"
@@ -117,100 +156,86 @@ export const AvatarWithBadgePreview = () => {
             quality={100}
             width={80}
             height={80}
-            objectFit="cover"
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute top-[-2px] right-[-2px] inline-flex items-center justify-center w-7 h-7 text-xs font-bold leading-none ring ring-white text-white bg-red-500 rounded-full">
-            3
-          </span>
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
+        </div>
+        <div className="avatar">
+          <Image
+            src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            loading="lazy"
+            alt="Avatar"
+            quality={100}
+            width={80}
+            height={80}
+            placeholder="blur"
+            blurDataURL="https://placeholder.co/80"
+            className="rounded-full shadow-sm pointer-events-none"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
+        </div>
+        <div className="avatar ">
+          <Image
+            src="https://images.unsplash.com/photo-1543949806-2c9935e6aa78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            loading="lazy"
+            alt="Avatar"
+            quality={100}
+            width={80}
+            height={80}
+            placeholder="blur"
+            blurDataURL="https://placeholder.co/80"
+            className="rounded-full shadow-sm pointer-events-none"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
+        </div>
+        <div className="avatar">
+          <Image
+            src="https://images.unsplash.com/photo-1611432579699-484f7990b127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+            loading="lazy"
+            alt="Avatar"
+            quality={100}
+            width={80}
+            height={80}
+            placeholder="blur"
+            blurDataURL="https://placeholder.co/80"
+            className="rounded-full shadow-sm pointer-events-none"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
+        </div>
+        <div className="avatar">
+          <Image
+            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+            loading="lazy"
+            alt="Avatar"
+            quality={100}
+            width={80}
+            height={80}
+            placeholder="blur"
+            blurDataURL="https://placeholder.co/80"
+            className="rounded-full shadow-sm pointer-events-none"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
         </div>
       </div>
-    </>
-  );
-};
-
-export const GroupAvatarPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Group Avatar */}
-        <div className="flex -space-x-6 avatar-group">
-          <div className="avatar">
-            <Image
-              src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRzaG90fGVufDB8fDB8fHww"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-            />
-          </div>
-          <div className="avatar ">
-            <Image
-              src="https://images.unsplash.com/photo-1543949806-2c9935e6aa78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGhlYWRzaG90fGVufDB8fDB8fHww"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://images.unsplash.com/photo-1611432579699-484f7990b127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              objectFit="cover"
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    </div>
+  </>;
 };
 
 const avatars = () => {

@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 
 import { useEffect, useRef, useState } from "react";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
@@ -74,22 +74,23 @@ const photoTrailingOnMousemove = () => {
       }
     }, []);
 
-    return (
-      <>
-        {images.map((image, index) => (
-          <Image
-            src={image}
-            width={1920}
-            height={1080}
-            alt="image"
-            key={index}
-            data-status="inactive"
-            ref={(el) => (imageRefs.current[index] = el)}
-            className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
-          />
-        ))}
-      </>
-    );
+    return <>
+      {images.map((image, index) => (
+        <Image
+          src={image}
+          width={1920}
+          height={1080}
+          alt="image"
+          key={index}
+          data-status="inactive"
+          ref={(el) => (imageRefs.current[index] = el)}
+          className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
+      ))}
+    </>;
   };
   return (
     <>
