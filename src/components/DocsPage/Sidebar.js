@@ -65,6 +65,11 @@ export const Sidebar = () => {
       url: "badges",
     },
     {
+      name: "Select",
+      url: "select",
+      new: true,
+    },
+    {
       name: "Buttons",
       url: "buttons",
     },
@@ -133,6 +138,7 @@ export const Sidebar = () => {
       url: "hero",
     },
   ];
+
   return (
     <>
       <div
