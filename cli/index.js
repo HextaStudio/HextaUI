@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import ora from "ora";
 import path from "path";
 import fs from "fs";
@@ -39,9 +38,10 @@ if (process.argv[2] === "add") {
         responseType: "stream",
       })
         .then(function (response) {
-          const dir = path.join(process.cwd(), "hexta-ui", "components");
-          fs.mkdirSync(dir, { recursive: true });
-          const filePath = path.join(dir, `${answers.component}.js`);
+          const srcDir = path.join(process.cwd(), "src");
+          const componentsDir = path.join(srcDir, "components");
+          fs.mkdirSync(componentsDir, { recursive: true });
+          const filePath = path.join(componentsDir, `${answers.component}.js`);
           response.data.pipe(fs.createWriteStream(filePath));
           componentLoader.succeed(
             `${answers.component} component was added successfully`
@@ -88,8 +88,8 @@ function updateConfigFile(configFilePath, componentLoader) {
     (match, contentArray) => {
       const trimmedArray = contentArray.trim();
       const newContentArray = trimmedArray
-        ? `${trimmedArray} "./hexta-ui/components/**/*.{js,ts,jsx,tsx,mdx},"`
-        : '"./hexta-ui/components/**/*.{js,ts,jsx,tsx,mdx},"';
+        ? `${trimmedArray} "./src/components/**/*.{js,ts,jsx,tsx,mdx}"`
+        : '"./src/components/**/*.{js,ts,jsx,tsx,mdx}",';
       return `content: [${newContentArray}]`;
     }
   );
