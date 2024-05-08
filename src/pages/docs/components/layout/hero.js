@@ -57,8 +57,9 @@ export const SplitHeroPreview = () => {
           className="h-auto max-w-full rounded-lg"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </div>
     </section>
   );

@@ -5,36 +5,39 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 const CardComponent = ({ component }) => {
-  return <>
-    <div className="w-full p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">
-      <div className="h-full">
-        <Image
-          className="object-cover w-full h-full border border-white border-opacity-10"
-          src={component.image}
-          width={1920}
-          height={1080}
-          alt={component.title}
-          loading="lazy"
-          style={{
-            maxWidth: "100%",
-            height: "auto",
-            objectFit: "cover"
-          }} />
-      </div>
-      <div className="flex flex-col justify-between h-1/3">
-        <div className="flex flex-col py-3">
-          <h4 className="text-lg font-semibold h3">{component.title}</h4>
-          <p className="text-sm opacity-80">{component.description}</p>
+  return (
+    <>
+      <div className="w-full p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">
+        <div className="h-full">
+          <Image
+            className="object-cover w-full h-full border border-white border-opacity-10"
+            src={component.image}
+            width={1920}
+            height={1080}
+            alt={component.title}
+            loading="lazy"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover",
+            }}
+          />
         </div>
-        <Link
-          href={`/docs/components/${component.url}`}
-          className="secondary-button"
-        >
-          Use this Component
-        </Link>
+        <div className="flex flex-col justify-between h-1/3">
+          <div className="flex flex-col py-3">
+            <h4 className="text-lg font-semibold h3">{component.title}</h4>
+            <p className="text-sm opacity-80">{component.description}</p>
+          </div>
+          <Link
+            href={`/docs/components/${component.url}`}
+            className="secondary-button"
+          >
+            Use this Component
+          </Link>
+        </div>
       </div>
-    </div>
-  </>;
+    </>
+  );
 };
 
 const components = () => {

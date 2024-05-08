@@ -192,8 +192,9 @@ export const FooterWithLogoAndSocial = () => {
                 className="h-8 mr-2"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <span className="text-xl font-bold text-white">HextaUI</span>
             </a>
           </div>

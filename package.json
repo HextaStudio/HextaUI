@@ -8,7 +8,9 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.2",

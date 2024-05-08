@@ -85,8 +85,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[90%] top-[70%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
         <Image
           src={images.floating2}
           alt="image"
@@ -95,8 +96,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[5%] top-[65%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </div>
       <div ref={plane2} className="w-full h-full absolute brightness-[0.6]">
         <Image
@@ -107,8 +109,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[5%] top-[10%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
         <Image
           src={images.floating6}
           alt="image"
@@ -117,8 +120,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[80%] top-[5%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </div>
       <div ref={plane3} className="w-full h-full absolute brightness-[0.5]">
         <Image
@@ -129,8 +133,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[65%] top-[2.5%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
         <Image
           src={images.floating5}
           alt="image"
@@ -139,8 +144,9 @@ const FloatingImagesGalleryPreview = () => {
           className="absolute left-[40%] top-[75%]"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </div>
       <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
         <h3 className="text-lg font-medium text-center text-white h3">

@@ -135,10 +135,9 @@ Enhancement suggestions are tracked as [GitHub issues](/issues).
 
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
-
 ### Your First Code Contribution
 
-Interested in making your first code contribution to the project? here's how you can start with - 
+Interested in making your first code contribution to the project? here's how you can start with -
 
 - **Setup Development Environment:** Ensure you have all the necessary dependencies and tools installed to work on the project. Refer to the project's README.md file for instructions on setting up your development environment.
 - **Selecting an Issue:** Look for issues labeled "good first issue" or "enhancements" to find tasks suitable for beginners. You can filter the issues list by these labels to identify opportunities for contribution.
@@ -147,7 +146,7 @@ Interested in making your first code contribution to the project? here's how you
 
 ### Improving The Documentation
 
-Contributing to the documentation is a very valuable way to enhance the project. Here's how you can help this project - 
+Contributing to the documentation is a very valuable way to enhance the project. Here's how you can help this project -
 
 - **Updating Existing Documentation:** Review the current documentation and suggest improvements or corrections where it's needed. Identify outdated information, inaccuracies, or areas that require clarification.(if any)
 - **Adding Missing Documentation:** Identify any gaps in the documentation and contribute new content to address them. Document any new features or changes introduced to the project to ensure users have comprehensive guidance.

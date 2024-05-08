@@ -74,23 +74,26 @@ const photoTrailingOnMousemove = () => {
       }
     }, []);
 
-    return <>
-      {images.map((image, index) => (
-        <Image
-          src={image}
-          width={1920}
-          height={1080}
-          alt="image"
-          key={index}
-          data-status="inactive"
-          ref={(el) => (imageRefs.current[index] = el)}
-          className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
-      ))}
-    </>;
+    return (
+      <>
+        {images.map((image, index) => (
+          <Image
+            src={image}
+            width={1920}
+            height={1080}
+            alt="image"
+            key={index}
+            data-status="inactive"
+            ref={(el) => (imageRefs.current[index] = el)}
+            className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        ))}
+      </>
+    );
   };
   return (
     <>

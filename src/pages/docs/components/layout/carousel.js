@@ -69,8 +69,9 @@ export const BasicCarouselPreview = () => {
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -144,8 +145,9 @@ export const CarouselWithAutoplayPreview = () => {
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -243,8 +245,9 @@ export const CarouselWithCustomControls = () => {
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -320,8 +323,9 @@ export const CarouselWithThumbnails = () => {
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               <h3 className="mb-2 text-xl font-bold text-white">
                 {slide.title}
               </h3>
@@ -361,8 +365,9 @@ export const CarouselWithThumbnails = () => {
               className="mt-4 rounded-lg"
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
           </SplideSlide>
         ))}
       </Splide>
@@ -440,8 +445,9 @@ export const CarouselWithThumbnailsExample = () => {
                 style={{
                   maxWidth: "100%",
                   height: "auto",
-                  objectFit: "cover"
-                }} />
+                  objectFit: "cover",
+                }}
+              />
             </div>
           </SplideSlide>
         ))}
@@ -483,8 +489,9 @@ export const CarouselWithThumbnailsExample = () => {
               style={{
                 maxWidth: "100%",
                 height: "auto",
-                objectFit: "cover"
-              }} />
+                objectFit: "cover",
+              }}
+            />
           </SplideSlide>
         ))}
       </Splide>
