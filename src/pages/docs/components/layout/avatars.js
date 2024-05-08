@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const BasicAvatarPreview = () => {
   return (
@@ -276,7 +276,7 @@ const avatars = () => {
                 lang="jsx"
                 filename="jsx"
                 code={`{/* If you're using Next Js */}
-import Image from 'next/legacy/image';`}
+import Image from 'next/image';`}
               />
             </div>
           </div>

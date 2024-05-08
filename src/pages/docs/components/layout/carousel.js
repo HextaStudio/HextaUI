@@ -6,7 +6,8 @@ import { NextSeo } from "next-seo";
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
-import Image from "next/legacy/image";
+
+import Image from "next/image";
 
 export const BasicCarouselPreview = () => {
   const slides = [
@@ -62,7 +63,7 @@ export const BasicCarouselPreview = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -134,7 +135,7 @@ export const CarouselWithAutoplayPreview = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -230,7 +231,7 @@ export const CarouselWithCustomControls = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -304,7 +305,7 @@ export const CarouselWithThumbnails = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab ">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -342,7 +343,7 @@ export const CarouselWithThumbnails = () => {
       >
         {slides.map((slide, index) => (
           <SplideSlide key={index} className="">
-            <img
+            <Image
               src={slide.imageUrl}
               alt={slide.title}
               className="mt-4 rounded-lg"
@@ -599,7 +600,7 @@ export const BasicCarousel = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -692,7 +693,7 @@ export const CarouselWithAutoplay = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -809,7 +810,7 @@ export const CarouselWithCustomControls = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -904,7 +905,7 @@ export const CarouselWithThumbnails = () => {
         {slides.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="flex flex-col items-center cursor-grab ">
-              <img
+              <Image
                 src={slide.imageUrl}
                 alt={slide.title}
                 className="w-full h-auto mb-4 rounded-lg"
@@ -942,7 +943,7 @@ export const CarouselWithThumbnails = () => {
       >
         {slides.map((slide, index) => (
           <SplideSlide key={index} className="">
-            <img
+            <Image
               src={slide.imageUrl}
               alt={slide.title}
               className="mt-4 rounded-lg"

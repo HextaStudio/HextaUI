@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 export const TitleOnlyNavbarPreview = () => {
@@ -74,7 +74,7 @@ export const TitleSearchImageNavbarPreview = () => {
             className="max-[456px]:hidden px-1 py-2 m-1 text-sm border border-white rounded border-opacity-5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-20 focus:outline-offset-2 text-opacity-90 text-md"
             placeholder="Search"
           />
-          <img
+          <Image
             src="https://source.unsplash.com/random/35x35"
             aria-placeholder="blur"
             alt="logo"
@@ -177,7 +177,7 @@ export const IconLinksNavbarPreview = () => {
     <>
       <nav className="flex items-center justify-between w-full px-4 py-2 m-4">
         <div className="">
-          <img
+          <Image
             src="https://placeholder.co/100"
             aria-placeholder="blur"
             alt="logo"
@@ -256,7 +256,7 @@ export const TitleIconLinksNavbarPreview = () => {
                 className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
                 href="#"
               >
-                <img
+                <Image
                   src="https://placeholder.co/100"
                   aria-placeholder="blur"
                   alt="icon"
@@ -270,7 +270,7 @@ export const TitleIconLinksNavbarPreview = () => {
                 className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
                 href="#"
               >
-                <img
+                <Image
                   src="https://placeholder.co/100"
                   aria-placeholder="blur"
                   alt="icon"
@@ -284,7 +284,7 @@ export const TitleIconLinksNavbarPreview = () => {
                 className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
                 href="#"
               >
-                <img
+                <Image
                   src="https://placeholder.co/100"
                   aria-placeholder="blur"
                   alt="icon"
@@ -553,7 +553,7 @@ const navbar = () => {
       className="max-[456px]:hidden px-1 py-2 m-1 text-sm border border-white rounded border-opacity-5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-20 focus:outline-offset-2 text-opacity-90 text-md"
       placeholder="Search"
     />
-    <img
+    <Image
       src="https://source.unsplash.com/random/35x35"
       aria-placeholder="blur"
       alt="logo"
@@ -686,7 +686,7 @@ const navbar = () => {
                 filename="jsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
-    <img
+    <Image
       src="https://placeholder.co/100"
       aria-placeholder="blur"
       alt="logo"
@@ -785,7 +785,7 @@ const navbar = () => {
           className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
           href="#"
         >
-          <img
+          <Image
             src="https://placeholder.co/100"
             aria-placeholder="blur"
             alt="icon"
@@ -799,7 +799,7 @@ const navbar = () => {
           className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
           href="#"
         >
-          <img
+          <Image
             src="https://placeholder.co/100"
             aria-placeholder="blur"
             alt="icon"
@@ -813,7 +813,7 @@ const navbar = () => {
           className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:opacity-100"
           href="#"
         >
-          <img
+          <Image
             src="https://placeholder.co/100"
             aria-placeholder="blur"
             alt="icon"

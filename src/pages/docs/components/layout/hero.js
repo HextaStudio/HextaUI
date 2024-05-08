@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 
 export const BasicHeroPreview = () => {
@@ -51,7 +51,7 @@ export const SplitHeroPreview = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:w-1/2">
-        <img
+        <Image
           src="https://via.placeholder.com/500x400"
           alt="Hero Image"
           className="h-auto max-w-full rounded-lg"
@@ -279,7 +279,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex items-center justify-center md:w-1/2">
-        <img
+        <Image
           src="https://via.placeholder.com/500x400"
           alt="Hero Image"
           className="h-auto max-w-full rounded-lg"

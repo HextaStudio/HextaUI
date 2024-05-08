@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 
 import { useEffect, useRef, useState } from "react";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
@@ -77,7 +77,7 @@ const photoTrailingOnMousemove = () => {
     return (
       <>
         {images.map((image, index) => (
-          <img
+          <Image
             src={image}
             width={1920}
             height={1080}
@@ -210,7 +210,7 @@ useEffect(() => {
 return (
     <>
     {images.map((image, index) => (
-        <img
+        <Image
         src={image}
         width={1920}
         height={1080}

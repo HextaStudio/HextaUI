@@ -5,7 +5,9 @@ import { useEffect, useRef } from "react";
 import React from "react";
 import gsap from "gsap";
 
+import Image from "next/image";
 import { NextSeo } from "next-seo";
+
 const images = {
   floating1:
     "https://images.unsplash.com/photo-1708261432863-41fdab7b5de9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8",
@@ -75,14 +77,14 @@ const FloatingImagesGalleryPreview = () => {
       className="relative w-screen h-screen overflow-hidden"
     >
       <div ref={plane1} className="absolute w-full h-full">
-        <img
+        <Image
           src={images.floating1}
           alt="image"
           width={300}
           height={1080}
           className="absolute left-[90%] top-[70%]"
         />
-        <img
+        <Image
           src={images.floating2}
           alt="image"
           width={300}
@@ -91,14 +93,14 @@ const FloatingImagesGalleryPreview = () => {
         />
       </div>
       <div ref={plane2} className="w-full h-full absolute brightness-[0.6]">
-        <img
+        <Image
           src={images.floating4}
           alt="image"
           width={250}
           height={1080}
           className="absolute left-[5%] top-[10%]"
         />
-        <img
+        <Image
           src={images.floating6}
           alt="image"
           width={200}
@@ -107,14 +109,14 @@ const FloatingImagesGalleryPreview = () => {
         />
       </div>
       <div ref={plane3} className="w-full h-full absolute brightness-[0.5]">
-        <img
+        <Image
           src={images.floating3}
           alt="image"
           width={150}
           height={1080}
           className="absolute left-[65%] top-[2.5%]"
         />
-        <img
+        <Image
           src={images.floating5}
           alt="image"
           width={200}
@@ -264,14 +266,14 @@ floating6:
       className="relative w-screen h-screen overflow-hidden"
     >
       <div ref={plane1} className="absolute w-full h-full">
-     <img
+     <Image
           src={images.floating1}
           alt="image"
           width={300}
           height={1080}
           className="absolute left-[90%] top-[70%]"
         />
-     <img
+     <Image
           src={images.floating2}
           alt="image"
           width={300}
@@ -280,14 +282,14 @@ floating6:
         />
       </div>
       <div ref={plane2} className="w-full h-full absolute brightness-[0.6]">
-     <img
+     <Image
           src={images.floating4}
           alt="image"
           width={250}
           height={1080}
           className="absolute left-[5%] top-[10%]"
         />
-     <img
+     <Image
           src={images.floating6}
           alt="image"
           width={200}
@@ -296,14 +298,14 @@ floating6:
         />
       </div>
       <div ref={plane3} className="w-full h-full absolute brightness-[0.5]">
-     <img
+     <Image
           src={images.floating3}
           alt="image"
           width={150}
           height={1080}
           className="absolute left-[65%] top-[2.5%]"
         />
-     <img
+     <Image
           src={images.floating5}
           alt="image"
           width={200}
