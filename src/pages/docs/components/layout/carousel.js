@@ -7,7 +7,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const BasicCarouselPreview = () => {
   const slides = [

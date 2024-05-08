@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import React from "react";
 import gsap from "gsap";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
 
 const images = {

@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const BasicAvatarPreview = () => {
   return (
