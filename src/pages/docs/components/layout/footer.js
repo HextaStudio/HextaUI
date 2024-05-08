@@ -189,6 +189,9 @@ export const FooterWithLogoAndSocial = () => {
               <Image
                 src="https://placeholder.co/50"
                 alt="HextaUI Logo"
+                width={50}
+                height={50}
+                objectFit="cover"
                 className="h-8 mr-2"
                 style={{
                   maxWidth: "100%",

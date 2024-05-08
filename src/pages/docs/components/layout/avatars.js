@@ -12,7 +12,7 @@ export const BasicAvatarPreview = () => {
         {/* Default Avatar */}
         <div className="avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -21,18 +21,13 @@ export const BasicAvatarPreview = () => {
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-full shadow-sm pointer-events-none"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
         </div>
 
         {/* Circular Avatar */}
         <div className="avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -42,18 +37,13 @@ export const BasicAvatarPreview = () => {
             blurDataURL="https://placeholder.co/80"
             className="shadow-sm rounded-3xl"
             pointer-events-none
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
         </div>
 
         {/* Squared Avatar */}
         <div className="avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -62,11 +52,6 @@ export const BasicAvatarPreview = () => {
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-sm shadow-sm pointer-events-none"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
         </div>
       </div>
@@ -81,7 +66,7 @@ export const AvatarWithStatusPreview = () => {
         {/* Avatar with Online Status */}
         <div className="relative avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -90,11 +75,6 @@ export const AvatarWithStatusPreview = () => {
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-full shadow-sm pointer-events-none"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
           <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-green-500 rounded-full ring ring-white"></span>
         </div>
@@ -102,7 +82,7 @@ export const AvatarWithStatusPreview = () => {
         {/* Avatar with Offline Status */}
         <div className="relative avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -111,11 +91,6 @@ export const AvatarWithStatusPreview = () => {
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-full shadow-sm pointer-events-none"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
           <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-red-500 rounded-full ring ring-white"></span>
         </div>
@@ -131,7 +106,7 @@ export const AvatarWithBadgePreview = () => {
         {/* Avatar with Badge */}
         <div className="relative avatar">
           <Image
-            src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+            src="https://placeholder.co/80"
             loading="lazy"
             alt="Avatar"
             quality={100}
@@ -140,11 +115,6 @@ export const AvatarWithBadgePreview = () => {
             placeholder="blur"
             blurDataURL="https://placeholder.co/80"
             className="rounded-full shadow-sm pointer-events-none"
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
           />
           <span className="absolute top-[-2px] right-[-2px] inline-flex items-center justify-center w-7 h-7 text-xs font-bold leading-none ring ring-white text-white bg-red-500 rounded-full">
             3
@@ -163,7 +133,7 @@ export const GroupAvatarPreview = () => {
         <div className="flex -space-x-6 avatar-group">
           <div className="avatar">
             <Image
-              src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+              src="https://placeholder.co/80"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -181,7 +151,7 @@ export const GroupAvatarPreview = () => {
           </div>
           <div className="avatar">
             <Image
-              src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRzaG90fGVufDB8fDB8fHww"
+              src="https://placeholder.co/80"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -199,7 +169,7 @@ export const GroupAvatarPreview = () => {
           </div>
           <div className="avatar ">
             <Image
-              src="https://images.unsplash.com/photo-1543949806-2c9935e6aa78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGhlYWRzaG90fGVufDB8fDB8fHww"
+              src="https://placeholder.co/80"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -217,7 +187,7 @@ export const GroupAvatarPreview = () => {
           </div>
           <div className="avatar">
             <Image
-              src="https://images.unsplash.com/photo-1611432579699-484f7990b127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+              src="https://placeholder.co/80"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -235,7 +205,7 @@ export const GroupAvatarPreview = () => {
           </div>
           <div className="avatar">
             <Image
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+              src="https://placeholder.co"
               loading="lazy"
               alt="Avatar"
               quality={100}
@@ -341,7 +311,7 @@ import Image from 'next/image';`}
                 code={`{/* Default Avatar */}
 <div className="avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -357,7 +327,7 @@ import Image from 'next/image';`}
 {/* Circular Avatar */}
 <div className="avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -373,7 +343,7 @@ import Image from 'next/image';`}
 {/* Squared Avatar */}
 <div className="avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -405,7 +375,7 @@ import Image from 'next/image';`}
                 code={`{/* Avatar with Online Status */}
 <div className="relative avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -422,7 +392,7 @@ import Image from 'next/image';`}
 {/* Avatar with Offline Status */}
 <div className="relative avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -455,7 +425,7 @@ import Image from 'next/image';`}
                 code={`{/* Avatar with Badge */}
 <div className="relative avatar">
   <Image
-    src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+    src="https://placeholder.co/80"
     loading="lazy"
     alt="Avatar"
     quality={100}
@@ -491,7 +461,7 @@ import Image from 'next/image';`}
 <div className="flex -space-x-6 avatar-group">
   <div className="avatar">
     <Image
-      src="https://images.unsplash.com/photo-1606335192038-f5a05f761b3a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhlYWRzaG90fGVufDB8fDB8fHww"
+      src="https://placeholder.co/80"
       loading="lazy"
       alt="Avatar"
       quality={100}
@@ -505,7 +475,7 @@ import Image from 'next/image';`}
   </div>
   <div className="avatar">
     <Image
-      src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhlYWRzaG90fGVufDB8fDB8fHww"
+      src="https://placeholder.co/80"
       loading="lazy"
       alt="Avatar"
       quality={100}
@@ -519,13 +489,10 @@ import Image from 'next/image';`}
   </div>
   <div className="avatar ">
     <Image
-      src="https://images.unsplash.com/photo-1543949806-2c9935e6aa78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGhlYWRzaG90fGVufDB8fDB8fHww"
+      src="https://placeholder.co"
       loading="lazy"
       alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
+      quality={100}https://placeholder.co/80="cover"
       placeholder="blur"
       blurDataURL="https://placeholder.co/80"
       className="rounded-full shadow-sm pointer-events-none"
@@ -533,7 +500,7 @@ import Image from 'next/image';`}
   </div>
   <div className="avatar">
     <Image
-      src="https://images.unsplash.com/photo-1611432579699-484f7990b127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+      src="https://placeholder.co"
       loading="lazy"
       alt="Avatar"
       quality={100}
@@ -541,13 +508,10 @@ import Image from 'next/image';`}
       height={80}
       objectFit="cover"
       placeholder="blur"
-      blurDataURL="https://placeholder.co/80"
-      className="rounded-full shadow-sm pointer-events-none"
-    />
-  </div>
+      blurDataURLhttps://placeholder.co/80>
   <div className="avatar">
     <Image
-      src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+      src="https://placeholder.co"
       loading="lazy"
       alt="Avatar"
       quality={100}

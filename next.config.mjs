@@ -6,22 +6,23 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "i.imgur.com",
-        pathname: "/*",
       },
       {
         protocol: "https",
         hostname: "source.unsplash.com",
-        pathname: "/*",
       },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-        pathname: "/*",
       },
       {
         protocol: "https",
         hostname: "picsum.photos",
         pathname: "/*",
+      },
+      {
+        protocol: "https",
+        hostname: "placeholder.co",
       },
     ],
   },

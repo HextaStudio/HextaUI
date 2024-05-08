@@ -76,6 +76,9 @@ export const TitleSearchImageNavbarPreview = () => {
           />
           <Image
             src="https://source.unsplash.com/random/35x35"
+            width={35}
+            height={35}
+            objectFit="cover"
             aria-placeholder="blur"
             alt="logo"
             loading="lazy"
@@ -183,12 +186,12 @@ export const IconLinksNavbarPreview = () => {
         <div className="">
           <Image
             src="https://placeholder.co/100"
+            width={100}
+            height={100}
             aria-placeholder="blur"
             alt="logo"
             loading="lazy"
             className="flex items-center justify-center rounded-full"
-            width={50}
-            height={50}
             style={{
               maxWidth: "100%",
               height: "auto",
@@ -266,6 +269,8 @@ export const TitleIconLinksNavbarPreview = () => {
               >
                 <Image
                   src="https://placeholder.co/100"
+                  width={100}
+                  height={100}
                   aria-placeholder="blur"
                   alt="icon"
                   loading="lazy"
@@ -284,6 +289,8 @@ export const TitleIconLinksNavbarPreview = () => {
               >
                 <Image
                   src="https://placeholder.co/100"
+                  width={100}
+                  height={100}
                   aria-placeholder="blur"
                   alt="icon"
                   loading="lazy"
@@ -302,6 +309,8 @@ export const TitleIconLinksNavbarPreview = () => {
               >
                 <Image
                   src="https://placeholder.co/100"
+                  width={100}
+                  height={100}
                   aria-placeholder="blur"
                   alt="icon"
                   loading="lazy"
@@ -575,6 +584,9 @@ const navbar = () => {
     />
     <Image
       src="https://source.unsplash.com/random/35x35"
+      width={35}
+      height={35}
+      objectFit="cover"
       aria-placeholder="blur"
       alt="logo"
       loading="lazy"
@@ -708,6 +720,8 @@ const navbar = () => {
   <div>
     <Image
       src="https://placeholder.co/100"
+      width={100}
+      height={100}
       aria-placeholder="blur"
       alt="logo"
       loading="lazy"
@@ -807,6 +821,8 @@ const navbar = () => {
         >
           <Image
             src="https://placeholder.co/100"
+            width={100}
+            height={100}
             aria-placeholder="blur"
             alt="icon"
             loading="lazy"
@@ -821,6 +837,8 @@ const navbar = () => {
         >
           <Image
             src="https://placeholder.co/100"
+            width={100}
+            height={100}
             aria-placeholder="blur"
             alt="icon"
             loading="lazy"
@@ -835,6 +853,8 @@ const navbar = () => {
         >
           <Image
             src="https://placeholder.co/100"
+            width={100}
+            height={100}
             aria-placeholder="blur"
             alt="icon"
             loading="lazy"

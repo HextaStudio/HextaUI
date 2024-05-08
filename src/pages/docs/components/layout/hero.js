@@ -52,8 +52,11 @@ export const SplitHeroPreview = () => {
       </div>
       <div className="flex items-center justify-center md:w-1/2">
         <Image
-          src="https://via.placeholder.com/500x400"
+          src="https://placeholder.co/500x400"
           alt="Hero Image"
+          width={400}
+          height={500}
+          objectFit="cover"
           className="h-auto max-w-full rounded-lg"
           style={{
             maxWidth: "100%",
@@ -284,9 +287,9 @@ const Hero = () => {
       </div>
       <div className="flex items-center justify-center md:w-1/2">
         <Image
-          src="https://via.placeholder.com/500x400"
+          src="https://placeholder.co/500x400"
           alt="Hero Image"
-          className="h-auto max-w-full rounded-lg"
+    4    className="h-auto max-w-full rounded-lg"
         />
       </div>
     </section>

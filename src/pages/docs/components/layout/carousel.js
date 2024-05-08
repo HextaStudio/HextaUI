@@ -12,32 +12,32 @@ import Image from "next/image";
 export const BasicCarouselPreview = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -66,6 +66,9 @@ export const BasicCarouselPreview = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
@@ -87,32 +90,32 @@ export const BasicCarouselPreview = () => {
 export const CarouselWithAutoplayPreview = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -142,6 +145,9 @@ export const CarouselWithAutoplayPreview = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
@@ -163,32 +169,32 @@ export const CarouselWithAutoplayPreview = () => {
 export const CarouselWithCustomControls = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -242,6 +248,9 @@ export const CarouselWithCustomControls = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
@@ -263,32 +272,32 @@ export const CarouselWithCustomControls = () => {
 export const CarouselWithThumbnails = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -320,6 +329,9 @@ export const CarouselWithThumbnails = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
                   maxWidth: "100%",
@@ -363,6 +375,8 @@ export const CarouselWithThumbnails = () => {
               src={slide.imageUrl}
               alt={slide.title}
               className="mt-4 rounded-lg"
+              width={100}
+              height={60}
               style={{
                 maxWidth: "100%",
                 height: "auto",
@@ -440,6 +454,7 @@ export const CarouselWithThumbnailsExample = () => {
                 width={700}
                 src={slide.imageUrl}
                 alt={slide.title}
+                objectFit="cover"
                 loading="lazy"
                 className="w-full h-auto mb-4 rounded-lg"
                 style={{
@@ -577,32 +592,32 @@ import { useEffect, useRef } from "react";
 export const BasicCarousel = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -631,6 +646,9 @@ export const BasicCarousel = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
               />
               <h3 className="mb-2 text-xl font-bold text-white">
@@ -669,32 +687,32 @@ import { useEffect, useRef } from "react";
 export const CarouselWithAutoplay = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -724,6 +742,9 @@ export const CarouselWithAutoplay = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
               />
               <h3 className="mb-2 text-xl font-bold text-white">
@@ -762,32 +783,32 @@ import { useEffect, useRef } from "react";
 export const CarouselWithCustomControls = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -841,6 +862,9 @@ export const CarouselWithCustomControls = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
               />
               <h3 className="mb-2 text-xl font-bold text-white">
@@ -879,32 +903,32 @@ import { useEffect, useRef } from "react";
 export const CarouselWithThumbnails = () => {
   const slides = [
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+1",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-1",
       title: "Slide 1",
       description: "This is the first slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+2",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-2",
       title: "Slide 2",
       description: "This is the second slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+3",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-3",
       title: "Slide 3",
       description: "This is the third slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+4",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-4",
       title: "Slide 4",
       description: "This is the fourth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+5",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-5",
       title: "Slide 5",
       description: "This is the fifth slide description.",
     },
     {
-      imageUrl: "https://via.placeholder.com/700x300?text=Slide+6",
+      imageUrl: "https://placeholder.co/800x300?text=Slide-6",
       title: "Slide 6",
       description: "This is the sixth slide description.",
     },
@@ -936,6 +960,9 @@ export const CarouselWithThumbnails = () => {
               <Image
                 src={slide.imageUrl}
                 alt={slide.title}
+                width={700}
+                height={400}
+                objectFit="cover"
                 className="w-full h-auto mb-4 rounded-lg"
               />
               <h3 className="mb-2 text-xl font-bold text-white">
