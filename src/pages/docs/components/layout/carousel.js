@@ -221,13 +221,13 @@ export const CarouselWithCustomControls = () => {
       <div className="flex justify-between max-[677px]:justify-center gap-20 mb-4">
         <button
           ref={customPrev}
-          className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+          className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         >
           Prev
         </button>
         <button
           ref={customNext}
-          className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+          className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         >
           Next
         </button>
@@ -835,13 +835,13 @@ export const CarouselWithCustomControls = () => {
       <div className="flex justify-between max-[677px]:justify-center gap-20 mb-4">
         <button
           ref={customPrev}
-          className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+          className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         >
           Prev
         </button>
         <button
           ref={customNext}
-          className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+          className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         >
           Next
         </button>

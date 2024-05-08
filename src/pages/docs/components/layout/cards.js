@@ -87,7 +87,7 @@ const CardWithTags = ({ title, description, image, tags }) => {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="px-2 py-1 mb-2 mr-2 text-xs border border-white rounded-md bg-zinc-900 text-zinc-200 border-opacity-5"
+              className="px-2 py-1 mb-2 mr-2 text-xs border border-white rounded-md bg-zinc-950 text-zinc-200 border-opacity-5"
             >
               {tag}
             </span>
@@ -111,7 +111,7 @@ const HorizontalCard = ({ title, description, image }) => {
       <div className="flex flex-col items-start flex-grow gap-3 p-4">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-500">{description}</p>
-        <button className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           Meow
         </button>
       </div>
@@ -446,7 +446,7 @@ const cards = () => {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="px-2 py-1 mb-2 mr-2 text-xs border border-white rounded-md bg-zinc-900 text-zinc-200 border-opacity-5"
+              className="px-2 py-1 mb-2 mr-2 text-xs border border-white rounded-md bg-zinc-950 text-zinc-200 border-opacity-5"
             >
               {tag}
             </span>
@@ -508,7 +508,7 @@ const cards = () => {
       <div className="flex flex-col items-start flex-grow gap-3 p-4">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-500">{description}</p>
-        <button className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           Meow
         </button>
       </div>

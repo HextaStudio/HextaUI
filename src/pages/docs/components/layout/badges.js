@@ -14,7 +14,7 @@ export const BasicBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
           Secondary
         </span>
 
@@ -92,7 +92,7 @@ export const PillBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
           <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -136,7 +136,7 @@ export const IconBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
           <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -164,7 +164,7 @@ export const CounterBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
           <span className="mr-1">Messages</span>
           <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-blue-500 rounded-full">
             12
@@ -188,7 +188,7 @@ export const BadgeOnButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           Secondary
           <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-blue-500 rounded-full">
             12
@@ -209,7 +209,7 @@ export const GlowingBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
           Glowing Secondary
         </span>
       </div>
@@ -227,7 +227,7 @@ export const AnimatedBadgesPreview = () => {
         </span>
 
         {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
+        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
           Bouncing Secondary
         </span>
       </div>
@@ -244,7 +244,7 @@ export const SegmentedBadgesPreview = () => {
           <span className="px-3 py-1 bg-white border border-zinc-900 text-black flex items-center font-[600] text-[12px]">
             Primary
           </span>
-          <span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
+          <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
             Secondary
           </span>
         </div>
@@ -316,7 +316,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
     Secondary
 </span>
 
@@ -412,7 +412,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
     <path
         fillRule="evenodd"
@@ -465,7 +465,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
     <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
     <path
         fillRule="evenodd"
@@ -502,7 +502,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
     <span className="mr-1">Messages</span>
     <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-blue-500 rounded-full">
     12
@@ -535,7 +535,7 @@ const badges = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
     Secondary
     <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-blue-500 rounded-full">
     12
@@ -565,7 +565,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
     Glowing Secondary
 </span>`}
               />
@@ -592,7 +592,7 @@ const badges = () => {
 </span>
 
 {/* secondary */}
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
     Bouncing Secondary
 </span>`}
               />
@@ -618,7 +618,7 @@ const badges = () => {
 <span className="px-3 py-1 bg-white border border-zinc-900 text-black flex items-center font-[600] text-[12px]">
     Primary
 </span>
-<span className="px-3 py-1 bg-zinc-900 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
+<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
     Secondary
 </span>
 </div>

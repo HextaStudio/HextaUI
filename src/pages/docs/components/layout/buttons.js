@@ -14,7 +14,7 @@ export const ButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           Secondary
         </button>
 
@@ -34,7 +34,7 @@ export const ButtonsPreview = () => {
         </button>
 
         {/* Ghost */}
-        <button className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s]">
+        <button className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]">
           Ghost
         </button>
 
@@ -62,7 +62,7 @@ export const DisabledButtonsPreview = () => {
         {/* secondary */}
         <button
           disabled
-          className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90 disabled:contrast-[60%] cursor-not-allowed"
+          className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90 disabled:contrast-[60%] cursor-not-allowed"
         >
           Secondary
         </button>
@@ -164,7 +164,7 @@ export const IconButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M13 7H7v6h6V7z" />
           </svg>
@@ -196,7 +196,7 @@ export const LoadingButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           <svg
             className="w-5 h-5 mr-2 animate-spin"
             fill="currentColor"
@@ -243,7 +243,7 @@ export const RoundedButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           Rounded Secondary
         </button>
       </div>
@@ -268,7 +268,7 @@ export const ButtonWithIconPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -288,12 +288,12 @@ export const HoverEffectButtonsPreview = () => {
     <>
       <div className="flex flex-wrap items-center gap-4 m-5">
         {/* primary */}
-        <button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:scale-105 hover:bg-zinc-900 hover:text-white">
+        <button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:scale-105 hover:bg-zinc-950 hover:text-white">
           Hover Scale
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:translate-y-[-5px] hover:shadow-lg">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:translate-y-[-5px] hover:shadow-lg">
           Hover Translate
         </button>
 
@@ -316,7 +316,7 @@ export const PulseButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
           Pulse Secondary
         </button>
       </div>
@@ -334,7 +334,7 @@ export const GlowingButtonsPreview = () => {
         </button>
 
         {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:shadow-glow-blue">
+        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:shadow-glow-blue">
           Glow Blue
         </button>
       </div>
@@ -393,7 +393,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
   Secondary
 </button>
 
@@ -413,7 +413,7 @@ const buttons = () => {
 </button>
 
 {/* Ghost */}
-<button className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s]">
+<button className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]">
   Ghost
 </button>
 
@@ -449,7 +449,7 @@ const buttons = () => {
 {/* secondary */}
 <button
   disabled
-  className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90 disabled:contrast-[60%] cursor-not-allowed"
+  className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90 disabled:contrast-[60%] cursor-not-allowed"
 >
   Secondary
 </button>
@@ -575,7 +575,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
     <path d="M13 7H7v6h6V7z" />
   </svg>
@@ -616,7 +616,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
   <svg
     className="w-5 h-5 mr-2 animate-spin"
     fill="currentColor"
@@ -679,7 +679,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
   Rounded Secondary
 </button>`}
               />
@@ -712,7 +712,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
     <path
       fillRule="evenodd"
@@ -740,12 +740,12 @@ const buttons = () => {
                 lang="jsx"
                 filename="jsx"
                 code={`{/* primary */}
-<button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:scale-105 hover:bg-zinc-900 hover:text-white">
+<button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:scale-105 hover:bg-zinc-950 hover:text-white">
   Hover Scale
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:translate-y-[-5px] hover:shadow-lg">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:translate-y-[-5px] hover:shadow-lg">
   Hover Translate
 </button>
 
@@ -776,7 +776,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
   Pulse Secondary
 </button>`}
               />
@@ -819,7 +819,7 @@ const buttons = () => {
 </button>
 
 {/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-900 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:shadow-glow-blue">
+<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.3s] hover:shadow-glow-blue">
   Glow Blue
 </button>`}
               />

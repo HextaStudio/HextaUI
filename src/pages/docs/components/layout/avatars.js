@@ -266,19 +266,19 @@ const avatars = () => {
                 <h3 className="h3">Note</h3>
                 <div className="relative justify-center p-4 my-3 overflow-hidden text-[14px] leading-loose border border-white text-md border-opacity-10 rounded-2xl preview-container">
                   Here we are using Next Js so, I have used{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-900 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
+                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
                     &lt;Image/&gt;
                   </kbd>{" "}
                   instead of{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-900 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
+                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
                     &lt;img/&gt;
                   </kbd>
                   . If you're not using Next Js please replace{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-900 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
+                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
                     &lt;Image/&gt;
                   </kbd>{" "}
                   with{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-900 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
+                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
                     &lt;img/&gt;
                   </kbd>
                 </div>

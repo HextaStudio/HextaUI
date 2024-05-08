@@ -15,14 +15,14 @@ export const BasicMenuRight = () => {
   return (
     <div className="relative">
       <button
-        className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         Menu
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -67,7 +67,7 @@ export const MenuWithButton = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -86,7 +86,7 @@ export const MenuWithButton = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -131,7 +131,7 @@ export const MenuWithButtonAndIcons = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -150,7 +150,7 @@ export const MenuWithButtonAndIcons = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -228,7 +228,7 @@ export const DividedMenuWithButtonAndIcons = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -247,7 +247,7 @@ export const DividedMenuWithButtonAndIcons = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="flex flex-col gap-2 py-2"
             role="menu"
@@ -377,14 +377,14 @@ export const BasicMenuRight = () => {
   return (
     <div className="relative">
       <button
-        className="px-[20px] py-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="px-[20px] py-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         Menu
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -448,7 +448,7 @@ export const MenuWithButton = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -467,7 +467,7 @@ export const MenuWithButton = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -532,7 +532,7 @@ export const MenuWithButtonAndIcons = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -551,7 +551,7 @@ export const MenuWithButtonAndIcons = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="py-2"
             role="menu"
@@ -648,7 +648,7 @@ export const DividedMenuWithButtonAndIcons = () => {
   return (
     <div className="relative">
       <button
-        className="p-[8px] bg-zinc-900  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+        className="p-[8px] bg-zinc-950  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
         onClick={toggleMenu}
       >
         <svg
@@ -667,7 +667,7 @@ export const DividedMenuWithButtonAndIcons = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-900 ring-1 ring-black ring-opacity-5">
+        <div className="absolute right-0 w-48 mt-2 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5">
           <div
             className="flex flex-col gap-2 py-2"
             role="menu"

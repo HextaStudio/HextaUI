@@ -19,7 +19,7 @@ export const BasicToastPreview = () => {
   return (
     <>
       <button
-        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s] border-zinc-800 border"
+        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
         onClick={toggleToast}
       >
         Show Toast
@@ -44,7 +44,7 @@ export const BasicToastPreview = () => {
               </div>
               <div>
                 <button
-                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s]  "
+                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]  "
                   onClick={toggleToast}
                 >
                   Undo
@@ -115,7 +115,7 @@ export const BasicToastPreview = () => {
   return (
     <>
       <button
-        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s] border-zinc-800 border"
+        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
         onClick={toggleToast}
       >
         Show Toast
@@ -140,7 +140,7 @@ export const BasicToastPreview = () => {
               </div>
               <div>
                 <button
-                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s]  "
+                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]  "
                   onClick={toggleToast}
                 >
                   Undo

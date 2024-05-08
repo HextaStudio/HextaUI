@@ -16,7 +16,7 @@ export const AlertDialogPreview = () => {
   return (
     <>
       <button
-        className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s] border  border-zinc-900"
+        className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border  border-zinc-900"
         onClick={toggleAlertDialog}
       >
         Show Dialog
@@ -39,7 +39,7 @@ export const AlertDialogPreview = () => {
               </button>
 
               <button
-                className="px-[20px] py-[8px] bg-zinc-900 bg-opacity-20  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+                className="px-[20px] py-[8px] bg-zinc-950 bg-opacity-20  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
                 onClick={toggleAlertDialog}
               >
                 Cancel
@@ -111,7 +111,7 @@ export const AlertDialog = () => {
   return (
     <>
       <button
-        className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-900 transition-all duration-[0.4s] border  border-zinc-900"
+        className="px-[20px] py-[8px]  text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border  border-zinc-900"
         onClick={toggleAlertDialog}
       >
         Show Dialog
@@ -134,7 +134,7 @@ export const AlertDialog = () => {
               </button>
 
               <button
-                className="px-[20px] py-[8px] bg-zinc-900 bg-opacity-20  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
+                className="px-[20px] py-[8px] bg-zinc-950 bg-opacity-20  border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
                 onClick={toggleAlertDialog}
               >
                 Cancel
