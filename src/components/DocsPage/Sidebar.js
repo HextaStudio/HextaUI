@@ -110,7 +110,11 @@ export const Sidebar = () => {
       url: "typography",
       new: true,
     },
-
+    {
+      name: "Cards",
+      url: "cards",
+      new: true,
+    },
     {
       name: "Navbar",
       url: "navbar",
