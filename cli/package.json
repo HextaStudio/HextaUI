@@ -1,10 +1,10 @@
 {
   "name": "@hextastudio/ui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "bin": {
-    "hexta-ui": "./index.cjs"
+    "hexta-ui": "./index.js"
   },
   "scripts": {
     "build:css": "postcss styles.css -o dist/output.css"
