@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import { TextRevealV1Preview } from "@/pages/docs/components/modern/text-reveal-v1";
-import { Reviews } from "./Reviews";
 import { WaterDropGridPreview } from "@/pages/docs/components/modern/water-drop-effect";
 import PricingCards from "./PricingCards";
 import { InfiniteScrollingTextV1Preview } from "@/pages/docs/components/modern/infinite-text-scroll-v1";
@@ -135,7 +134,7 @@ export const Hero = () => {
           </Link>
           <Link href="/pricing" className="secondary-button grow">
             Pricing
-          </Link>
+          </Link>{" "}
         </div>
         <div>
           <TextRevealV1Preview />
