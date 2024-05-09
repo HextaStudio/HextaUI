@@ -48,10 +48,10 @@ if (process.argv[2] === "add") {
               answers.component
             } component was added successfully — Guide to use ${
               answers.component
-            }, https://ui.hextastudio.in/docs/components/layout/${answers.component.toLower()}`
+            }, https://ui.hextastudio.in/docs/components/layout/${answers.component.toLowerCase()}`
           );
 
-          updateTailwindConfig(componentLoader, answers.framework);
+          // updateTailwindConfig(componentLoader, answers.framework);
         })
         .catch(function (error) {
           componentLoader.fail(
