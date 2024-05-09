@@ -5,7 +5,7 @@ import fs from "fs";
 import axios from "axios";
 import inquirer from "inquirer";
 
-const components = ["Select", "Tooltip"];
+const components = ["Select", "Tooltip", "Loader"];
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
 const frameworks = ["Next.js", "Vue", "React"];
@@ -27,7 +27,7 @@ if (process.argv[2] === "add") {
       },
     ])
     .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/cli/components/${answers.component}.js`;
+      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/hexta-ui/cli/components/${answers.component}.js`;
       const componentLoader = ora(
         `Downloading ${answers.component} component`
       ).start();
