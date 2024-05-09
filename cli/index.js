@@ -5,10 +5,18 @@ import fs from "fs";
 import axios from "axios";
 import inquirer from "inquirer";
 
-const components = ["Select", "Tooltip", "Loader"];
+const components = [
+  "Select",
+  "Tooltip",
+  "Loader",
+  "Avatar",
+  "Button",
+  "Toggle",
+  "Toast",
+].sort();
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
-const frameworks = ["Next.js", "Vue", "React"];
+const frameworks = ["Next.js", "React"];
 
 if (process.argv[2] === "add") {
   inquirer
@@ -22,7 +30,7 @@ if (process.argv[2] === "add") {
       {
         type: "list",
         name: "component",
-        message: "Which component do you want to download?",
+        message: "Which component would you like to instal?",
         choices: components,
       },
     ])
@@ -39,7 +47,7 @@ if (process.argv[2] === "add") {
       })
         .then(function (response) {
           const srcDir = path.join(process.cwd(), "src");
-          const componentsDir = path.join(srcDir, "components");
+          const componentsDir = path.join(srcDir, "components", "hexta-ui");
           fs.mkdirSync(componentsDir, { recursive: true });
           const filePath = path.join(componentsDir, `${answers.component}.js`);
           response.data.pipe(fs.createWriteStream(filePath));
