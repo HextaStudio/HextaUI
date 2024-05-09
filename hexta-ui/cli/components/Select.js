@@ -1,6 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-export const Select = ({ options, label, value, onChange }) => {
+const cn = (...args) => {
+  return twMerge(clsx(args));
+};
+
+export const Select = ({ options, label, value, onChange, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -31,7 +37,10 @@ export const Select = ({ options, label, value, onChange }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         type="button"
-        className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:border-zinc-700 min-w-[10rem]"
+        className={cn(
+          "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:border-zinc-700 min-w-[10rem]",
+          className
+        )}
         onClick={handleDropdownToggle}
       >
         {value ? value.label : label}
@@ -69,7 +78,13 @@ export const Select = ({ options, label, value, onChange }) => {
   );
 };
 
-export const SearchableSelect = ({ options, label, value, onChange }) => {
+export const SearchableSelect = ({
+  options,
+  label,
+  value,
+  onChange,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef(null);
@@ -111,7 +126,10 @@ export const SearchableSelect = ({ options, label, value, onChange }) => {
       <div className="relative">
         <input
           type="text"
-          className="block w-full px-4 py-2 text-sm text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700 min-w-[10rem]"
+          className={cn(
+            "block w-full px-4 py-2 text-sm text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700 min-w-[10rem]",
+            className
+          )}
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
@@ -163,7 +181,13 @@ export const SearchableSelect = ({ options, label, value, onChange }) => {
   );
 };
 
-export const GroupedSelect = ({ options, label, value, onChange }) => {
+export const GroupedSelect = ({
+  options,
+  label,
+  value,
+  onChange,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -194,7 +218,10 @@ export const GroupedSelect = ({ options, label, value, onChange }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         type="button"
-        className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]"
+        className={cn(
+          "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]",
+          className
+        )}
         onClick={handleDropdownToggle}
       >
         {value ? value.label : label}
@@ -237,7 +264,13 @@ export const GroupedSelect = ({ options, label, value, onChange }) => {
   );
 };
 
-export const AnimatedSelect = ({ options, label, value, onChange }) => {
+export const AnimatedSelect = ({
+  options,
+  label,
+  value,
+  onChange,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -268,7 +301,10 @@ export const AnimatedSelect = ({ options, label, value, onChange }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         type="button"
-        className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 transition-all duration-300 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]"
+        className={cn(
+          "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 transition-all duration-300 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]",
+          className
+        )}
         onClick={handleDropdownToggle}
       >
         {value ? value.label : label}
@@ -309,7 +345,7 @@ export const AnimatedSelect = ({ options, label, value, onChange }) => {
   );
 };
 
-export const IconSelect = ({ options, label, value, onChange }) => {
+export const IconSelect = ({ options, label, value, onChange, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -340,7 +376,10 @@ export const IconSelect = ({ options, label, value, onChange }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         type="button"
-        className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]"
+        className={cn(
+          "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]",
+          className
+        )}
         onClick={handleDropdownToggle}
       >
         {value ? (
@@ -394,7 +433,7 @@ export const IconSelect = ({ options, label, value, onChange }) => {
   );
 };
 
-export const MultiSelect = ({ options, label, value, onChange }) => {
+export const MultiSelect = ({ options, label, value, onChange, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const dropdownRef = useRef(null);
@@ -431,7 +470,12 @@ export const MultiSelect = ({ options, label, value, onChange }) => {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <div className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]">
+      <div
+        className={cn(
+          "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]",
+          className
+        )}
+      >
         <div onClick={handleDropdownToggle}>
           {selectedOptions.length > 0
             ? selectedOptions.map((option) => option.label).join(", ")
