@@ -1,6 +1,17 @@
 import { useState } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-export const TooltipComponent = ({ text, direction = "top", children }) => {
+const cn = (...args) => {
+  return twMerge(clsx(args));
+};
+
+export const TooltipComponent = ({
+  text,
+  direction = "top",
+  children,
+  className,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -25,7 +36,7 @@ export const TooltipComponent = ({ text, direction = "top", children }) => {
       <div onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
         {children}
       </div>
-      <div className={tooltipClasses}>{text}</div>
+      <div className={cn(tooltipClasses, className)}>{text}</div>
     </div>
   );
 };
