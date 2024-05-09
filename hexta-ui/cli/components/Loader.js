@@ -1,90 +1,61 @@
-export const SpinnerCircleLoader = ({ size }) => {
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+const cn = (...args) => {
+  return twMerge(clsx(args));
+};
+
+export const SpinnerCircleLoader = ({ className }) => {
   return (
     <>
       <div
-        className={`w-[${size}px] h-[${size}px] border-t-2 rounded-full border-zinc animate-spin`}
+        className={cn(
+          "w-[30px] h-[30px] border-t-2 rounded-full border-zinc animate-spin",
+          className
+        )}
       ></div>
     </>
   );
 };
 
-export const SpinnerSquareLoader = ({ size }) => {
+export const SpinnerSquareLoader = ({ className }) => {
   return (
     <>
       <div className="flex items-center justify-center">
         <div
-          className={`w-[${size}px] h-[${size}px] bg-zinc-100 animate-spin`}
+          className={cn(
+            "w-[30px] h-[30px] bg-zinc-100 animate-spin",
+            className
+          )}
         ></div>
       </div>
     </>
   );
 };
 
-export const CircleBouncingLoader = ({ size }) => {
-  return (
-    <>
-      <div className="flex items-center justify-center">
-        <div className="flex space-x-2">
-          <div
-            className={`w-[${size}px] h-[${size}px] rounded-full bg-zinc-100 animate-bounce`}
-          ></div>
-          <div
-            className={`w-[${size}px] h-[${size}px] delay-100 rounded-full bg-zinc-100 animate-bounce`}
-            style={{
-              animationDelay: "0.2s",
-            }}
-          ></div>
-          <div
-            className={`w-[${size}px] h-[${size}px] delay-200 rounded-full bg-zinc-100 animate-bounce`}
-            style={{
-              animationDelay: "0.3s",
-            }}
-          ></div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const SquareBouncingLoader = ({ size }) => {
-  return (
-    <>
-      <div className="flex items-center justify-center">
-        <div className="flex space-x-2">
-          <div
-            className={`w-[${size}px] h-[${size}px] bg-zinc-100 animate-bounce`}
-          ></div>
-          <div
-            className={`w-[${size}px] h-[${size}px] bg-zinc-100 animate-bounce`}
-            style={{ animationDelay: "0.2s" }}
-          ></div>
-          <div
-            className={`w-[${size}px] h-[${size}px] bg-zinc-100 animate-bounce`}
-            style={{ animationDelay: "0.4s" }}
-          ></div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const PingLoader = ({ size }) => {
+export const PingLoader = ({ className }) => {
   return (
     <>
       <div className="flex items-center justify-center h-screen">
         <div
-          className={`w-[${size}px] h-[${size}px] rounded-full bg-zinc-100 animate-ping`}
+          className={cn(
+            "w-[30px] h-[30px] rounded-full bg-zinc-100 animate-ping",
+            className
+          )}
         ></div>
       </div>
     </>
   );
 };
 
-export const ColoredLoader = ({ size, color }) => {
+export const ColoredLoader = ({ className }) => {
   return (
     <>
       <div
-        className={`w-[${size}px] h-[${size}px] border-${color}-500 border-t-2 rounded-full border-zinc animate-spin`}
+        className={cn(
+          "w-[30px] h-[30px] border-zinc-500 border-t-2 rounded-full border-zinc animate-spin",
+          className
+        )}
       ></div>
     </>
   );
