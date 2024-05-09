@@ -5,7 +5,7 @@ import fs from "fs";
 import axios from "axios";
 import inquirer from "inquirer";
 
-const components = ["Select"];
+const components = ["Select", "Tooltip"];
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
 const frameworks = ["Next.js", "Vue", "React"];
@@ -44,7 +44,11 @@ if (process.argv[2] === "add") {
           const filePath = path.join(componentsDir, `${answers.component}.js`);
           response.data.pipe(fs.createWriteStream(filePath));
           componentLoader.succeed(
-            `${answers.component} component was added successfully`
+            `${
+              answers.component
+            } component was added successfully — Guide to use ${
+              answers.component
+            }, https://ui.hextastudio.in/docs/components/layout/${answers.component.toLower()}`
           );
 
           updateTailwindConfig(componentLoader, answers.framework);
