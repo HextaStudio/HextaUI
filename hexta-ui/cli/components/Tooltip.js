@@ -25,14 +25,14 @@ export const TooltipComponent = ({
     right: "left-full top-1/2 -translate-y-1/2 ml-2",
   };
 
-  const tooltipClasses = `absolute z-10 px-3 py-2 text-xs font-medium text-black bg-white rounded-md whitespace-nowrap ${
+  const tooltipClasses = `absolute z-10  px-3 py-2 text-xs font-medium text-black bg-white rounded-md whitespace-nowrap ${
     directionClasses[direction]
-  } border-zinc-800 border transform transition-all duration-[0.2s] ${
-    isVisible ? "opacity-100" : "opacity-0"
+  } border-zinc-800 border transform transition-all duration-[0.2s] flex ${
+    isVisible ? "flex" : "hidden"
   }`;
 
   return (
-    <div className="relative inline-block ">
+    <div className="relative flex">
       <div onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
         {children}
       </div>
