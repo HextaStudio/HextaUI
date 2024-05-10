@@ -100,7 +100,7 @@ pnpm add @hextastudio/ui`}
               />
             </div>
             <div className="installation">
-              <h2 className="text-3xl font-bold">Usage</h2>
+              <h2 className="text-3xl font-bold">Example Usage</h2>
               <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
                 <Button>Primary Button</Button>
               </div>
