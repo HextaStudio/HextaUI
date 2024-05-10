@@ -58,6 +58,11 @@ export default function App({ Component, pageProps }) {
         src="https://eu.umami.is/script.js"
         data-website-id="de2f88ed-b01d-46df-8a45-e3443a7a69a5"
       ></Script>
+      <Script
+        async
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "9b35480418994f0baddec0066c6edd55"}'
+      ></Script>
       <Component {...pageProps} />
     </>
   );
