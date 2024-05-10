@@ -5,9 +5,9 @@ import React from "react";
 import { NextSeo } from "next-seo";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Toast from "@/components/hexta-ui/Toast";
 
-export const BasicToastPreview = () => {
+const Toasts = () => {
   const [showToast, setShowToast] = useState(false);
 
   const toggleToast = () => {
@@ -16,49 +16,7 @@ export const BasicToastPreview = () => {
       setShowToast(false);
     }, 5000);
   };
-  return (
-    <>
-      <button
-        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
-        onClick={toggleToast}
-      >
-        Show Toast
-      </button>
-      {showToast && (
-        <AnimatePresence>
-          <motion.div
-            key="toast"
-            initial={{ translateY: 100, opacity: 0 }}
-            animate={{ translateY: 0, opacity: 1 }}
-            exit={{ translateY: 100, opacity: 0 }}
-            className={`flex items-center justify-between h-fit py-3 px-5 m-4  rounded-lg border-b-2 gap-3 border border-zinc-800 bg-[#070707] fixed bottom-0 right-0`}
-          >
-            <div className="flex items-center justify-center gap-4">
-              <div className="flex flex-col ">
-                <p className="text-[15px] font-medium  items-center flex tracking-normal opacity-90">
-                  Successfully created toast
-                </p>
-                <small className="text-[12px] opacity-80">
-                  Copy and paste code for this Toast
-                </small>
-              </div>
-              <div>
-                <button
-                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]  "
-                  onClick={toggleToast}
-                >
-                  Undo
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      )}
-    </>
-  );
-};
 
-const Toasts = () => {
   return (
     <>
       {" "}
@@ -94,16 +52,84 @@ const Toasts = () => {
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div className="installation">
-                <h3 className="h3">Basic Toast</h3>
+                <h3 className="h3">Preview</h3>
                 <div className="relative flex items-center  justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <BasicToastPreview />
+                  <button
+                    className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
+                    onClick={toggleToast}
+                  >
+                    Show Toast
+                  </button>
+                  <Toast
+                    text="Successfully created toast"
+                    description="Copy and paste code for this Toast"
+                    showToast={showToast}
+                    onUndo={toggleToast}
+                  />
                 </div>
-                <CodeBlock
-                  lang="jsx"
-                  filename="jsx"
-                  code={`import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-export const BasicToastPreview = () => {
+              </div>
+            </div>
+          </div>
+          <div className="installation">
+            <h2 className="text-3xl font-bold">Installation</h2>
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`npm install @hextastudio/ui
+# or
+bun install @hextastudio/ui
+# or
+yarn add @hextastudio/ui
+# or
+pnpm add @hextastudio/ui`}
+            />
+
+            <p>After installation let's add the Button component.</p>
+            <CodeBlock lang="bash" filename="bash" code={`npx hexta-ui add`} />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? (Use arrow keys)
+> Next.js 
+  React`}
+            />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? Next.js
+? Which component would you like to instal?
+  Avatar
+  Button
+  Loader
+  Select
+> Toast
+  Toggle
+  Tooltip`}
+            />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? Next.js         
+? Which component would you like to instal? Toast
+✔ Toast component was added successfully — Guide to use Toast, https://ui.hextastudio.in/docs/components/layout/toast`}
+            />
+            <p>Importing toast in your file.</p>
+            <CodeBlock
+              lang="jsx"
+              filename="jsx"
+              code={`import Toast from "@/components/hexta-ui/Toast";`}
+            />
+          </div>
+          <div className="installation">
+            <h2 className="text-3xl font-bold">Example Usage</h2>
+
+            <CodeBlock
+              lang="jsx"
+              filename="jsx"
+              code={`import { useState } from "react";
+import Toast from "@/components/hexta-ui/Toast";
+
+export const Home = () => {
   const [showToast, setShowToast] = useState(false);
 
   const toggleToast = () => {
@@ -112,52 +138,25 @@ export const BasicToastPreview = () => {
       setShowToast(false);
     }, 5000);
   };
+  
   return (
     <>
-      <button
-        className="px-[20px] py-[8px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
-        onClick={toggleToast}
-      >
+      <button className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border-zinc-800 border"
+        onClick={toggleToast}>
         Show Toast
       </button>
-      {showToast && (
-        <AnimatePresence>
-          <motion.div
-            key="toast"
-            initial={{ translateY: 100, opacity: 0 }}
-            animate={{ translateY: 0, opacity: 1 }}
-            exit={{ translateY: 100, opacity: 0 }}
-            className={\`flex items-center justify-between h-fit py-3 px-5 m-4  rounded-lg border-b-2 gap-3 border border-zinc-800 bg-[#070707] fixed bottom-0 right-0\`}
-          >
-            <div className="flex items-center justify-center gap-4">
-              <div className="flex flex-col ">
-                <p className="text-[15px] font-medium  items-center flex tracking-normal opacity-90">
-                  Successfully created toast
-                </p>
-                <small className="text-[12px] opacity-80">
-                  Copy and paste code for this Toast
-                </small>
-              </div>
-              <div>
-                <button
-                  className="px-[8px] py-[2px]  text-white  rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s]  "
-                  onClick={toggleToast}
-                >
-                  Undo
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      )}
-    </>
-  );
-};
 
-`}
-                />
-              </div>
-            </div>
+      <Toast
+        text="Successfully created toast"
+        description="Copy and paste code for this Toast"
+        showToast={showToast}
+        onUndo={toggleToast}
+      />
+    </>
+  )
+}
+              `}
+            />
           </div>
         </main>
       </DocsLayout>
