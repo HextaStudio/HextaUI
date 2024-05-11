@@ -219,6 +219,18 @@ export const Sidebar = () => {
             <li>
               <Link
                 className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                  router.pathname === `/docs/resources/install-hexta-ui`
+                    ? "opacity-100"
+                    : "opacity-60"
+                }`}
+                href="/docs/resources/install-hexta-ui"
+              >
+                Install HextaUI
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
                   router.pathname === `/docs/resources/install-tailwind`
                     ? "opacity-100"
                     : "opacity-60"
