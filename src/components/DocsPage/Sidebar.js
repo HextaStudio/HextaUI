@@ -68,7 +68,6 @@ export const Sidebar = () => {
       name: "Select",
       url: "select",
       new: true,
-      hidden: true,
     },
     {
       name: "Button",
