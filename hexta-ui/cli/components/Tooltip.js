@@ -6,12 +6,7 @@ const cn = (...args) => {
   return twMerge(clsx(args));
 };
 
-export const TooltipComponent = ({
-  text,
-  direction = "top",
-  children,
-  className,
-}) => {
+export const Tooltip = ({ text, direction = "top", children, className }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {

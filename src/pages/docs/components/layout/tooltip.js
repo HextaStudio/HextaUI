@@ -2,38 +2,10 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
+import { Tooltip } from "../../../../../hexta-ui/cli/components/Tooltip";
+
 import { NextSeo } from "next-seo";
-import { useState } from "react";
-
-const TooltipComponent = ({ text, direction = "top", children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-
-  const directionClasses = {
-    top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
-    bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 -translate-y-1/2 ml-2",
-  };
-
-  const tooltipClasses = `absolute z-10 px-3 py-2 text-xs font-medium text-black bg-white rounded-md whitespace-nowrap ${
-    directionClasses[direction]
-  } border-zinc-800 border transform transition-all duration-[0.2s] ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`;
-
-  return (
-    <div className="relative inline-block ">
-      <div onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
-        {children}
-      </div>
-      <div className={tooltipClasses}>{text}</div>
-    </div>
-  );
-};
+import Badge from "../../../../../hexta-ui/cli/components/Badges";
 
 const tooltip = () => {
   return (
@@ -71,146 +43,88 @@ const tooltip = () => {
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
-                <h3 className="h3">Default Tooltip</h3>
+                <h3 className="h3">Preview</h3>
                 <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <TooltipComponent text="This is Top Tooltip" direction="top">
-                    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-                      Hover me
-                    </button>
-                  </TooltipComponent>
+                  <Tooltip direction="top" text="Meow ~">
+                    <Badge outlined className="cursor-default">
+                      🐈 Hover me
+                    </Badge>
+                  </Tooltip>
                 </div>
               </div>
             </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+          </div>
+          <div className="installation">
+            <div>
+              <h2 className="text-3xl font-bold">Installation</h2>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`import { useState } from "react";
-
-const Tooltip = ({ text, direction = "top", children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-
-  const directionClasses = {
-    top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
-    bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 -translate-y-1/2 ml-2",
-  };
-
-  const tooltipClasses = \`absolute z-10 px-3 py-2 text-xs font-medium text-black bg-white rounded-md whitespace-nowrap \${
-    directionClasses[direction]
-  } border-zinc-800 border transform transition-all duration-[0.2s] \${
-    isVisible ? "opacity-100" : "opacity-0"
-  }\`;
-
-  return (
-    <div className="relative inline-block ">
-      <div onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
-        {children}
-      </div>
-      <div className={tooltipClasses}>{text}</div>
-    </div>
-  );
-};`}
+                lang="bash"
+                filename="bash"
+                code={`npm install @hextastudio/ui
+# or
+bun install @hextastudio/ui
+# or
+yarn add @hextastudio/ui
+# or
+pnpm add @hextastudio/ui`}
               />
-              <h3 className="h3">Usage</h3>
+
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npx hexta-ui add`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? (Use arrow keys)
+> Next.js 
+  React`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js
+? Which component would you like to instal?
+  AlertDialog
+  Avatar
+  Button
+  Loader
+  Select
+  Toast
+  Toggle
+> Tooltip`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js         
+? Which component would you like to instal? Tooltip
+✔ Tooltip component was added successfully — Guide to use Tooltip, https://ui.hextastudio.in/docs/components/layout/tooltip`}
+              />
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`<Tooltip text="This s Tooltip information">  
-    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-        Hover me
-    </button>
-</Tooltip>`}
+                code={`import { Avatar } from "@/components/hexta-ui/Tooltip";`}
               />
             </div>
           </div>
           <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Right Tooltip</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <TooltipComponent
-                    text="This is Right Tooltip"
-                    direction="right"
-                  >
-                    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-                      Hover me
-                    </button>
-                  </TooltipComponent>
-                </div>
-              </div>
+            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+              <Tooltip direction="top" text="Meow ~">
+                <Badge outlined className="cursor-default">
+                  🐈 Hover me
+                </Badge>
+              </Tooltip>
             </div>
-
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="jsx"
               filename="jsx"
-              code={`<Tooltip text="This s Tooltip information" direction="right">  
-    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-        Hover me
-    </button>
-</Tooltip>`}
-            />
-          </div>{" "}
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Left Tooltip</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <TooltipComponent
-                    text="This is Left Tooltip"
-                    direction="left"
-                  >
-                    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-                      Hover me
-                    </button>
-                  </TooltipComponent>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="jsx"
-              filename="jsx"
-              code={`<Tooltip text="This s Tooltip information" direction="left">  
-    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-        Hover me
-    </button>
-</Tooltip>`}
-            />
-          </div>
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Bottom Tooltip</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <TooltipComponent
-                    text="This is Bottom Tooltip"
-                    direction="bottom"
-                  >
-                    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-                      Hover me
-                    </button>
-                  </TooltipComponent>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="jsx"
-              filename="jsx"
-              code={`<Tooltip text="This s Tooltip information" direction="bottom">  
-    <button className="px-[20px] py-[8px] border-2 border-zinc-900 text-zinc-100 rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-        Hover me
-    </button>
+              code={`<Tooltip direction="top" text="Meow ~">
+  <Badge outlined className="cursor-default">
+    🐈 Hover me
+  </Badge>
 </Tooltip>`}
             />
           </div>
