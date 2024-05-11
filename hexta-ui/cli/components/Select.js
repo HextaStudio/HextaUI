@@ -146,7 +146,7 @@ const Select = ({
       <div className="relative">
         <input
           type="text"
-          className="block w-full px-4 py-2 text-sm text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700 min-w-[10rem]"
+          className="block w-full px-4 py-2 text-sm text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700 min-w-[10rem] relative"
           placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
@@ -154,7 +154,7 @@ const Select = ({
         />
         <button
           type="button"
-          className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-100"
+          className="absolute top-0 bottom-0 right-0 flex items-center px-2 text-gray-100"
           onClick={handleDropdownToggle}
         >
           <svg
