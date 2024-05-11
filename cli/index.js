@@ -33,7 +33,7 @@ if (process.argv[2] === "add") {
       {
         type: "list",
         name: "component",
-        message: "Which component would you like to instal?",
+        message: "Which component would you like to install?",
         choices: components,
       },
     ])
