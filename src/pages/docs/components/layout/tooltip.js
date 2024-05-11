@@ -105,7 +105,7 @@ pnpm add @hextastudio/ui`}
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`import { Avatar } from "@/components/hexta-ui/Tooltip";`}
+                code={`import { Tooltip } from "@/components/hexta-ui/Tooltip";`}
               />
             </div>
           </div>
