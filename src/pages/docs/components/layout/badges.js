@@ -3,265 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-
-export const BasicBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          Primary
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-          Secondary
-        </span>
-
-        {/* info */}
-        <span className="px-3 py-1 bg-blue-400 border border-blue-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          Info
-        </span>
-
-        {/* success */}
-        <span className="px-3 py-1 bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          Success
-        </span>
-
-        {/* warning */}
-        <span className="px-3 py-1 bg-yellow-400 border border-yellow-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          Warning
-        </span>
-
-        {/* danger */}
-        <span className="px-3 py-1 bg-red-700 border border-red-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-          Danger
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const OutlinedBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 border-2 border-zinc-900 text-zinc-100 rounded-full flex items-center font-[600] text-[12px]">
-          Primary
-        </span>
-
-        {/* info */}
-        <span className="px-3 py-1 border-2 border-blue-900 text-blue-100 rounded-full flex items-center font-[600] text-[12px]">
-          Info
-        </span>
-
-        {/* success */}
-        <span className="px-3 py-1 border-2 border-green-900 text-green-100 rounded-full flex items-center font-[600] text-[12px]">
-          Success
-        </span>
-
-        {/* warning */}
-        <span className="px-3 py-1 border-2 border-yellow-900 text-yellow-100 rounded-full flex items-center font-[600] text-[12px]">
-          Warning
-        </span>
-
-        {/* danger */}
-        <span className="px-3 py-1 border-2 border-red-900 text-red-100 rounded-full flex items-center font-[600] text-[12px]">
-          Danger
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const PillBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Primary
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Secondary
-        </span>
-
-        {/* info */}
-        <span className="px-3 py-1 bg-blue-400 border border-blue-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Info
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const IconBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Primary
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Secondary
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const CounterBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-          <span className="mr-1">Notifications</span>
-          <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-red-500 rounded-full">
-            5
-          </small>
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-          <span className="mr-1">Messages</span>
-          <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-blue-500 rounded-full">
-            12
-          </small>
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const BadgeOnButtonsPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-          Primary
-          <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-red-500 rounded-full">
-            5
-          </small>
-        </button>
-
-        {/* secondary */}
-        <button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-          Secondary
-          <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-blue-500 rounded-full">
-            12
-          </small>
-        </button>
-      </div>
-    </>
-  );
-};
-
-export const GlowingBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-white">
-          Glowing Primary
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
-          Glowing Secondary
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const AnimatedBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
-          Pulsing Primary
-        </span>
-
-        {/* secondary */}
-        <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
-          Bouncing Secondary
-        </span>
-      </div>
-    </>
-  );
-};
-
-export const SegmentedBadgesPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* primary */}
-        <div className="inline-flex overflow-hidden rounded-lg">
-          <span className="px-3 py-1 bg-white border border-zinc-900 text-black flex items-center font-[600] text-[12px]">
-            Primary
-          </span>
-          <span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
-            Secondary
-          </span>
-        </div>
-
-        {/* success */}
-        <div className="inline-flex overflow-hidden rounded-lg">
-          <span className="px-3 py-1 bg-green-400 border border-green-900 text-black flex items-center font-[600] text-[12px]">
-            Success
-          </span>
-          <span className="px-3 py-1 bg-green-900 border border-green-900 text-white flex items-center font-[600] text-[12px]">
-            Danger
-          </span>
-        </div>
-      </div>
-    </>
-  );
-};
+import Badge from "../../../../../hexta-ui/cli/components/Badges";
 
 const badges = () => {
   return (
@@ -294,343 +36,195 @@ const badges = () => {
             <p className="text-sm opacity-80">
               Collection of multiple badges/chips with multiple variants.
             </p>
-          </div>
-
+          </div>{" "}
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
-                <h3 className="h3">Basic Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <BasicBadgesPreview />
+                <h3 className="h3">Preview</h3>
+                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                  <Badge>Latest version</Badge>
                 </div>
               </div>
             </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+          </div>
+          <div className="installation">
+            <div>
+              <h2 className="text-3xl font-bold">Installation</h2>
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npm install @hextastudio/ui
+# or
+bun install @hextastudio/ui
+# or
+yarn add @hextastudio/ui
+# or
+pnpm add @hextastudio/ui`}
+              />
+
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npx hexta-ui add`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? (Use arrow keys)
+> Next.js 
+  React`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js
+? Which component would you like to instal?
+  AlertDialog
+  Avatar
+> Badges
+  Button
+  Loader
+  Select
+  Toast
+  Toggle
+  Tooltip`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js         
+? Which component would you like to instal? Badges
+✔ Badges component was added successfully — Guide to use Badges, https://ui.hextastudio.in/docs/components/layout/badges`}
+              />
+              <p>Importing badges in your file.</p>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    Primary
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-    Secondary
-</span>
-
-{/* info */}
-<span className="px-3 py-1 bg-blue-400 border border-blue-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    Info
-</span>
-
-{/* success */}
-<span className="px-3 py-1 bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    Success
-</span>
-
-{/* warning */}
-<span className="px-3 py-1 bg-yellow-400 border border-yellow-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    Warning
-</span>
-
-{/* danger */}
-<span className="px-3 py-1 bg-red-700 border border-red-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-    Danger
-</span>`}
+                code={`import { Badge } from "@/components/hexta-ui/Badge";`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Outlined Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <OutlinedBadgesPreview />
-                </div>
+            <div>
+              <h3 className="h3">Basic Badge</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <Badge>Latest version</Badge>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 border-2 border-zinc-900 text-zinc-100 rounded-full flex items-center font-[600] text-[12px]">
-    Primary
-</span>
-
-{/* info */}
-<span className="px-3 py-1 border-2 border-blue-900 text-blue-100 rounded-full flex items-center font-[600] text-[12px]">
-    Info
-</span>
-
-{/* success */}
-<span className="px-3 py-1 border-2 border-green-900 text-green-100 rounded-full flex items-center font-[600] text-[12px]">
-    Success
-</span>
-
-{/* warning */}
-<span className="px-3 py-1 border-2 border-yellow-900 text-yellow-100 rounded-full flex items-center font-[600] text-[12px]">
-    Warning
-</span>
-
-{/* danger */}
-<span className="px-3 py-1 border-2 border-red-900 text-red-100 rounded-full flex items-center font-[600] text-[12px]">
-    Danger
-</span>`}
+                code={`<Badge>Latest version</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Pill Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <PillBadgesPreview />
+            <div>
+              <h3 className="h3">Outlined Badge</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Badge variant="info" outlined>
+                    Info
+                  </Badge>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-    <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-    />
-    </svg>
-    Primary
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-    <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-    />
-    </svg>
-    Secondary
-</span>
-
-{/* info */}
-<span className="px-3 py-1 bg-blue-400 border border-blue-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-    <path
-        fillRule="evenodd"
-        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-        clipRule="evenodd"
-    />
-    </svg>
-    Info
-</span>`}
+                code={`<Badge variant="info" outlined>Info</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Icon Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <IconBadgesPreview />
+            <div>
+              <h3 className="h3">Badge with Icon</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Badge pill icon>
+                    Success
+                  </Badge>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-    <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-    />
-    </svg>
-    Primary
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-    <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-    />
-    </svg>
-    Secondary
-</span>`}
+                code={`<Badge pill icon>Success</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Counter Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <CounterBadgesPreview />
+            <div>
+              <h3 className="h3">Badge with Counter</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Badge counter={5}>Notifications</Badge>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px]">
-    <span className="mr-1">Notifications</span>
-    <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-red-500 rounded-full">
-    5
-    </small>
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px]">
-    <span className="mr-1">Messages</span>
-    <small className="flex items-center justify-center w-5 h-5 text-sm text-white bg-blue-500 rounded-full">
-    12
-    </small>
-</span>`}
+                code={`<Badge counter={5}>Notifications</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Badges on Buttons</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <BadgeOnButtonsPreview />
+            <div>
+              <h3 className="h3">Glowing Badge</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Badge variant="secondary" glowing>
+                    Glowing Secondary
+                  </Badge>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<button className="px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-    Primary
-    <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-red-500 rounded-full">
-    5
-    </small>
-</button>
-
-{/* secondary */}
-<button className="px-[20px] py-[8px] bg-zinc-950 border border-zinc-900 text-white rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90">
-    Secondary
-    <small className="flex items-center justify-center w-5 h-5 ml-2 text-white bg-blue-500 rounded-full">
-    12
-    </small>
-</button>`}
+                code={`<Badge variant="secondary" glowing>Glowing Secondary</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Glowing Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <GlowingBadgesPreview />
+            <div>
+              <h3 className="h3">Pulsing Animated Badge</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Badge variant="primary" animated>
+                    Pulsing Primary
+                  </Badge>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-white">
-    Glowing Primary
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] hover:shadow-glow-blue">
-    Glowing Secondary
-</span>`}
+                code={`<Badge variant="primary" animated>Pulsing Primary</Badge>`}
               />
             </div>
-          </div>
 
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Animated Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <AnimatedBadgesPreview />
+            <div>
+              <h3 className="h3">Segmented Badge</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <div className="inline-flex overflow-hidden rounded-lg">
+                    <Badge segmented className="rounded-e-sm">
+                      Primary
+                    </Badge>
+                    <Badge
+                      variant="secondary"
+                      segmented
+                      className="rounded-s-sm"
+                    >
+                      Secondary
+                    </Badge>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* primary */}
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-pulse hover:animate-none">
-    Pulsing Primary
-</span>
-
-{/* secondary */}
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s] animate-bounce">
-    Bouncing Secondary
-</span>`}
-              />
-            </div>
-          </div>
-
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Segmented Badges</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <SegmentedBadgesPreview />
-                </div>
-              </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`{/* primary */}
-<div className="inline-flex overflow-hidden rounded-lg">
-<span className="px-3 py-1 bg-white border border-zinc-900 text-black flex items-center font-[600] text-[12px]">
-    Primary
-</span>
-<span className="px-3 py-1 bg-zinc-950 border border-zinc-900 text-white flex items-center font-[600] text-[12px]">
-    Secondary
-</span>
-</div>
-
-{/* success */}
-<div className="inline-flex overflow-hidden rounded-lg">
-<span className="px-3 py-1 bg-green-400 border border-green-900 text-black flex items-center font-[600] text-[12px]">
-    Success
-</span>
-<span className="px-3 py-1 bg-green-900 border border-green-900 text-white flex items-center font-[600] text-[12px]">
-    Danger
-</span>
+                code={`<div className="inline-flex overflow-hidden rounded-lg">
+  <Badge segmented className="rounded-e-sm">Primary</Badge>
+  <Badge variant="secondary" segmented className="rounded-s-sm">Secondary</Badge>
 </div>`}
               />
             </div>
