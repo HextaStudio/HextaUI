@@ -48,32 +48,36 @@ const avatars = () => {
             </div>
           </div>
           <div className="installation">
-            <h2 className="text-3xl font-bold">Installation</h2>
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`npm install @hextastudio/ui
+            <div>
+              <h2 className="text-3xl font-bold">Installation</h2>
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npm install @hextastudio/ui
 # or
 bun install @hextastudio/ui
 # or
 yarn add @hextastudio/ui
 # or
 pnpm add @hextastudio/ui`}
-            />
+              />
 
-            <p>After installation let's add the Button component.</p>
-            <CodeBlock lang="bash" filename="bash" code={`npx hexta-ui add`} />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? (Use arrow keys)
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npx hexta-ui add`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? (Use arrow keys)
 > Next.js 
   React`}
-            />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? Next.js
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js
 ? Which component would you like to instal?
   AlertDialog
 > Avatar
@@ -83,20 +87,22 @@ pnpm add @hextastudio/ui`}
   Toast
   Toggle
   Tooltip`}
-            />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? Next.js         
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js         
 ? Which component would you like to instal? Avatar
 ✔ Avatar component was added successfully — Guide to use Avatar, https://ui.hextastudio.in/docs/components/layout/avatar`}
-            />
-            <p>Importing toast in your file.</p>
-            <CodeBlock
-              lang="jsx"
-              filename="jsx"
-              code={`import { Avatar } from "@/components/hexta-ui/Avatar";`}
-            />
+              />
+              <p>Importing Avatar in your file.</p>
+              <CodeBlock
+                lang="jsx"
+                filename="jsx"
+                code={`import { Avatar } from "@/components/hexta-ui/Avatar";`}
+              />
+            </div>
+
             <div>
               <h3 className="h3">Preview</h3>
               <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
@@ -109,6 +115,7 @@ pnpm add @hextastudio/ui`}
                 code={`<Avatar avatarUrl="/path/to/avatar.jpg" />`}
               />
             </div>
+
             <div>
               <h3 className="h3">Preview</h3>
               <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
@@ -136,6 +143,7 @@ pnpm add @hextastudio/ui`}
 <Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} offline/>`}
               />
             </div>
+
             <div>
               <h3 className="h3">Preview</h3>
               <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">

@@ -59,7 +59,6 @@ yarn add @hextastudio/ui
 pnpm add @hextastudio/ui`}
               />
 
-              <p>After installation let's add the Button component.</p>
               <CodeBlock
                 lang="bash"
                 filename="bash"
