@@ -61,8 +61,8 @@ export const Sidebar = () => {
 
   const layoutComponentLinks = [
     {
-      name: "Badges",
-      url: "badges",
+      name: "Badge",
+      url: "badge",
     },
     {
       name: "Select",
@@ -71,20 +71,20 @@ export const Sidebar = () => {
       hidden: true,
     },
     {
-      name: "Buttons",
-      url: "buttons",
+      name: "Button",
+      url: "button",
     },
     {
-      name: "Avatars",
-      url: "avatars",
+      name: "Avatar",
+      url: "avatar",
     },
     {
-      name: "Loaders",
-      url: "loaders",
+      name: "Loader",
+      url: "loader",
     },
     {
-      name: "Toasts",
-      url: "toasts",
+      name: "Toast",
+      url: "toast",
     },
     {
       name: "Footer",
@@ -92,8 +92,8 @@ export const Sidebar = () => {
       hidden: true,
     },
     {
-      name: "Charts",
-      url: "charts",
+      name: "Chart",
+      url: "chart",
       hidden: true,
     },
     {
@@ -102,8 +102,8 @@ export const Sidebar = () => {
       hidden: true,
     },
     {
-      name: "Menus",
-      url: "menus",
+      name: "Menu",
+      url: "menu",
       new: true,
       hidden: true,
     },
@@ -124,8 +124,8 @@ export const Sidebar = () => {
       new: true,
     },
     {
-      name: "Cards",
-      url: "cards",
+      name: "Card",
+      url: "card",
       new: true,
       hidden: true,
     },
