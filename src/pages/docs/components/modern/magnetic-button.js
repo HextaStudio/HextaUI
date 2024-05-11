@@ -108,14 +108,14 @@ const magneticButton = () => {
             <h3 className="h3">Setup</h3>
             <CodeBlock
               lang="jsx"
-              filename="index.jsx"
+              filename="@/components/MagneticLink"
               code={`import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import React from "react";`}
-            />
+import React from "react"`}
+              />
             <CodeBlock
               lang="jsx"
-              filename="index.jsx"
+              filename="@/components/MagneticLink"
               code={`export default function MagneticLink({ children }) {
     const magnetic = useRef(null);
 
