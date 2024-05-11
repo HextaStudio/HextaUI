@@ -68,6 +68,7 @@ export const Sidebar = () => {
       name: "Select",
       url: "select",
       new: true,
+      hidden: true,
     },
     {
       name: "Buttons",
@@ -88,19 +89,23 @@ export const Sidebar = () => {
     {
       name: "Footer",
       url: "footer",
+      hidden: true,
     },
     {
       name: "Charts",
       url: "charts",
+      hidden: true,
     },
     {
       name: "Carousel",
       url: "carousel",
+      hidden: true,
     },
     {
       name: "Menus",
       url: "menus",
       new: true,
+      hidden: true,
     },
     {
       name: "Toggle",
@@ -114,16 +119,20 @@ export const Sidebar = () => {
     {
       name: "Typography",
       url: "typography",
+      hidden: true,
+
       new: true,
     },
     {
       name: "Cards",
       url: "cards",
       new: true,
+      hidden: true,
     },
     {
       name: "Navbar",
       url: "navbar",
+      hidden: true,
     },
     {
       name: "Alert Dialog",
@@ -132,12 +141,14 @@ export const Sidebar = () => {
     {
       name: "Breadcrumb",
       url: "breadcrumb",
+      hidden: true,
     },
     {
       name: "Hero",
       url: "hero",
+      hidden: true,
     },
-  ];
+  ].sort();
 
   return (
     <>
@@ -296,7 +307,7 @@ export const Sidebar = () => {
             {layoutComponentLinks
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((link, index) => (
-                <li key={index}>
+                <li key={index} className={` ${link.hidden && "hidden"} `}>
                   <Link
                     className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
                       router.pathname === `/docs/components/layout/${link.url}`
