@@ -127,7 +127,7 @@ export const Sidebar = () => {
     },
     {
       name: "Alert Dialog",
-      url: "alert-dialog",
+      url: "alertDialog",
     },
     {
       name: "Breadcrumb",
