@@ -2,10 +2,10 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
-import { Tooltip } from "../../../../../hexta-ui/cli/components/Tooltip";
+import { Tooltip } from "@/components/hexta-ui/Tooltip";
 
 import { NextSeo } from "next-seo";
-import Badge from "../../../../../hexta-ui/cli/components/Badges";
+import Badge from "@/components/hexta-ui/Badges";
 
 const tooltip = () => {
   return (

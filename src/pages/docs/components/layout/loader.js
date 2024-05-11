@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-import { Loader } from "../../../../../hexta-ui/cli/components/Loader";
+import { Loader } from "@/components/hexta-ui/Loader";
 
 import { NextSeo } from "next-seo";
 
@@ -130,7 +130,7 @@ pnpm add @hextastudio/ui`}
           <div>
             <h3 className="h3">Ping loader</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="pingLoader" />
+              <Loader variant="pingLoader" className="animate-ping" size={40} />
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
@@ -154,13 +154,18 @@ pnpm add @hextastudio/ui`}
           <div>
             <h3 className="h3">Loader with custom size and color</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="circleLoader" color="red" size={40} />
+              <Loader
+                variant="circleLoader"
+                color="red"
+                size={40}
+                className="border-t-red-500"
+              />
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="jsx"
               filename="jsx"
-              code={`<Loader variant="circleLoader" color="red" size={40} />`}
+              code={`<Loader variant="circleLoader" color="red" size={40} className="border-t-red-500"/>`}
             />
           </div>
         </main>

@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
-import { AlertDialog } from "../../../../../hexta-ui/cli/components/AlertDialog";
+import { AlertDialog } from "@/components/hexta-ui/AlertDialog";
 
 import { NextSeo } from "next-seo";
 

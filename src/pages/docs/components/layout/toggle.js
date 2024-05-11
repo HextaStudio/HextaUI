@@ -6,7 +6,7 @@ import { NextSeo } from "next-seo";
 
 import { useState } from "react";
 
-import { Toggle } from "../../../../../hexta-ui/cli/components/Toggle";
+import { Toggle } from "@/components/hexta-ui/Toggle";
 
 const toggle = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -50,13 +50,11 @@ const toggle = () => {
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
                 <h3 className="h3">Preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-                  <div>
-                    <Toggle enabled={isEnabled} onChange={handleToggle} />
-                    <p className="mt-2 text-sm ">
-                      {isEnabled ? "Enabled" : "Disabled"}
-                    </p>
-                  </div>
+                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center flex-col">
+                  <Toggle enabled={isEnabled} onChange={handleToggle} />
+                  <p className="mt-2 text-sm ">
+                    {isEnabled ? "Enabled" : "Disabled"}
+                  </p>
                 </div>
               </div>
             </div>

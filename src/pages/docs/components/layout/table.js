@@ -4,7 +4,7 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 
-import { Table } from "../../../../../hexta-ui/cli/components/Table";
+import { Table } from "@/components/hexta-ui/Table";
 
 const table = () => {
   const data = [

@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import Badge from "../../../../../hexta-ui/cli/components/Badges";
+import Badge from "@/components/hexta-ui/Badges";
 
 const badges = () => {
   return (
