@@ -3,229 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import Image from "next/image";
-
-export const BasicAvatarPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Default Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-        </div>
-
-        {/* Circular Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="shadow-sm rounded-3xl"
-            pointer-events-none
-          />
-        </div>
-
-        {/* Squared Avatar */}
-        <div className="avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-sm shadow-sm pointer-events-none"
-          />
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const AvatarWithStatusPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Avatar with Online Status */}
-        <div className="relative avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-green-500 rounded-full ring ring-white"></span>
-        </div>
-
-        {/* Avatar with Offline Status */}
-        <div className="relative avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-red-500 rounded-full ring ring-white"></span>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const AvatarWithBadgePreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Avatar with Badge */}
-        <div className="relative avatar">
-          <Image
-            src="https://placeholder.co/80"
-            loading="lazy"
-            alt="Avatar"
-            quality={100}
-            width={80}
-            height={80}
-            placeholder="blur"
-            blurDataURL="https://placeholder.co/80"
-            className="rounded-full shadow-sm pointer-events-none"
-          />
-          <span className="absolute top-[-2px] right-[-2px] inline-flex items-center justify-center w-7 h-7 text-xs font-bold leading-none ring ring-white text-white bg-red-500 rounded-full">
-            3
-          </span>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const GroupAvatarPreview = () => {
-  return (
-    <>
-      <div className="flex flex-wrap items-center gap-4 m-5">
-        {/* Group Avatar */}
-        <div className="flex -space-x-6 avatar-group">
-          <div className="avatar">
-            <Image
-              src="https://placeholder.co/80"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://placeholder.co/80"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div className="avatar ">
-            <Image
-              src="https://placeholder.co/80"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://placeholder.co/80"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div className="avatar">
-            <Image
-              src="https://placeholder.co/80"
-              loading="lazy"
-              alt="Avatar"
-              quality={100}
-              width={80}
-              height={80}
-              placeholder="blur"
-              blurDataURL="https://placeholder.co/80"
-              className="rounded-full shadow-sm pointer-events-none"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+import { Avatar } from "@/components/hexta-ui/Avatar";
 
 const avatars = () => {
   return (
@@ -258,275 +36,123 @@ const avatars = () => {
             <p className="text-sm opacity-80">
               Collection of Avatar components with multiple variants.
             </p>
-          </div>
-
+          </div>{" "}
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
-                <h3 className="h3">Note</h3>
-                <div className="relative justify-center p-4 my-3 overflow-hidden text-[14px] leading-loose border border-white text-md border-opacity-10 rounded-2xl preview-container">
-                  Here we are using Next Js so, I have used{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
-                    &lt;Image/&gt;
-                  </kbd>{" "}
-                  instead of{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
-                    &lt;img/&gt;
-                  </kbd>
-                  . If you're not using Next Js please replace{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
-                    &lt;Image/&gt;
-                  </kbd>{" "}
-                  with{" "}
-                  <kbd className="p-[6px] border border-b-2 bg-zinc-950 border-white rounded-[8px] border-opacity-40 text-[14px] m-[5px]">
-                    &lt;img/&gt;
-                  </kbd>
+                <h3 className="h3">Preview</h3>
+                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                  <Avatar avatarUrl="https://placeholder.co/80" size={80} />
                 </div>
               </div>
             </div>
-            <div className="installation">
-              {/* <h3 className="h3">Code</h3> */}
+          </div>
+          <div className="installation">
+            <h2 className="text-3xl font-bold">Installation</h2>
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`npm install @hextastudio/ui
+# or
+bun install @hextastudio/ui
+# or
+yarn add @hextastudio/ui
+# or
+pnpm add @hextastudio/ui`}
+            />
+
+            <p>After installation let's add the Button component.</p>
+            <CodeBlock lang="bash" filename="bash" code={`npx hexta-ui add`} />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? (Use arrow keys)
+> Next.js 
+  React`}
+            />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? Next.js
+? Which component would you like to instal?
+  AlertDialog
+> Avatar
+  Button
+  Loader
+  Select
+  Toast
+  Toggle
+  Tooltip`}
+            />
+            <CodeBlock
+              lang="bash"
+              filename="bash"
+              code={`? Which framework are you using? Next.js         
+? Which component would you like to instal? Avatar
+✔ Avatar component was added successfully — Guide to use Avatar, https://ui.hextastudio.in/docs/components/layout/avatar`}
+            />
+            <p>Importing toast in your file.</p>
+            <CodeBlock
+              lang="jsx"
+              filename="jsx"
+              code={`import { Avatar } from "@/components/hexta-ui/Avatar";`}
+            />
+            <div>
+              <h3 className="h3">Preview</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <Avatar avatarUrl="https://placeholder.co/80" size={80} />
+              </div>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* If you're using Next Js */}
-import Image from 'next/image';`}
+                code={`<Avatar avatarUrl="/path/to/avatar.jpg" />`}
               />
             </div>
-          </div>
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Basic Avatars</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <BasicAvatarPreview />
+            <div>
+              <h3 className="h3">Preview</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Avatar
+                    variant="withStatus"
+                    avatarUrl="https://placeholder.co/80"
+                    size={80}
+                  />
+                  <Avatar
+                    variant="withStatus"
+                    avatarUrl="https://placeholder.co/80"
+                    size={80}
+                    offline
+                  />
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* Default Avatar */}
-<div className="avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="rounded-full shadow-sm pointer-events-none"
-  />
-</div>
+                code={`<Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} />
 
-{/* Circular Avatar */}
-<div className="avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="shadow-sm rounded-3xl" pointer-events-none
-  />
-</div>
-
-{/* Squared Avatar */}
-<div className="avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="rounded-sm shadow-sm pointer-events-none"
-  />
-</div>`}
+                
+<Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} offline/>`}
               />
             </div>
-          </div>
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Avatars with Status</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <AvatarWithStatusPreview />
+            <div>
+              <h3 className="h3">Preview</h3>
+              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+                <div className="flex gap-4 ">
+                  <Avatar
+                    variant="withBadge"
+                    avatarUrl="https://placeholder.co/80"
+                    size={80}
+                    badgeNumber={5}
+                  />
                 </div>
               </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+              <h3 className="h3">Usage</h3>
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`{/* Avatar with Online Status */}
-<div className="relative avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="rounded-full shadow-sm pointer-events-none"
-  />
-  <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-green-500 rounded-full ring ring-white"></span>
-</div>
-
-{/* Avatar with Offline Status */}
-<div className="relative avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="rounded-full shadow-sm pointer-events-none"
-  />
-  <span className="absolute bottom-[4px] right-[4px] block w-4 h-4 bg-red-500 rounded-full ring ring-white"></span>
-</div>`}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Avatars with Badge</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <AvatarWithBadgePreview />
-                </div>
-              </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`{/* Avatar with Badge */}
-<div className="relative avatar">
-  <Image
-    src="https://placeholder.co/80"
-    loading="lazy"
-    alt="Avatar"
-    quality={100}
-    width={80}
-    height={80}
-    objectFit="cover"
-    placeholder="blur"
-    blurDataURL="https://placeholder.co/80"
-    className="rounded-full shadow-sm pointer-events-none"
-  />
-  <span className="absolute top-[-2px] right-[-2px] inline-flex items-center justify-center w-7 h-7 text-xs font-bold leading-none ring ring-white text-white bg-red-500 rounded-full">
-    3
-  </span>
-</div>`}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Group Avatars</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
-                  <GroupAvatarPreview />
-                </div>
-              </div>
-            </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`{/* Group Avatar */}
-<div className="flex -space-x-6 avatar-group">
-  <div className="avatar">
-    <Image
-      src="https://placeholder.co/80"
-      loading="lazy"
-      alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
-      placeholder="blur"
-      blurDataURL="https://placeholder.co/80"
-      className="rounded-full shadow-sm pointer-events-none"
-    />
-  </div>
-  <div className="avatar">
-    <Image
-      src="https://placeholder.co/80"
-      loading="lazy"
-      alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
-      placeholder="blur"
-      blurDataURL="https://placeholder.co/80"
-      className="rounded-full shadow-sm pointer-events-none"
-    />
-  </div>
-  <div className="avatar ">
-    <Image
-      src="https://placeholder.co/80"
-      loading="lazy"
-      alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
-      placeholder="blur"
-      blurDataURL="https://placeholder.co/80"
-      className="rounded-full shadow-sm pointer-events-none"
-    />
-  </div>
-  <div className="avatar">
-    <Image
-      src="https://placeholder.co/80"
-      loading="lazy"
-      alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
-      placeholder="blur"
-      blurDataURLhttps://placeholder.co/80>
-  <div className="avatar">
-    <Image
-      src="https://placeholder.co/80"
-      loading="lazy"
-      alt="Avatar"
-      quality={100}
-      width={80}
-      height={80}
-      objectFit="cover"
-      placeholder="blur"
-      blurDataURL="https://placeholder.co/80"
-      className="rounded-full shadow-sm pointer-events-none"
-    />
-  </div>
-</div>`}
+                code={` <Avatar variant="withBadge" avatarUrl="https://placeholder.co/80" size={80} badgeNumber={5} />`}
               />
             </div>
           </div>
