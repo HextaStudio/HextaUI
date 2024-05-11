@@ -7,7 +7,7 @@ const cn = (...args) => {
   return twMerge(clsx(args));
 };
 
-export const ToggleSwitch = ({
+export const Toggle = ({
   enabled,
   onChange,
   enabledColor = "bg-green-500",

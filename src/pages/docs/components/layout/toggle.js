@@ -6,75 +6,15 @@ import { NextSeo } from "next-seo";
 
 import { useState } from "react";
 
-const ToggleSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  const handleToggle = () => {
-    setIsEnabled(!isEnabled);
-  };
-
-  return (
-    <div className="flex flex-col items-center gap-4">
-      <div
-        className={`relative inline-block w-[60px] h-[32px] rounded-full cursor-pointer transition-colors ease-in-out duration-100 ${
-          isEnabled ? "bg-green-500" : "bg-red-500"
-        }`}
-        onClick={handleToggle}
-      >
-        <span
-          className={`absolute left-[3px] top-[50%] translate-y-[-50%] bg-white w-[25px] h-[25px] rounded-full transition ease-in-out duration-100 ${
-            isEnabled ? "translate-x-[29px]" : "translate-x-0"
-          }`}
-        ></span>
-      </div>
-      <p className="text-sm opacity-80">
-        Toggle is {isEnabled ? "enabled" : "disabled"}
-      </p>
-    </div>
-  );
-};
-
-const CheckboxToggleSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  const handleToggle = () => {
-    setIsEnabled(!isEnabled);
-  };
-
-  return (
-    <div className="flex flex-col items-center gap-4">
-      <div
-        className={`relative inline-flex items-center gap-2 px-2 py-1 rounded-md cursor-pointer transition-colors ease-in-out duration-100 ${
-          isEnabled ? "bg-green-500" : "bg-gray-400"
-        }`}
-        onClick={handleToggle}
-      >
-        <span
-          className={`w-[20px] h-[20px] rounded-md border-2 border-white transition ease-in-out duration-100 ${
-            isEnabled ? "bg-white" : "bg-transparent"
-          }`}
-        >
-          {isEnabled && (
-            <svg
-              className="w-4 h-4 text-green-500 fill-current"
-              viewBox="0 0 20 20"
-            >
-              <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
-            </svg>
-          )}
-        </span>
-        <span className="text-sm font-medium text-white pointer-events-none">
-          {isEnabled ? "Enabled" : "Disabled"}
-        </span>
-      </div>
-      <p className="text-sm opacity-80">
-        Toggle is {isEnabled ? "enabled" : "disabled"}
-      </p>
-    </div>
-  );
-};
+import { Toggle } from "../../../../../hexta-ui/cli/components/Toggle";
 
 const toggle = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const handleToggle = (value) => {
+    setIsEnabled(value);
+  };
+
   return (
     <>
       <NextSeo
@@ -110,106 +50,109 @@ const toggle = () => {
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
                 <h3 className="h3">Preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[35rem] text-center px-[5rem]">
-                  <ToggleSwitch />
+                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
+                  <div>
+                    <Toggle enabled={isEnabled} onChange={handleToggle} />
+                    <p className="mt-2 text-sm ">
+                      {isEnabled ? "Enabled" : "Disabled"}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
+          </div>
+          <div className="installation">
+            <div>
+              <h2 className="text-3xl font-bold">Installation</h2>
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npm install @hextastudio/ui
+# or
+bun install @hextastudio/ui
+# or
+yarn add @hextastudio/ui
+# or
+pnpm add @hextastudio/ui`}
+              />
+
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`npx hexta-ui add`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? (Use arrow keys)
+> Next.js 
+  React`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js
+? Which component would you like to instal?
+  AlertDialog
+  Avatar
+  Button
+  Loader
+  Select
+  Toast
+> Toggle
+  Tooltip`}
+              />
+              <CodeBlock
+                lang="bash"
+                filename="bash"
+                code={`? Which framework are you using? Next.js         
+? Which component would you like to instal? Toggle
+✔ Toggle component was added successfully — Guide to use Toggle, https://ui.hextastudio.in/docs/components/layout/toggle`}
+              />
               <CodeBlock
                 lang="jsx"
                 filename="jsx"
-                code={`import { useState } from "react";
-
-const ToggleSwitch = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  const handleToggle = () => {
-    setIsEnabled(!isEnabled);
-  };
-
-  return (
-    <div className="flex flex-col items-center gap-4">
-      <div
-        className={\`relative inline-block w-[60px] h-[32px] rounded-full cursor-pointer transition-colors ease-in-out duration-100 \${
-          isEnabled ? "bg-green-500" : "bg-red-500"
-        }\`}
-        onClick={handleToggle}
-      >
-        <span
-          className={\`absolute left-[3px] top-[50%] translate-y-[-50%] bg-white w-[25px] h-[25px] rounded-full transition ease-in-out duration-100 \${
-            isEnabled ? "translate-x-[29px]" : "translate-x-0"
-          }\`}
-        ></span>
-      </div>
-      <p className="text-sm opacity-80">
-        Toggle is {isEnabled ? "enabled" : "disabled"}
-      </p>
-    </div>
-  );
-};`}
+                code={`import { Toggle } from "@/components/hexta-ui/Toggle";`}
               />
             </div>
           </div>
           <div>
-            <div className="flex flex-col gap-4 py-10 preview">
+            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
               <div>
-                <h3 className="h3">Preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[35rem] text-center px-[5rem]">
-                  <CheckboxToggleSwitch />
-                </div>
+                <Toggle enabled={isEnabled} onChange={handleToggle} />
+                <p className="mt-2 text-sm ">
+                  {isEnabled ? "Enabled" : "Disabled"}
+                </p>
               </div>
             </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`import { useState } from "react";
+            <h3 className="h3">Usage</h3>
+            <CodeBlock
+              lang="jsx"
+              filename="jsx"
+              code={`import { useState } from "react";
+import { Toggle } from "@/components/hexta-ui/Toggle";
 
-const CheckboxToggleSwitch = () => {
+
+export const Home = () => {
   const [isEnabled, setIsEnabled] = useState(false);
 
-  const handleToggle = () => {
-    setIsEnabled(!isEnabled);
+  const handleToggle = (value) => {
+    setIsEnabled(value);
   };
-
+  
   return (
-    <div className="flex items-center gap-4">
-      <div
-        className={\`relative inline-flex items-center gap-2 px-2 py-1 rounded-md cursor-pointer transition-colors ease-in-out duration-100 \${
-          isEnabled ? "bg-green-500" : "bg-gray-400"
-        }\`}
-        onClick={handleToggle}
-      >
-        <span
-          className={\`w-[20px] h-[20px] rounded-md border-2 border-white transition ease-in-out duration-100 \${
-            isEnabled ? "bg-white" : "bg-transparent"
-          }\`}
-        >
-          {isEnabled && (
-            <svg
-              className="w-4 h-4 text-green-500 fill-current"
-              viewBox="0 0 20 20"
-            >
-              <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
-            </svg>
-          )}
-        </span>
-        <span className="text-sm font-medium text-white">
+    <>
+      <div>
+        <Toggle enabled={isEnabled} onChange={handleToggle} />
+        
+        <p className="mt-2 text-sm ">
           {isEnabled ? "Enabled" : "Disabled"}
-        </span>
+        </p>
       </div>
-      <p className="text-sm opacity-80">
-        Toggle is {isEnabled ? "enabled" : "disabled"}
-      </p>
-    </div>
+    </>
   );
-};
-`}
-              />
-            </div>
+}`}
+            />
           </div>
         </main>
       </DocsLayout>
