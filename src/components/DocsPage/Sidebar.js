@@ -74,6 +74,11 @@ export const Sidebar = () => {
       url: "button",
     },
     {
+      name: "Table",
+      url: "table",
+      new: true,
+    },
+    {
       name: "Avatar",
       url: "avatar",
     },
