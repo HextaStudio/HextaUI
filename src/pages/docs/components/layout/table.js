@@ -34,7 +34,7 @@ const table = () => {
             "Responsive Table component used to display information in table format.",
           images: [
             {
-              url: "https://i.imgur.com/L9bkOYd.png",
+              url: "https://i.imgur.com/Vd0QX6d.png",
               width: 1920,
               height: 1080,
               alt: "Table - HextaUI ✨",
@@ -143,9 +143,9 @@ pnpm add @hextastudio/ui`}
     ];
 
     return (
-    <>
-        <Table data={data} columns={columns} />  
-    </>
+      <>
+          <Table data={data} columns={columns} />  
+      </>
     );
 }`}
             />
