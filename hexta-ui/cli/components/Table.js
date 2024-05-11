@@ -42,7 +42,9 @@ export const Table = ({
                 readOnly
                 className="mr-2"
               />
-              <span className="text-sm">{column.label}</span>
+              <span className="text-sm pointer-events-none">
+                {column.label}
+              </span>
             </div>
           ))}
         </div>
@@ -56,7 +58,7 @@ export const Table = ({
                 <th
                   key={column.key}
                   className={cn(
-                    "px-4 py-2 text-left bg-gray-100 ",
+                    "px-4 py-3 text-left bg-gray-100 ",
                     headerClassName
                   )}
                 >
@@ -74,7 +76,7 @@ export const Table = ({
                   <td
                     key={`${index}-${column.key}`}
                     className={cn(
-                      "px-4 py-2 text-md opacity-90 text-left ",
+                      "px-4 py-3 text-md opacity-90 text-left text-[14px]",
                       cellClassName
                     )}
                   >
