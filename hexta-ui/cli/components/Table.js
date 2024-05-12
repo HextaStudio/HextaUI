@@ -22,8 +22,10 @@ export const Table = ({
   const [searchTerm, setSearchTerm] = React.useState("");
   const [limitedData, setLimitedData] = React.useState([]);
   const [sortOrder, setSortOrder] = React.useState("asc");
+  const [sortColumn, setSortColumn] = React.useState(null);
 
-  const toggleSortOrder = () => {
+  const toggleSortOrder = (key) => {
+    setSortColumn(key);
     setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
   };
 
@@ -34,14 +36,16 @@ export const Table = ({
       )
     );
 
-    filteredData.sort((a, b) => {
-      if (a.name < b.name) return sortOrder === "asc" ? -1 : 1;
-      if (a.name > b.name) return sortOrder === "asc" ? 1 : -1;
-      return 0;
-    });
+    if (sortColumn) {
+      filteredData.sort((a, b) => {
+        if (a[sortColumn] < b[sortColumn]) return sortOrder === "asc" ? -1 : 1;
+        if (a[sortColumn] > b[sortColumn]) return sortOrder === "asc" ? 1 : -1;
+        return 0;
+      });
+    }
 
     setLimitedData(filteredData);
-  }, [data, searchTerm, sortOrder]);
+  }, [data, searchTerm, sortOrder, sortColumn]);
 
   useEffect(() => {
     const filteredData = data.filter((item) =>
@@ -112,6 +116,7 @@ export const Table = ({
                       "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
                       headerClassName
                     )}
+                    onClick={() => toggleSortOrder(column.key)}
                   >
                     {column.label}
                   </th>
