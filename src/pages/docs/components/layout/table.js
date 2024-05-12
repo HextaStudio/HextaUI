@@ -13,6 +13,13 @@ const table = () => {
     { id: 3, name: "Sassy", age: 3 },
     { id: 4, name: "Shadow", age: 4 },
     { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
+    { id: 5, name: "Simba", age: 1 },
   ];
 
   const columns = [
@@ -57,7 +64,7 @@ const table = () => {
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
                 <h3 className="h3">Preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem] text-center p-6">
+                <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden text-center border border-white border-opacity-10 rounded-2xl preview-container">
                   <Table data={data} columns={columns} />
                 </div>
               </div>
@@ -120,7 +127,7 @@ pnpm add @hextastudio/ui`}
             </div>
           </div>
           <div>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem] p-6 text-center">
+            <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden text-center border border-white border-opacity-10 rounded-2xl preview-container">
               <Table data={data} columns={columns} />
             </div>
             <h3 className="h3">Usage</h3>
