@@ -368,7 +368,7 @@ export const Sidebar = () => {
                         ? "opacity-100"
                         : "opacity-60"
                     }`}
-                    href={`/docs/components/layout/${link.url}`}
+                    href={`/docs/components/layout/${link.url.toLowerCase()}`}
                   >
                     {link.name}{" "}
                     {link.new && (
