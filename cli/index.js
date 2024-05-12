@@ -16,6 +16,7 @@ const components = [
   "Toast",
   "Badges",
   "AlertDialog",
+  "Menu",
 ].sort();
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
