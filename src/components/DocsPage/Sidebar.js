@@ -141,7 +141,7 @@ export const Sidebar = () => {
     {
       name: "Breadcrumb",
       url: "breadcrumb",
-      hidden: true,
+      new: true,
     },
     {
       name: "Hero",
