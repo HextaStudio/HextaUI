@@ -3,7 +3,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { NextSeo } from "next-seo";
 
 import { useState } from "react";
-import { Menu } from "../../../../../hexta-ui/cli/components/Menu";
+import { Menu } from "@/components/hexta-ui/Menu";
 
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
