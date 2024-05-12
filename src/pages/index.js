@@ -2,10 +2,7 @@ import { Hero } from "@/components/Hero";
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 
-import { Table } from "../../hexta-ui/cli/components/Table";
-
 export default function Home() {
- 
   return (
     <>
       <NextSeo

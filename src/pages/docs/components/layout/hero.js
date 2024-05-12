@@ -2,7 +2,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 import { NextSeo } from "next-seo";
-import Hero from "@/components/hexta-ui/Hero";
+import { Hero } from "@/components/hexta-ui/Hero";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const hero = () => {

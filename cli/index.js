@@ -6,19 +6,28 @@ import axios from "axios";
 import inquirer from "inquirer";
 
 const components = [
-  "Select",
-  "Tooltip",
-  "Loader",
-  "Avatar",
-  "Button",
-  "Toggle",
-  "Table",
-  "Hero",
-  "Toast",
-  "Badges",
   "AlertDialog",
+  "Avatar",
+  "Badges",
   "Breadcrumb",
+  "Button",
+  "Checkbox",
+  "Datepicker",
+  "DragAndDrop",
+  "FileUpload",
+  "Hero",
+  "Input",
+  "Loader",
   "Menu",
+  "ProgressBar",
+  "Select",
+  "Slider",
+  "Stepper",
+  "Table",
+  "Tabs",
+  "Toast",
+  "Toggle",
+  "Tooltip",
 ].sort();
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
@@ -41,7 +50,7 @@ if (process.argv[2] === "add") {
       },
     ])
     .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/hexta-ui/cli/components/${answers.component}.js`;
+      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.js`;
       const componentLoader = ora(
         `Downloading ${answers.component} component`
       ).start();

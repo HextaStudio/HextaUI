@@ -32,25 +32,30 @@ npx hexta-ui add
 
 That's it! HextaUI makes it easy to enhance your user interface with modern, customizable components.
 
-<!-- markdown table of currently supported components with description -->
-
-| Component    | Description                                                    |
-| ------------ | -------------------------------------------------------------- |
-| Button       | A simple button component with various styles and sizes.       |
-| Select       | A dropdown select input field with different styles and sizes. |
-| Toggle       | A toggle component with different styles and sizes.            |
-| Toast        | A simple toast component with various styles and sizes.        |
-| Alert Dialog | A dialog component with various styles and sizes.              |
-| Tooltip      | A tooltip component with various styles and sizes.             |
-| Toast        | A toast component with various styles and sizes.               |
-| Loader       | A loader component with various styles and sizes.              |
-| Avatar       | An avatar component with various styles and sizes.             |
-| Badge        | A badge component with various styles and sizes.               |
-| Breadcrumb   | A breadcrumb component with various styles and sizes.          |
-| Dropdown     | A dropdown component with various styles and sizes.            |
-| Table        | A table component with various styles and sizes.               |
-| Tooltip      | A tooltip component with various styles and sizes.             |
-| Hero         | A hero component with various styles and sizes.                |
+| Component   | Description                                                                           |
+| ----------- | ------------------------------------------------------------------------------------- |
+| AlertDialog | A modal that displays a message or requires user action.                              |
+| Avatar      | A circular image that represents a user.                                              |
+| Badges      | A small icon that displays additional information.                                    |
+| Breadcrumb  | A navigation trail that displays the user's location.                                 |
+| Button      | A clickable component that performs an action.                                        |
+| Checkbox    | A tick box that allows users to select multiple options.                              |
+| Datepicker  | A calendar that allows users to select a date.                                        |
+| DragAndDrop | A draggable component that allows users to move items.                                |
+| FileUpload  | A component that allows users to upload files.                                        |
+| Hero        | A large, eye-catching section at the top of a page.                                   |
+| Input       | A field that allows users to enter text.                                              |
+| Loader      | A spinner that indicates a loading state.                                             |
+| Menu        | A list of options that users can select from.                                         |
+| ProgressBar | A visual indicator of progress.                                                       |
+| Select      | A dropdown list that allows users to select an option.                                |
+| Slider      | A component that allows users to select a value within a range.                       |
+| Stepper     | A component that guides users through a series of steps.                              |
+| Table       | A grid that displays data in rows and columns.                                        |
+| Tabs        | A navigation component that allows users to switch between different sections.        |
+| Toast       | A temporary message that appears at the bottom of the screen.                         |
+| Toggle      | A switch that allows users to toggle between two states.                              |
+| Tooltip     | A small pop-up that displays additional information when users hover over an element. |
 
 ### Support
 

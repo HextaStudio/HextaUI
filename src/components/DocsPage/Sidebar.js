@@ -40,90 +40,130 @@ const componentLinks = [
 const layoutComponentLinks = [
   {
     name: "Badge",
-    url: "badge",
+    url: "Badge",
   },
   {
-    name: "Select",
-    url: "select",
-  },
-  {
-    name: "Button",
-    url: "button",
-  },
-  {
-    name: "Table",
-    url: "table",
+    name: "Input",
+    url: "Input",
     new: true,
   },
   {
+    name: "Checkbox",
+    url: "Checkbox",
+    new: true,
+  },
+  {
+    name: "Date Picker",
+    url: "DatePicker",
+    new: true,
+  },
+  {
+    name: "Drag and Drop",
+    url: "DragAndDrop",
+    new: true,
+  },
+  {
+    name: "Tabs",
+    url: "Tabs",
+    new: true,
+  },
+  {
+    name: "Stepper",
+    url: "Stepper",
+    new: true,
+  },
+  {
+    name: "Progress Bar",
+    url: "ProgressBar",
+    new: true,
+  },
+  {
+    name: "Slider",
+    url: "Slider",
+    new: true,
+  },
+  {
+    name: "Select",
+    url: "Select",
+  },
+  {
+    name: "File Upload",
+    url: "FileUpload",
+    new: true,
+  },
+  {
+    name: "Button",
+    url: "Button",
+  },
+  {
+    name: "Table",
+    url: "Table",
+  },
+  {
     name: "Avatar",
-    url: "avatar",
+    url: "Avatar",
   },
   {
     name: "Loader",
-    url: "loader",
+    url: "Loader",
   },
   {
     name: "Toast",
-    url: "toast",
+    url: "Toast",
   },
   {
     name: "Footer",
-    url: "footer",
+    url: "Footer",
     hidden: true,
   },
   {
     name: "Chart",
-    url: "chart",
+    url: "Chart",
     hidden: true,
   },
   {
     name: "Carousel",
-    url: "carousel",
+    url: "Carousel",
     hidden: true,
   },
   {
     name: "Menu",
-    url: "menu",
-    new: true,
+    url: "Menu",
   },
   {
     name: "Toggle",
-    url: "toggle",
+    url: "Toggle",
   },
   {
     name: "Tooltip",
-    url: "tooltip",
+    url: "Tooltip",
   },
   {
     name: "Typography",
-    url: "typography",
+    url: "Typography",
     hidden: true,
-    new: true,
   },
   {
     name: "Card",
-    url: "card",
-    new: true,
+    url: "Card",
     hidden: true,
   },
   {
     name: "Navbar",
-    url: "navbar",
+    url: "Navbar",
     hidden: true,
   },
   {
     name: "Alert Dialog",
-    url: "alertDialog",
+    url: "AlertDialog",
   },
   {
     name: "Breadcrumb",
-    url: "breadcrumb",
-    new: true,
+    url: "Breadcrumb",
   },
   {
     name: "Hero",
-    url: "hero",
+    url: "Hero",
   },
 ].sort();
 
