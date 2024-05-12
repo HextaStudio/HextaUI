@@ -49,37 +49,37 @@ const layoutComponentLinks = [
   },
   {
     name: "Checkbox",
-    url: "Checkbox",
+    url: "checkbox",
     new: true,
   },
   {
     name: "Date Picker",
-    url: "DatePicker",
+    url: "date-picker",
     new: true,
   },
   {
     name: "Drag and Drop",
-    url: "DragAndDrop",
+    url: "drag-and-drop",
     new: true,
   },
   {
     name: "Tabs",
-    url: "Tabs",
+    url: "tabs",
     new: true,
   },
   {
     name: "Stepper",
-    url: "Stepper",
+    url: "stepper",
     new: true,
   },
   {
     name: "Progress Bar",
-    url: "ProgressBar",
+    url: "progress-bar",
     new: true,
   },
   {
     name: "Slider",
-    url: "Slider",
+    url: "slider",
     new: true,
   },
   {
@@ -88,7 +88,7 @@ const layoutComponentLinks = [
   },
   {
     name: "File Upload",
-    url: "FileUpload",
+    url: "file-upload",
     new: true,
   },
   {
@@ -155,7 +155,7 @@ const layoutComponentLinks = [
   },
   {
     name: "Alert Dialog",
-    url: "alertDialog",
+    url: "alert-dialog",
   },
   {
     name: "Breadcrumb",
