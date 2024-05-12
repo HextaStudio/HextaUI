@@ -129,7 +129,36 @@ const stepper = () => {
           <CodeBlock
             lang="jsx"
             filename="jsx"
-            code={`
+            code={`import { Stepper } from "@/components/hexta-ui/Stepper";
+
+export const Home = () => {
+  const stepContent = [
+    {
+      label: "Step 1",
+      content: <div>Step 1 is Active</div>,
+    },
+    {
+      label: "Step 2",
+      content: <div>Step 2 is Active</div>,
+    },
+    {
+      label: "Step 3",
+      content: <div>Step 3 is Active</div>,
+    },
+    {
+      label: "Step 3",
+      content: <div>Step 3 is Active</div>,
+    },
+  ];
+  
+  return (
+    <>
+      <div>
+        <Stepper steps={stepContent} activeStep={2} />
+      </div>
+    </>
+  )
+}
 `}
           />
           <Table data={data} columns={columns} tableTitle="Props Information" />
