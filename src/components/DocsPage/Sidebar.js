@@ -2,9 +2,142 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
+const componentLinks = [
+  {
+    name: "Magnetic Button",
+    url: "magnetic-button",
+  },
+  {
+    name: "White Ray",
+    url: "white-ray",
+  },
+  {
+    name: "Text Reveal v1",
+    url: "text-reveal-v1",
+  },
+  {
+    name: "Photo Trailing Effect",
+    url: "photo-trailing-mousemove",
+  },
+  {
+    name: "Water Drop Effect",
+    url: "water-drop-effect",
+  },
+  {
+    name: "Hacker Text Effect",
+    url: "hacker-text-effect",
+  },
+  {
+    name: "Floating Image Gallery",
+    url: "floating-image-gallery",
+  },
+  {
+    name: "Infinite Text Scroll v1",
+    url: "infinite-text-scroll-v1",
+  },
+];
+
+const layoutComponentLinks = [
+  {
+    name: "Badge",
+    url: "badge",
+  },
+  {
+    name: "Select",
+    url: "select",
+  },
+  {
+    name: "Button",
+    url: "button",
+  },
+  {
+    name: "Table",
+    url: "table",
+    new: true,
+  },
+  {
+    name: "Avatar",
+    url: "avatar",
+  },
+  {
+    name: "Loader",
+    url: "loader",
+  },
+  {
+    name: "Toast",
+    url: "toast",
+  },
+  {
+    name: "Footer",
+    url: "footer",
+    hidden: true,
+  },
+  {
+    name: "Chart",
+    url: "chart",
+    hidden: true,
+  },
+  {
+    name: "Carousel",
+    url: "carousel",
+    hidden: true,
+  },
+  {
+    name: "Menu",
+    url: "menu",
+    new: true,
+  },
+  {
+    name: "Toggle",
+    url: "toggle",
+  },
+  {
+    name: "Tooltip",
+    url: "tooltip",
+  },
+  {
+    name: "Typography",
+    url: "typography",
+    hidden: true,
+    new: true,
+  },
+  {
+    name: "Card",
+    url: "card",
+    new: true,
+    hidden: true,
+  },
+  {
+    name: "Navbar",
+    url: "navbar",
+    hidden: true,
+  },
+  {
+    name: "Alert Dialog",
+    url: "alertDialog",
+  },
+  {
+    name: "Breadcrumb",
+    url: "breadcrumb",
+    new: true,
+  },
+  {
+    name: "Hero",
+    url: "hero",
+  },
+].sort();
+
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredComponentLinks = componentLinks.filter((link) => {
+    return link.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+  const filteredLayoutComponentLinks = layoutComponentLinks.filter((link) => {
+    return link.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
   const router = useRouter();
 
   const toggleSidebar = () => {
@@ -23,131 +156,6 @@ export const Sidebar = () => {
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
-
-  const componentLinks = [
-    {
-      name: "Magnetic Button",
-      url: "magnetic-button",
-    },
-    {
-      name: "White Ray",
-      url: "white-ray",
-    },
-    {
-      name: "Text Reveal v1",
-      url: "text-reveal-v1",
-    },
-    {
-      name: "Photo Trailing Effect",
-      url: "photo-trailing-mousemove",
-    },
-    {
-      name: "Water Drop Effect",
-      url: "water-drop-effect",
-    },
-    {
-      name: "Hacker Text Effect",
-      url: "hacker-text-effect",
-    },
-    {
-      name: "Floating Image Gallery",
-      url: "floating-image-gallery",
-    },
-    {
-      name: "Infinite Text Scroll v1",
-      url: "infinite-text-scroll-v1",
-    },
-  ];
-
-  const layoutComponentLinks = [
-    {
-      name: "Badge",
-      url: "badge",
-    },
-    {
-      name: "Select",
-      url: "select",
-    },
-    {
-      name: "Button",
-      url: "button",
-    },
-    {
-      name: "Table",
-      url: "table",
-      new: true,
-    },
-    {
-      name: "Avatar",
-      url: "avatar",
-    },
-    {
-      name: "Loader",
-      url: "loader",
-    },
-    {
-      name: "Toast",
-      url: "toast",
-    },
-    {
-      name: "Footer",
-      url: "footer",
-      hidden: true,
-    },
-    {
-      name: "Chart",
-      url: "chart",
-      hidden: true,
-    },
-    {
-      name: "Carousel",
-      url: "carousel",
-      hidden: true,
-    },
-    {
-      name: "Menu",
-      url: "menu",
-      new: true,
-    },
-    {
-      name: "Toggle",
-      url: "toggle",
-    },
-    {
-      name: "Tooltip",
-      url: "tooltip",
-    },
-    {
-      name: "Typography",
-      url: "typography",
-      hidden: true,
-      new: true,
-    },
-    {
-      name: "Card",
-      url: "card",
-      new: true,
-      hidden: true,
-    },
-    {
-      name: "Navbar",
-      url: "navbar",
-      hidden: true,
-    },
-    {
-      name: "Alert Dialog",
-      url: "alertDialog",
-    },
-    {
-      name: "Breadcrumb",
-      url: "breadcrumb",
-      new: true,
-    },
-    {
-      name: "Hero",
-      url: "hero",
-    },
-  ].sort();
 
   return (
     <>
@@ -178,6 +186,14 @@ export const Sidebar = () => {
           minWidth: "16rem",
         }}
       >
+        {" "}
+        <input
+          type="text"
+          placeholder="Search Components..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
+        />
         <div
           className="absolute w-fit justify-end items-end ml-auto right-[1rem] p-[9px] cursor-pointer top-[1rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[9999999999]"
           onClick={toggleSidebar}
@@ -281,7 +297,7 @@ export const Sidebar = () => {
             Modern
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {componentLinks.map((link, index) => (
+            {filteredComponentLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
@@ -297,13 +313,12 @@ export const Sidebar = () => {
             ))}
           </ul>
         </div>
-
         <div className="sidebar-section">
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
             Layout Components
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {layoutComponentLinks
+            {filteredLayoutComponentLinks
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((link, index) => (
                 <li key={index} className={` ${link.hidden && "hidden"} `}>
