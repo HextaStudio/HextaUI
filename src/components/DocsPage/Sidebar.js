@@ -40,7 +40,7 @@ const componentLinks = [
 const layoutComponentLinks = [
   {
     name: "Badge",
-    url: "Badge",
+    url: "badge",
   },
   {
     name: "Input",
@@ -84,7 +84,7 @@ const layoutComponentLinks = [
   },
   {
     name: "Select",
-    url: "Select",
+    url: "select",
   },
   {
     name: "File Upload",
@@ -93,37 +93,37 @@ const layoutComponentLinks = [
   },
   {
     name: "Button",
-    url: "Button",
+    url: "button",
   },
   {
     name: "Table",
-    url: "Table",
+    url: "table",
   },
   {
     name: "Avatar",
-    url: "Avatar",
+    url: "avatar",
   },
   {
     name: "Loader",
-    url: "Loader",
+    url: "loader",
   },
   {
     name: "Toast",
-    url: "Toast",
+    url: "toast",
   },
   {
     name: "Footer",
-    url: "Footer",
+    url: "footer",
     hidden: true,
   },
   {
     name: "Chart",
-    url: "Chart",
+    url: "chart",
     hidden: true,
   },
   {
     name: "Carousel",
-    url: "Carousel",
+    url: "carousel",
     hidden: true,
   },
   {
@@ -132,38 +132,38 @@ const layoutComponentLinks = [
   },
   {
     name: "Toggle",
-    url: "Toggle",
+    url: "toggle",
   },
   {
     name: "Tooltip",
-    url: "Tooltip",
+    url: "tooltip",
   },
   {
     name: "Typography",
-    url: "Typography",
+    url: "typography",
     hidden: true,
   },
   {
     name: "Card",
-    url: "Card",
+    url: "card",
     hidden: true,
   },
   {
     name: "Navbar",
-    url: "Navbar",
+    url: "navbar",
     hidden: true,
   },
   {
     name: "Alert Dialog",
-    url: "AlertDialog",
+    url: "alertDialog",
   },
   {
     name: "Breadcrumb",
-    url: "Breadcrumb",
+    url: "breadcrumb",
   },
   {
     name: "Hero",
-    url: "Hero",
+    url: "hero",
   },
 ].sort();
 
@@ -368,7 +368,7 @@ export const Sidebar = () => {
                         ? "opacity-100"
                         : "opacity-60"
                     }`}
-                    href={`/docs/components/layout/${link.url.toLowerCase()}`}
+                    href={`/docs/components/layout/${link.url}`}
                   >
                     {link.name}{" "}
                     {link.new && (
