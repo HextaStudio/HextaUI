@@ -121,8 +121,8 @@ const toast = () => {
             <h2 className="text-3xl font-bold">Example Usage</h2>
 
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 import Toast from "@/components/hexta-ui/Toast";
 

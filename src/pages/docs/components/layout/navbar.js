@@ -493,8 +493,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
 <div>
   <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -543,8 +543,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
 <div>
   <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -570,8 +570,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -609,8 +609,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -664,8 +664,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -714,8 +714,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <Image
@@ -774,8 +774,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -806,8 +806,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
   <div>
     <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -880,8 +880,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
 <div>
   <p className="text-xl font-bold tracking-tighter">HextaUI</p>
@@ -968,8 +968,8 @@ const navbar = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<nav className="flex items-center justify-between w-full px-4 py-2 m-4">
 <div>
   <p className="text-xl font-bold tracking-tighter">HextaUI</p>

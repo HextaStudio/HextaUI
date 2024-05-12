@@ -101,8 +101,8 @@ const fileupload = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { FileUpload } from "@/components/hexta-ui/FileUpload";
 
 export const Home = () => {

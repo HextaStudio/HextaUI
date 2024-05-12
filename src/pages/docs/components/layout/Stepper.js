@@ -127,8 +127,8 @@ const stepper = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { Stepper } from "@/components/hexta-ui/Stepper";
 
 export const Home = () => {

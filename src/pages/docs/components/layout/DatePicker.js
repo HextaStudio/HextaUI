@@ -113,8 +113,8 @@ const datepicker = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { useState } from "react";
 import { Datepicker } from "@/components/hexta-ui/Datepicker";
 

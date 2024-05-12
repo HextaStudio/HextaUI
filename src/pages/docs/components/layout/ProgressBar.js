@@ -93,8 +93,8 @@ const progressbar = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
 
 export const Home = () => {

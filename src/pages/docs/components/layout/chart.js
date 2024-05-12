@@ -423,8 +423,8 @@ npm i recharts`}
                   code={`Since we're using next js we have access to next/dynamic, if you're not using next js then dynamic importing could be different for you.`}
                 />
                 <CodeBlock
-                  lang="jsx"
-                  filename="jsx"
+                  lang="tsx"
+                  filename="Home.tsx"
                   code={`import dynamic from "next/dynamic";
 
 import {

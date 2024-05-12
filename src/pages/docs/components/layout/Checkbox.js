@@ -112,8 +112,8 @@ const checkbox = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { useState } from "react";
 import { Checkbox } from "@/components/hexta-ui/Checkbox";
 

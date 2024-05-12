@@ -67,8 +67,8 @@ const hero = () => {
                 </div>
                 <h3 className="h3">Usage</h3>
                 <CodeBlock
-                  lang="jsx"
-                  filename="jsx"
+                  lang="tsx"
+                  filename="Home.tsx"
                   code={`<Hero
     title="This is Basic Hero Component"
     subtitle="Aliqua ipsum Lorem sit laborum cupidatat sint voluptate eu excepteur."
@@ -94,8 +94,8 @@ const hero = () => {
                 </div>
                 <h3 className="h3">Usage</h3>
                 <CodeBlock
-                  lang="jsx"
-                  filename="jsx"
+                  lang="tsx"
+                  filename="Home.tsx"
                   code={`<Hero
     title="Hero component with Background Image"
     subtitle="Aliqua ipsum Lorem sit laborum cupidatat sint voluptate eu excepteur."

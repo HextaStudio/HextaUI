@@ -564,8 +564,8 @@ npm i @splidejs/react-splide`}
               />
               <h3 className="h3">Import splide CSS file in _app.js</h3>
               <CodeBlock
-                lang="jsx"
-                filename="_app.js"
+                lang="tsx"
+                filename="_app.ts"
                 code={`import "@splidejs/react-splide/css";`}
               />
             </div>
@@ -582,8 +582,8 @@ npm i @splidejs/react-splide`}
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
@@ -677,8 +677,8 @@ export const BasicCarousel = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
@@ -773,8 +773,8 @@ export const CarouselWithAutoplay = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
@@ -893,8 +893,8 @@ export const CarouselWithCustomControls = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useRef } from "react";
