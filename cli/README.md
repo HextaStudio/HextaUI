@@ -31,3 +31,30 @@ npx hexta-ui add
 ![preview](https://i.imgur.com/rHCHZFd.png)
 
 That's it! HextaUI makes it easy to enhance your user interface with modern, customizable components.
+
+<!-- markdown table of currently supported components with description -->
+
+| Component    | Description                                                    |
+| ------------ | -------------------------------------------------------------- |
+| Button       | A simple button component with various styles and sizes.       |
+| Select       | A dropdown select input field with different styles and sizes. |
+| Toggle       | A toggle component with different styles and sizes.            |
+| Toast        | A simple toast component with various styles and sizes.        |
+| Alert Dialog | A dialog component with various styles and sizes.              |
+| Tooltip      | A tooltip component with various styles and sizes.             |
+| Toast        | A toast component with various styles and sizes.               |
+| Loader       | A loader component with various styles and sizes.              |
+| Avatar       | An avatar component with various styles and sizes.             |
+| Badge        | A badge component with various styles and sizes.               |
+| Breadcrumb   | A breadcrumb component with various styles and sizes.          |
+| Dropdown     | A dropdown component with various styles and sizes.            |
+| Table        | A table component with various styles and sizes.               |
+| Tooltip      | A tooltip component with various styles and sizes.             |
+
+### Support
+
+- [Documentation](https://ui.hextastudio.in/docs/components/layout/alertDialog)
+- [GitHub Issues](https://github.com/HextaStudio/HextaUI/issues)
+- [Discord](https://dsc.gg/hextastudio)
+- [Email](mailto:hi@hextastudio.in)
+- [Twitter](https://twitter.com/preetsuthar17)
