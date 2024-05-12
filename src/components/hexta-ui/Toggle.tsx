@@ -3,9 +3,17 @@ import React from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
+
+interface ToggleProps {
+  enabled: boolean;
+  onChange: (value: boolean) => void;
+  enabledColor?: string;
+  disabledColor?: string;
+  className?: string;
+}
 
 export const Toggle = ({
   enabled,
@@ -13,7 +21,7 @@ export const Toggle = ({
   enabledColor = "bg-green-500",
   disabledColor = "bg-red-500",
   className,
-}) => {
+}: ToggleProps) => {
   const handleToggle = () => {
     onChange(!enabled);
   };

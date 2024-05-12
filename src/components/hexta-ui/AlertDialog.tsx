@@ -1,9 +1,19 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
+
+interface AlertDialogProps {
+  title: string;
+  message: string;
+  onConfirm: () => void;
+  onCancel: () => void;
+  isOpen: boolean;
+  className?: string;
+}
+
 export const AlertDialog = ({
   title,
   message,
@@ -11,7 +21,7 @@ export const AlertDialog = ({
   onCancel,
   isOpen,
   className,
-}) => {
+}: AlertDialogProps) => {
   return (
     <>
       {isOpen && (

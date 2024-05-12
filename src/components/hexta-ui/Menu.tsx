@@ -3,9 +3,24 @@ import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
+
+interface MenuItem {
+  label: string;
+  href: string;
+  icon: JSX.Element;
+}
+
+interface MenuProps {
+  items: MenuItem[];
+  dividedItems?: MenuItem[];
+  onOpen: () => void;
+  onClose: () => void;
+  isOpen: boolean;
+  className?: string;
+}
 
 export const Menu = ({
   items,
@@ -14,7 +29,7 @@ export const Menu = ({
   onClose,
   isOpen,
   className,
-}) => {
+}: MenuProps) => {
   return (
     <div className="relative">
       {isOpen && (

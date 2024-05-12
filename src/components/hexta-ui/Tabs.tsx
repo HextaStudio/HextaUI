@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-export const Tabs = ({ tabs, className }) => {
+interface TabsProps {
+  tabs: any[];
+  className: string;
+}
+
+export const Tabs = ({ tabs, className }: TabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
+  const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
 

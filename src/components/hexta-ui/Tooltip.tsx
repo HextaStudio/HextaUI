@@ -2,18 +2,30 @@ import { useState } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: (string | undefined)[]): string => {
   return twMerge(clsx(args));
 };
 
-export const Tooltip = ({ text, direction = "top", children, className }) => {
+interface TooltipProps {
+  text: string;
+  direction?: "top" | "bottom" | "left" | "right";
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Tooltip = ({
+  text,
+  direction = "top",
+  children,
+  className,
+}: TooltipProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
 
-  const directionClasses = {
+  const directionClasses: { [key: string]: string } = {
     top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
     bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
     left: "right-full top-1/2 -translate-y-1/2 mr-2",

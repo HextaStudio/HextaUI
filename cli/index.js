@@ -50,7 +50,7 @@ if (process.argv[2] === "add") {
       },
     ])
     .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.js`;
+      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.tsx`;
       const componentLoader = ora(
         `Downloading ${answers.component} component`
       ).start();

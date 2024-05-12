@@ -2,11 +2,17 @@ import React from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-export const ProgressBar = ({ value, max, className }) => {
+interface ProgressBarProps {
+  value: number;
+  max: number;
+  className?: string;
+}
+
+export const ProgressBar = ({ value, max, className }: ProgressBarProps) => {
   const percentage = (value / max) * 100;
 
   return (

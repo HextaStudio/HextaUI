@@ -2,6 +2,22 @@ import React from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
+interface ButtonProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "info"
+    | "success"
+    | "fail"
+    | "ghost"
+    | "link";
+  disabled?: boolean;
+  outline?: boolean;
+  animated?: boolean;
+}
+
 export const Button = ({
   children,
   className,
@@ -10,7 +26,7 @@ export const Button = ({
   outline = false,
   animated = false,
   ...rest
-}) => {
+}: ButtonProps) => {
   const baseClasses = twMerge(
     "px-[20px] py-[8px] rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
   );
