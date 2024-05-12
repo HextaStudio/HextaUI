@@ -1,11 +1,57 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
+
 import { Loader } from "@/components/hexta-ui/Loader";
+import { Table } from "@/components/hexta-ui/Table";
 
 import { NextSeo } from "next-seo";
 
 const loaders = () => {
+  const data = [
+    {
+      propName: "variant",
+      propType: "string",
+      defaultValue: "circleLoader",
+      description: "Variant of the loader.",
+    },
+    {
+      propName: "color",
+      propType: "string",
+      defaultValue: "white",
+      description: "Color of the loader.",
+    },
+    {
+      propName: "size",
+      propType: "number",
+      defaultValue: "32",
+      description: "Size of the loader.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the loader.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   return (
     <>
       <NextSeo
@@ -168,6 +214,7 @@ pnpm add @hextastudio/ui`}
               code={`<Loader variant="circleLoader" color="red" size={40} className="border-t-red-500"/>`}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

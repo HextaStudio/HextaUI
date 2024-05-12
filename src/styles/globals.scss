@@ -205,18 +205,14 @@ th {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 code {
   border-radius: 7px;
 }
 
 .component-card,
-table,
 .preview-container,
 .codeblock-header,
+table,
 pre {
   max-width: 60dvw;
   z-index: 2 !important;
@@ -225,9 +221,9 @@ pre {
 
 @media screen and (max-width: 900px) {
   .component-card,
-  table,
   .preview-container,
   .codeblock-header,
+  table,
   pre {
     max-width: 90dvw;
     z-index: 2 !important;

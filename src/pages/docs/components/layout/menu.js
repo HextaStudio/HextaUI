@@ -4,11 +4,65 @@ import { NextSeo } from "next-seo";
 
 import { useState } from "react";
 import { Menu } from "@/components/hexta-ui/Menu";
+import { Table } from "@/components/hexta-ui/Table";
 
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
 const menus = () => {
+  const data = [
+    {
+      propName: "items",
+      propType: "Array",
+      defaultValue: "null",
+      description: "Array of menu items.",
+    },
+    {
+      propName: "dividedItems",
+      propType: "Array",
+      defaultValue: "null",
+      description: "Array of menu items with divider.",
+    },
+    {
+      propName: "onOpen",
+      propType: "function",
+
+      defaultValue: "null",
+      description: "Function to be called on open.",
+    },
+    {
+      propName: "onClose",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on close.",
+    },
+    {
+      propName: "isOpen",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "State to open the menu.",
+    },
+  ];
+
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
+
   const menuItemsWithIcons = [
     { href: "/", label: "Home", icon: <FaHome /> },
     { href: "/account", label: "Account", icon: <FaUser /> },
@@ -399,6 +453,7 @@ export const Home = () => {
 }`}
             />
           </div>
+          <Table columns={columns} data={data} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

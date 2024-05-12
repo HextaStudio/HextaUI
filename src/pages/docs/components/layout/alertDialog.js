@@ -4,7 +4,7 @@ import React from "react";
 import { AlertDialog } from "@/components/hexta-ui/AlertDialog";
 
 import { NextSeo } from "next-seo";
-
+import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 
 const alertDialog = () => {
@@ -19,7 +19,62 @@ const alertDialog = () => {
     console.log("Action canceled");
     setShowDialog(false);
   };
-
+  const data = [
+    {
+      propName: "title",
+      propType: "string",
+      defaultValue: "null",
+      description: "Title of the dialog.",
+    },
+    {
+      propName: "message",
+      propType: "string",
+      defaultValue: "null",
+      description: "Message of the dialog.",
+    },
+    {
+      propName: "onConfirm",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on confirm.",
+    },
+    {
+      propName: "onCancel",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on cancel.",
+    },
+    {
+      propName: "isOpen",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "State to open the dialog.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the dialog.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   return (
     <>
       <NextSeo
@@ -169,6 +224,7 @@ export const Home = () => {
               />
             </div>
           </div>
+          <Table columns={columns} data={data} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

@@ -10,6 +10,7 @@ const cn = (...args) => {
 export const Table = ({
   data,
   columns,
+  tableTitle = "Table",
   className,
   headerClassName,
   rowClassName,
@@ -39,18 +40,19 @@ export const Table = ({
   };
 
   return (
-    <div className="overflow-x-auto">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center justify-between mb-4">
+    <div className="mt-[5rem]  min-w-[60dvw] max-w-[60dvw] max-[900px]:max-w-[90dvw]">
+      <h2 className="text-2xl font-semibold">{tableTitle}</h2>
+      <div className="flex flex-wrap items-center justify-between mb-[2rem] gap-4">
+        <div className="flex items-center justify-between grow">
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search..."
-            className="px-4 py-3 mx-1 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
+            className="flex px-4 py-3 mx-1 my-4 text-sm rounded-lg grow focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
           />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4 mx-1">
           {columns.map((column) => (
             <div
               key={column.key}
@@ -70,44 +72,46 @@ export const Table = ({
           ))}
         </div>
       </div>
-      <table className={cn("w-full table-auto", className)}>
-        <thead>
-          <tr>
-            {columns
-              .filter((column) => visibleColumns.includes(column.key))
-              .map((column) => (
-                <th
-                  key={column.key}
-                  className={cn(
-                    "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
-                    headerClassName
-                  )}
-                >
-                  {column.label}
-                </th>
-              ))}
-          </tr>
-        </thead>
-        <tbody>
-          {limitedData.map((row, index) => (
-            <tr key={index} className={cn("", rowClassName)}>
+      <div className="overflow-x-auto">
+        <table className={cn("w-full", className)}>
+          <thead>
+            <tr>
               {columns
                 .filter((column) => visibleColumns.includes(column.key))
                 .map((column) => (
-                  <td
-                    key={`${index}-${column.key}`}
+                  <th
+                    key={column.key}
                     className={cn(
-                      "px-4 py-3 text-md opacity-90 text-left text-[14px]",
-                      cellClassName
+                      "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
+                      headerClassName
                     )}
                   >
-                    {row[column.key]}
-                  </td>
+                    {column.label}
+                  </th>
                 ))}
             </tr>
-          ))}
-        </tbody>
-      </table>{" "}
+          </thead>
+          <tbody>
+            {limitedData.map((row, index) => (
+              <tr key={index} className={cn("", rowClassName)}>
+                {columns
+                  .filter((column) => visibleColumns.includes(column.key))
+                  .map((column) => (
+                    <td
+                      key={`${index}-${column.key}`}
+                      className={cn(
+                        "px-4 py-3 text-md opacity-90 text-left text-[14px]",
+                        cellClassName
+                      )}
+                    >
+                      {row[column.key]}
+                    </td>
+                  ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>{" "}
+      </div>
     </div>
   );
 };

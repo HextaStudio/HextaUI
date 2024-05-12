@@ -6,9 +6,43 @@ import { NextSeo } from "next-seo";
 
 import { useState } from "react";
 
+import { Table } from "@/components/hexta-ui/Table";
 import { Toggle } from "@/components/hexta-ui/Toggle";
 
 const toggle = () => {
+  const data = [
+    {
+      propName: "enabled",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "State of the toggle.",
+    },
+    {
+      propName: "onChange",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on toggle.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
+
   const [isEnabled, setIsEnabled] = useState(false);
 
   const handleToggle = (value) => {
@@ -152,6 +186,7 @@ export const Home = () => {
 }`}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

@@ -3,9 +3,85 @@ import { CodeBlock } from "@/components/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
+
 import Badge from "@/components/hexta-ui/Badges";
+import { Table } from "@/components/hexta-ui/Table";
 
 const badges = () => {
+  const data = [
+    {
+      propName: "variant",
+      propType: "string",
+      defaultValue: "primary",
+      description: "Variant of the badge.",
+    },
+    {
+      propName: "outlined",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Outlined variant of the badge.",
+    },
+    {
+      propName: "icon",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Icon variant of the badge.",
+    },
+    {
+      propName: "pill",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Pill variant of the badge.",
+    },
+    {
+      propName: "counter",
+      propType: "number",
+      defaultValue: "null",
+      description: "Counter variant of the badge.",
+    },
+    {
+      propName: "glowing",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Glowing variant of the badge.",
+    },
+    {
+      propName: "animated",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Animated variant of the badge.",
+    },
+    {
+      propName: "segmented",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Segmented variant of the badge.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the badge.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   return (
     <>
       <NextSeo
@@ -229,6 +305,7 @@ pnpm add @hextastudio/ui`}
               />
             </div>
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

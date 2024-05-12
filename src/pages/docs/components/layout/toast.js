@@ -6,8 +6,53 @@ import { NextSeo } from "next-seo";
 
 import { useState } from "react";
 import Toast from "@/components/hexta-ui/Toast";
+import { Table } from "@/components/hexta-ui/Table";
 
 const Toasts = () => {
+  const data = [
+    {
+      propName: "text",
+      propType: "string",
+      defaultValue: "null",
+      description: "Text to be displayed in the toast.",
+    },
+    {
+      propName: "description",
+      propType: "string",
+      defaultValue: "null",
+      description: "Description to be displayed in the toast.",
+    },
+    {
+      propName: "showToast",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "State to open the toast.",
+    },
+    {
+      propName: "onUndo",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on undo.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   const [showToast, setShowToast] = useState(false);
 
   const toggleToast = () => {
@@ -158,6 +203,7 @@ export const Home = () => {
               `}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

@@ -4,8 +4,60 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 import { Avatar } from "@/components/hexta-ui/Avatar";
+import { Table } from "@/components/hexta-ui/Table";
 
 const avatars = () => {
+  const data = [
+    {
+      propName: "avatarUrl",
+      propType: "string",
+      defaultValue: "null",
+      description: "URL of the avatar.",
+    },
+    {
+      propName: "size",
+      propType: "number",
+      defaultValue: "40",
+      description: "Size of the avatar.",
+    },
+    {
+      propName: "variant",
+      propType: "string",
+      defaultValue: "null",
+      description: "Variant of the avatar.",
+    },
+    {
+      propName: "badgeNumber",
+      propType: "number",
+      defaultValue: "null",
+      description: "Number to be displayed on the badge.",
+    },
+    {
+      propName: "offline",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Status of the user.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
+
   return (
     <>
       <NextSeo
@@ -164,6 +216,7 @@ pnpm add @hextastudio/ui`}
               />
             </div>
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

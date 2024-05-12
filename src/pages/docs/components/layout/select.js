@@ -1,13 +1,90 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
-import Select from "@/components/hexta-ui/Select";
 import { NextSeo } from "next-seo";
+
+import Select from "@/components/hexta-ui/Select";
+import { Table } from "@/components/hexta-ui/Table";
 
 import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";
 
 import React, { useState } from "react";
 
 const select = () => {
+  const data = [
+    {
+      propName: "options",
+      propType: "Array",
+      defaultValue: "null",
+      description: "Options to be displayed in the select.",
+    },
+    {
+      propName: "label",
+      propType: "string",
+      defaultValue: "null",
+      description: "Label of the select.",
+    },
+    {
+      propName: "isGrouped",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Group options in select.",
+    },
+    {
+      propName: "isMulti",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Select multiple options.",
+    },
+    {
+      propName: "isSearchable",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Search for an option.",
+    },
+    {
+      propName: "isAnimated",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Animate the select.",
+    },
+    {
+      propName: "isIconSelect",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Select with icons.",
+    },
+    {
+      propName: "onChange",
+      propType: "function",
+      defaultValue: "null",
+      description: "Function to be called on change.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the select.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
+
   const [selectedOption, setSelectedOption] = useState(null);
 
   const options = [
@@ -446,6 +523,7 @@ export const Home = () => {
 }`}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

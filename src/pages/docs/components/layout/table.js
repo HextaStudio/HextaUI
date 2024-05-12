@@ -8,6 +8,45 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const table = () => {
   const data = [
+    {
+      propName: "data",
+      propType: "array",
+      defaultValue: "[]",
+      description: "Data to be displayed in the table.",
+    },
+    {
+      propName: "columns",
+      propType: "array",
+      defaultValue: "[]",
+      description: "Columns to be displayed in the table.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the table.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
+
+  const TableData = [
     { id: 1, name: "Whiskers", age: 2 },
     { id: 2, name: "Fluffy", age: 5 },
     { id: 3, name: "Sassy", age: 3 },
@@ -20,7 +59,7 @@ const table = () => {
     { id: 10, name: "Kitty", age: 1 },
   ];
 
-  const columns = [
+  const TableColumns = [
     { key: "id", label: "Kitty ID" },
     { key: "name", label: "Kitty Name" },
     { key: "age", label: "Age" },
@@ -63,7 +102,7 @@ const table = () => {
               <div>
                 <h3 className="h3">Preview</h3>
                 <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden text-center border border-white border-opacity-10 rounded-2xl preview-container">
-                  <Table data={data} columns={columns} />
+                  <Table data={TableData} columns={TableColumns} />
                 </div>
               </div>
             </div>
@@ -126,7 +165,7 @@ pnpm add @hextastudio/ui`}
           </div>
           <div>
             <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden text-center border border-white border-opacity-10 rounded-2xl preview-container">
-              <Table data={data} columns={columns} />
+              <Table data={TableData} columns={TableColumns} />
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
@@ -149,12 +188,13 @@ pnpm add @hextastudio/ui`}
 
     return (
       <>
-          <Table data={data} columns={columns} />  
+          <Table data={TableData} columns={TableColumns} />  
       </>
     );
 }`}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

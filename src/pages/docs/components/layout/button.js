@@ -4,8 +4,53 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 import Button from "@/components/hexta-ui/Button";
+import { Table } from "@/components/hexta-ui/Table";
 
 const buttons = () => {
+  const data = [
+    {
+      propName: "variant",
+      propType: "string",
+      defaultValue: "primary",
+      description: "Variant of the button.",
+    },
+    {
+      propName: "outline",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Outline variant of the button.",
+    },
+    {
+      propName: "disabled",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Disabled variant of the button.",
+    },
+    {
+      propName: "className",
+      propType: "string",
+      defaultValue: "null",
+      description: "Custom class name for the button.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   return (
     <>
       <NextSeo
@@ -213,6 +258,7 @@ pnpm add @hextastudio/ui`}
               />
             </div>
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

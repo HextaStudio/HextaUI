@@ -6,8 +6,41 @@ import { Tooltip } from "@/components/hexta-ui/Tooltip";
 
 import { NextSeo } from "next-seo";
 import Badge from "@/components/hexta-ui/Badges";
+import { Table } from "@/components/hexta-ui/Table";
 
 const tooltip = () => {
+  const data = [
+    {
+      propName: "direction",
+      propType: "string",
+      defaultValue: "top",
+      description: "Direction of the tooltip.",
+    },
+    {
+      propName: "text",
+      propType: "string",
+      defaultValue: "null",
+      description: "Text to be displayed in the tooltip.",
+    },
+  ];
+  const columns = [
+    {
+      label: "Prop Name",
+      key: "propName",
+    },
+    {
+      label: "Prop Type",
+      key: "propType",
+    },
+    {
+      label: "Default Value",
+      key: "defaultValue",
+    },
+    {
+      label: "Description",
+      key: "description",
+    },
+  ];
   return (
     <>
       <NextSeo
@@ -128,6 +161,7 @@ pnpm add @hextastudio/ui`}
 </Tooltip>`}
             />
           </div>
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>
