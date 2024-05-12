@@ -8,6 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";
 
 import React, { useState } from "react";
+import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const select = () => {
   const data = [
@@ -169,61 +170,7 @@ const select = () => {
               </div>
             </div>
           </div>{" "}
-          <div className="installation">
-            <div>
-              <h2 className="text-3xl font-bold">Installation</h2>
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npm install @hextastudio/ui
-# or
-bun install @hextastudio/ui
-# or
-yarn add @hextastudio/ui
-# or
-pnpm add @hextastudio/ui`}
-              />
-
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npx hexta-ui add`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? (Use arrow keys)
-> Next.js 
-  React`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js
-? Which component would you like to install?
-  AlertDialog
-  Avatar
-  Button
-  Loader
-  Toggle
-> Select
-  Toast
-  Tooltip`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js         
-? Which component would you like to install? Select
-✔ Select component was added successfully — Guide to use Select, https://ui.hextastudio.in/docs/components/layout/select`}
-              />
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`import { Select } from "@/components/hexta-ui/Select";`}
-              />
-            </div>
-          </div>
+          <InstallationSteps component="Select" />
           <div>
             <h3 className="h3">Basic Select</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem] flex-col gap-2">

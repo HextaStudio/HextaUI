@@ -5,6 +5,7 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import Button from "@/components/hexta-ui/Button";
 import { Table } from "@/components/hexta-ui/Table";
+import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const buttons = () => {
   const data = [
@@ -90,59 +91,7 @@ const buttons = () => {
                 </div>
               </div>
             </div>
-            <div className="installation">
-              <h2 className="text-3xl font-bold">Installation</h2>
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npm install @hextastudio/ui
-# or
-bun install @hextastudio/ui
-# or
-yarn add @hextastudio/ui
-# or
-pnpm add @hextastudio/ui`}
-              />
-
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npx hexta-ui add`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? (Use arrow keys)
-> Next.js 
-  React`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js
-? Which component would you like to install?
-  Avatar
-> Button
-  Loader
-  Select
-  Toast
-  Toggle
-  Tooltip`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js         
-? Which component would you like to install? Button
-✔ Button component was added successfully — Guide to use Button, https://ui.hextastudio.in/docs/components/layout/button`}
-              />
-              <p>Importing button in your file.</p>
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`import Button from "@/components/hexta-ui/Button";`}
-              />
-            </div>
+            <InstallationSteps component="Button" />
             <div className="installation">
               <h2 className="text-3xl font-bold">Example Usage</h2>
               <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">

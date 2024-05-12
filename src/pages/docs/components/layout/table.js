@@ -5,6 +5,7 @@ import React from "react";
 import { NextSeo } from "next-seo";
 
 import { Table } from "@/components/hexta-ui/Table";
+import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const table = () => {
   const data = [
@@ -109,62 +110,7 @@ const table = () => {
               </div>
             </div>
           </div>
-          <div className="installation">
-            <div>
-              <h2 className="text-3xl font-bold">Installation</h2>
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npm install @hextastudio/ui
-# or
-bun install @hextastudio/ui
-# or
-yarn add @hextastudio/ui
-# or
-pnpm add @hextastudio/ui`}
-              />
-
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`npx hexta-ui add`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? (Use arrow keys)
-> Next.js 
-  React`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js
-? Which component would you like to install?
-  AlertDialog
-  Avatar
-  Button
-  Loader
-  Select
-> Table
-  Toast
-  Toggle
-  Tooltip`}
-              />
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js         
-? Which component would you like to install? Table
-✔ Table component was added successfully — Guide to use Table, https://ui.hextastudio.in/docs/components/layout/table`}
-              />
-              <CodeBlock
-                lang="jsx"
-                filename="jsx"
-                code={`import { Table } from "@/components/hexta-ui/Table";`}
-              />
-            </div>
-          </div>
+          <InstallationSteps component="Table" />
           <div>
             <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
               <div>

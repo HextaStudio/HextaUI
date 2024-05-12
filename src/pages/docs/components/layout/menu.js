@@ -8,6 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const menus = () => {
   const data = [
@@ -147,56 +148,7 @@ const menus = () => {
               </div>
             </div>
           </div>
-          <div>
-            <h2 className="text-3xl font-bold">Installation</h2>
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`npm install @hextastudio/ui
-# or
-bun install @hextastudio/ui
-# or
-yarn add @hextastudio/ui
-# or
-pnpm add @hextastudio/ui`}
-            />
-
-            <CodeBlock lang="bash" filename="bash" code={`npx hexta-ui add`} />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? (Use arrow keys)
-> Next.js 
-  React`}
-            />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? Next.js
-? Which component would you like to install?
-  AlertDialog
-  Avatar
-  Button
-  Loader
-> Menu
-  Select
-  Toast
-  Toggle
-  Tooltip`}
-            />
-            <CodeBlock
-              lang="bash"
-              filename="bash"
-              code={`? Which framework are you using? Next.js         
-? Which component would you like to install? Menu
-✔ Menu component was added successfully — Guide to use Menu, https://ui.hextastudio.in/docs/components/layout/menu`}
-            />
-            <CodeBlock
-              lang="jsx"
-              filename="jsx"
-              code={`import { Menu } from "@/components/hexta-ui/Menu";`}
-            />
-          </div>
+          <InstallationSteps component="Menu" />
           <div>
             <h3 className="h3">Basic Menu</h3>
             <div className="relative flex items-start justify-end my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] p-4">
