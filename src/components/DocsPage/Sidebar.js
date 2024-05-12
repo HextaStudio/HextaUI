@@ -128,7 +128,7 @@ const layoutComponentLinks = [
   },
   {
     name: "Menu",
-    url: "Menu",
+    url: "menu",
   },
   {
     name: "Toggle",
