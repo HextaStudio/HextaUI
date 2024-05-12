@@ -67,7 +67,6 @@ export const Sidebar = () => {
     {
       name: "Select",
       url: "select",
-      new: true,
     },
     {
       name: "Button",
@@ -109,12 +108,10 @@ export const Sidebar = () => {
       name: "Menu",
       url: "menu",
       new: true,
-      hidden: true,
     },
     {
       name: "Toggle",
       url: "toggle",
-      new: true,
     },
     {
       name: "Tooltip",
@@ -124,7 +121,6 @@ export const Sidebar = () => {
       name: "Typography",
       url: "typography",
       hidden: true,
-
       new: true,
     },
     {

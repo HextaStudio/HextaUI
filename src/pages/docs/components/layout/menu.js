@@ -92,10 +92,6 @@ const menus = () => {
                 </div>
               </div>
             </div>
-            <div className="installation">
-              <h3 className="h3">Code</h3>
-              <CodeBlock lang="jsx" filename="jsx" code={``} />
-            </div>
           </div>
           <div>
             <h2 className="text-3xl font-bold">Installation</h2>
