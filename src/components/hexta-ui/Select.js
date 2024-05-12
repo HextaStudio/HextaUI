@@ -7,7 +7,7 @@ const cn = (...args) => {
   return twMerge(clsx(args));
 };
 
-const Select = ({
+export const Select = ({
   options,
   label,
   value,
@@ -244,4 +244,3 @@ const Select = ({
     </div>
   );
 };
-export default Select;

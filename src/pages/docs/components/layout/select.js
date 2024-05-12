@@ -2,7 +2,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import { NextSeo } from "next-seo";
 
-import Select from "@/components/hexta-ui/Select";
+import { Select } from "@/components/hexta-ui/Select";
 import { Table } from "@/components/hexta-ui/Table";
 
 import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";

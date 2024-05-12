@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Badge = ({
+export const Badge = ({
   children,
   variant = "primary",
   outlined = false,
@@ -84,5 +84,3 @@ const Badge = ({
     </span>
   );
 };
-
-export default Badge;

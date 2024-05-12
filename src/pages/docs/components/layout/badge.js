@@ -4,8 +4,9 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 
-import Badge from "@/components/hexta-ui/Badges";
+import { Badge } from "@/components/hexta-ui/Badges";
 import { Table } from "@/components/hexta-ui/Table";
+
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 const badges = () => {
