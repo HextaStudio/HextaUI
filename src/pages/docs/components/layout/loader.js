@@ -214,7 +214,13 @@ pnpm add @hextastudio/ui`}
               code={`<Loader variant="circleLoader" color="red" size={40} className="border-t-red-500"/>`}
             />
           </div>
-          <Table data={data} columns={columns} tableTitle="Props Information" />
+          <div className="mt-[5rem]">
+            <Table
+              columns={columns}
+              data={data}
+              tableTitle="Props Information"
+            />
+          </div>
         </main>
       </DocsLayout>
     </>

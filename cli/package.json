@@ -1,6 +1,6 @@
 {
   "name": "@hextastudio/ui",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Easily use modern pre-built components in your website without any efforts.",
   "main": "index.js",
   "bin": {

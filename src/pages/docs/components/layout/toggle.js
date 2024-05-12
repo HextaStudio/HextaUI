@@ -186,7 +186,13 @@ export const Home = () => {
 }`}
             />
           </div>
-          <Table data={data} columns={columns} tableTitle="Props Information" />
+          <div className="mt-[5rem]">
+            <Table
+              columns={columns}
+              data={data}
+              tableTitle="Props Information"
+            />
+          </div>
         </main>
       </DocsLayout>
     </>

@@ -224,8 +224,13 @@ export const Home = () => {
               />
             </div>
           </div>
-          <Table columns={columns} data={data} tableTitle="Props Information" />
-        </main>
+          <div className="mt-[5rem]">
+            <Table
+              columns={columns}
+              data={data}
+              tableTitle="Props Information"
+            />
+          </div>        </main>
       </DocsLayout>
     </>
   );

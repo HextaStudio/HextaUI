@@ -16,6 +16,7 @@ const components = [
   "Toast",
   "Badges",
   "AlertDialog",
+  "Breadcrumb",
   "Menu",
 ].sort();
 const tailwindCSSSetupLink =
