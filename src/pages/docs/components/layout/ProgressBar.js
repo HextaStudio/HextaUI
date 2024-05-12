@@ -12,15 +12,15 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "value",
-    type: "Number",
-    default: "0",
+    propName: "value",
+    propType: "Number",
+    defaultValue: "0",
     description: "Value of the progress bar",
   },
   {
-    prop: "max",
-    type: "Number",
-    default: "100",
+    propName: "max",
+    propType: "Number",
+    defaultValue: "100",
     description: "Maximum value of the progress bar",
   },
 ];
@@ -107,7 +107,7 @@ export const Home = () => {
 
 `}
           />
-        <Table columns={columns} data={data} tableTitle="Props Information" />
+          <Table columns={columns} data={data} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>

@@ -11,27 +11,27 @@ import { Tabs } from "@/components/hexta-ui/Tabs";
 
 const data = [
   {
-    prop: "tabs",
-    type: "Array",
-    default: "[]",
+    propName: "tabs",
+    propType: "Array",
+    defaultValue: "[]",
     description: "Array of tabs",
   },
   {
-    prop: "tabs.label",
-    type: "String",
-    default: "null",
+    propName: "tabs.label",
+    propType: "String",
+    defaultValue: "null",
     description: "Label for the tab",
   },
   {
-    prop: "tabs.content",
-    type: "Node",
-    default: "null",
+    propName: "tabs.content",
+    propType: "Node",
+    defaultValue: "null",
     description: "Content for the tab",
   },
   {
-    prop: "className",
-    type: "String",
-    default: "null",
+    propName: "className",
+    propType: "String",
+    defaultValue: "null",
     description: "className for the tabs",
   },
 ];

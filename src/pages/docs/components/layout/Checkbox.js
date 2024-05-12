@@ -12,27 +12,27 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "checked",
-    type: "Boolean",
-    default: "false",
+    propName: "checked",
+    propType: "Boolean",
+    defaultValue: "false",
     description: "State of the checkbox",
   },
   {
-    prop: "onChange",
-    type: "Function",
-    default: "() => {}",
+    propName: "onChange",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when checkbox is changed",
   },
   {
-    prop: "label",
-    type: "String",
-    default: "null",
+    propName: "label",
+    propType: "String",
+    defaultValue: "null",
     description: "Label for the checkbox",
   },
   {
-    prop: "className",
-    type: "String",
-    default: "null",
+    propName: "className",
+    propType: "String",
+    defaultValue: "null",
     description: "className for the checkbox",
   },
 ];

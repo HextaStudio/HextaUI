@@ -12,21 +12,21 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "value",
-    type: "String",
-    default: "''",
+    propName: "value",
+    propType: "String",
+    defaultValue: "''",
     description: "Value of the input",
   },
   {
-    prop: "onChange",
-    type: "Function",
-    default: "() => {}",
+    propName: "onChange",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when value is changed",
   },
   {
-    prop: "placeholder",
-    type: "String",
-    default: "''",
+    propName: "placeholder",
+    propType: "String",
+    defaultValue: "''",
     description: "Placeholder for the input",
   },
 ];

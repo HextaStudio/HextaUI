@@ -12,21 +12,21 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "value",
-    type: "Date",
-    default: "null",
+    propName: "value",
+    propType: "Date",
+    defaultValue: "null",
     description: "Value of the datepicker",
   },
   {
-    prop: "onChange",
-    type: "Function",
-    default: "() => {}",
+    propName: "onChange",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when value is changed",
   },
   {
-    prop: "className",
-    type: "String",
-    default: "null",
+    propName: "className",
+    propType: "String",
+    defaultValue: "null",
     description: "className for the datepicker",
   },
 ];

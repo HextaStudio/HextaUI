@@ -12,15 +12,15 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "items",
-    type: "Array",
-    default: "[]",
+    propName: "items",
+    propType: "Array",
+    defaultValue: "[]",
     description: "Array of items to be displayed",
   },
   {
-    prop: "onDrop",
-    type: "Function",
-    default: "() => {}",
+    propName: "onDrop",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when item is dropped",
   },
 ];

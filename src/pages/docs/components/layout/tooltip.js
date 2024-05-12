@@ -5,7 +5,7 @@ import React from "react";
 import { Tooltip } from "@/components/hexta-ui/Tooltip";
 
 import { NextSeo } from "next-seo";
-import Badge from "@/components/hexta-ui/Badges";
+import { Badge } from "@/components/hexta-ui/Badges";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 

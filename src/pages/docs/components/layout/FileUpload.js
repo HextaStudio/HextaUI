@@ -11,21 +11,21 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "onChange",
-    type: "Function",
-    default: "() => {}",
+    propName: "onChange",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when value is changed",
   },
   {
-    prop: "multiple",
-    type: "Boolean",
-    default: "false",
+    propName: "multiple",
+    propType: "Boolean",
+    defaultValue: "false",
     description: "Allow multiple files to be uploaded",
   },
   {
-    prop: "accept",
-    type: "String",
-    default: "null",
+    propName: "accept",
+    propType: "String",
+    defaultValue: "null",
     description: "Accepted file types",
   },
 ];

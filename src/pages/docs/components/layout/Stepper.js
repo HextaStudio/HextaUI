@@ -11,33 +11,33 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "steps",
-    type: "Array",
-    default: "[]",
+    propName: "steps",
+    propType: "Array",
+    defaultValue: "[]",
     description: "Array of steps",
   },
   {
-    prop: "steps.label",
-    type: "String",
-    default: "null",
+    propName: "steps.label",
+    propType: "String",
+    defaultValue: "null",
     description: "Label for the step",
   },
   {
-    prop: "steps.content",
-    type: "Node",
-    default: "null",
+    propName: "steps.content",
+    propType: "Node",
+    defaultValue: "null",
     description: "Content for the step",
   },
   {
-    prop: "activeStep",
-    type: "Number",
-    default: "0",
+    propName: "activeStep",
+    propType: "Number",
+    defaultValue: "0",
     description: "Active step index",
   },
   {
-    prop: "className",
-    type: "String",
-    default: "null",
+    propName: "className",
+    propType: "String",
+    defaultValue: "null",
     description: "className for the stepper",
   },
 ];

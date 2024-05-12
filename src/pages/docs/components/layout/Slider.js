@@ -12,33 +12,33 @@ import { Table } from "@/components/hexta-ui/Table";
 
 const data = [
   {
-    prop: "value",
-    type: "Number",
-    default: "0",
+    propName: "value",
+    propType: "Number",
+    defaultValue: "0",
     description: "Value of the slider",
   },
   {
-    prop: "min",
-    type: "Number",
-    default: "0",
+    propName: "min",
+    propType: "Number",
+    defaultValue: "0",
     description: "Minimum value of the slider",
   },
   {
-    prop: "max",
-    type: "Number",
-    default: "100",
+    propName: "max",
+    propType: "Number",
+    defaultValue: "100",
     description: "Maximum value of the slider",
   },
   {
-    prop: "onChange",
-    type: "Function",
-    default: "() => {}",
+    propName: "onChange",
+    propType: "Function",
+    defaultValue: "() => {}",
     description: "Function to be called when value is changed",
   },
   {
-    prop: "className",
-    type: "String",
-    default: "null",
+    propName: "className",
+    propType: "String",
+    defaultValue: "null",
     description: "className for the slider",
   },
 ];
