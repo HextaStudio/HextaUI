@@ -85,7 +85,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
   Avatar
   Button
@@ -99,7 +99,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Tooltip
+? Which component would you like to install? Tooltip
 ✔ Tooltip component was added successfully — Guide to use Tooltip, https://ui.hextastudio.in/docs/components/layout/tooltip`}
               />
               <CodeBlock

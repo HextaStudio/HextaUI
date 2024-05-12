@@ -78,7 +78,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
 > Avatar
   Button
@@ -92,7 +92,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Avatar
+? Which component would you like to install? Avatar
 ✔ Avatar component was added successfully — Guide to use Avatar, https://ui.hextastudio.in/docs/components/layout/avatar`}
               />
               <p>Importing Avatar in your file.</p>

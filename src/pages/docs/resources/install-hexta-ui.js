@@ -72,7 +72,7 @@ const hextaUIinstallation = () => {
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal? (Use arrow keys)
+? Which component would you like to install? (Use arrow keys)
   Avatar
 > Button 
   Loader 
@@ -86,7 +86,7 @@ const hextaUIinstallation = () => {
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal? Avatar
+? Which component would you like to install? Avatar
 ✔ Button component was added successfully — Guide to use Button, https://ui.hextastudio.in/docs/components/layout/button`}
               />
               <p>

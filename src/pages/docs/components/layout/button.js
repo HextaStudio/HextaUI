@@ -75,7 +75,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   Avatar
 > Button
   Loader
@@ -88,7 +88,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Button
+? Which component would you like to install? Button
 ✔ Button component was added successfully — Guide to use Button, https://ui.hextastudio.in/docs/components/layout/button`}
               />
               <p>Importing button in your file.</p>

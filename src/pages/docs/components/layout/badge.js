@@ -78,7 +78,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
   Avatar
 > Badges
@@ -93,7 +93,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Badges
+? Which component would you like to install? Badges
 ✔ Badges component was added successfully — Guide to use Badges, https://ui.hextastudio.in/docs/components/layout/badges`}
               />
               <p>Importing badges in your file.</p>

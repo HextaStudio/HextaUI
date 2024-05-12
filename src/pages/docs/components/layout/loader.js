@@ -78,7 +78,7 @@ pnpm add @hextastudio/ui`}
                   lang="bash"
                   filename="bash"
                   code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
   Avatar
   Button
@@ -92,7 +92,7 @@ pnpm add @hextastudio/ui`}
                   lang="bash"
                   filename="bash"
                   code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Loader
+? Which component would you like to install? Loader
 ✔ Loader component was added successfully — Guide to use Loader, https://ui.hextastudio.in/docs/components/layout/loader`}
                 />
                 <CodeBlock

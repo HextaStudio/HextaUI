@@ -94,7 +94,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
   Avatar
   Button
@@ -109,7 +109,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Table
+? Which component would you like to install? Table
 ✔ Table component was added successfully — Guide to use Table, https://ui.hextastudio.in/docs/components/layout/table`}
               />
               <CodeBlock

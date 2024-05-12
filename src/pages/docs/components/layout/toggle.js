@@ -90,7 +90,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   AlertDialog
   Avatar
   Button
@@ -104,7 +104,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Toggle
+? Which component would you like to install? Toggle
 ✔ Toggle component was added successfully — Guide to use Toggle, https://ui.hextastudio.in/docs/components/layout/toggle`}
               />
               <CodeBlock

@@ -97,7 +97,7 @@ pnpm add @hextastudio/ui`}
               lang="bash"
               filename="bash"
               code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
   Avatar
   Button
   Loader
@@ -110,7 +110,7 @@ pnpm add @hextastudio/ui`}
               lang="bash"
               filename="bash"
               code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? Toast
+? Which component would you like to install? Toast
 ✔ Toast component was added successfully — Guide to use Toast, https://ui.hextastudio.in/docs/components/layout/toast`}
             />
             <p>Importing toast in your file.</p>

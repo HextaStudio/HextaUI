@@ -103,7 +103,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js
-? Which component would you like to instal?
+? Which component would you like to install?
 > AlertDialog
   Avatar
   Button
@@ -117,7 +117,7 @@ pnpm add @hextastudio/ui`}
                 lang="bash"
                 filename="bash"
                 code={`? Which framework are you using? Next.js         
-? Which component would you like to instal? AlertDialog
+? Which component would you like to install? AlertDialog
 ✔ AlertDialog component was added successfully — Guide to use AlertDialog, https://ui.hextastudio.in/docs/components/layout/alertDialog`}
               />
               <p>Importing toast in your file.</p>
