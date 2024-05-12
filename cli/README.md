@@ -58,3 +58,9 @@ That's it! HextaUI makes it easy to enhance your user interface with modern, cus
 - [Discord](https://dsc.gg/hextastudio)
 - [Email](mailto:hi@hextastudio.in)
 - [Twitter](https://twitter.com/preetsuthar17)
+
+## Resource
+
+- Check out [this](https://github.com/firstcontributions/first-contributions) awesome contribution guide for you First Contribution. | [click here](https://github.com/firstcontributions/first-contributions)
+
+Like it? Star the repo ⭐
