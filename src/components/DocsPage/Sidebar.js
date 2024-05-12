@@ -146,7 +146,6 @@ export const Sidebar = () => {
     {
       name: "Hero",
       url: "hero",
-      hidden: true,
     },
   ].sort();
 

@@ -13,6 +13,7 @@ const components = [
   "Button",
   "Toggle",
   "Table",
+  "Hero",
   "Toast",
   "Badges",
   "AlertDialog",

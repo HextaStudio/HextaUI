@@ -50,6 +50,7 @@ That's it! HextaUI makes it easy to enhance your user interface with modern, cus
 | Dropdown     | A dropdown component with various styles and sizes.            |
 | Table        | A table component with various styles and sizes.               |
 | Tooltip      | A tooltip component with various styles and sizes.             |
+| Hero         | A hero component with various styles and sizes.                |
 
 ### Support
 
