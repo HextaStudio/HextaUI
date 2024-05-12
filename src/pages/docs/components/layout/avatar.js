@@ -7,7 +7,7 @@ import { Avatar } from "@/components/hexta-ui/Avatar";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const avatars = () => {
+const avatar = () => {
   const data = [
     {
       propName: "avatarUrl",
@@ -176,4 +176,4 @@ const avatars = () => {
   );
 };
 
-export default avatars;
+export default avatar;

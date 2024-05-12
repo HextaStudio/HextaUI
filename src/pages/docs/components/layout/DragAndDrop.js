@@ -43,7 +43,7 @@ const columns = [
   },
 ];
 
-const dragAndDrop = () => {
+const draganddrop = () => {
   const handleDrop = (draggedItem, dropIndex) => {
     const newItems = items.filter((item) => item !== draggedItem);
     newItems.splice(dropIndex, 0, draggedItem);
@@ -134,4 +134,4 @@ export const Home = () => {
   );
 };
 
-export default dragAndDrop;
+export default draganddrop;

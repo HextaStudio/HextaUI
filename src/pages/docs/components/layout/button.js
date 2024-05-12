@@ -7,7 +7,7 @@ import Button from "@/components/hexta-ui/Button";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const buttons = () => {
+const button = () => {
   const data = [
     {
       propName: "variant",
@@ -220,4 +220,4 @@ const buttons = () => {
   );
 };
 
-export default buttons;
+export default button;

@@ -49,7 +49,7 @@ const columns = [
   },
 ];
 
-const fileUpload = () => {
+const fileupload = () => {
   const handleFileChange = (e) => {
     console.log(e.target.files);
   };
@@ -129,4 +129,4 @@ export const Home = () => {
   );
 };
 
-export default fileUpload;
+export default fileupload;

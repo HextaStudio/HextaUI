@@ -9,7 +9,7 @@ import Toast from "@/components/hexta-ui/Toast";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const Toasts = () => {
+const toast = () => {
   const data = [
     {
       propName: "text",
@@ -168,4 +168,4 @@ export const Home = () => {
   );
 };
 
-export default Toasts;
+export default toast;

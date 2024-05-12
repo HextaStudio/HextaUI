@@ -44,7 +44,7 @@ const columns = [
   },
 ];
 
-const progressBar = () => {
+const progressbar = () => {
   return (
     <>
       <NextSeo
@@ -114,4 +114,4 @@ export const Home = () => {
   );
 };
 
-export default progressBar;
+export default progressbar;

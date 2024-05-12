@@ -9,7 +9,7 @@ import { Table } from "@/components/hexta-ui/Table";
 
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const badges = () => {
+const badge = () => {
   const data = [
     {
       propName: "variant",
@@ -265,4 +265,4 @@ const badges = () => {
   );
 };
 
-export default badges;
+export default badge;

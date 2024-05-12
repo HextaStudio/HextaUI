@@ -10,7 +10,7 @@ import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const menus = () => {
+const menu = () => {
   const data = [
     {
       propName: "items",
@@ -412,4 +412,4 @@ export const Home = () => {
   );
 };
 
-export default menus;
+export default menu;

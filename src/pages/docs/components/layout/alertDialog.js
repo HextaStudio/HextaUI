@@ -8,7 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const alertDialog = () => {
+const alertdialog = () => {
   const [showDialog, setShowDialog] = useState(false);
 
   const handleConfirm = () => {
@@ -185,4 +185,4 @@ export const Home = () => {
   );
 };
 
-export default alertDialog;
+export default alertdialog;

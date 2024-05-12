@@ -8,7 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
-const loaders = () => {
+const loader = () => {
   const data = [
     {
       propName: "variant",
@@ -174,4 +174,4 @@ const loaders = () => {
   );
 };
 
-export default loaders;
+export default loader;
