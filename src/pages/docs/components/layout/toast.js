@@ -5,7 +5,7 @@ import React from "react";
 import { NextSeo } from "next-seo";
 
 import { useState } from "react";
-import Toast from "@/components/hexta-ui/Toast";
+import { Toast } from "@/components/hexta-ui/Toast";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
@@ -30,7 +30,7 @@ const toast = () => {
       description: "State to open the toast.",
     },
     {
-      propName: "onUndo",
+      propName: "onCancel",
       propType: "function",
       defaultValue: "null",
       description: "Function to be called on undo.",
@@ -110,7 +110,7 @@ const toast = () => {
                     text="Successfully created toast"
                     description="Copy and paste code for this Toast"
                     showToast={showToast}
-                    onUndo={toggleToast}
+                    onCancel={() => setShowToast(false)}
                   />
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const Home = () => {
         text="Successfully created toast"
         description="Copy and paste code for this Toast"
         showToast={showToast}
-        onUndo={toggleToast}
+        onCancel={toggleToast}
       />
     </>
   )
