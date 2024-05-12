@@ -13,13 +13,11 @@ const table = () => {
     { id: 3, name: "Sassy", age: 3 },
     { id: 4, name: "Shadow", age: 4 },
     { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
-    { id: 5, name: "Simba", age: 1 },
+    { id: 6, name: "Mittens", age: 2 },
+    { id: 7, name: "Snowball", age: 5 },
+    { id: 8, name: "Tiger", age: 3 },
+    { id: 9, name: "Smokey", age: 4 },
+    { id: 10, name: "Kitty", age: 1 },
   ];
 
   const columns = [
