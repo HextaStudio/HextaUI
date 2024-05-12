@@ -3,7 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = ({ ...args }) => {
+const cn = (...args) => {
   return twMerge(clsx(args));
 };
 
