@@ -101,8 +101,8 @@ const draganddrop = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { useState } from "react";
 import { DragAndDrop } from "@/components/hexta-ui/DragAndDrop";
 

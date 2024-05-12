@@ -98,8 +98,8 @@ const button = () => {
                 <Button>Primary Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import Button from "@/components/hexta-ui/Button";
                 
 <Button>Primary Button</Button>`}
@@ -111,8 +111,8 @@ const button = () => {
                 <Button variant="secondary">Secondary Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="secondary">Secondary Button</Button>`}
               />
             </div>
@@ -122,8 +122,8 @@ const button = () => {
                 <Button variant="info">Info Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="info">Info Button</Button>`}
               />
             </div>
@@ -133,8 +133,8 @@ const button = () => {
                 <Button variant="success">Success Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="success">Success Button</Button>`}
               />
             </div>
@@ -144,8 +144,8 @@ const button = () => {
                 <Button variant="fail">Fail Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="fail">Fail Button</Button>`}
               />
             </div>
@@ -155,8 +155,8 @@ const button = () => {
                 <Button variant="ghost">Ghost Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="ghost">Ghost Button</Button>`}
               />
             </div>
@@ -166,8 +166,8 @@ const button = () => {
                 <Button variant="link">Link Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="link">Link Button</Button>`}
               />
             </div>
@@ -177,8 +177,8 @@ const button = () => {
                 <Button disabled>Disabled Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button disabled>Disabled Button</Button>`}
               />
             </div>
@@ -188,8 +188,8 @@ const button = () => {
                 <Button outline>Outline Button</Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button outline>Outline Button</Button>`}
               />
             </div>
@@ -201,8 +201,8 @@ const button = () => {
                 </Button>
               </div>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Button variant="animated" className="text-black bg-white">Animated Button</Button>`}
               />
             </div>

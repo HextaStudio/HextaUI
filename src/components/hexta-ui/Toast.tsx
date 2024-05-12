@@ -2,9 +2,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
+
+interface ToastProps {
+  text: string;
+  description: string;
+  showToast: boolean;
+  onCancel: () => void;
+  className?: string;
+}
 
 export const Toast = ({
   text,
@@ -12,7 +20,7 @@ export const Toast = ({
   showToast,
   onCancel,
   className,
-}) => {
+}: ToastProps) => {
   return (
     <AnimatePresence>
       {showToast && (

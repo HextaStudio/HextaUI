@@ -318,8 +318,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const BasicFooter = () => {
   return (
     <footer className="w-full py-8 bg-[#080808] border-t border-t-zinc-800">
@@ -348,8 +348,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const FooterWithLinks = () => {
   return (
     <footer className="py-8 w-full  bg-[#080808] border-t border-t-zinc-800">
@@ -427,8 +427,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const FooterWithSubscribe= () => {
   return (
     <footer className="py-8 w-full  bg-[#080808] border-t border-t-zinc-800">
@@ -483,8 +483,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const FooterWithContactInfo = () => {
   return (
     <footer className="py-8 w-full bg-[#080808] border-t border-t-zinc-800">
@@ -558,8 +558,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const FooterWithLogoAndSocial = () => {
   return (
     <footer className="py-8 w-full bg-[#080808] border-t border-t-zinc-800">
@@ -602,8 +602,8 @@ const footer = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`export const FooterWithLanguageSelector = () => {
 return (
     <footer className="py-8 w-full bg-[#080808] border-t border-t-zinc-800">

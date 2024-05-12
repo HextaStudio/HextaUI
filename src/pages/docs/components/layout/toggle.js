@@ -106,8 +106,8 @@ const toggle = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 import { Toggle } from "@/components/hexta-ui/Toggle";
 

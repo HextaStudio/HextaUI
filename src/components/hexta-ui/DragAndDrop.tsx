@@ -2,27 +2,40 @@ import React, { useState, useRef } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-export const DragAndDrop = ({ items, onDrop, className }) => {
-  const [draggedItem, setDraggedItem] = useState(null);
-  const dropZoneRef = useRef(null);
+interface DragAndDropProps {
+  items: { label: string }[];
+  onDrop: (item: { label: string }) => void;
+  className?: string;
+}
 
-  const handleDragStart = (e, item) => {
+export const DragAndDrop = ({ items, onDrop, className }: DragAndDropProps) => {
+  const dropZoneRef = useRef(null);
+  const [draggedItem, setDraggedItem] = useState<{ label: string } | null>(
+    null
+  );
+
+  const handleDragStart = (
+    e: React.DragEvent<HTMLDivElement>,
+    item: { label: string }
+  ) => {
     setDraggedItem(item);
     e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("text/plain", null);
+    e.dataTransfer.setData("text/plain", "");
   };
 
-  const handleDragOver = (e) => {
+  const handleDragOver = (e: { preventDefault: () => void }) => {
     e.preventDefault();
   };
 
-  const handleDrop = (e) => {
+  const handleDrop = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    onDrop(draggedItem);
+    if (draggedItem) {
+      onDrop(draggedItem);
+    }
     setDraggedItem(null);
   };
 

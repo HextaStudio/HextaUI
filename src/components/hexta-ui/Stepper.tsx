@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-export const Stepper = ({ steps, activeStep, className }) => {
+interface StepperProps {
+  steps: { label: string; content: string }[];
+  activeStep: number;
+  className?: string;
+}
+
+export const Stepper = ({ steps, activeStep, className }: StepperProps) => {
   const isValidStep = activeStep >= 0 && activeStep < steps.length;
   const content = isValidStep ? steps[activeStep].content : "Invalid step";
 

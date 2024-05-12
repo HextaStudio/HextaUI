@@ -185,8 +185,8 @@ const select = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
                
 export const Home = () => {
@@ -234,8 +234,8 @@ export const Home = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 
 const groupedOptions = {
@@ -287,8 +287,8 @@ export const Home = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
                
 export const Home = () => {
@@ -339,8 +339,8 @@ export const Home = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 
 export const Home = () => {
@@ -389,8 +389,8 @@ export const Home = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 
 export const Home = () => {
@@ -437,8 +437,8 @@ export const Home = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`import { useState } from "react";
 
 export const Home = () => {

@@ -103,8 +103,8 @@ const loader = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Loader variant="circleLoader" />`}
             />
           </div>
@@ -115,8 +115,8 @@ const loader = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Loader variant="squareLoader" />`}
             />
           </div>
@@ -127,8 +127,8 @@ const loader = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Loader variant="pingLoader" />`}
             />
           </div>
@@ -139,8 +139,8 @@ const loader = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Loader variant="coloredLoader" color="indigo" />`}
             />
           </div>
@@ -156,8 +156,8 @@ const loader = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Loader variant="circleLoader" color="red" size={40} className="border-t-red-500"/>`}
             />
           </div>

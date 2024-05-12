@@ -14,10 +14,22 @@ import {
 } from "date-fns";
 import { FaCalendar } from "react-icons/fa";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
-const Calendar = ({ value, onChange }) => {
+
+interface CalendarProps {
+  value: Date;
+  onChange: (date: Date) => void;
+}
+
+interface DatePickerProps {
+  className?: string;
+  value: Date;
+  onChange: (date: Date) => void;
+}
+
+const Calendar = ({ value, onChange }: CalendarProps) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const startDate = startOfMonth(currentDate);
   const endDate = endOfMonth(currentDate);
@@ -27,7 +39,7 @@ const Calendar = ({ value, onChange }) => {
     dateRange.push(new Date(currentDay));
     currentDay = addDays(currentDay, 1);
   }
-  const handleDateClick = (date) => {
+  const handleDateClick = (date: Date) => {
     onChange(date);
   };
   return (
@@ -103,9 +115,10 @@ const Calendar = ({ value, onChange }) => {
     </div>
   );
 };
-export const Datepicker = ({ className, value, onChange }) => {
+
+export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
   const [showCalendar, setShowCalendar] = useState(false);
-  const handleDateChange = (date) => {
+  const handleDateChange = (date: Date) => {
     onChange(date);
     setShowCalendar(false);
   };

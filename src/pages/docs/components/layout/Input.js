@@ -105,8 +105,8 @@ const input = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { useState } from "react";
 import { Input } from "@/components/hexta-ui/Input";
 

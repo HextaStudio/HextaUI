@@ -3,9 +3,19 @@ import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { useEffect } from "react";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
+
+interface TableProps {
+  data: any[];
+  columns: any[];
+  tableTitle?: string;
+  className?: string;
+  headerClassName?: string;
+  rowClassName?: string;
+  cellClassName?: string;
+}
 
 export const Table = ({
   data,
@@ -15,17 +25,17 @@ export const Table = ({
   headerClassName,
   rowClassName,
   cellClassName,
-}) => {
+}: TableProps) => {
   const [visibleColumns, setVisibleColumns] = React.useState(
     columns.map((column) => column.key)
   );
   const [searchTerm, setSearchTerm] = React.useState("");
-  const [limitedData, setLimitedData] = React.useState([]);
   const [sortOrder, setSortOrder] = React.useState("asc");
   const [sortColumn, setSortColumn] = React.useState(null);
+  const [limitedData, setLimitedData] = React.useState<typeof data>([]);
 
-  const toggleSortOrder = (key) => {
-    setSortColumn(key);
+  const toggleSortOrder = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setSortColumn(null);
     setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
   };
 
@@ -56,7 +66,7 @@ export const Table = ({
     setLimitedData(filteredData);
   }, [data, searchTerm]);
 
-  const toggleColumn = (key) => {
+  const toggleColumn = (key: null) => {
     setVisibleColumns((prevVisibleColumns) =>
       prevVisibleColumns.includes(key)
         ? prevVisibleColumns.filter((column) => column !== key)

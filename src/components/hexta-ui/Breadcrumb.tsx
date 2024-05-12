@@ -3,11 +3,21 @@ import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-export const Breadcrumb = ({ items }) => {
+interface BreadcrumbItem {
+  title: string;
+  href?: string;
+  active?: boolean;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+export const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol className="flex flex-wrap items-center gap-2">

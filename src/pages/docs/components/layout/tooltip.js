@@ -99,8 +99,8 @@ const tooltip = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`<Tooltip direction="top" text="Meow ~">
   <Badge outlined className="cursor-default">
     🐈 Hover me

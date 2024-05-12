@@ -98,8 +98,8 @@ const breadcrumb = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
-              lang="jsx"
-              filename="jsx"
+              lang="tsx"
+              filename="Home.tsx"
               code={`
 import { Breadcrumb } from "@/components/hexta-ui/Breadcrumb";
 

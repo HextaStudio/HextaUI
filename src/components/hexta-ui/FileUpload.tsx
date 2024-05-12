@@ -4,9 +4,18 @@ import { twMerge } from "tailwind-merge";
 
 import { FaTrash } from "react-icons/fa";
 
-const cn = (...args) => {
+const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
+
+interface FileUploadProps {
+  className?: string;
+  multiple?: boolean;
+  accept?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  children?: React.ReactNode;
+}
 
 export const FileUpload = ({
   className,
@@ -15,29 +24,32 @@ export const FileUpload = ({
   onChange,
   disabled = false,
   children,
-}) => {
-  const [files, setFiles] = useState([]);
-  const inputRef = useRef(null);
+}: FileUploadProps) => {
+  const [files, setFiles] = useState<File[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (e) => {
-    const newFiles = e.target.files;
-    setFiles([...files, ...newFiles]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newFiles = e.target.files as unknown as File[];
+    setFiles([...files, ...(newFiles || [])]);
     if (onChange) {
       onChange(e);
     }
   };
 
-  const handleRemoveFile = (index) => {
+  const handleRemoveFile = (index: number) => {
     const updatedFiles = [...files];
     updatedFiles.splice(index, 1);
     setFiles(updatedFiles);
   };
 
   const handleUploadClick = () => {
-    inputRef.current.click();
+    inputRef.current?.click();
   };
 
-  const handleDrop = (e) => {
+  const handleDrop = (e: {
+    preventDefault: () => void;
+    dataTransfer: { files: any };
+  }) => {
     e.preventDefault();
     const newFiles = e.dataTransfer.files;
     setFiles([...files, ...newFiles]);

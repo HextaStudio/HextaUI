@@ -1,5 +1,15 @@
 import Link from "next/link";
 
+interface HeroProps {
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  primaryButtonText: string;
+  primaryButtonLink: string;
+  secondaryButtonText: string;
+  secondaryButtonLink: string;
+}
+
 export const Hero = ({
   title,
   subtitle,
@@ -8,7 +18,7 @@ export const Hero = ({
   primaryButtonLink,
   secondaryButtonText,
   secondaryButtonLink,
-}) => {
+}: HeroProps) => {
   return (
     <section
       className="relative flex flex-row items-center justify-center gap-4 p-10 text-center bg-center bg-cover"

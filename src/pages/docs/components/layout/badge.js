@@ -134,8 +134,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge>Latest version</Badge>`}
               />
             </div>
@@ -151,8 +151,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge variant="info" outlined>Info</Badge>`}
               />
             </div>
@@ -168,8 +168,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge pill icon>Success</Badge>`}
               />
             </div>
@@ -183,8 +183,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge counter={5}>Notifications</Badge>`}
               />
             </div>
@@ -200,8 +200,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge variant="secondary" glowing>Glowing Secondary</Badge>`}
               />
             </div>
@@ -217,8 +217,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Badge variant="primary" animated>Pulsing Primary</Badge>`}
               />
             </div>
@@ -243,8 +243,8 @@ const badge = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<div className="inline-flex overflow-hidden rounded-lg">
   <Badge segmented className="rounded-e-sm">Primary</Badge>
   <Badge variant="secondary" segmented className="rounded-s-sm">Secondary</Badge>

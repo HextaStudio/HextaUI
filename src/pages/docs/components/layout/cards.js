@@ -248,8 +248,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const BasicCard = ({ title, description, image }) => {
   return (
     <div className="overflow-hidden border rounded-lg shadow-md bg-zinc-950 border-zinc-800">
@@ -273,8 +273,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<BasicCard
     title={"Cats are so cute :3"}
     description={
@@ -302,8 +302,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const CardWithButton = ({ title, description, image, buttonText }) => {
   return (
     <div className="overflow-hidden border rounded-lg shadow-md bg-zinc-950 border-zinc-800">
@@ -329,8 +329,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<CardWithButton
     buttonText={"Create free account"}
     title={"Cats are so cute :3"}
@@ -361,8 +361,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const CardWithAvatar = ({ title, description, image, avatarUrl }) => {
   return (
     <div className="overflow-hidden border rounded-lg shadow-md bg-zinc-950 border-zinc-800">
@@ -392,8 +392,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<CardWithAvatar
     avatarUrl={
         "https://source.unsplash.com/random/100x100?headshot"
@@ -427,8 +427,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const CardWithTags = ({ title, description, image, tags }) => {
   return (
     <div className="overflow-hidden border rounded-lg shadow-md bg-zinc-950 border-zinc-800">
@@ -461,8 +461,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<CardWithTags
     tags={["cute", "cat", "meow", "kitty"]}
     avatarUrl={
@@ -493,8 +493,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const HorizontalCard = ({ title, description, image }) => {
   return (
     <div className="flex flex-wrap overflow-hidden border rounded-lg shadow-md bg-zinc-950 border-zinc-900">
@@ -520,8 +520,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<HorizontalCard
     title={"Cats are so cute :3"}
     description={
@@ -548,8 +548,8 @@ const cards = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`import { useState } from "react";
 
 const HoverCard = ({ title, description, image }) => {
@@ -600,8 +600,8 @@ const HoverCard = ({ title, description, image }) => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<HoverCard
     title={"Cats are so cute :3"}
     description={
@@ -628,8 +628,8 @@ const HoverCard = ({ title, description, image }) => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const SkewedCard = ({ title, description, image }) => {
   return (
     <div className="relative overflow-hidden transform skew-y-3 border rounded-lg shadow-md bg-zinc-950 border-zinc-900">
@@ -652,8 +652,8 @@ const HoverCard = ({ title, description, image }) => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={` <SkewedCard
     title={"Cats are so cute :3"}
     description={
@@ -680,8 +680,8 @@ const HoverCard = ({ title, description, image }) => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const AnimatedCard = ({ title, description, image }) => {
   return (
     <div className="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-md bg-zinc-950 hover:scale-[1.02] border border-zinc-900">
@@ -704,8 +704,8 @@ const HoverCard = ({ title, description, image }) => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<AnimatedCard
     title={"Cats are so cute :3"}
     description={

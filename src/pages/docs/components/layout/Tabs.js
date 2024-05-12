@@ -115,8 +115,8 @@ const tabs = () => {
             </div>
           </div>
           <CodeBlock
-            lang="jsx"
-            filename="jsx"
+            lang="tsx"
+            filename="Home.tsx"
             code={`import { Tabs } from "@/components/hexta-ui/Tabs";
 
 export const Home = () => {

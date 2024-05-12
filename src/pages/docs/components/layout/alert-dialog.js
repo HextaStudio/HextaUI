@@ -133,8 +133,8 @@ const alertdialog = () => {
             <div className="installation">
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="home.tsx"
                 code={`import { useState } from "react";
 
 export const Home = () => {

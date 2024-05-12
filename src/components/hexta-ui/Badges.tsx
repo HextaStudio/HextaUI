@@ -1,5 +1,18 @@
 import clsx from "clsx";
 
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary" | "info" | "success" | "warning" | "danger";
+  outlined?: boolean;
+  pill?: boolean;
+  icon?: boolean;
+  counter?: number;
+  glowing?: boolean;
+  animated?: boolean;
+  segmented?: boolean;
+  className?: string;
+}
+
 export const Badge = ({
   children,
   variant = "primary",
@@ -12,7 +25,7 @@ export const Badge = ({
   segmented = false,
   className,
   ...rest
-}) => {
+}: BadgeProps) => {
   const baseStyle =
     "px-3 py-1 rounded-full flex items-center font-[600] text-[12px] transition-all duration-[0.3s]";
 

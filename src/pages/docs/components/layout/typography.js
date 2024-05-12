@@ -120,8 +120,8 @@ const typography = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const Headings = () => {
   return (
     <div className="space-y-[2rem]">
@@ -150,8 +150,8 @@ const typography = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const Paragraphs = () => {
   return (
     <div className="space-y-[2rem]">
@@ -188,8 +188,8 @@ const typography = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const InlineTextElements = () => {
   return (
     <div className="space-y-[2rem]">
@@ -226,8 +226,8 @@ const typography = () => {
             <div className="installation">
               <h3 className="h3">Code</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`const TextAlignment = () => {
   return (
     <div className="space-y-[2rem]">

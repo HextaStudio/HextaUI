@@ -48,7 +48,7 @@ const installNext = () => {
                 filename="bash"
                 lang="bash"
                 code={`What is your project named? my-app
-Would you like to use TypeScript? No 
+Would you like to use TypeScript? Yes 
 Would you like to use ESLint? No 
 Would you like to use Tailwind CSS? Yes
 Would you like to use src/ directory? Yes

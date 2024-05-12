@@ -109,8 +109,8 @@ const avatar = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Avatar avatarUrl="/path/to/avatar.jpg" />`}
               />
             </div>
@@ -134,8 +134,8 @@ const avatar = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={`<Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} />
 
                 
@@ -157,8 +157,8 @@ const avatar = () => {
               </div>
               <h3 className="h3">Usage</h3>
               <CodeBlock
-                lang="jsx"
-                filename="jsx"
+                lang="tsx"
+                filename="Home.tsx"
                 code={` <Avatar variant="withBadge" avatarUrl="https://placeholder.co/80" size={80} badgeNumber={5} />`}
               />
             </div>

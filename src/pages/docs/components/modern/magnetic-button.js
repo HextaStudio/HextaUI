@@ -112,7 +112,7 @@ const magneticButton = () => {
               code={`import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import React from "react"`}
-              />
+            />
             <CodeBlock
               lang="jsx"
               filename="@/components/MagneticLink"

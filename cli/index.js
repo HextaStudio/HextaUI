@@ -6,29 +6,29 @@ import axios from "axios";
 import inquirer from "inquirer";
 
 const components = [
-  "AlertDialog",
-  "Avatar",
-  "Badges",
-  "Breadcrumb",
-  "Button",
-  "Checkbox",
-  "Datepicker",
-  "DragAndDrop",
-  "FileUpload",
-  "Hero",
-  "Input",
-  "Loader",
-  "Menu",
-  "ProgressBar",
-  "Select",
-  "Slider",
-  "Stepper",
-  "Table",
-  "Tabs",
-  "Toast",
-  "Toggle",
-  "Tooltip",
-].sort();
+  { title: "AlertDialog", url: "alert-dialog" },
+  { title: "Avatar", url: "avatar" },
+  { title: "Badge", url: "badge" },
+  { title: "Breadcrumb", url: "breadcrumb" },
+  { title: "Button", url: "button" },
+  { title: "Checkbox", url: "checkbox" },
+  { title: "Datepicker", url: "date-picker" },
+  { title: "DragAndDrop", url: "drag-and-drop" },
+  { title: "FileUpload", url: "file-upload" },
+  { title: "Hero", url: "hero" },
+  { title: "Input", url: "input" },
+  { title: "Loader", url: "loader" },
+  { title: "Menu", url: "menu" },
+  { title: "ProgressBar", url: "progressB-bar" },
+  { title: "Select", url: "select" },
+  { title: "Slider", url: "slider" },
+  { title: "Stepper", url: "stepper" },
+  { title: "Table", url: "table" },
+  { title: "Tabs", url: "tabs" },
+  { title: "Toast", url: "toast" },
+  { title: "Toggle", url: "toggle" },
+  { title: "Tooltip", url: "tooltip" },
+].sort((a, b) => a.title.localeCompare(b.title));
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
 const frameworks = ["Next.js", "React"];
@@ -46,11 +46,14 @@ if (process.argv[2] === "add") {
         type: "list",
         name: "component",
         message: "Which component would you like to install?",
-        choices: components,
+        choices: components.map((component) => ({
+          name: component.title,
+          value: component.url,
+        })),
       },
     ])
     .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.js`;
+      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.tsx`;
       const componentLoader = ora(
         `Downloading ${answers.component} component`
       ).start();
@@ -67,11 +70,7 @@ if (process.argv[2] === "add") {
           const filePath = path.join(componentsDir, `${answers.component}.js`);
           response.data.pipe(fs.createWriteStream(filePath));
           componentLoader.succeed(
-            `${
-              answers.component
-            } component was added successfully — Guide to use ${
-              answers.component
-            }, https://ui.hextastudio.in/docs/components/layout/${answers.component.toLowerCase()}`
+            `${answers.component} component was added successfully — Guide to use ${answers.component}, https://ui.hextastudio.in/docs/components/layout/${answers.component}`
           );
 
           // updateTailwindConfig(componentLoader, answers.framework);

@@ -47,8 +47,8 @@ React`}
 ✔ ${component} component was added successfully — Guide to use ${component}, https://ui.hextastudio.in/docs/components/layout/${component}`}
         />
         <CodeBlock
-          lang="jsx"
-          filename="jsx"
+          lang="tsx"
+          filename="tsx"
           code={`import { ${component} } from "@/components/hexta-ui/${component}";`}
         />
       </div>
