@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import { useEffect } from "react";
 
 const cn = (...args) => {
   return twMerge(clsx(args));
@@ -17,6 +18,17 @@ export const Table = ({
   const [visibleColumns, setVisibleColumns] = React.useState(
     columns.map((column) => column.key)
   );
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [limitedData, setLimitedData] = React.useState([]);
+
+  useEffect(() => {
+    const filteredData = data.filter((item) =>
+      Object.values(item).some((val) =>
+        String(val).toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+    setLimitedData(filteredData);
+  }, [data, searchTerm]);
 
   const toggleColumn = (key) => {
     setVisibleColumns((prevVisibleColumns) =>
@@ -29,6 +41,15 @@ export const Table = ({
   return (
     <div className="overflow-x-auto">
       <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search..."
+            className="px-4 py-3 mx-1 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
+          />
+        </div>
         <div className="flex items-center gap-4">
           {columns.map((column) => (
             <div
@@ -58,7 +79,7 @@ export const Table = ({
                 <th
                   key={column.key}
                   className={cn(
-                    "px-4 py-3 text-left bg-gray-100 ",
+                    "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
                     headerClassName
                   )}
                 >
@@ -68,7 +89,7 @@ export const Table = ({
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
+          {limitedData.map((row, index) => (
             <tr key={index} className={cn("", rowClassName)}>
               {columns
                 .filter((column) => visibleColumns.includes(column.key))
@@ -86,7 +107,7 @@ export const Table = ({
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>{" "}
     </div>
   );
 };
