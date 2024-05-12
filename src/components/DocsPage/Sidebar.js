@@ -44,7 +44,7 @@ const layoutComponentLinks = [
   },
   {
     name: "Input",
-    url: "Input",
+    url: "input",
     new: true,
   },
   {
