@@ -1,6 +1,10 @@
 import { CodeBlock } from "../CodeBlock";
 
-export const InstallationSteps = ({ component }) => {
+interface InstallationStepsProps {
+  component: string;
+}
+
+export const InstallationSteps = ({ component }: InstallationStepsProps) => {
   return (
     <>
       {" "}

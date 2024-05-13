@@ -68,6 +68,11 @@ const layoutComponentLinks = [
     new: true,
   },
   {
+    name: "Card",
+    url: "card",
+    new: true,
+  },
+  {
     name: "Stepper",
     url: "stepper",
     new: true,

@@ -17,6 +17,7 @@ const components = [
   "Badge",
   "Breadcrumb",
   "Button",
+  "Card",
   "Checkbox",
   "Datepicker",
   "DragAndDrop",
