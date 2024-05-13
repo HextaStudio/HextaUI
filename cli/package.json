@@ -1,6 +1,6 @@
 {
   "name": "@hextastudio/ui",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Easily use modern pre-built components in your website without any efforts.",
   "main": "index.js",
   "bin": {
@@ -42,7 +42,7 @@
     "responsive"
   ],
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^1.6.8",
     "chalk": "^4.1.2",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
