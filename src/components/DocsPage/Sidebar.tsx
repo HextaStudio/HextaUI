@@ -53,10 +53,7 @@ const layoutComponentLinks = [
     name: "Date Picker",
     new: true,
   },
-  {
-    name: "Drag and Drop",
-    new: true,
-  },
+
   {
     name: "Tabs",
     new: true,
