@@ -1,129 +1,140 @@
 #!/usr/bin/env node
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 import ora from "ora";
 import path from "path";
 import fs from "fs";
 import axios from "axios";
 import inquirer from "inquirer";
+import semver from "semver";
+import { exec } from "child_process";
 
 const components = [
-  { title: "AlertDialog", url: "alert-dialog" },
-  { title: "Avatar", url: "avatar" },
-  { title: "Badge", url: "badge" },
-  { title: "Breadcrumb", url: "breadcrumb" },
-  { title: "Button", url: "button" },
-  { title: "Checkbox", url: "checkbox" },
-  { title: "Datepicker", url: "date-picker" },
-  { title: "DragAndDrop", url: "drag-and-drop" },
-  { title: "FileUpload", url: "file-upload" },
-  { title: "Hero", url: "hero" },
-  { title: "Input", url: "input" },
-  { title: "Loader", url: "loader" },
-  { title: "Menu", url: "menu" },
-  { title: "ProgressBar", url: "progressB-bar" },
-  { title: "Select", url: "select" },
-  { title: "Slider", url: "slider" },
-  { title: "Stepper", url: "stepper" },
-  { title: "Table", url: "table" },
-  { title: "Tabs", url: "tabs" },
-  { title: "Toast", url: "toast" },
-  { title: "Toggle", url: "toggle" },
-  { title: "Tooltip", url: "tooltip" },
-].sort((a, b) => a.title.localeCompare(b.title));
+  "AlertDialog",
+  "Avatar",
+  "Badge",
+  "Breadcrumb",
+  "Button",
+  "Checkbox",
+  "Datepicker",
+  "DragAndDrop",
+  "FileUpload",
+  "Hero",
+  "Input",
+  "Loader",
+  "Menu",
+  "ProgressBar",
+  "Select",
+  "Slider",
+  "Stepper",
+  "Table",
+  "Tabs",
+  "Toast",
+  "Toggle",
+  "Tooltip",
+].sort();
+
 const tailwindCSSSetupLink =
   "https://ui.hextastudio.in/docs/resources/install-tailwind";
 const frameworks = ["Next.js", "React"];
 
-if (process.argv[2] === "add") {
-  inquirer
-    .prompt([
-      {
-        type: "list",
-        name: "framework",
-        message: "Which framework are you using?",
-        choices: frameworks,
-      },
-      {
-        type: "list",
-        name: "component",
-        message: "Which component would you like to install?",
-        choices: components.map((component) => ({
-          name: component.title,
-          value: component.url,
-        })),
-      },
-    ])
-    .then((answers) => {
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.tsx`;
-      const componentLoader = ora(
-        `Downloading ${answers.component} component`
-      ).start();
-
-      axios({
-        method: "get",
-        url: url,
-        responseType: "stream",
-      })
-        .then(function (response) {
-          const srcDir = path.join(process.cwd(), "src");
-          const componentsDir = path.join(srcDir, "components", "hexta-ui");
-          fs.mkdirSync(componentsDir, { recursive: true });
-          const filePath = path.join(componentsDir, `${answers.component}.js`);
-          response.data.pipe(fs.createWriteStream(filePath));
-          componentLoader.succeed(
-            `${answers.component} component was added successfully — Guide to use ${answers.component}, https://ui.hextastudio.in/docs/components/layout/${answers.component}`
-          );
-
-          // updateTailwindConfig(componentLoader, answers.framework);
-        })
-        .catch(function (error) {
-          componentLoader.fail(
-            `Error adding ${answers.component} component: ${error.message}`
-          );
-        });
+function getLatestVersion() {
+  return new Promise((resolve, reject) => {
+    exec("npm view @hextastudio/ui version", (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(stdout.trim());
+      }
     });
+  });
+}
+
+function getInstalledVersion() {
+  try {
+    const packageJson = require(path.join(
+      process.cwd(),
+      "node_modules",
+      "@hextastudio/ui",
+      "package.json"
+    ));
+    return packageJson.version;
+  } catch (error) {
+    return null;
+  }
+}
+function handleAdd() {
+  const installedVersion = getInstalledVersion();
+  if (!installedVersion) {
+    console.log(
+      "Error: @hextastudio/ui package not found. Please install it first."
+    );
+    return;
+  }
+
+  getLatestVersion()
+    .then((latestVersion) => {
+      if (semver.lt(installedVersion, latestVersion)) {
+        console.log(
+          `Warning: Your installed version of @hextastudio/ui (${installedVersion}) is outdated. Please update to the latest version (${latestVersion}) for the best experience.`
+        );
+      }
+
+      inquirer
+        .prompt([
+          {
+            type: "list",
+            name: "framework",
+            message: "Which framework are you using?",
+            choices: frameworks,
+          },
+          {
+            type: "list",
+            name: "component",
+            message: "Which component would you like to install?",
+            choices: components,
+          },
+        ])
+        .then((answers) => {
+          const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${answers.component}.tsx`;
+          console.log(url);
+          const componentLoader = ora(
+            `Downloading ${answers.component} component`
+          ).start();
+          axios({
+            method: "get",
+            url: url,
+            responseType: "stream",
+          })
+            .then(function (response) {
+              const srcDir = path.join(process.cwd(), "src");
+              const componentsDir = path.join(srcDir, "components", "hexta-ui");
+              fs.mkdirSync(componentsDir, { recursive: true });
+              const filePath = path.join(
+                componentsDir,
+                `${answers.component}.tsx`
+              );
+              response.data.pipe(fs.createWriteStream(filePath));
+              componentLoader.succeed(
+                `${answers.component} component was added successfully — Guide to use ${answers.component}, https://ui.hextastudio.in/docs/components/layout/${answers.component}`
+              );
+            })
+            .catch(function (error) {
+              componentLoader.fail(
+                `Error adding ${answers.component} component: ${error.message}`
+              );
+            });
+        });
+    })
+    .catch((error) => {
+      console.error("Error fetching latest version:", error);
+    });
+}
+
+if (process.argv[2] === "add") {
+  handleAdd();
 } else {
   console.log("Invalid command: did you mean `npx hexta-ui add`?");
-}
-
-function updateTailwindConfig(componentLoader, framework) {
-  const tailwindConfigFiles = {
-    "Next.js": ["tailwind.config.js", "tailwind.config.cjs"],
-    Vue: ["tailwind.config.js"],
-    React: ["tailwind.config.js"],
-  };
-
-  const configFiles = tailwindConfigFiles[framework];
-
-  for (const configFile of configFiles) {
-    const configFilePath = path.join(process.cwd(), configFile);
-    if (fs.existsSync(configFilePath)) {
-      updateConfigFile(configFilePath, componentLoader);
-      return;
-    }
-  }
-
-  componentLoader.warn(
-    `Tailwind CSS configuration not found for ${framework}. Please set up Tailwind CSS: ${tailwindCSSSetupLink}`
-  );
-}
-
-function updateConfigFile(configFilePath, componentLoader) {
-  const configContent = fs.readFileSync(configFilePath, "utf-8");
-  const updatedContent = configContent.replace(
-    /content:\s*\[([\s\S]*?)\]/,
-    (match, contentArray) => {
-      const trimmedArray = contentArray.trim();
-      const newContentArray = trimmedArray
-        ? `${trimmedArray} "./src/components/**/*.{js,ts,jsx,tsx,mdx}"`
-        : '"./src/components/**/*.{js,ts,jsx,tsx,mdx}",';
-      return `content: [${newContentArray}]`;
-    }
-  );
-
-  if (updatedContent !== configContent) {
-    fs.writeFileSync(configFilePath, updatedContent);
-    componentLoader.succeed("Tailwind CSS configuration updated successfully");
-  } else {
-    componentLoader.warn("Tailwind CSS configuration already up-to-date");
-  }
 }
