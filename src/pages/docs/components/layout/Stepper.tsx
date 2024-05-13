@@ -113,7 +113,13 @@ const stepper = () => {
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
               <div>
-                <Stepper steps={stepContent} activeStep={2} />
+                <Stepper
+                  steps={stepContent.map((step) => ({
+                    ...step,
+                    content: step.content.toString(),
+                  }))}
+                  activeStep={2}
+                />
               </div>
             </div>
           </div>
@@ -122,7 +128,13 @@ const stepper = () => {
             <h3 className="h3">Slider</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
               <div>
-                <Stepper steps={stepContent} activeStep={2} />
+                <Stepper
+                  steps={stepContent.map((step) => ({
+                    ...step,
+                    content: step.content.toString(),
+                  }))}
+                  activeStep={2}
+                />{" "}
               </div>
             </div>
           </div>
@@ -154,7 +166,13 @@ export const Home = () => {
   return (
     <>
       <div>
-        <Stepper steps={stepContent} activeStep={2} />
+          <Stepper
+            steps={stepContent.map((step) => ({
+              ...step,
+              content: step.content.toString(),
+            }))}
+            activeStep={2}
+          />      
       </div>
     </>
   )

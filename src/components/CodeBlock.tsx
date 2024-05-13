@@ -3,7 +3,13 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-export const CodeBlock = ({ code, lang, filename }) => {
+interface CodeBlockProps {
+  code: string;
+  lang: string;
+  filename?: string;
+}
+
+export const CodeBlock = ({ code, lang, filename }: CodeBlockProps) => {
   const [copyStatus, setCopyStatus] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -43,16 +49,7 @@ export const CodeBlock = ({ code, lang, filename }) => {
             {filename}
           </small>
         )}
-        <CopyToClipboard
-          text={code}
-          onCopy={onCopyText}
-          className="flex items-center justify-center"
-          style={{
-            fontFamily: "Inter",
-            fontSize: "14px",
-            cursor: "pointer",
-          }}
-        >
+        <CopyToClipboard text={code} onCopy={onCopyText}>
           <div>
             {copyStatus ? (
               <div className="flex items-center justify-center gap-1 copy-to-clipboard-button">

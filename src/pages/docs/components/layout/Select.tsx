@@ -2,7 +2,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
 import { NextSeo } from "next-seo";
 
-import { Select } from "@/components/hexta-ui/Select";
+import { Select, Option } from "@/components/hexta-ui/Select";
 import { Table } from "@/components/hexta-ui/Table";
 
 import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";
@@ -86,7 +86,7 @@ const select = () => {
     },
   ];
 
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const options = [
     { value: 1, label: "Option 1" },
@@ -111,7 +111,7 @@ const select = () => {
     { value: 3, label: "Windows", icon: <FaWindows /> },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option | null) => {
     setSelectedOption(option);
   };
 
@@ -188,9 +188,10 @@ const select = () => {
               lang="tsx"
               filename="Home.tsx"
               code={`import { useState } from "react";
-               
+import { Option } from "@/components/hexta-ui/Select";
+
 export const Home = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const options = [
     { value: 1, label: "Option 1" },
@@ -198,7 +199,7 @@ export const Home = () => {
     { value: 3, label: "Option 3" },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option | null) => {
     setSelectedOption(option);
   };
 
@@ -237,6 +238,7 @@ export const Home = () => {
               lang="tsx"
               filename="Home.tsx"
               code={`import { useState } from "react";
+import { Option } from "@/components/hexta-ui/Select";
 
 const groupedOptions = {
   "Group 1": [
@@ -248,11 +250,10 @@ const groupedOptions = {
     { value: 4, label: "Option 4" },
   ],
 };
-
 export const Home = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option || null) => {
     setSelectedOption(option);
   };
 
@@ -289,10 +290,11 @@ export const Home = () => {
             <CodeBlock
               lang="tsx"
               filename="Home.tsx"
-              code={`import { useState } from "react";
-               
+              code={`import { useState } from "react";   
+import { Option } from "@/components/hexta-ui/Select";
+
 export const Home = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const options = [
     { value: 1, label: "Option 1" },
@@ -300,7 +302,7 @@ export const Home = () => {
     { value: 3, label: "Option 3" },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option || null) => {
     setSelectedOption(option);
   };
 
@@ -342,6 +344,8 @@ export const Home = () => {
               lang="tsx"
               filename="Home.tsx"
               code={`import { useState } from "react";
+import { Option } from "@/components/hexta-ui/Select";
+
 
 export const Home = () => {
   const [selectedOption, setSelectedOption] = useState([]);
@@ -352,7 +356,7 @@ export const Home = () => {
     { value: 3, label: "Option 3" },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option || null) => {
     setSelectedOption(option);
   };
 
@@ -392,9 +396,10 @@ export const Home = () => {
               lang="tsx"
               filename="Home.tsx"
               code={`import { useState } from "react";
+import { Option } from "@/components/hexta-ui/Select";
 
 export const Home = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const options = [
     { value: 1, label: "Option 1" },
@@ -402,7 +407,7 @@ export const Home = () => {
     { value: 3, label: "Option 3" },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option || null) => {
     setSelectedOption(option);
   };
 
@@ -440,9 +445,10 @@ export const Home = () => {
               lang="tsx"
               filename="Home.tsx"
               code={`import { useState } from "react";
+import { Option } from "@/components/hexta-ui/Select";
 
 export const Home = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const iconOptions = [
     { value: 1, label: "Apple", icon: <FaApple /> },
@@ -450,7 +456,7 @@ export const Home = () => {
     { value: 3, label: "Windows", icon: <FaWindows /> },
   ];
 
-  const handleChange = (option) => {
+  const handleChange = (option: Option || null) => {
     setSelectedOption(option);
   };
 

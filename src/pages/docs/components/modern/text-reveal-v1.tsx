@@ -10,12 +10,14 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const TextRevealV1Preview = () => {
+interface TextRevealV1PreviewProps {
+  text: string;
+}
+
+export const TextRevealV1Preview = ({ text }: TextRevealV1PreviewProps) => {
   const textRef = useRef(null);
   const textSpanRef = useRef(null);
 
-  const text =
-    "In HextaUI everything is component based so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!";
   const words = text.split(" ");
 
   useEffect(() => {
@@ -99,7 +101,7 @@ const textRevealV1 = () => {
                   height: "100rem",
                 }}
               >
-                <TextRevealV1Preview />
+                <TextRevealV1Preview text="In HextaUI everything is component based so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!" />
               </div>
             </div>
           </div>

@@ -103,7 +103,7 @@ const slider = () => {
               <div>
                 <Slider
                   value={value}
-                  onChange={(e) => setValue(e.target.value)}
+                  onChange={(e) => setValue(Number(e.target.value))}
                   min={0}
                   max={100}
                 />
@@ -118,7 +118,7 @@ const slider = () => {
               <div>
                 <Slider
                   value={value}
-                  onChange={(e) => setValue(e.target.value)}
+                  onChange={(e) => setValue(Number(e.target.value))}
                   min={0}
                   max={100}
                 />

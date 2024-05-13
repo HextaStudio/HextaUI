@@ -7,32 +7,37 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 
-export const HackerTextEffectPreview = ({ text }) => {
+export const HackerTextEffectPreview = ({
+  text,
+}: {
+  text?: { uppercase?: string };
+}) => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
 
-  let interval = null;
+  let interval: string | number | NodeJS.Timeout | undefined;
 
   useEffect(() => {
     if (textRef.current) {
-      textRef.current.onmouseover = (event) => {
+      textRef.current.onmouseover = (event: MouseEvent) => {
         let iteration = 0;
 
         clearInterval(interval);
 
         interval = setInterval(() => {
-          event.target.innerText = event.target.innerText
+          const target = event.target as HTMLParagraphElement;
+          target.innerText = target.innerText
             .split("")
             .map((letter, index) => {
               if (index < iteration) {
-                return event.target.dataset.text[index];
+                return target.dataset.text?.[index] || "";
               }
 
               return letters[Math.floor(Math.random() * 26)];
             })
             .join("");
 
-          if (iteration >= event.target.dataset.text.length) {
+          if (iteration >= (target.dataset.text?.length || 0)) {
             clearInterval(interval);
           }
 
@@ -41,12 +46,14 @@ export const HackerTextEffectPreview = ({ text }) => {
       };
     }
   }, []);
+
   return (
     <p ref={textRef} className="h1" data-text={text?.uppercase || "HEXTA UI"}>
       {text?.uppercase || "HEXTA UI"}
     </p>
   );
 };
+
 const hackerTextEffect = () => {
   return (
     <>
@@ -94,54 +101,55 @@ const hackerTextEffect = () => {
           <div className="installation">
             <h3 className="h3">Setup</h3>
             <CodeBlock
-              lang="jsx"
-              filename="index.jsx"
+              lang="tsx"
+              filename="index.tsx"
               code={`import { useEffect, useRef } from "react";
 import React from "react";`}
             />
             <CodeBlock
-              lang="jsx"
-              filename="index.jsx"
-              code={`const HackerTextEffectPreview = () => {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const textRef = useRef(null);
+              lang="tsx"
+              filename="index.tsx"
+              code={`const HackerTextEffectPreview = ({ text }: { text?: { uppercase?: string } }) => {
+   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   const textRef = useRef<HTMLParagraphElement>(null);
 
-    let interval = null;
+   let interval: NodeJS.Timer | null = null;
 
-    useEffect(() => {
-        if (textRef.current) {
-        textRef.current.onmouseover = (event) => {
-            let iteration = 0;
+   useEffect(() => {
+       if (textRef.current) {
+       textRef.current.onmouseover = (event: MouseEvent) => {
+           let iteration = 0;
 
-            clearInterval(interval);
+           clearInterval(interval as NodeJS.Timer);
 
-            interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-                .split("")
-                .map((letter, index) => {
-                if (index < iteration) {
-                    return event.target.dataset.text[index];
-                }
+           interval = setInterval(() => {
+           const target = event.target as HTMLParagraphElement;
+           target.innerText = target.innerText
+               .split("")
+               .map((letter, index) => {
+               if (index < iteration) {
+                   return target.dataset.text?.[index] || "";
+               }
 
-                return letters[Math.floor(Math.random() * 26)];
-                })
-                .join("");
+               return letters[Math.floor(Math.random() * 26)];
+               })
+               .join("");
 
-            if (iteration >= event.target.dataset.text.length) {
-                clearInterval(interval);
-            }
+           if (iteration >= (target.dataset.text?.length || 0)) {
+               clearInterval(interval as NodeJS.Timer);
+           }
 
-            iteration += 1 / 3;
-            }, 30);
-        };
-        }
-    }, []);
-    
-    return (
-        <p ref={textRef} className="h1" data-text="HEXTA UI">
-            HOVER ME
-        </p>
-    );
+           iteration += 1 / 3;
+           }, 30);
+       };
+       }
+   }, []);
+   
+   return (
+       <p ref={textRef} className="h1" data-text={text?.uppercase || "HEXTA UI"}>
+           {text?.uppercase || "HEXTA UI"}
+       </p>
+   );
 };`}
             />
           </div>

@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/hexta-studio.svg";
 
-export const Footer = ({ docs }) => {
+interface FooterProps {
+  docs?: boolean;
+}
+
+export const Footer = ({ docs }: FooterProps) => {
   return (
     <>
       <footer

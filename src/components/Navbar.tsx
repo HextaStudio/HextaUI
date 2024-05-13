@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/hexta-studio.svg";
 
-export const Navbar = ({ docs }) => {
+interface NavarProps {
+  docs?: boolean;
+}
+
+export const Navbar = ({ docs }: NavarProps) => {
   return (
     <>
       <nav

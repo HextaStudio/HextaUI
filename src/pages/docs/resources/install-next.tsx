@@ -1,6 +1,6 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/CodeBlock";
-
+import React from "react";
 import { NextSeo } from "next-seo";
 
 const installNext = () => {

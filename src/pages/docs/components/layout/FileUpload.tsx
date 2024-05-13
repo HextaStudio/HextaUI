@@ -50,7 +50,7 @@ const columns = [
 ];
 
 const fileupload = () => {
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: { target: { files: any } }) => {
     console.log(e.target.files);
   };
   return (
@@ -107,7 +107,7 @@ const fileupload = () => {
 
 export const Home = () => {
   
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: { target: { files: any } }) => {
     console.log(e.target.files);
   };
   

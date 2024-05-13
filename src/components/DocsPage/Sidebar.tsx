@@ -40,135 +40,106 @@ const componentLinks = [
 const layoutComponentLinks = [
   {
     name: "Badge",
-    url: "badge",
   },
   {
     name: "Input",
-    url: "input",
     new: true,
   },
   {
     name: "Checkbox",
-    url: "checkbox",
     new: true,
   },
   {
     name: "Date Picker",
-    url: "date-picker",
     new: true,
   },
   {
     name: "Drag and Drop",
-    url: "drag-and-drop",
     new: true,
   },
   {
     name: "Tabs",
-    url: "tabs",
     new: true,
   },
   {
     name: "Card",
-    url: "card",
     new: true,
   },
   {
     name: "Stepper",
-    url: "stepper",
     new: true,
   },
   {
     name: "Progress Bar",
-    url: "progress-bar",
     new: true,
   },
   {
     name: "Slider",
-    url: "slider",
     new: true,
   },
   {
     name: "Select",
-    url: "select",
   },
   {
     name: "File Upload",
-    url: "file-upload",
     new: true,
   },
   {
     name: "Button",
-    url: "button",
   },
   {
     name: "Table",
-    url: "table",
   },
   {
     name: "Avatar",
-    url: "avatar",
   },
   {
     name: "Loader",
-    url: "loader",
   },
   {
     name: "Toast",
-    url: "toast",
   },
   {
     name: "Footer",
-    url: "footer",
     hidden: true,
   },
   {
     name: "Chart",
-    url: "chart",
     hidden: true,
   },
   {
     name: "Carousel",
-    url: "carousel",
     hidden: true,
   },
   {
     name: "Menu",
-    url: "menu",
   },
   {
     name: "Toggle",
-    url: "toggle",
   },
   {
     name: "Tooltip",
-    url: "tooltip",
   },
   {
     name: "Typography",
-    url: "typography",
     hidden: true,
   },
   {
     name: "Card",
-    url: "card",
     hidden: true,
   },
   {
     name: "Navbar",
-    url: "navbar",
     hidden: true,
   },
   {
     name: "Alert Dialog",
-    url: "alert-dialog",
   },
   {
     name: "Breadcrumb",
-    url: "breadcrumb",
   },
   {
     name: "Hero",
-    url: "hero",
   },
 ].sort();
 
@@ -369,11 +340,15 @@ export const Sidebar = () => {
                 <li key={index} className={` ${link.hidden && "hidden"} `}>
                   <Link
                     className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                      router.pathname === `/docs/components/layout/${link.url}`
+                      router.pathname ===
+                      `/docs/components/layout/${link.name.replace(" ", "")}`
                         ? "opacity-100"
                         : "opacity-60"
                     }`}
-                    href={`/docs/components/layout/${link.url}`}
+                    href={`/docs/components/layout/${link.name.replace(
+                      " ",
+                      ""
+                    )}`}
                   >
                     {link.name}{" "}
                     {link.new && (

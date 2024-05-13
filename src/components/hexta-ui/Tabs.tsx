@@ -8,7 +8,7 @@ const cn = (...args: any[]) => {
 
 interface TabsProps {
   tabs: any[];
-  className: string;
+  className?: string;
 }
 
 export const Tabs = ({ tabs, className }: TabsProps) => {

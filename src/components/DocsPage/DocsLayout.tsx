@@ -9,33 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { useEffect, useRef } from "react";
 
-export const DocsLayout = ({ children }) => {
-  const navbarRef = useRef(null);
-  const sidebarRef = useRef(null);
-  const footerRef = useRef(null);
+interface DocsLayoutProps {
+  children: React.ReactNode;
+}
 
-  useEffect(() => {
-    let pinSidebar;
-
-    if (window.innerWidth > 900) {
-      pinSidebar = ScrollTrigger.create({
-        trigger: sidebarRef.current,
-        start: "top top",
-        pin: true,
-        pinSpacing: false,
-      });
-    }
-
-    return () => {
-      if (pinSidebar) {
-        pinSidebar.kill();
-      }
-    };
-  }, []);
-
+export const DocsLayout = ({ children }: DocsLayoutProps) => {
   return (
     <>
-      <div ref={navbarRef}>
+      <div>
         <Navbar />
       </div>
       <div className="flex justify-center">
@@ -48,7 +29,6 @@ export const DocsLayout = ({ children }) => {
       </div>
       <div
         className="footer-div"
-        ref={footerRef}
         style={{
           display: "flex",
           marginLeft: "auto",

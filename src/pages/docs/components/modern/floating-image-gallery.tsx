@@ -27,13 +27,13 @@ const FloatingImagesGalleryPreview = () => {
   const plane1 = useRef(null);
   const plane2 = useRef(null);
   const plane3 = useRef(null);
-  let requestAnimationFrameId = null;
+  let requestAnimationFrameId: number | null = null;
   let xForce = 0;
   let yForce = 0;
   const easing = 0.08;
   const speed = 0.01;
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     const { movementX, movementY } = e;
     xForce += movementX * speed;
     yForce += movementY * speed;
@@ -42,7 +42,7 @@ const FloatingImagesGalleryPreview = () => {
     }
   };
 
-  const lerp = (start, target, amount) =>
+  const lerp = (start: number, target: number, amount: number) =>
     start * (1 - amount) + target * amount;
 
   const animate = () => {
@@ -53,18 +53,10 @@ const FloatingImagesGalleryPreview = () => {
       x: `+=${xForce * 0.5}`,
       y: `+=${yForce * 0.5}`,
     });
-    gsap.set(plane3.current, {
-      x: `+=${xForce * 0.25}`,
-      y: `+=${yForce * 0.25}`,
-    });
-
-    if (Math.abs(xForce) < 0.01) xForce = 0;
-    if (Math.abs(yForce) < 0.01) yForce = 0;
-
     if (xForce !== 0 || yForce !== 0) {
       requestAnimationFrame(animate);
     } else {
-      cancelAnimationFrame(requestAnimationFrameId);
+      cancelAnimationFrame(requestAnimationFrameId as number);
       requestAnimationFrameId = null;
     }
   };

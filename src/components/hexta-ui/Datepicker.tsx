@@ -25,8 +25,8 @@ interface CalendarProps {
 
 interface DatePickerProps {
   className?: string;
-  value: Date;
-  onChange: (date: Date) => void;
+  value: Date | undefined;
+  onChange: (date: Date | undefined) => void;
 }
 
 const Calendar = ({ value, onChange }: CalendarProps) => {
@@ -142,7 +142,10 @@ export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
       {showCalendar && (
         <div className="absolute z-10 w-64 mt-2 translate-x-[-50%] left-[50%] bg-white rounded-lg shadow-lg">
           {" "}
-          <Calendar value={value} onChange={handleDateChange} />{" "}
+          <Calendar
+            value={value ?? new Date()}
+            onChange={handleDateChange}
+          />{" "}
         </div>
       )}{" "}
     </div>

@@ -23,12 +23,13 @@ const photoTrailingOnMousemove = () => {
       "https://images.unsplash.com/photo-1713203403441-4a3137c6f39b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D",
     ];
 
-    const imageRefs = useRef([]);
+    const imageRefs = useRef(new Array(images.length).fill(null));
+    let imgRef: React.RefObject<HTMLImageElement> = React.createRef();
 
     let globalIndex = 0,
       last = { x: 0, y: 0 };
 
-    const activate = (index, x, y) => {
+    const activate = (index: number, x: any, y: any) => {
       const image = imageRefs.current[index];
 
       if (image) {
@@ -44,11 +45,11 @@ const photoTrailingOnMousemove = () => {
       }
     };
 
-    const distanceFromLast = (x, y) => {
+    const distanceFromLast = (x: number, y: number) => {
       return Math.hypot(x - last.x, y - last.y);
     };
 
-    const handleOnMove = (e) => {
+    const handleOnMove = (e: MouseEvent | Touch) => {
       if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 15) {
         const leadIndex = globalIndex % images.length;
         const tailIndex = (globalIndex - 5) % images.length;
@@ -84,7 +85,9 @@ const photoTrailingOnMousemove = () => {
             alt="image"
             key={index}
             data-status="inactive"
-            ref={(el) => (imageRefs.current[index] = el)}
+            ref={(el) => {
+              imageRefs.current[index] = el;
+            }}
             className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
             style={{
               maxWidth: "100%",

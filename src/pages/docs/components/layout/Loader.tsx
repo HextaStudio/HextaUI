@@ -109,30 +109,6 @@ const loader = () => {
             />
           </div>
           <div>
-            <h3 className="h3">Square loader</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="squareLoader" />
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<Loader variant="squareLoader" />`}
-            />
-          </div>
-          <div>
-            <h3 className="h3">Ping loader</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="pingLoader" className="animate-ping" size={40} />
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<Loader variant="pingLoader" />`}
-            />
-          </div>
-          <div>
             <h3 className="h3">Colored loader</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
               <Loader variant="coloredLoader" color="indigo" />

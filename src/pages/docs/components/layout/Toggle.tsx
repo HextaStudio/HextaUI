@@ -46,7 +46,7 @@ const toggle = () => {
 
   const [isEnabled, setIsEnabled] = useState(false);
 
-  const handleToggle = (value) => {
+  const handleToggle = (value: boolean | ((prevState: boolean) => boolean)) => {
     setIsEnabled(value);
   };
 

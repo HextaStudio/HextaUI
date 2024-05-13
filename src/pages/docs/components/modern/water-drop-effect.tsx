@@ -5,12 +5,20 @@ import anime from "animejs";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 
-export const WaterDropGridPreview = ({ width, height }) => {
+interface WaterDropGridPreviewProps {
+  width?: number;
+  height?: number;
+}
+
+export const WaterDropGridPreview = ({
+  width,
+  height,
+}: WaterDropGridPreviewProps) => {
   const GRID_WIDTH = width || 40;
   const GRID_HEIGHT = height || 40;
 
   const DotGrid = () => {
-    const handleDotClick = (e) => {
+    const handleDotClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
       anime({
         targets: ".dot-point",
         scale: [
@@ -27,7 +35,7 @@ export const WaterDropGridPreview = ({ width, height }) => {
         ],
         delay: anime.stagger(100, {
           grid: [GRID_WIDTH, GRID_HEIGHT],
-          from: e.target.dataset.index,
+          from: parseInt((e.target as HTMLDivElement).dataset.index ?? ""),
         }),
       });
     };

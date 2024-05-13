@@ -7,8 +7,12 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 
-export const MagneticLinkPreview = ({ children }) => {
-  const magnetic = useRef(null);
+export const MagneticLinkPreview = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const magnetic = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const xTo = gsap.quickTo(magnetic?.current, "x", {
@@ -21,10 +25,15 @@ export const MagneticLinkPreview = ({ children }) => {
       duration: 1,
     });
 
-    const mouseMove = (e) => {
+    const mouseMove = (e: { clientX: any; clientY: any }) => {
       const { clientX, clientY } = e;
       const { height, width, left, top } =
-        magnetic?.current.getBoundingClientRect();
+        magnetic?.current?.getBoundingClientRect() || {
+          height: 0,
+          width: 0,
+          left: 0,
+          top: 0,
+        };
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
 
@@ -32,7 +41,7 @@ export const MagneticLinkPreview = ({ children }) => {
       yTo(y);
     };
 
-    const mouseLeave = (e) => {
+    const mouseLeave = () => {
       gsap.to(magnetic?.current, { x: 0 });
       gsap.to(magnetic?.current, { y: 0 });
 
@@ -49,7 +58,9 @@ export const MagneticLinkPreview = ({ children }) => {
     };
   }, []);
 
-  return React.cloneElement(children, { ref: magnetic });
+  return children
+    ? React.cloneElement(children as React.ReactElement<any>, { ref: magnetic })
+    : null;
 };
 
 const magneticButton = () => {

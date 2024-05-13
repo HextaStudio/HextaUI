@@ -51,9 +51,9 @@ const columns = [
 ];
 
 const datepicker = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
 
-  const handleDateChange = (date) => {
+  const handleDateChange = (date: Date | undefined) => {
     setSelectedDate(date);
   };
 
@@ -119,9 +119,9 @@ const datepicker = () => {
 import { Datepicker } from "@/components/hexta-ui/Datepicker";
 
 export const Home = () => {
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState<Date>();
 
-    const handleDateChange = (date) => {
+    const handleDateChange = (date: Date | undefined) => {
       setSelectedDate(date);
     };
     

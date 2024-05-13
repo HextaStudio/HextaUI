@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 interface HeroProps {
-  title: string;
-  subtitle: string;
-  backgroundImage: string;
-  primaryButtonText: string;
-  primaryButtonLink: string;
-  secondaryButtonText: string;
-  secondaryButtonLink: string;
+  title?: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  primaryButtonText?: string;
+  primaryButtonLink?: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
 }
 
 export const Hero = ({

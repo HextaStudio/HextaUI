@@ -10,7 +10,7 @@ const cn = (...args: any[]) => {
 interface MenuItem {
   label: string;
   href: string;
-  icon: JSX.Element;
+  icon?: JSX.Element;
 }
 
 interface MenuProps {

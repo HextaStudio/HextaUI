@@ -16,7 +16,7 @@ export const InfiniteScrollingTextV1Preview = () => {
 
   const maxRotation = 8;
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: { clientX: number; clientY: any }) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
 
       const midpoint = window.innerWidth / 2;

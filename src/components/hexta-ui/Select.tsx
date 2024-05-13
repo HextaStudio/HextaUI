@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-interface Option {
+export interface Option {
   value: string | number;
   label: string;
   icon?: JSX.Element;
@@ -12,7 +12,7 @@ interface SelectProps {
   options: Option[] | { [key: string]: Option[] };
   label: string;
   value?: Option | null;
-  onChange: (option: Option) => void;
+  onChange?: (option: Option | null) => void;
   variant?: "default";
   isMulti?: boolean;
   isSearchable?: boolean;
@@ -54,7 +54,9 @@ export const Select: React.FC<SelectProps> = ({
         setSelectedOptions([...selectedOptions, option]);
       }
     } else {
-      onChange(option);
+      if (onChange) {
+        onChange(option);
+      }
       setIsOpen(false);
       setSearchTerm("");
     }

@@ -6,7 +6,12 @@ import { NextSeo } from "next-seo";
 
 import "@splidejs/react-splide/css";
 
-export default function App({ Component, pageProps }) {
+interface AppProps {
+  Component: any;
+  pageProps: any;
+}
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
@@ -51,7 +56,7 @@ export default function App({ Component, pageProps }) {
       <Script
         async
         src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
+        charSet="utf-8"
       ></Script>
       <Script
         async

@@ -4,7 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 
-const CardComponent = ({ component }) => {
+interface CardComponentProps {
+  component: {
+    title: string;
+    description: string;
+    url: string;
+    image: string;
+  };
+}
+
+const CardComponent = ({ component }: CardComponentProps) => {
   return (
     <>
       <div className="w-full p-4 m-2 border border-white border-opacity-10 rounded-xl h-fit component-card">

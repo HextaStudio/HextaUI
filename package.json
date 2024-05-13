@@ -39,9 +39,12 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.11.2",
+    "@types/animejs": "^3.1.12",
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.2",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.5"
