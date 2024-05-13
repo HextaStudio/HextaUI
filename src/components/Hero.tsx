@@ -137,7 +137,7 @@ export const Hero = () => {
           </Link>{" "}
         </div>
         <div>
-          <TextRevealV1Preview />
+          <TextRevealV1Preview text="In HextaUI everything is component based so you can Copy and paste components like this in your own website and customize with your own style without any efforts. Start building your website with these components today!" />
         </div>
         <div>
           <BentoGrid />
