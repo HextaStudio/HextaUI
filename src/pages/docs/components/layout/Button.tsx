@@ -193,19 +193,6 @@ const button = () => {
                 code={`<Button outline>Outline Button</Button>`}
               />
             </div>
-            <div className="installation">
-              <h3 className="h3">Animated Button</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-                <Button variant="animated" className="text-black bg-white">
-                  Animated Button
-                </Button>
-              </div>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Button variant="animated" className="text-black bg-white">Animated Button</Button>`}
-              />
-            </div>
           </div>
           <div className="mt-[5rem]">
             <Table
