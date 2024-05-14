@@ -140,6 +140,13 @@ const layoutComponentLinks = [
   },
 ].sort();
 
+const templateComponentsLinks = [
+  {
+    name: "Portfolio Template v1",
+    url: "portfolio-template-v1",
+  },
+];
+
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -303,6 +310,27 @@ export const Sidebar = () => {
                 Install Framer Motion
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className="sidebar-section">
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Templates (pro)
+          </p>
+          <ul className="flex flex-col gap-[8px] p-2">
+            {templateComponentsLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                    router.pathname === `/docs/templates/${link.url}`
+                      ? "opacity-100"
+                      : "opacity-60"
+                  }`}
+                  href={`/docs/templates/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="sidebar-section">
