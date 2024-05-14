@@ -10,7 +10,7 @@ export const Footer = ({ docs }: FooterProps) => {
   return (
     <>
       <footer
-        className={`flex flex-wrap items-center  p-10 footer gap-7 grow justify-between  className="max-lg:ml-auto" `}
+        className={`flex flex-wrap items-center  p-12 footer gap-7 grow justify-between  className="max-lg:ml-auto" `}
         style={{
           borderTop: "1px solid #ffffff20",
         }}
