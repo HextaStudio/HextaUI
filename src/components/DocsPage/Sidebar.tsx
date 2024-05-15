@@ -43,20 +43,16 @@ const layoutComponentLinks = [
   },
   {
     name: "Input",
-    new: true,
   },
   {
     name: "Checkbox",
-    new: true,
   },
   {
     name: "Date Picker",
-    new: true,
   },
 
   {
     name: "Tabs",
-    new: true,
   },
   {
     name: "Card",
@@ -68,18 +64,15 @@ const layoutComponentLinks = [
   },
   {
     name: "Progress Bar",
-    new: true,
   },
   {
     name: "Slider",
-    new: true,
   },
   {
     name: "Select",
   },
   {
     name: "File Upload",
-    new: true,
   },
   {
     name: "Button",
@@ -95,10 +88,6 @@ const layoutComponentLinks = [
   },
   {
     name: "Toast",
-  },
-  {
-    name: "Footer",
-    hidden: true,
   },
   {
     name: "Chart",
@@ -125,10 +114,7 @@ const layoutComponentLinks = [
     name: "Card",
     hidden: true,
   },
-  {
-    name: "Navbar",
-    hidden: true,
-  },
+
   {
     name: "Alert Dialog",
   },
@@ -137,6 +123,14 @@ const layoutComponentLinks = [
   },
   {
     name: "Hero",
+  },
+  {
+    name: "Navbar",
+    new: true,
+  },
+  {
+    name: "Footer",
+    new: true,
   },
 ].sort();
 
