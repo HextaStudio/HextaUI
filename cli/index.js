@@ -35,6 +35,8 @@ const components = [
   "Toast",
   "Toggle",
   "Tooltip",
+  "Footer",
+  "Navbar",
 ].sort();
 
 const tailwindCSSSetupLink =
