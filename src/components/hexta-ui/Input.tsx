@@ -10,8 +10,8 @@ interface InputProps {
   className?: string;
   type?: string;
   disabled?: boolean;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
 }
 
@@ -32,7 +32,7 @@ export const Input = ({
       onChange={onChange}
       placeholder={placeholder}
       className={cn(
-        "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
+        "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none border border-white border-opacity-10 focus:border-opacity-30 focus:outline-2 ",
         className
       )}
       {...props}
