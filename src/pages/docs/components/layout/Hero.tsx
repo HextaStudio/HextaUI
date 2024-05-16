@@ -73,7 +73,7 @@ const hero = () => {
     title="This is Basic Hero Component"
     subtitle="Aliqua ipsum Lorem sit laborum cupidatat sint voluptate eu excepteur."
     primaryButtonText="Get Started"
-    primaryButtonLinkT="#"
+    primaryButtonLink="#"
     secondaryButtonText="About us"
     secondaryButtonLink="#"
 />`}
@@ -100,7 +100,7 @@ const hero = () => {
     title="Hero component with Background Image"
     subtitle="Aliqua ipsum Lorem sit laborum cupidatat sint voluptate eu excepteur."
     primaryButtonText="Get Started"
-    primaryButtonLinkT="#"
+    primaryButtonLink="#"
     secondaryButtonText="About us"
     secondaryButtonLink="#"
     backgroundImage="https://images.unsplash.com/photo-1614851099511-773084f6911d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
