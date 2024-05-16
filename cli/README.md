@@ -1,3 +1,5 @@
+Sure, I've updated the documentation based on the new changes:
+
 ## HextaUI - Modern UI Library
 
 HextaUI is a user interface library that offers contemporary components, making it effortless to integrate into your projects. With the HextaUI CLI, you can quickly install and utilize these components without any hassle.
@@ -13,22 +15,26 @@ npm install @hextastudio/ui@latest
 After installation, use the HextaUI CLI by running:
 
 ```bash
-npx hexta-ui add
+npx hexta-ui <command>
 ```
+
+### Commands
+
+- `npx hexta-ui add <component_name>`: Add a component to your project.
+- `npx hexta-ui list`: List all available components.
+- `npx hexta-ui help`: Show the help message.
 
 ### Usage
 
-1. Choose a framework:
+1. To add a component, run:
 
-   - Next.js
-   - React
+```bash
+npx hexta-ui add <component_name>
+```
 
-![preview](https://i.imgur.com/V8nw0Kv.png)
+Replace `<component_name>` with the name of the component you want to install (e.g., `npx hexta-ui add button`). You can use lowercase or uppercase for the component name.
 
-2. Select components:
-   - Browse through the list using arrow keys and choose the ones you need.
-
-![preview](https://i.imgur.com/rHCHZFd.png)
+2. The CLI will download the selected component and place it in the `src/components/hexta-ui` directory of your project.
 
 That's it! HextaUI makes it easy to enhance your user interface with modern, customizable components.
 
@@ -56,6 +62,8 @@ That's it! HextaUI makes it easy to enhance your user interface with modern, cus
 | Toast       | A temporary message that appears at the bottom of the screen.                         |
 | Toggle      | A switch that allows users to toggle between two states.                              |
 | Tooltip     | A small pop-up that displays additional information when users hover over an element. |
+| Navbar      | A navigation bar that contains links to different sections of a website.              |
+| Footer      | A section at the bottom of a page that contains contact information and links.        |
 
 ### Support
 
@@ -67,6 +75,6 @@ That's it! HextaUI makes it easy to enhance your user interface with modern, cus
 
 ## Resource
 
-- Check out [this](https://github.com/firstcontributions/first-contributions) awesome contribution guide for you First Contribution. | [click here](https://github.com/firstcontributions/first-contributions)
+- Check out [this](https://github.com/firstcontributions/first-contributions) awesome contribution guide for your First Contribution. | [click here](https://github.com/firstcontributions/first-contributions)
 
 Like it? Star the repo ⭐
