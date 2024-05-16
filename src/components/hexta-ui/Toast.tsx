@@ -30,7 +30,7 @@ export const Toast = ({
           animate={{ translateY: 0, opacity: 1 }}
           exit={{ translateY: 100, opacity: 0 }}
           className={cn(
-            "flex items-center justify-between h-fit py-3 px-5 m-4 rounded-lg border-b-2 gap-3 border border-zinc-800 bg-[#070707] fixed bottom-0 right-0",
+            "flex items-center justify-between h-fit py-3 px-5 m-4 rounded-lg border-b-2 gap-3 border border-zinc-800 bg-neutral-950 fixed bottom-0 right-0 z-[99999999]",
             className
           )}
         >
