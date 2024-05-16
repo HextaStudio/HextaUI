@@ -10,6 +10,7 @@ import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const menu = () => {
   const data = [
@@ -84,26 +85,10 @@ const menu = () => {
 
   return (
     <>
-      {" "}
-      <NextSeo
+      <DocsSEO
         title="Menus - HextaUI ✨"
         description="Collection of Menu components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/menus"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/menus",
-          title: "Menus - HextaUI ✨",
-          description: "Collection of Menu components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/oe8BqaV.png",
-              width: 1920,
-              height: 1080,
-              alt: "Menus - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Menus - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/oe8BqaV.png"
       />
       <DocsLayout>
         <main>

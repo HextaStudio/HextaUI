@@ -7,6 +7,7 @@ import { Avatar } from "@/components/hexta-ui/Avatar";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const avatar = () => {
   const data = [
@@ -62,26 +63,10 @@ const avatar = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Avatars - HextaUI ✨"
         description="Collection of Avatar components with multiple variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/avatars"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/avatars",
-          title: "Avatars - HextaUI ✨",
-          description:
-            "Collection of Avatar components with multiple variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/Wm4aBoc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Avatars - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Avatars - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/Wm4aBoc.png"
       />
       <DocsLayout>
         <main>

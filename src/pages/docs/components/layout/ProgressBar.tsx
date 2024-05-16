@@ -10,6 +10,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -48,26 +49,10 @@ const columns = [
 const progressbar = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Progress Bar - HextaUI ✨"
         description="Progress Bar allows user to display progress of specific operation."
-        canonical="https://ui.hextastudio.in/docs/components/layout/progressBar"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/progressBar",
-          title: "Progress Bar - HextaUI ✨",
-          description:
-            "Progress Bar allows user to display progress of specific operation.",
-          images: [
-            {
-              url: "https://i.imgur.com/wIeGLVv.png",
-              width: 1920,
-              height: 1080,
-              alt: "Progress Bar - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Progress Bar - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/wIeGLVv.png"
       />
       <DocsLayout>
         <main>

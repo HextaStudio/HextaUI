@@ -8,6 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const loader = () => {
   const data = [
@@ -56,26 +57,10 @@ const loader = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Loaders - HextaUI ✨"
         description="Collection of Loaders components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/loaders"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/loaders",
-          title: "Loaders - HextaUI ✨",
-          description:
-            "Collection of Loaders components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/TQAInIK.png",
-              width: 1920,
-              height: 1080,
-              alt: "Loaders - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Loaders - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/TQAInIK.png"
       />
       <DocsLayout>
         <main>

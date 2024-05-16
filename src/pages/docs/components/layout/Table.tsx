@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const table = () => {
   const data = [
@@ -69,26 +70,10 @@ const table = () => {
 
   return (
     <>
-      <NextSeo
-        title="Table - HextaUI ✨"
+      <DocsSEO
+        title="Table"
         description="Responsive Table component used to display information in table format."
-        canonical="https://ui.hextastudio.in/docs/components/layout/table"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/table",
-          title: "Table - HextaUI ✨",
-          description:
-            "Responsive Table component used to display information in table format.",
-          images: [
-            {
-              url: "https://i.imgur.com/Vd0QX6d.png",
-              width: 1920,
-              height: 1080,
-              alt: "Table - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Table - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/Vd0QX6d.png"
       />
       <DocsLayout>
         <main>

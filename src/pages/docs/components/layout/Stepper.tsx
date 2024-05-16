@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Stepper } from "@/components/hexta-ui/Stepper";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -81,26 +82,10 @@ const stepper = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Stepper - HextaUI ✨"
         description="Stepper is used to display progress in a linear sequence of tasks."
-        canonical="https://ui.hextastudio.in/docs/components/layout/stepper"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/stepper",
-          title: "Stepper - HextaUI ✨",
-          description:
-            "Stepper is used to display progress in a linear sequence of tasks.",
-          images: [
-            {
-              url: "https://i.imgur.com/2XmpMHU.png",
-              width: 1920,
-              height: 1080,
-              alt: "Stepper - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Stepper - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/2XmpMHU.png"
       />
       <DocsLayout>
         <main>

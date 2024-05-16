@@ -5,29 +5,15 @@ import { NextSeo } from "next-seo";
 import { Hero } from "@/components/hexta-ui/Hero";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const hero = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Hero - HextaUI ✨"
         description="Collection of Hero components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/hero"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/hero",
-          title: "Hero - HextaUI ✨",
-          description: "Collection of Hero components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/rkzeMDo.png",
-              width: 1920,
-              height: 1080,
-              alt: "Hero - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Hero - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/rkzeMDo.png"
       />
       <DocsLayout>
         <main>

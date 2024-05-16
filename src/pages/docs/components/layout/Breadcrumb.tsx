@@ -9,6 +9,7 @@ import { Breadcrumb } from "@/components/hexta-ui/Breadcrumb";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const breadcrumb = () => {
   const items = [
@@ -49,26 +50,10 @@ const breadcrumb = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Breadcrumb - HextaUI ✨"
         description="Displays the path to the current resource using a hierarchy of links."
-        canonical="https://ui.hextastudio.in/docs/components/layout/breadcrumb"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/breadcrumb",
-          title: "Breadcrumb - HextaUI ✨",
-          description:
-            "Displays the path to the current resource using a hierarchy of links.",
-          images: [
-            {
-              url: "https://i.imgur.com/oDya0tl.png",
-              width: 1920,
-              height: 1080,
-              alt: "Breadcrumb - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Breadcrumb - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/oDya0tl.png"
       />
       <DocsLayout>
         <main>

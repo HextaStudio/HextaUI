@@ -10,6 +10,7 @@ import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";
 import React, { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const select = () => {
   const data = [
@@ -118,28 +119,11 @@ const select = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Select - HextaUI ✨"
         description="Used for collecting user provided information from a list of options."
-        canonical="https://ui.hextastudio.in/docs/components/layout/select"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/select",
-          title: "Select - HextaUI ✨",
-          description:
-            "Used for collecting user provided information from a list of options.",
-          images: [
-            {
-              url: "https://i.imgur.com/6lS5lCy.png",
-              width: 1920,
-              height: 1080,
-              alt: "Select - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Select - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/6lS5lCy.png"
       />
-
       <DocsLayout>
         <main>
           {" "}

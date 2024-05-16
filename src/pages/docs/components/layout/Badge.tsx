@@ -9,6 +9,7 @@ import { Table } from "@/components/hexta-ui/Table";
 
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const badge = () => {
   const data = [
@@ -87,26 +88,10 @@ const badge = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Badges - HextaUI ✨"
         description="Collection of multiple badges/chips with multiple variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/badges"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/badges",
-          title: "Badges - HextaUI ✨",
-          description:
-            "Collection of multiple badges/chips with multiple variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/T4CpygK.png",
-              width: 1920,
-              height: 1080,
-              alt: "Badges - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Badges - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/T4CpygK.png"
       />
       <DocsLayout>
         <main>

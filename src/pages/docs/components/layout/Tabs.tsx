@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Table } from "@/components/hexta-ui/Table";
 import { Tabs } from "@/components/hexta-ui/Tabs";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -72,26 +73,10 @@ const tabs = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Tabs - HextaUI ✨"
         description="Tabs allows users to navigate between different sections of a component"
-        canonical="https://ui.hextastudio.in/docs/components/layout/tabs"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/tabs",
-          title: "Tabs - HextaUI ✨",
-          description:
-            "Tabs allows users to navigate between different sections of a component",
-          images: [
-            {
-              url: "https://i.imgur.com/GCHQpRl.png",
-              width: 1920,
-              height: 1080,
-              alt: "Tabs - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Tabs - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/GCHQpRl.png"
       />
       <DocsLayout>
         <main>

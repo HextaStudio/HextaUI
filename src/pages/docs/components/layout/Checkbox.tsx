@@ -10,6 +10,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Checkbox } from "@/components/hexta-ui/Checkbox";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -62,26 +63,10 @@ const checkbox = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Checkbox - HextaUI ✨"
         description="Checkboxes allow the user to select one or more items from a set."
-        canonical="https://ui.hextastudio.in/docs/components/layout/checkbox"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/checkbox",
-          title: "Checkbox - HextaUI ✨",
-          description:
-            "Checkboxes allow the user to select one or more items from a set.",
-          images: [
-            {
-              url: "https://i.imgur.com/iynaQcS.png",
-              width: 1920,
-              height: 1080,
-              alt: "Checkbox - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Checkbox - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/iynaQcS.png"
       />
       <DocsLayout>
         <main>

@@ -7,30 +7,15 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Button } from "@/components/hexta-ui/Button";
 import { Card } from "@/components/hexta-ui/Card";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const cards = () => {
   return (
     <>
-      <NextSeo
-        title="Cards - HextaUI ✨"
+      <DocsSEO
+        title="Card - HextaUI ✨"
         description="Collection of multiple reusable card components with props."
-        canonical="https://ui.hextastudio.in/docs/components/layout/cards"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/cards",
-          title: "Cards - HextaUI ✨",
-          description:
-            "Collection of multiple reusable card components with props.",
-          images: [
-            {
-              url: "https://i.imgur.com/5S1wN8p.png",
-              width: 1920,
-              height: 1080,
-              alt: "Cards - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Cards - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/5S1wN8p.png"
       />
       <DocsLayout>
         <main>

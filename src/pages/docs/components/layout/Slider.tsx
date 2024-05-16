@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Slider } from "@/components/hexta-ui/Slider";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -67,26 +68,10 @@ const slider = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Slider - HextaUI ✨"
         description="Slider allows user to select a value from range of specific values."
-        canonical="https://ui.hextastudio.in/docs/components/layout/progressBar"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/progressBar",
-          title: "Slider - HextaUI ✨",
-          description:
-            "Slider allows user to select a value from range of specific values.",
-          images: [
-            {
-              url: "https://i.imgur.com/rkYrlmH.png",
-              width: 1920,
-              height: 1080,
-              alt: "Slider - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Slider - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/rkYrlmH.png"
       />
       <DocsLayout>
         <main>

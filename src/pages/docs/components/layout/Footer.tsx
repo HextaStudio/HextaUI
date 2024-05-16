@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const footer = () => {
   const data = [
@@ -71,27 +72,10 @@ const footer = () => {
 
   return (
     <>
-      {" "}
-      <NextSeo
+      <DocsSEO
         title="Footer - HextaUI ✨"
         description="Collection of Footer components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/footer"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/footer",
-          title: "Footer - HextaUI ✨",
-          description:
-            "Collection of Footer components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/Jad7qle.png",
-              width: 1920,
-              height: 1080,
-              alt: "Footer - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Footer - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/Jad7qle.png"
       />
       <DocsLayout>
         <main>

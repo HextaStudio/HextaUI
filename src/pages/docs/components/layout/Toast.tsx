@@ -9,6 +9,7 @@ import { Toast } from "@/components/hexta-ui/Toast";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const toast = () => {
   const data = [
@@ -66,30 +67,13 @@ const toast = () => {
 
   return (
     <>
-      {" "}
-      <NextSeo
+      <DocsSEO
         title="Toasts - HextaUI ✨"
         description="Some awesome toasts component with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/toasts"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/toasts",
-          title: "Toasts - HextaUI ✨",
-          description: "Some awesome toasts component with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/5P0bFAB.png",
-              width: 1920,
-              height: 1080,
-              alt: "Toasts - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Toasts - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/5P0bFAB.png"
       />
       <DocsLayout>
         <main>
-          {" "}
           <DocsHeader
             title="Toasts"
             description="Some awesome toasts component with different variants."

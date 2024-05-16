@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import { Navbar } from "@/components/hexta-ui/Navbar";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const navbar = () => {
   const data = [
@@ -82,26 +83,10 @@ const navbar = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Navbar - HextaUI ✨"
         description="Collection of Navbar components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/navbar"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/navbar",
-          title: "Navbar - HextaUI ✨",
-          description:
-            "Collection of Navbar components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/BtOWZYT.png",
-              width: 1920,
-              height: 1080,
-              alt: "Navbar - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Navbar - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/BtOWZYT.png"
       />
       <DocsLayout>
         <main>

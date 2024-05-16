@@ -7,6 +7,7 @@ import Button from "@/components/hexta-ui/Button";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const button = () => {
   const data = [
@@ -55,25 +56,10 @@ const button = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Buttons - HextaUI ✨"
         description="Collection of multiple buttons with multiple variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/buttons"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/buttons",
-          title: "Buttons - HextaUI ✨",
-          description: "Collection of multiple buttons with multiple variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/eOlyvkH.png",
-              width: 1920,
-              height: 1080,
-              alt: "Buttons - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Buttons - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/eOlyvkH.png"
       />
       <DocsLayout>
         <main>

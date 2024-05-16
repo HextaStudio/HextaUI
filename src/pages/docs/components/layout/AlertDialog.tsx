@@ -8,6 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const alertdialog = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -79,25 +80,10 @@ const alertdialog = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Alert Dialog - HextaUI ✨"
         description="A modal dialog that interrupts the user with important content and expects a response."
-        canonical="https://ui.hextastudio.in/docs/components/layout/alert-dialog"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/alert-dialog",
-          title: "Alert Dialog - HextaUI ✨",
-          description: "              expects a response.",
-          images: [
-            {
-              url: "https://i.imgur.com/KKUqpjL.png",
-              width: 1920,
-              height: 1080,
-              alt: "Alert Dialog - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Alert Dialog - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/KKUqpjL.png"
       />
       <DocsLayout>
         <main>

@@ -10,6 +10,7 @@ import { format } from "date-fns";
 import { Datepicker } from "@/components/hexta-ui/Datepicker";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -60,25 +61,10 @@ const datepicker = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Date Picker - HextaUI ✨"
         description="The Date Picker component lets users select a date."
-        canonical="https://ui.hextastudio.in/docs/components/layout/datepicker"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/datepicker",
-          title: "Date Picker - HextaUI ✨",
-          description: "The Date Picker component lets users select a date.",
-          images: [
-            {
-              url: "https://i.imgur.com/nqWHqng.png",
-              width: 1920,
-              height: 1080,
-              alt: "Date Picker - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Date Picker - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/nqWHqng.png"
       />
       <DocsLayout>
         <main>

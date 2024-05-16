@@ -9,6 +9,7 @@ import { Badge } from "@/components/hexta-ui/Badge";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const tooltip = () => {
   const data = [
@@ -45,26 +46,10 @@ const tooltip = () => {
   ];
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Tooltip - HextaUI ✨"
         description="An awesome component to display tooltip for information."
-        canonical="https://ui.hextastudio.in/docs/components/layout/tooltip"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/tooltip",
-          title: "Tooltip - HextaUI ✨",
-          description:
-            "Collection of Tooltip components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/TQAInIK.png",
-              width: 1920,
-              height: 1080,
-              alt: "Tooltip - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Tooltip - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/TQAInIK.png"
       />
       <DocsLayout>
         <main>

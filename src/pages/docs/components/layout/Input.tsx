@@ -10,6 +10,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Input } from "@/components/hexta-ui/Input";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -55,26 +56,10 @@ const input = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Input - HextaUI ✨"
         description="Collection of Input components with different variants."
-        canonical="https://ui.hextastudio.in/docs/components/layout/input"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/input",
-          title: "Input - HextaUI ✨",
-          description:
-            "Collection of Input components with different variants.",
-          images: [
-            {
-              url: "https://i.imgur.com/znkNh7x.png",
-              width: 1920,
-              height: 1080,
-              alt: "Input - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Input - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/znkNh7x.png"
       />
       <DocsLayout>
         <main>

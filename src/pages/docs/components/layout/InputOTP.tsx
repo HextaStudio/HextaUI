@@ -9,6 +9,7 @@ import { OTP } from "@/components/hexta-ui/InputOTP";
 import { useState } from "react";
 import Toast from "@/components/hexta-ui/Toast";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const otp = () => {
   const [otpValue, setOtpValue] = useState("");
@@ -29,25 +30,10 @@ const otp = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Input OTP - HextaUI ✨"
-        description="An Input component for OTP"
-        canonical="https://ui.hextastudio.in/docs/components/layout/InputOTP"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/InputOTP",
-          title: "Input OTP - HextaUI ✨",
-          description: "An Input component for OTP",
-          images: [
-            {
-              url: "https://i.imgur.com/3RiTZRk.png",
-              width: 1920,
-              height: 1080,
-              alt: "Input OTP - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Input OTP - HextaUI ✨",
-        }}
+        description="An Input component for OTP."
+        image="https://i.imgur.com/3RiTZRk.png"
       />
       <DocsLayout>
         <main>

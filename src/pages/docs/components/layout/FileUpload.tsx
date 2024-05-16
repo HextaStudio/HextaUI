@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { FileUpload } from "@/components/hexta-ui/FileUpload";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [
   {
@@ -56,25 +57,10 @@ const fileupload = () => {
   };
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="File Upload - HextaUI ✨"
         description="File upload allows users to upload files."
-        canonical="https://ui.hextastudio.in/docs/components/layout/fileUpload"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/fileUpload",
-          title: "File Upload - HextaUI ✨",
-          description: "File upload allows users to upload files.",
-          images: [
-            {
-              url: "https://i.imgur.com/TTpD2Jr.png",
-              width: 1920,
-              height: 1080,
-              alt: "File Upload - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "File Upload - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/TTpD2Jr.png"
       />
       <DocsLayout>
         <main>

@@ -10,6 +10,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { Toggle } from "@/components/hexta-ui/Toggle";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const toggle = () => {
   const data = [
@@ -53,26 +54,10 @@ const toggle = () => {
 
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Toggle - HextaUI ✨"
         description="Toggle switch component with enabled and disabled state."
-        canonical="https://ui.hextastudio.in/docs/components/layout/toggle"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/components/layout/toggle",
-          title: "Toggle - HextaUI ✨",
-          description:
-            "Toggle switch component with enabled and disabled state.",
-          images: [
-            {
-              url: "https://i.imgur.com/L9bkOYd.png",
-              width: 1920,
-              height: 1080,
-              alt: "Toggle - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Toggle - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/L9bkOYd.png"
       />
       <DocsLayout>
         <main>
