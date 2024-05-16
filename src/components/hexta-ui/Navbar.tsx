@@ -1,6 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Input } from "./Input";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+import Link from "next/link";
+
+const cn = (...args: any[]) => {
+  return clsx(twMerge(...args));
+};
 
 interface NavbarProps {
   title?: string;
@@ -11,6 +18,7 @@ interface NavbarProps {
   icons?: { src: string; alt: string; href: string }[];
   dropdown?: { label: string; options: { label: string; href: string }[] };
   responsive?: boolean;
+  className?: string;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -22,11 +30,21 @@ export const Navbar: React.FC<NavbarProps> = ({
   icons,
   dropdown,
   responsive,
+  className,
 }) => {
   return (
-    <nav className="flex flex-wrap items-center justify-between w-full px-4 py-2 m-4">
+    <nav
+      className={cn(
+        "flex  items-center justify-between w-full py-[1rem] px-[2rem] gap-3 bg-neutral-950",
+        className
+      )}
+    >
       <div className="flex flex-row-reverse gap-3">
-        {title && <p className="text-xl font-bold tracking-tighter">{title}</p>}
+        {title && (
+          <Link href="/#" className="text-xl font-bold tracking-tighter">
+            {title}
+          </Link>
+        )}
         {image && (
           <Image
             src={image.src}
@@ -49,11 +67,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           />
         )}
         {links && (
-          <ul className="flex gap-1 text-md">
+          <ul className="flex gap-3 text-md">
             {links.map((link, index) => (
               <li key={index}>
                 <a
-                  className="p-[10px] tracking-tighter text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
+                  className="p-2 text-[14px] rounded duration-[0.2s] transition-all opacity-80 hover:bg-[#ffffff08] hover:opacity-100"
                   href={link.href}
                 >
                   {link.label}
