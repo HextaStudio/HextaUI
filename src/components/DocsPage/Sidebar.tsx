@@ -42,6 +42,10 @@ const layoutComponentLinks = [
     name: "Badge",
   },
   {
+    name: "Input OTP",
+    new: true,
+  },
+  {
     name: "Input",
   },
   {
