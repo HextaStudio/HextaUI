@@ -38,6 +38,7 @@ const components = [
   "Tooltip",
   "Footer",
   "Navbar",
+  "InputOTP",
 ].sort();
 
 const help = () => {
