@@ -54,51 +54,23 @@ const hextaUIinstallation = () => {
               <CodeBlock
                 lang="bash"
                 filename="bash"
-                code={`npx hexta-ui add`}
+                code={`npx hexta-ui add <component_name>`}
               />
-              <p>
-                Then, you will be asked to select the framework you are using:
-              </p>
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? (Use arrow keys)
-> Next.js 
-  React `}
-              />
-              <p>Now simply select the component you would like to install:</p>
+              <div className="flex flex-col gap-4">
+                <p>
+                  Replace &lt;component_name&gt; with the name of the component
+                  you want to install (e.g., `npx hexta-ui add button`).
+                </p>
+                <p>
+                  The CLI will download the selected component and place it in
+                  the `src/components/hexta-ui` directory of your project.
+                </p>
 
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js
-? Which component would you like to install? (Use arrow keys)
-  Avatar
-> Button 
-  Loader 
-  Select 
-  Toast 
-  Toggle 
-  Tooltip`}
-              />
-
-              <CodeBlock
-                lang="bash"
-                filename="bash"
-                code={`? Which framework are you using? Next.js
-? Which component would you like to install? Avatar
-✔ Button component was added successfully — Guide to use Button, https://ui.hextastudio.in/docs/components/layout/button`}
-              />
-              <p>
-                Congratulations! You have successfully installed and added your
-                first component!{" "}
-                <Link
-                  className="blue-link"
-                  href="/docs/components/layout/buttons"
-                >
-                  Learn how to use the Button component
-                </Link>
-              </p>
+                <p>
+                  That's it! HextaUI makes it easy to enhance your user
+                  interface with modern, customizable components.
+                </p>
+              </div>
             </div>
           </div>
         </main>
