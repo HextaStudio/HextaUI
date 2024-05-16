@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
 const componentLinks = [
@@ -145,6 +145,7 @@ export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null!);
 
   const filteredComponentLinks = componentLinks.filter((link) => {
     return link.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -164,13 +165,37 @@ export const Sidebar = () => {
     };
 
     checkMobile();
-    window.addEventListener("resize", checkMobile);
+    const handleShortcut = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleShortcut);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("keydown", handleShortcut);
     };
   }, []);
+  useEffect(() => {
+    const inputElement = searchInputRef.current;
+    if (inputElement) {
+      const handleShortcut = (e: KeyboardEvent) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          inputElement.focus();
+        }
+      };
 
+      inputElement.addEventListener("keydown", handleShortcut);
+
+      return () => {
+        inputElement.removeEventListener("keydown", handleShortcut);
+      };
+    }
+  }, []);
   return (
     <>
       <div
@@ -207,6 +232,7 @@ export const Sidebar = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
+          ref={searchInputRef}
         />
         <div
           className="absolute w-fit justify-end items-end ml-auto right-[1rem] p-[9px] cursor-pointer top-[1rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[9999999999]"
