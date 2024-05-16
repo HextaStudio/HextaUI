@@ -2,40 +2,40 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
-const componentLinks = [
-  {
-    name: "Magnetic Button",
-    url: "magnetic-button",
-  },
-  {
-    name: "White Ray",
-    url: "white-ray",
-  },
-  {
-    name: "Text Reveal v1",
-    url: "text-reveal-v1",
-  },
-  {
-    name: "Photo Trailing Effect",
-    url: "photo-trailing-mousemove",
-  },
-  {
-    name: "Water Drop Effect",
-    url: "water-drop-effect",
-  },
-  {
-    name: "Hacker Text Effect",
-    url: "hacker-text-effect",
-  },
-  {
-    name: "Floating Image Gallery",
-    url: "floating-image-gallery",
-  },
-  {
-    name: "Infinite Text Scroll v1",
-    url: "infinite-text-scroll-v1",
-  },
-];
+// const componentLinks = [
+//   {
+//     name: "Magnetic Button",
+//     url: "magnetic-button",
+//   },
+//   {
+//     name: "White Ray",
+//     url: "white-ray",
+//   },
+//   {
+//     name: "Text Reveal v1",
+//     url: "text-reveal-v1",
+//   },
+//   {
+//     name: "Photo Trailing Effect",
+//     url: "photo-trailing-mousemove",
+//   },
+//   {
+//     name: "Water Drop Effect",
+//     url: "water-drop-effect",
+//   },
+//   {
+//     name: "Hacker Text Effect",
+//     url: "hacker-text-effect",
+//   },
+//   {
+//     name: "Floating Image Gallery",
+//     url: "floating-image-gallery",
+//   },
+//   {
+//     name: "Infinite Text Scroll v1",
+//     url: "infinite-text-scroll-v1",
+//   },
+// ];
 
 const layoutComponentLinks = [
   {
@@ -138,6 +138,29 @@ const layoutComponentLinks = [
   },
 ].sort();
 
+const getStartedLinks = [
+  {
+    name: "Install Next.js",
+    url: "install-next",
+  },
+  {
+    name: "CLI",
+    url: "install-hexta-ui",
+  },
+  {
+    name: "Install Tailwind CSS",
+    url: "install-tailwind",
+  },
+  {
+    name: "Install GSAP",
+    url: "install-gsap",
+  },
+  {
+    name: "Install Framer Motion",
+    url: "install-framer-motion",
+  },
+];
+
 const templateComponentsLinks = [
   {
     name: "Portfolio Template v1",
@@ -151,9 +174,6 @@ export const Sidebar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null!);
 
-  const filteredComponentLinks = componentLinks.filter((link) => {
-    return link.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
   const filteredLayoutComponentLinks = layoutComponentLinks.filter((link) => {
     return link.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
@@ -243,7 +263,7 @@ export const Sidebar = () => {
           placeholder="Search Components..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
+          className="flex px-4 py-2 my-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
           ref={searchInputRef}
         />
         <div
@@ -277,78 +297,32 @@ export const Sidebar = () => {
             </li>
           </ul>
         </div>
-        <div className="relative bg-black sidebar-section">
+        <div className="sidebar-section">
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
-            Resources
+            Getting Started
           </p>
-          <ul className="flex flex-col gap-[8px] p-2">
-            <li>
-              <Link
-                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                  router.pathname === `/docs/resources/install-next`
-                    ? "opacity-100"
-                    : "opacity-60"
-                }`}
-                href="/docs/resources/install-next"
-              >
-                Install Next.js
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                  router.pathname === `/docs/resources/install-hexta-ui`
-                    ? "opacity-100"
-                    : "opacity-60"
-                }`}
-                href="/docs/resources/install-hexta-ui"
-              >
-                Install HextaUI
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                  router.pathname === `/docs/resources/install-tailwind`
-                    ? "opacity-100"
-                    : "opacity-60"
-                }`}
-                href="/docs/resources/install-tailwind"
-              >
-                Install Tailwind CSS
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`flex items-center gap-1 text-sm transition-all hover:opacity-90 hover:underline w-fit ${
-                  router.pathname === `/docs/resources/install-gsap`
-                    ? "opacity-100"
-                    : "opacity-60"
-                }`}
-                href="/docs/resources/install-gsap"
-              >
-                Install GSAP
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                  router.pathname === `/docs/resources/install-framer-motion`
-                    ? "opacity-100"
-                    : "opacity-60"
-                }`}
-                href="/docs/resources/install-framer-motion"
-              >
-                Install Framer Motion
-              </Link>
-            </li>
+          <ul className="flex flex-col gap-[6px] p-2">
+            {getStartedLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                    router.pathname === `/docs/resources/${link.url}`
+                      ? "opacity-100"
+                      : "opacity-60"
+                  }`}
+                  href={`/docs/resources/${link.url}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="sidebar-section">
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
             Templates (pro)
           </p>
-          <ul className="flex flex-col gap-[8px] p-2">
+          <ul className="flex flex-col gap-[6px] p-2">
             {templateComponentsLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -367,30 +341,9 @@ export const Sidebar = () => {
         </div>
         <div className="sidebar-section">
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
-            Modern
+            Components
           </p>
-          <ul className="flex flex-col gap-[8px] p-2">
-            {filteredComponentLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                    router.pathname === `/docs/components/modern/${link.url}`
-                      ? "opacity-100"
-                      : "opacity-60"
-                  }`}
-                  href={`/docs/components/modern/${link.url}`}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="sidebar-section">
-          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
-            Layout Components
-          </p>
-          <ul className="flex flex-col gap-[8px] p-2">
+          <ul className="flex flex-col gap-[6px] p-2">
             {filteredLayoutComponentLinks
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((link, index) => (
