@@ -301,7 +301,7 @@ export const Sidebar = () => {
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
             Getting Started
           </p>
-          <ul className="flex flex-col gap-[6px] p-2">
+          <ul className="flex flex-col gap-[8px] p-2">
             {getStartedLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -322,7 +322,7 @@ export const Sidebar = () => {
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
             Templates (pro)
           </p>
-          <ul className="flex flex-col gap-[6px] p-2">
+          <ul className="flex flex-col gap-[8px] p-2">
             {templateComponentsLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -343,7 +343,7 @@ export const Sidebar = () => {
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
             Components
           </p>
-          <ul className="flex flex-col gap-[6px] p-2">
+          <ul className="flex flex-col gap-[8px] p-2">
             {filteredLayoutComponentLinks
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((link, index) => (
