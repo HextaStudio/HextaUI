@@ -22,6 +22,7 @@ interface CalendarProps {
   value: Date;
   onChange: (date: Date) => void;
 }
+const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sas"];
 
 interface DatePickerProps {
   className?: string;
@@ -46,36 +47,30 @@ const Calendar = ({ value, onChange }: CalendarProps) => {
     <div className="p-4 text-gray-300 border border-white rounded-md shadow-md bg-neutral-950 border-opacity-10 ">
       {" "}
       <div className="flex items-center justify-between mb-4">
-        {" "}
         <button
-          className="flex items-center justify-center text-gray-600 hover:text-gray-800"
+          className="flex items-center justify-center text-gray-400 hover:text-gray-200"
           onClick={() => setCurrentDate(subMonths(currentDate, 1))}
         >
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             viewBox="0 0 24 24"
           >
-            {" "}
             <path
               fill="currentColor"
               d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
-            />{" "}
-          </svg>{" "}
-          Prev{" "}
-        </button>{" "}
+            />
+          </svg>
+        </button>
         <span className="text-sm font-semibold">
           {" "}
           {format(currentDate, "MMMM yyyy")}{" "}
         </span>{" "}
         <button
-          className="flex items-center justify-center text-gray-600 hover:text-gray-800"
+          className="flex items-center justify-center text-gray-400 hover:text-gray-200"
           onClick={() => setCurrentDate(addMonths(currentDate, 1))}
         >
-          {" "}
-          Next{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -92,7 +87,14 @@ const Calendar = ({ value, onChange }: CalendarProps) => {
         </button>{" "}
       </div>{" "}
       <div className="grid grid-cols-7 gap-2 ">
-        {" "}
+        {daysOfWeek.map((day, index) => (
+          <div
+            key={index}
+            className="px-2 py-1 text-center text-zinc-100 text-opacity-80 text-[13px]"
+          >
+            {day}
+          </div>
+        ))}
         {dateRange.map((date, index) => (
           <button
             key={index}
@@ -128,7 +130,7 @@ export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
       <div className="relative">
         <input
           type="text"
-          value={value ? format(value, "dd/MM/yyyy") : "dd/MM/yyyy"}
+          value={value ? format(value, "dd/MM/yyyy") : "Pick a date"}
           onClick={() => setShowCalendar(!showCalendar)}
           className={cn(
             "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50 relative cursor-pointer bg-neutral-950 border border-white border-opacity-10"
