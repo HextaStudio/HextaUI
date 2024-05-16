@@ -9,7 +9,7 @@ interface LinkItem {
 
 interface FooterProps {
   copyright?: string;
-
+  title?: string;
   links?: {
     title?: string;
     items?: LinkItem[] | undefined;
@@ -38,7 +38,8 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({
-  copyright = `&copy; ${new Date().getFullYear()} HextaUI. All rights reserved.`,
+  title = "HextaUI",
+  copyright = `© ${new Date().getFullYear()} ${title}. All rights reserved.`,
   links,
   subscribe,
   contact,
@@ -47,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({
   social,
 }) => {
   return (
-    <footer className="py-8 w-full bg-[#080808] border-t border-t-zinc-800">
+    <footer className="py-8 border-t border-t-zinc-800  max-w-[70rem] w-full mx-auto">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-between gap-4">
           {logo && logo.src && logo.width && (
