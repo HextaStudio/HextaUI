@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "@/components/hexta-ui/Badges";
+import { Badge } from "@/components/hexta-ui/Badge";
 
 const portfolioTemplateV1 = () => {
   return (
