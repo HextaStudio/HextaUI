@@ -169,6 +169,14 @@ export const Sidebar = () => {
     };
 
     checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleShortcut = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
@@ -179,10 +187,10 @@ export const Sidebar = () => {
     window.addEventListener("keydown", handleShortcut);
 
     return () => {
-      window.removeEventListener("resize", checkMobile);
       window.removeEventListener("keydown", handleShortcut);
     };
   }, []);
+
   useEffect(() => {
     const inputElement = searchInputRef.current;
     if (inputElement) {
