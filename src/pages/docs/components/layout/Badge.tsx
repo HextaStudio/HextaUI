@@ -4,7 +4,7 @@ import React from "react";
 
 import { NextSeo } from "next-seo";
 
-import { Badge } from "@/components/hexta-ui/Badges";
+import { Badge } from "@/components/hexta-ui/Badge";
 import { Table } from "@/components/hexta-ui/Table";
 
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
@@ -125,7 +125,7 @@ const badge = () => {
               </div>
             </div>
           </div>
-          <InstallationSteps component="badges" />
+          <InstallationSteps component="badge" />
           <div className="installation">
             <div>
               <h3 className="h3">Basic Badge</h3>
