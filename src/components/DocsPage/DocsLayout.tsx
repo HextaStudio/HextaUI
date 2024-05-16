@@ -7,8 +7,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useEffect, useRef } from "react";
-
 interface DocsLayoutProps {
   children: React.ReactNode;
 }
@@ -23,7 +21,7 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         <aside className="pt-16">
           <Sidebar />
         </aside>
-        <main className="flex flex-wrap justify-center flex-grow p-10 pt-24 ml-[16rem] max-[900px]:ml-0 max-[900px]:mt-[2rem]">
+        <main className="flex flex-wrap justify-center flex-grow p-[5rem] pt-24 ml-[18rem] max-[900px]:ml-0 max-[900px]:mt-[2rem] max-[600px]:px-[2rem]">
           {children}
         </main>
       </div>
