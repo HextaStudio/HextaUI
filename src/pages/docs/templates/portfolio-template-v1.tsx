@@ -46,7 +46,7 @@ const portfolioTemplateV1 = () => {
                   >
                     ✨ Buy this template
                     <Badge variant="secondary">
-                      <small>10% off</small>
+                      <small>$29 off</small>
                     </Badge>
                   </Link>
                   <Link
@@ -87,7 +87,7 @@ const portfolioTemplateV1 = () => {
                   >
                     ✨ Buy this template
                     <Badge variant="secondary">
-                      <small>10% off</small>
+                      <small>$29 off</small>
                     </Badge>
                   </Link>
                   <Link
