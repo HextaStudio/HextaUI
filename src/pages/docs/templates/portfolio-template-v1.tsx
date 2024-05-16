@@ -41,7 +41,7 @@ const portfolioTemplateV1 = () => {
                 {" "}
                 <div className="flex gap-3 flex-wrap mb-[3rem]">
                   <Link
-                    href="https://hextaui.lemonsqueezy.com/buy/b0efb8d0-2059-4ec6-bb11-580c3bf842b0?discount=0"
+                    href="https://hextaui.lemonsqueezy.com/buy/b0efb8d0-2059-4ec6-bb11-580c3bf842b0"
                     className="flex items-center gap-2 primary-button"
                   >
                     ✨ Buy this template
@@ -82,7 +82,7 @@ const portfolioTemplateV1 = () => {
                 </div>
                 <div className="flex gap-3 flex-wrap mt-[3rem]">
                   <Link
-                    href="https://hextaui.lemonsqueezy.com/buy/b0efb8d0-2059-4ec6-bb11-580c3bf842b0?discount=0"
+                    href="https://hextaui.lemonsqueezy.com/buy/b0efb8d0-2059-4ec6-bb11-580c3bf842b0"
                     className="flex items-center gap-2 primary-button"
                   >
                     ✨ Buy this template
