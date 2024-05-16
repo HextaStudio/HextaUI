@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const alertdialog = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -100,13 +101,11 @@ const alertdialog = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Alert Dialog</h1>
-            <p className="text-sm opacity-80">
-              A modal dialog that interrupts the user with important content and
-              expects a response.
-            </p>
-          </div>
+          <DocsHeader
+            title="Alert Dialog"
+            description=" A modal dialog that interrupts the user with important content and
+              expects a response."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

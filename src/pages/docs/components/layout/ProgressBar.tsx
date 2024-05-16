@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -71,13 +72,10 @@ const progressbar = () => {
       <DocsLayout>
         <main>
           {" "}
-          <div className="header">
-            <h1 className="h1">Progress Bar</h1>
-            <p className="text-sm opacity-80">
-              Progress Bar allows user to display progress of specific
-              operation.
-            </p>
-          </div>
+          <DocsHeader
+            title="Progress Bar"
+            description="Progress Bar allows user to display progress of specific operation."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               {" "}

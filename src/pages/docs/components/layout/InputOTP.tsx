@@ -8,6 +8,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { OTP } from "@/components/hexta-ui/InputOTP";
 import { useState } from "react";
 import Toast from "@/components/hexta-ui/Toast";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const otp = () => {
   const [otpValue, setOtpValue] = useState("");
@@ -50,11 +51,10 @@ const otp = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Input OTP</h1>
-            <p className="text-sm opacity-80">An Input component for OTP</p>
-          </div>
+          <DocsHeader
+            title="Input OTP"
+            description="An Input component for OTP."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               <OTP setValue={handleOTPChange} />

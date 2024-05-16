@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { format } from "date-fns";
 import { Datepicker } from "@/components/hexta-ui/Datepicker";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -82,12 +83,10 @@ const datepicker = () => {
       <DocsLayout>
         <main>
           {" "}
-          <div className="header">
-            <h1 className="h1">Date Picker</h1>
-            <p className="text-sm opacity-80">
-              The Date Picker component lets users select a date.
-            </p>
-          </div>
+          <DocsHeader
+            title="Date Picker"
+            description="The Date Picker component lets users select a date."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-start justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem]">
               <div className="flex flex-col gap-1">

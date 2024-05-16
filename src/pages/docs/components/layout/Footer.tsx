@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const footer = () => {
   const data = [
@@ -94,13 +95,10 @@ const footer = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Footer</h1>
-            <p className="text-sm opacity-80">
-              Collection of Footer components with different variants.
-            </p>
-          </div>
+          <DocsHeader
+            title="Footer"
+            description="Collection of Footer components with different variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

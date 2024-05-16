@@ -8,6 +8,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { Table } from "@/components/hexta-ui/Table";
 import { Tabs } from "@/components/hexta-ui/Tabs";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -94,14 +95,10 @@ const tabs = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Tabs</h1>
-            <p className="text-sm opacity-80">
-              Tabs allows users to navigate between different sections of a
-              component
-            </p>
-          </div>
+          <DocsHeader
+            title="Tabs"
+            description="Tabs allows users to navigate between different sections of a component"
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               <Tabs tabs={tabContent} />

@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import { Badge } from "@/components/hexta-ui/Badge";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const tooltip = () => {
   const data = [
@@ -67,13 +68,10 @@ const tooltip = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Tooltip</h1>
-            <p className="text-sm opacity-80">
-              An awesome component to display tooltip for information.{" "}
-            </p>
-          </div>{" "}
+          <DocsHeader
+            title="Tooltip"
+            description="An awesome component to display tooltip for information."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

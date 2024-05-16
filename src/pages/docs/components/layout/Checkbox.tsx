@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { Checkbox } from "@/components/hexta-ui/Checkbox";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -84,13 +85,10 @@ const checkbox = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Checkbox</h1>
-            <p className="text-sm opacity-80">
-              Checkboxes allow the user to select one or more items from a set.
-            </p>
-          </div>
+          <DocsHeader
+            title="Checkbox"
+            description="Checkboxes allow the user to select one or more items from a set."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               <Checkbox

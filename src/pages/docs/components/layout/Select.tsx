@@ -9,6 +9,7 @@ import { FaApple, FaAndroid, FaWindows } from "react-icons/fa";
 
 import React, { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const select = () => {
   const data = [
@@ -142,13 +143,10 @@ const select = () => {
       <DocsLayout>
         <main>
           {" "}
-          <div className="header">
-            <h1 className="h1">Select</h1>
-            <p className="text-sm opacity-80">
-              Used for collecting user provided information from a list of
-              options.
-            </p>
-          </div>
+          <DocsHeader
+            title="Select"
+            description="Used for collecting user provided information from a list of options."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

@@ -9,6 +9,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const menu = () => {
   const data = [
@@ -106,13 +107,10 @@ const menu = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Menus</h1>
-            <p className="text-sm opacity-80">
-              Collection of Menu components with different variants.
-            </p>
-          </div>
+          <DocsHeader
+            title="Menus"
+            description="Collection of Menu components with different variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

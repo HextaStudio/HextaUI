@@ -8,6 +8,7 @@ import { Badge } from "@/components/hexta-ui/Badge";
 import { Table } from "@/components/hexta-ui/Table";
 
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const badge = () => {
   const data = [
@@ -109,12 +110,10 @@ const badge = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Badges</h1>
-            <p className="text-sm opacity-80">
-              Collection of multiple badges/chips with multiple variants.
-            </p>
-          </div>{" "}
+          <DocsHeader
+            title="Badges"
+            description="Collection of multiple badges/chips with multiple variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

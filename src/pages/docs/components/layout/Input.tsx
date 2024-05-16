@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { Input } from "@/components/hexta-ui/Input";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -77,13 +78,10 @@ const input = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Input</h1>
-            <p className="text-sm opacity-80">
-              Collection of Input components with different variants.
-            </p>
-          </div>
+          <DocsHeader
+            title="Input"
+            description="Collection of Input components with different variants."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               <Input

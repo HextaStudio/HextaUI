@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { Button } from "@/components/hexta-ui/Button";
 import { Card } from "@/components/hexta-ui/Card";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const cards = () => {
   return (
@@ -33,13 +34,10 @@ const cards = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Cards</h1>
-            <p className="text-sm opacity-80">
-              Collection of multiple reusable card components with props.
-            </p>
-          </div>
+          <DocsHeader
+            title="Card"
+            description="Collection of multiple reusable card components with props."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import Button from "@/components/hexta-ui/Button";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const button = () => {
   const data = [
@@ -76,12 +77,10 @@ const button = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Buttons</h1>
-            <p className="text-sm opacity-80">
-              Collection of multiple buttons with multiple variants.
-            </p>
-          </div>
+          <DocsHeader
+            title="Buttons"
+            description="Collection of multiple buttons with multiple variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

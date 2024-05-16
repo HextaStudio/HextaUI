@@ -8,6 +8,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { Stepper } from "@/components/hexta-ui/Stepper";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -104,12 +105,10 @@ const stepper = () => {
       <DocsLayout>
         <main>
           {" "}
-          <div className="header">
-            <h1 className="h1">Stepper</h1>
-            <p className="text-sm opacity-80">
-              Stepper is used to display progress in a linear sequence of tasks.
-            </p>
-          </div>
+          <DocsHeader
+            title="Stepper"
+            description="Stepper is used to display progress in a linear sequence of tasks."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
               <div>

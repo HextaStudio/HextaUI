@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import { Avatar } from "@/components/hexta-ui/Avatar";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const avatar = () => {
   const data = [
@@ -84,12 +85,10 @@ const avatar = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Avatars</h1>
-            <p className="text-sm opacity-80">
-              Collection of Avatar components with multiple variants.
-            </p>
-          </div>{" "}
+          <DocsHeader
+            title="Avatar"
+            description="Collection of Avatar components with multiple variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

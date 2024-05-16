@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/hexta-ui/Breadcrumb";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const breadcrumb = () => {
   const items = [
@@ -71,13 +72,10 @@ const breadcrumb = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Breadcrumb</h1>
-            <p className="text-sm opacity-80">
-              Displays the path to the current resource using a hierarchy of
-              links.
-            </p>
-          </div>
+          <DocsHeader
+            title="Breadcrumb"
+            description="Displays the path to the current resource using a hierarchy of links."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

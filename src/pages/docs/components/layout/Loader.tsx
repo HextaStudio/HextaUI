@@ -7,6 +7,7 @@ import { Table } from "@/components/hexta-ui/Table";
 
 import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const loader = () => {
   const data = [
@@ -78,13 +79,10 @@ const loader = () => {
       />
       <DocsLayout>
         <main>
-          {" "}
-          <div className="header">
-            <h1 className="h1">Loaders</h1>
-            <p className="text-sm opacity-80">
-              Collection of Loaders components with different variants.
-            </p>
-          </div>
+          <DocsHeader
+            title="Loader"
+            description="Collection of Loaders components with different variants."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>

@@ -9,6 +9,7 @@ import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { useState } from "react";
 import { Slider } from "@/components/hexta-ui/Slider";
 import { Table } from "@/components/hexta-ui/Table";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const data = [
   {
@@ -90,13 +91,10 @@ const slider = () => {
       <DocsLayout>
         <main>
           {" "}
-          <div className="header">
-            <h1 className="h1">Slider</h1>
-            <p className="text-sm opacity-80">
-              Slider allows user to select a value from range of specific
-              values.
-            </p>
-          </div>
+          <DocsHeader
+            title="Slider"
+            description="Slider allows user to select a value from range of specific values."
+          />
           <div className="flex flex-col gap-4 py-10 preview">
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
               {" "}

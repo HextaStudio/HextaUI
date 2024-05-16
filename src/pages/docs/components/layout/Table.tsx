@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const table = () => {
   const data = [
@@ -91,13 +92,10 @@ const table = () => {
       />
       <DocsLayout>
         <main>
-          <div className="header">
-            <h1 className="h1">Table</h1>
-            <p className="text-sm opacity-80">
-              Responsive Table component used to display information in table
-              format.{" "}
-            </p>
-          </div>{" "}
+          <DocsHeader
+            title="Table"
+            description="Responsive Table component used to display information in table format."
+          />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
               <div>
