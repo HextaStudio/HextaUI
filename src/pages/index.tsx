@@ -5,6 +5,8 @@ import { Pricing } from "@/components/landingPage/Pricing";
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 
+import { ReactLenis } from "lenis/react";
+
 export default function Home() {
   return (
     <>
@@ -29,13 +31,14 @@ export default function Home() {
           siteName: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
         }}
       />
-
-      <Layout>
-        <Hero />
-        <Features />
-        <Pricing />
-        <CTA />
-      </Layout>
+      <ReactLenis root>
+        <Layout>
+          <Hero />
+          <Features />
+          <Pricing />
+          <CTA />
+        </Layout>
+      </ReactLenis>
     </>
   );
 }
