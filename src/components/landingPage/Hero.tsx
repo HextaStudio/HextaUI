@@ -24,11 +24,11 @@ export const Hero = () => {
             Easy to use copy and paste components in your website and make your
             website 10x stunning and modern.
           </p>
-          <div className="scale-[1.1] flex gap-3 flex-wrap p-2">
-            <Link href="#" className="rounded-md primary-button grow">
-              Get Started
+          <div className="flex flex-wrap gap-3 p-2 z-[99]">
+            <Link href="/components" className="rounded-md primary-button grow">
+              Browse Components
             </Link>
-            <Link href="#" className="rounded-md secondary-button grow">
+            <Link href="#pricing" className="rounded-md secondary-button grow">
               Pricing
             </Link>
           </div>

@@ -14,7 +14,10 @@ export const PricingCard = ({
   description,
 }: PricingCardProps) => {
   return (
-    <div className="flex gap-3 flex-col w-full grow px-8 py-8 max-[988px]:px-4 text-left  bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 relative shadow-md rounded-2xl  z-[999] pricing-card">
+    <div
+      className="flex gap-3 flex-col w-full grow px-8 py-8 max-[988px]:px-4 text-left  bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 relative shadow-md rounded-2xl  z-[999] pricing-card"
+      id="pricing"
+    >
       <small className="absolute top-[-1rem] left-[50%] translate-x-[-50%] px-5 py-1 text-black bg-white rounded-3xl">
         Most Popular
       </small>
