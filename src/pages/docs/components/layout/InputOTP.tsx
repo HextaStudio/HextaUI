@@ -1,13 +1,12 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import React from "react";
 
-import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { OTP } from "@/components/hexta-ui/InputOTP";
 import { useState } from "react";
-import Toast from "@/components/hexta-ui/Toast";
+import { Toast } from "@/components/hexta-ui/Toast";
 import { DocsHeader } from "@/components/utils/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 

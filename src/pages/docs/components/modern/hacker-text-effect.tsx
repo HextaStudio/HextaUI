@@ -1,5 +1,5 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import { useEffect, useRef } from "react";
 import React from "react";

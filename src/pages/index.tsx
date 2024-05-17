@@ -1,4 +1,7 @@
-import { Hero } from "@/components/Hero";
+import { Hero } from "@/components/landingPage/Hero";
+import { CTA } from "@/components/landingPage/CTA";
+import { Features } from "@/components/landingPage/Features";
+import { Pricing } from "@/components/landingPage/Pricing";
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 
@@ -29,6 +32,9 @@ export default function Home() {
 
       <Layout>
         <Hero />
+        <Features />
+        <Pricing />
+        <CTA />
       </Layout>
     </>
   );

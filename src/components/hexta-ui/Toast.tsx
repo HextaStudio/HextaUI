@@ -65,5 +65,3 @@ export const Toast = ({
     </AnimatePresence>
   );
 };
-
-export default Toast;

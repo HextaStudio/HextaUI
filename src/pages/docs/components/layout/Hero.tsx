@@ -1,7 +1,6 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
-import { NextSeo } from "next-seo";
 import { Hero } from "@/components/hexta-ui/Hero";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 import { DocsHeader } from "@/components/utils/DocsHeader";

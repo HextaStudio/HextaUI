@@ -16,6 +16,8 @@ interface ButtonProps {
   disabled?: boolean;
   outline?: boolean;
   animated?: boolean;
+  rest?: any;
+  onClick?: () => void;
 }
 
 export const Button = ({
@@ -66,5 +68,3 @@ export const Button = ({
     </button>
   );
 };
-
-export default Button;

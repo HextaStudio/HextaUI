@@ -4,8 +4,6 @@ import "@/styles/tokyo-night-dark.css";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 
-import "@splidejs/react-splide/css";
-
 interface AppProps {
   Component: any;
   pageProps: any;

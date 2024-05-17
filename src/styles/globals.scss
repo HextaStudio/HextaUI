@@ -124,13 +124,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=beVietnam-pro@500,600,700,800&display=swap");
 
 :root {
+  --heading-fonts: "Be Vietnam Pro", sans-serif;
   color-scheme: dark;
   --background-color: #000;
   --code-background-color: rgba(255, 255, 255, 0.057);
   --text-color: #fff;
   --inter-fonts: "Inter", sans-serif;
+  --purple-color: rgb(128, 89, 255);
 }
 
 * {
@@ -150,6 +153,27 @@ html {
   color: var(--text-color);
   background-color: var(--background-color);
   overflow-x: hidden;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 pre,
@@ -268,16 +292,9 @@ pre {
 
 h1,
 h2 {
-  font-family: "Bricolage Grotesque", sans-serif;
-  background: linear-gradient(
-    to bottom,
-    white 40%,
-    rgba(255, 255, 255, 0.407) 100%
-  );
-  padding: 6px 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--heading-fonts);
+  font-weight: bold;
+  letter-spacing: -0.01em;
 }
 
 .bento-col {
@@ -397,4 +414,91 @@ h2 {
 
 .animate-slide-up {
   animation: slide-up 0.6s ease-out;
+}
+
+.grid-lines {
+  --s: 100px;
+  --t: 2px;
+  --h: 15;
+  background: conic-gradient(
+      from 90deg at var(--t) var(--t),
+      #0000 25%,
+      #5562706f 0
+    )
+    0 0 / var(--s) var(--s);
+  width: calc(round(down, 100%, var(--s)) + var(--t));
+  height: calc(var(--h) * var(--s) + var(--t));
+}
+.grid-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 90%;
+  background: conic-gradient(
+      from 90deg at var(--t) var(--t),
+      #0000 25%,
+      var(--purple-color) 0,
+      transparent
+    )
+    0 0 / var(--s);
+  animation: flow 5s linear infinite;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@supports not (opacity: round(1, 1)) {
+  .grid-lines {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.fading-out {
+  mask-image: linear-gradient(to bottom, transparent, white, transparent 80%);
+}
+
+.fading-out-2 {
+  mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
+}
+
+.pricing-card {
+  position: relative;
+  &::before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    mask-image: linear-gradient(to top, rgb(0, 0, 0) 0%, transparent 100%);
+    opacity: 5%;
+    background: conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0),
+      conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(1 * 20px)
+        calc(3 * 20px),
+      conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(2 * 20px)
+        calc(1 * 20px),
+      conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(3 * 20px)
+        calc(4 * 20px),
+      conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(4 * 20px)
+        calc(2 * 20px),
+      conic-gradient(at 50% 10%, #0000 75%, #f0f0f0 0) 0 calc(4 * 20px),
+      conic-gradient(at 50% 10%, #0000 75%, #f0f0f0 0) calc(1 * 20px)
+        calc(2 * 20px),
+      conic-gradient(at 50% 10%, #0000 75%, #f0f0f0 0) calc(2 * 20px) 0,
+      conic-gradient(at 50% 10%, #0000 75%, #f0f0f0 0) calc(3 * 20px)
+        calc(3 * 20px),
+      conic-gradient(at 50% 10%, #0000 75%, #f0f0f0 0) calc(4 * 20px)
+        calc(1 * 20px),
+      rgba(71, 212, 255, 0);
+    background-size: 100px 100px;
+  }
 }

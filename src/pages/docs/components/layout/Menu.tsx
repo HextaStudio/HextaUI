@@ -1,4 +1,4 @@
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { NextSeo } from "next-seo";
 

@@ -1,6 +1,5 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
-import { NextSeo } from "next-seo";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import { Select, Option } from "@/components/hexta-ui/Select";
 import { Table } from "@/components/hexta-ui/Table";

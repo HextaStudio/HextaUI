@@ -1,9 +1,8 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 import { AlertDialog } from "@/components/hexta-ui/AlertDialog";
 
-import { NextSeo } from "next-seo";
 import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";

@@ -1,10 +1,9 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
-import { CodeBlock } from "@/components/CodeBlock";
+import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import React from "react";
 import { useState } from "react";
 
-import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/utils/InstallationSteps";
 
 import { Checkbox } from "@/components/hexta-ui/Checkbox";

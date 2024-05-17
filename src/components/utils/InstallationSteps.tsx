@@ -1,4 +1,4 @@
-import { CodeBlock } from "../CodeBlock";
+import { CodeBlock } from "../DocsPage/CodeBlock";
 
 interface InstallationStepsProps {
   component: string;
