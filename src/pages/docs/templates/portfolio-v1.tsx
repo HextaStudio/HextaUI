@@ -5,30 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/hexta-ui/Badge";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const portfolioV1 = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Portfolio v1 - HextaUI ✨"
         description="Beautiful portfolio template built with Next.js, Tailwind CSS, and TypeScript."
-        canonical="https://ui.hextastudio.in/docs/templates/portfolio-template-v1"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/templates/portfolio-template-v1",
-          title: "Portfolio v1 - HextaUI ✨",
-          description:
-            "Beautiful portfolio template built with Next.js, Tailwind CSS, and TypeScript.",
-          images: [
-            {
-              url: "https://i.imgur.com/21NWXra.png",
-              width: 1920,
-              height: 1080,
-              alt: "Portfolio v1 - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Portfolio v1 - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/21NWXra.png"
       />
       <DocsLayout>
         <main>

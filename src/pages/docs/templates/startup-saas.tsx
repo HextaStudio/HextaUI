@@ -5,36 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/hexta-ui/Badge";
 import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const SaaSorStartup = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Startup/SaaS Template - HextaUI ✨"
-        description="Awesome and modern template for Startup or SaaS websites."
-        canonical="https://ui.hextastudio.in/docs/templates/portfolio-template-v1"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/templates/portfolio-template-v1",
-          title: "Startup/SaaS Template - HextaUI ✨",
-          description:
-            "Awesome and modern template for Startup or SaaS websites.",
-          images: [
-            {
-              url: "https://i.imgur.com/21NWXra.png",
-              width: 1920,
-              height: 1080,
-              alt: "Startup/SaaS Template - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Startup/SaaS Template - HextaUI ✨",
-        }}
+        description="Awesome and modern template for Startup or SaaS websites built with Next.js, Typescript and Tailwind CSS."
+        image="https://i.imgur.com/3ntQrYF.png"
       />
       <DocsLayout>
         <main>
           <DocsHeader
             title="Startup/SaaS Template"
-            description="Awesome and modern template for Startup or SaaS websites."
+            description="Awesome and modern template for Startup or SaaS websites built with Next.js, Typescript and Tailwind CSS."
           />
           <div>
             <div className="flex flex-col gap-4 py-10 preview">
