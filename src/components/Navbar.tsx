@@ -42,7 +42,7 @@ export const Navbar = ({ docs }: NavarProps) => {
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className="opacity-75 hover:opacity-100">
+              <Link href="#pricing" className="opacity-75 hover:opacity-100">
                 Pricing
               </Link>
             </li>
