@@ -2,41 +2,6 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
-// const componentLinks = [
-//   {
-//     name: "Magnetic Button",
-//     url: "magnetic-button",
-//   },
-//   {
-//     name: "White Ray",
-//     url: "white-ray",
-//   },
-//   {
-//     name: "Text Reveal v1",
-//     url: "text-reveal-v1",
-//   },
-//   {
-//     name: "Photo Trailing Effect",
-//     url: "photo-trailing-mousemove",
-//   },
-//   {
-//     name: "Water Drop Effect",
-//     url: "water-drop-effect",
-//   },
-//   {
-//     name: "Hacker Text Effect",
-//     url: "hacker-text-effect",
-//   },
-//   {
-//     name: "Floating Image Gallery",
-//     url: "floating-image-gallery",
-//   },
-//   {
-//     name: "Infinite Text Scroll v1",
-//     url: "infinite-text-scroll-v1",
-//   },
-// ];
-
 const layoutComponentLinks = [
   {
     name: "Badge",
@@ -162,6 +127,10 @@ const getStartedLinks = [
 ];
 
 const templateComponentsLinks = [
+  {
+    name: "Startup (SaaS)",
+    url: "startup-saas",
+  },
   {
     name: "Portfolio Template v1",
     url: "portfolio-template-v1",
