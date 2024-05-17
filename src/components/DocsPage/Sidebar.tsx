@@ -130,10 +130,14 @@ const templateComponentsLinks = [
   {
     name: "Startup (SaaS)",
     url: "startup-saas",
+
+    new: true,
   },
   {
-    name: "Portfolio Template v1",
-    url: "portfolio-template-v1",
+    name: "Portfolio v1",
+    url: "portfolio-v1",
+
+    new: true,
   },
 ];
 
@@ -303,6 +307,11 @@ export const Sidebar = () => {
                   href={`/docs/templates/${link.url}`}
                 >
                   {link.name}
+                  {link.new && (
+                    <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
+                      new
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}
