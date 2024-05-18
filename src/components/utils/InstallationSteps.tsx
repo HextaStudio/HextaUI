@@ -2,13 +2,17 @@ import { CodeBlock } from "../DocsPage/CodeBlock";
 
 interface InstallationStepsProps {
   component: string;
+  imports?: any[];
 }
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export const InstallationSteps = ({ component }: InstallationStepsProps) => {
+export const InstallationSteps = ({
+  component,
+  imports,
+}: InstallationStepsProps) => {
   return (
     <>
       {" "}
@@ -24,7 +28,7 @@ export const InstallationSteps = ({ component }: InstallationStepsProps) => {
           lang="tsx"
           filename="tsx"
           code={`import { ${capitalizeFirstLetter(
-            component
+            imports ? imports.join(", ") : component
           )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
             component
           )}";`}
