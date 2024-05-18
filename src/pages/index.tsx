@@ -29,13 +29,12 @@ export default function Home() {
           siteName: "HextaUI ✨ -  Gorgeous Web Components, Zero Effort",
         }}
       />
-        <Layout>
-          <Hero />
-          <Features />
-          <Pricing />
-          <CTA />
-        </Layout>
-   
+      <Layout>
+        <Hero />
+        <Features />
+        <Pricing />
+        <CTA />
+      </Layout>
     </>
   );
 }
