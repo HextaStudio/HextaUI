@@ -2,6 +2,8 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { NextSeo } from "next-seo";
+import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const framerMotionInstallation = () => {
   const { scrollYProgress } = useScroll();
@@ -9,33 +11,18 @@ const framerMotionInstallation = () => {
 
   return (
     <>
-      <NextSeo
-        title="Install Framer Motion - HextaUI ✨"
+      <DocsSEO
+        title="Install Framer Motion"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
-        canonical="https://ui.hextastudio.in/docs/components/resources/install-framer-motion"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/resources/install-framer-motion",
-          title: "Install Framer Motion - HextaUI ✨",
-          description:
-            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
-          images: [
-            {
-              url: "https://i.imgur.com/xlCPzQc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Install Framer Motion - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Install Framer Motion - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>
         <main>
-          <h1 className="h1">Install Framer Motion</h1>
-          <p className="text-sm opacity-80">
-            Install and setup Framer Motion animation library
-          </p>
+          <DocsHeader
+            title="Install Framer Motion"
+            description="Install and setup Framer Motion animation library"
+          />
+
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Installing Framer Motion</h3>

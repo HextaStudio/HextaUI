@@ -1,37 +1,24 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { NextSeo } from "next-seo";
+import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const InstallTailwind = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Install Tailwind CSS - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
-        canonical="https://ui.hextastudio.in/docs/components/resources/install-tailwind"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/resources/install-tailwind",
-          title: "Install Tailwind CSS - HextaUI ✨",
-          description:
-            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
-          images: [
-            {
-              url: "https://i.imgur.com/xlCPzQc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Install Tailwind CSS - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Install Tailwind CSS - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>
         <main>
-          <h1 className="h1">Install Tailwind CSS</h1>
-          <p className="text-sm opacity-80">
-            Install Tailwind CSS with Next.js
-          </p>
+          <DocsHeader
+            title="Install Tailwind CSS"
+            description="Install Tailwind CSS with Next.js"
+          />
+
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Create Next.Js Project</h3>

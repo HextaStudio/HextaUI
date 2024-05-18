@@ -2,37 +2,24 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
+import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const hextaUIinstallation = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Install HextaUI - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
-        canonical="https://ui.hextastudio.in/docs/components/resources/install-hexta-ui"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/resources/install-hexta-ui",
-          title: "Install HextaUI - HextaUI ✨",
-          description:
-            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
-          images: [
-            {
-              url: "https://i.imgur.com/xlCPzQc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Install HextaUI - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Install HextaUI - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>
         <main>
-          <h1 className="h1">Install Hexta UI</h1>
-          <p className="text-sm opacity-80">
-            Step-by-step guide to install and use the HextaUI library
-          </p>
+          <DocsHeader
+            title="Install HextaUI"
+            description="Step-by-step guide to install and use the HextaUI library"
+          />
+
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Step 1: Installing HextaUI</h3>

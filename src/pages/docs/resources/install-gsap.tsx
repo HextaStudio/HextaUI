@@ -1,37 +1,23 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { NextSeo } from "next-seo";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsHeader } from "@/components/utils/DocsHeader";
 
 const gsapInstallation = () => {
   return (
     <>
-      <NextSeo
-        title="Install GSAP - HextaUI ✨"
+      <DocsSEO
+        title="Install GSAP"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
-        canonical="https://ui.hextastudio.in/docs/components/resources/install-gsap"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/resources/install-gsap",
-          title: "Install GSAP - HextaUI ✨",
-          description:
-            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
-          images: [
-            {
-              url: "https://i.imgur.com/xlCPzQc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Install GSAP - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Install GSAP - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>
         <main>
-          <h1 className="h1">Install GSAP</h1>
-          <p className="text-sm opacity-80">
-            Install and setup GSAP animation library
-          </p>
+          <DocsHeader
+            title="Install GSAP"
+            description="Install and setup GSAP animation library"
+          />
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Installing GSAP</h3>

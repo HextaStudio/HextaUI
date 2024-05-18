@@ -2,37 +2,24 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 import { NextSeo } from "next-seo";
+import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const installNext = () => {
   return (
     <>
-      <NextSeo
+      <DocsSEO
         title="Install Next Js - HextaUI ✨"
         description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
-        canonical="https://ui.hextastudio.in/docs/components/resouces/install-next"
-        openGraph={{
-          url: "https://ui.hextastudio.in/docs/resources/install-next",
-          title: "Install Next Js - HextaUI ✨",
-          description:
-            "Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness.",
-          images: [
-            {
-              url: "https://i.imgur.com/xlCPzQc.png",
-              width: 1920,
-              height: 1080,
-              alt: "Install Next Js - HextaUI ✨",
-              type: "image/png",
-            },
-          ],
-          siteName: "Install Next Js - HextaUI ✨",
-        }}
+        image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>
         <main>
-          <h1 className="h1">Install Next Js</h1>
-          <p className="text-sm opacity-80">
-            Install Next js with Create Next App CLI
-          </p>
+          <DocsHeader
+            title="Install Next Js"
+            description="Install Next js with Create Next App CLI"
+          />
+
           <div className="flex flex-col gap-4 py-10">
             <div>
               <h3 className="h3">Create new project</h3>

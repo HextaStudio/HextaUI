@@ -2,6 +2,8 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
+import { Input } from "../hexta-ui/Input";
+
 const layoutComponentLinks = [
   {
     name: "Badge",
@@ -231,12 +233,11 @@ export const Sidebar = () => {
         }}
       >
         {" "}
-        <input
+        <Input
           type="text"
           placeholder="Search Components..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="flex px-4 py-2 my-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50"
           ref={searchInputRef}
         />
         <div
