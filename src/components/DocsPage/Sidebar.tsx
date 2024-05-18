@@ -7,101 +7,115 @@ import { Input } from "../hexta-ui/Input";
 const layoutComponentLinks = [
   {
     name: "Badge",
+    hidden: false,
   },
   {
     name: "Input OTP",
     new: true,
+    hidden: false,
   },
   {
     name: "Input",
+    hidden: false,
+  },
+  {
+    name: "TreeView",
+    new: true,
+    hidden: false,
   },
   {
     name: "Checkbox",
+    hidden: false,
   },
   {
     name: "Date Picker",
+    hidden: false,
   },
 
   {
     name: "Tabs",
+    hidden: false,
   },
   {
     name: "Card",
     new: true,
+    hidden: false,
   },
   {
     name: "Stepper",
-    new: true,
+    hidden: false,
   },
   {
     name: "Progress Bar",
+    hidden: false,
   },
   {
     name: "Slider",
+    hidden: false,
   },
   {
     name: "Select",
+    hidden: false,
   },
   {
     name: "File Upload",
+    hidden: false,
   },
   {
     name: "Button",
+    hidden: false,
   },
   {
     name: "Table",
+    hidden: false,
   },
   {
     name: "Avatar",
+    hidden: false,
   },
   {
     name: "Loader",
+    hidden: false,
   },
   {
     name: "Toast",
-  },
-  {
-    name: "Chart",
-    hidden: true,
-  },
-  {
-    name: "Carousel",
-    hidden: true,
+    hidden: false,
   },
   {
     name: "Menu",
+    hidden: false,
   },
   {
     name: "Toggle",
+    hidden: false,
   },
   {
     name: "Tooltip",
-  },
-  {
-    name: "Typography",
-    hidden: true,
+    hidden: false,
   },
   {
     name: "Card",
-    hidden: true,
+    hidden: false,
   },
-
   {
     name: "Alert Dialog",
+    hidden: false,
   },
   {
     name: "Breadcrumb",
+    hidden: false,
   },
   {
     name: "Hero",
+    hidden: false,
   },
   {
     name: "Navbar",
-    new: true,
+    hidden: false,
   },
   {
     name: "Footer",
-    new: true,
+    hidden: false,
   },
 ].sort();
 
