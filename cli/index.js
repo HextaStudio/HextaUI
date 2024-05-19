@@ -39,6 +39,7 @@ const components = [
   "Footer",
   "Navbar",
   "InputOTP",
+  "TreeView",
 ].sort();
 
 const help = () => {
