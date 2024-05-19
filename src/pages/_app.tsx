@@ -3,7 +3,7 @@ import "@/styles/tokyo-night-dark.css";
 
 import Script from "next/script";
 import { NextSeo } from "next-seo";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 interface AppProps {
   Component: any;
   pageProps: any;
@@ -66,6 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
         src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "9b35480418994f0baddec0066c6edd55"}'
       ></Script>
+      <GoogleAnalytics gaId="G-5HXV7Y3GF4" />
       <Component {...pageProps} />
     </>
   );

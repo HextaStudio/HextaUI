@@ -15,6 +15,7 @@
   "dependencies": {
     "@builder.io/partytown": "^0.10.2",
     "@hextastudio/ui": "^1.2.9",
+    "@next/third-parties": "^14.2.3",
     "animejs": "^3.2.2",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
