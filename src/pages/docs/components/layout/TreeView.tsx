@@ -1,13 +1,13 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
-import { DocsHeader } from "@/components/utils/DocsHeader";
-import { DocsPreview } from "@/components/utils/DocsPreview";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 import {
   TreeView,
   TreeChild,
   TreeHeader,
 } from "@/components/hexta-ui/TreeView";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { Table } from "@/components/hexta-ui/Table";

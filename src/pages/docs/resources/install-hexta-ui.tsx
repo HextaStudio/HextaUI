@@ -2,7 +2,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const hextaUIinstallation = () => {

@@ -2,8 +2,8 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 import { Hero } from "@/components/hexta-ui/Hero";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const hero = () => {

@@ -4,12 +4,12 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 
 import { NextSeo } from "next-seo";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { useState } from "react";
 import { Slider } from "@/components/hexta-ui/Slider";
 import { Table } from "@/components/hexta-ui/Table";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [

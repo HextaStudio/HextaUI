@@ -10,10 +10,10 @@ import {
 } from "@/components/hexta-ui/Tooltip";
 
 import { Badge } from "@/components/hexta-ui/Badge";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
-import { DocsPreview } from "@/components/utils/DocsPreview";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const tooltip = () => {
   return (

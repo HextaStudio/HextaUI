@@ -3,8 +3,8 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 
 import { Table } from "@/components/hexta-ui/Table";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const table = () => {

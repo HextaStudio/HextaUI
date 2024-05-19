@@ -6,8 +6,8 @@ import { useState } from "react";
 
 import { Table } from "@/components/hexta-ui/Table";
 import { Toggle } from "@/components/hexta-ui/Toggle";
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const toggle = () => {

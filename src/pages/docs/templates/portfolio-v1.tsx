@@ -4,7 +4,7 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/hexta-ui/Badge";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const portfolioV1 = () => {

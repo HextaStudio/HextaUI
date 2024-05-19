@@ -3,11 +3,11 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import React from "react";
 
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { FileUpload } from "@/components/hexta-ui/FileUpload";
 import { Table } from "@/components/hexta-ui/Table";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const data = [

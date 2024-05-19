@@ -2,10 +2,10 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 
-import { InstallationSteps } from "@/components/utils/InstallationSteps";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { Button } from "@/components/hexta-ui/Button";
 import { Card } from "@/components/hexta-ui/Card";
-import { DocsHeader } from "@/components/utils/DocsHeader";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const cards = () => {
