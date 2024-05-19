@@ -44,6 +44,12 @@ const data = [
     defaultValue: "null",
     description: "Classes to be applied to the component.",
   },
+  {
+    propName: "id",
+    propType: "string",
+    defaultValue: "null",
+    description: "Id to specific root.",
+  }
 ];
 
 const treeview = () => {
