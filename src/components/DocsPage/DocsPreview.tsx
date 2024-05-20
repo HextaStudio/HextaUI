@@ -16,7 +16,7 @@ export const DocsPreview = ({ children, className }: DocsPreviewProps) => {
       <div>
         <div className="flex flex-col gap-4 py-10 preview">
           <div>
-            <h3 className="h3">Preview</h3>
+            <h3 className="text-2xl font-bold">Preview</h3>
             <div
               className={cn(
                 "relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container min-h-[15rem]",
