@@ -16,7 +16,7 @@ export const Hero = () => {
             transform: "rotateX(71deg)",
           }}
         ></div>
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-4 text-center px-4">
           <h1 className="text-7xl font-bold tracking-tight max-w-[60rem] max-[482px]:text-6xl max-[372px]:text-5xl relative">
             Level up your Design Game with HextaUI
           </h1>
