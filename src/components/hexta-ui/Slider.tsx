@@ -30,7 +30,7 @@ export const Slider = ({
       value={value}
       onChange={onChange}
       className={cn(
-        "w-full h-1 bg-neutral-950  rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
+        "w-full h-1 bg-zinc-950  rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
         className
       )}
       {...props}

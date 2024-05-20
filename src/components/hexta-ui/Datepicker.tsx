@@ -44,7 +44,7 @@ const Calendar = ({ value, onChange }: CalendarProps) => {
     onChange(date);
   };
   return (
-    <div className="p-4 text-gray-300 border border-white rounded-md shadow-md bg-neutral-950 border-opacity-10 ">
+    <div className="p-4 text-gray-300 border border-white rounded-md shadow-md bg-zinc-950 border-opacity-10 ">
       {" "}
       <div className="flex items-center justify-between mb-4">
         <button
@@ -133,7 +133,7 @@ export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
           value={value ? format(value, "dd/MM/yyyy") : "Pick a date"}
           onClick={() => setShowCalendar(!showCalendar)}
           className={cn(
-            "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50 relative cursor-pointer bg-neutral-950 border border-white border-opacity-10"
+            "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50 relative cursor-pointer bg-zinc-950 border border-white border-opacity-10"
           )}
           readOnly
         />

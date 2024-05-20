@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
 import { Input } from "../hexta-ui/Input";
+import { url } from "inspector";
 
 const layoutComponentLinks = [
   {
@@ -154,6 +155,14 @@ const templateComponentsLinks = [
     url: "portfolio-v1",
 
     new: true,
+  },
+];
+
+const exampleComponentsLinks = [
+  {
+    name: "Post Card",
+    new: true,
+    hidden: false,
   },
 ];
 
@@ -330,6 +339,35 @@ export const Sidebar = () => {
                 </Link>
               </li>
             ))}
+          </ul>
+        </div>
+        <div className="sidebar-section">
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Examples
+          </p>
+          <ul className="flex flex-col gap-[8px] p-2">
+            {exampleComponentsLinks
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((link, index) => (
+                <li key={index} className={` ${link.hidden && "hidden"} `}>
+                  <Link
+                    className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                      router.pathname ===
+                      `/docs/examples/${link.name.replace(" ", "")}`
+                        ? "opacity-100"
+                        : "opacity-60"
+                    }`}
+                    href={`/docs/examples/${link.name.replace(" ", "")}`}
+                  >
+                    {link.name}{" "}
+                    {link.new && (
+                      <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
+                        new
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
         <div className="sidebar-section">

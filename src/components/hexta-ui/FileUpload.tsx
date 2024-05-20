@@ -72,8 +72,8 @@ export const FileUpload = ({
             className={cn(
               "flex items-center justify-center w-fit mx-auto px-4 py-3 my-4 text-sm rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
               disabled
-                ? "bg-neutral-950 text-gray-500 cursor-not-allowed"
-                : "bg-neutral-950 text-zinc-200 border border-white border-opacity-10 hover:bg-neutral-900"
+                ? "bg-zinc-950 text-gray-500 cursor-not-allowed"
+                : "bg-zinc-950 text-zinc-200 border border-white border-opacity-10 hover:bg-neutral-900"
             )}
             onClick={handleUploadClick}
             onDrop={handleDrop}
@@ -88,7 +88,7 @@ export const FileUpload = ({
         {files.map((file, index) => (
           <div
             key={index}
-            className="flex items-center justify-between py-3 px-4 mb-2 border border-white rounded-md bg-neutral-950 border-opacity-10  max-w-[15rem] w-full overflow-ellipsis mx-auto"
+            className="flex items-center justify-between py-3 px-4 mb-2 border border-white rounded-md bg-zinc-950 border-opacity-10  max-w-[15rem] w-full overflow-ellipsis mx-auto"
           >
             <span className="text-sm whitespace-nowrap overflow-hidden text-zinc-200 w-[13rem] text-ellipsis">
               {file.name}

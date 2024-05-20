@@ -31,17 +31,17 @@ export const Card = ({
 }: CardProps) => {
   const cardStyles = {
     default:
-      "bg-neutral-950 rounded-lg shadow-md p-6 border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
+      "bg-zinc-950 rounded-lg shadow-md p-6 border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
     primary:
-      "bg-neutral-950 text-white rounded-lg shadow-md p-6 hover:scale-[1.01] transition-transform duration-300 border border-white border-opacity-10 max-w-[25rem] m-4",
+      "bg-zinc-950 text-white rounded-lg shadow-md p-6 hover:scale-[1.01] transition-transform duration-300 border border-white border-opacity-10 max-w-[25rem] m-4",
     outline:
-      "border border-white border-opacity-10 rounded-lg p-6 hover:bg-neutral-950 transition-colors duration-300 max-w-[25rem] m-4",
+      "border border-white border-opacity-10 rounded-lg p-6 hover:bg-zinc-950 transition-colors duration-300 max-w-[25rem] m-4",
     imageTop:
-      "bg-neutral-950 rounded-lg shadow-md border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
+      "bg-zinc-950 rounded-lg shadow-md border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
     imageBottom:
-      "bg-neutral-950 rounded-lg shadow-md border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
+      "bg-zinc-950 rounded-lg shadow-md border border-white border-opacity-10 hover:shadow-lg transition-shadow duration-300 max-w-[25rem] m-4",
     hoverGrow:
-      "bg-neutral-950 rounded-lg shadow-md p-6 border border-white border-opacity-10 hover:scale-105 transition-transform duration-300 max-w-[25rem] m-4",
+      "bg-zinc-950 rounded-lg shadow-md p-6 border border-white border-opacity-10 hover:scale-105 transition-transform duration-300 max-w-[25rem] m-4",
   };
 
   const renderImage = () => {

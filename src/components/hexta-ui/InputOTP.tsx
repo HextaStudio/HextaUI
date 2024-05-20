@@ -74,7 +74,7 @@ export const OTP = ({ setValue }: OTPProps) => {
                 inputRefs.current[index] = el!;
               }}
               className={cn(
-                "w-10 h-12 text-center text-lg font-semibold border border-zinc-900 focus:outline-none focus:border-2 focus:border-white bg-neutral-950",
+                "w-10 h-12 text-center text-lg font-semibold border border-zinc-900 focus:outline-none focus:border-2 focus:border-white bg-zinc-950",
                 `${index === 0 && "rounded-l-xl"}`,
                 `${index === 5 && "rounded-r-xl"}`
               )}

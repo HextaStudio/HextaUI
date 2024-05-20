@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <nav
       className={cn(
-        "flex  items-center justify-between w-full py-[1rem] px-[2rem] gap-3 bg-neutral-950",
+        "flex  items-center justify-between w-full py-[1rem] px-[2rem] gap-3 bg-zinc-950",
         className
       )}
     >
