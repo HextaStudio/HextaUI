@@ -147,14 +147,12 @@ const templateComponentsLinks = [
   {
     name: "Startup (SaaS)",
     url: "startup-saas",
-
-    new: true,
+    new: false,
   },
   {
     name: "Portfolio v1",
     url: "portfolio-v1",
-
-    new: true,
+    new: false,
   },
 ];
 
