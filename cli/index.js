@@ -84,7 +84,7 @@ const getInstalledVersion = () => {
   }
 };
 
-const handleAdd = (componentName) => {
+const handleAdd = (componentNames) => {
   const installedVersion = getInstalledVersion();
   if (!installedVersion) {
     console.log(
@@ -103,63 +103,118 @@ const handleAdd = (componentName) => {
         );
       }
 
-      const normalizedComponentName = componentName.toLowerCase();
-      const validComponentName = components.find(
-        (component) => component.toLowerCase() === normalizedComponentName
-      );
+      const validComponentNames = [];
+      const invalidComponentNames = [];
+      const existingComponentNames = [];
 
-      if (!validComponentName) {
-        console.log(
-          chalk.red(`Error: Invalid component name "${componentName}".`)
+      componentNames.forEach((componentName) => {
+        const normalizedComponentName = componentName.toLowerCase();
+        const validComponentName = components.find(
+          (component) => component.toLowerCase() === normalizedComponentName
         );
-        return;
-      }
 
-      const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${validComponentName}.tsx`;
-      console.log(url);
-      const componentLoader = ora(
-        `Downloading ${validComponentName} component`
-      ).start();
-      axios({
-        method: "get",
-        url: url,
-        responseType: "stream",
-      })
-        .then(function (response) {
+        if (validComponentName) {
           const srcDir = path.join(process.cwd(), "src");
           const componentsDir = path.join(srcDir, "components", "hexta-ui");
-          fs.mkdirSync(componentsDir, { recursive: true });
           const filePath = path.join(
             componentsDir,
             `${validComponentName}.tsx`
           );
-          response.data.pipe(fs.createWriteStream(filePath));
-          componentLoader.succeed(
+
+          if (fs.existsSync(filePath)) {
+            existingComponentNames.push(validComponentName);
+          } else {
+            validComponentNames.push(validComponentName);
+          }
+        } else {
+          invalidComponentNames.push(componentName);
+        }
+      });
+
+      if (invalidComponentNames.length > 0) {
+        console.log(
+          chalk.red(
+            `Error: Invalid component name(s) "${invalidComponentNames.join(
+              ", "
+            )}".`
+          )
+        );
+      }
+
+      if (existingComponentNames.length > 0) {
+        console.log(
+          chalk.yellow(
+            `Warning: Component(s) "${existingComponentNames.join(
+              ", "
+            )}" already exist(s). Skipping download.`
+          )
+        );
+      }
+
+      if (validComponentNames.length === 0) {
+        return;
+      }
+
+      const downloadPromises = validComponentNames.map((validComponentName) => {
+        const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${validComponentName}.tsx`;
+        const componentLoader = ora(
+          `Downloading ${validComponentName} component`
+        ).start();
+        return axios({
+          method: "get",
+          url: url,
+          responseType: "stream",
+        })
+          .then(function (response) {
+            const srcDir = path.join(process.cwd(), "src");
+            const componentsDir = path.join(srcDir, "components", "hexta-ui");
+            fs.mkdirSync(componentsDir, { recursive: true });
+            const filePath = path.join(
+              componentsDir,
+              `${validComponentName}.tsx`
+            );
+            response.data.pipe(fs.createWriteStream(filePath));
+            componentLoader.succeed(
+              chalk.green(
+                `${validComponentName} component was added successfully — Guide to use ${validComponentName}, https://ui.hextastudio.in/docs/components/layout/${validComponentName}`
+              )
+            );
+          })
+          .catch(function (error) {
+            componentLoader.fail(
+              chalk.red(
+                `Error adding ${validComponentName} component: ${error.message}`
+              )
+            );
+          });
+      });
+
+      Promise.all(downloadPromises)
+        .then(() => {
+          console.log(
             chalk.green(
-              `${validComponentName} component was added successfully — Guide to use ${validComponentName}, https://ui.hextastudio.in/docs/components/layout/${validComponentName}`
+              `All components were added successfully: ${validComponentNames.join(
+                ", "
+              )}`
             )
           );
         })
-        .catch(function (error) {
-          componentLoader.fail(
-            chalk.red(
-              `Error adding ${validComponentName} component: ${error.message}`
-            )
-          );
+        .catch((error) => {
+          console.error(chalk.red("Error downloading components:", error));
         });
     })
     .catch((error) => {
       console.error(chalk.red("Error fetching latest version:", error));
     });
 };
-
 if (process.argv.length >= 4 && process.argv[2] === "add") {
-  const componentName = process.argv[3];
-  handleAdd(componentName);
+  const componentNamesString = process.argv.slice(3).join(" ");
+  const componentNames = componentNamesString.split(" ");
+  handleAdd(componentNames);
 } else {
   console.log(
     chalk.red(
-      "Invalid command: did you mean `npx hexta-ui add component_name`?"
+      "Invalid command: did you mean `npx hexta-ui add component_name1 component_name2 ...`?"
     )
   );
 }
@@ -170,8 +225,8 @@ if (process.argv.length >= 3) {
   switch (command) {
     case "add":
       if (process.argv.length >= 4) {
-        const componentName = process.argv[3];
-        handleAdd(componentName);
+        const componentNames = process.argv.slice(3);
+        handleAdd(componentNames);
       } else {
         console.log("Error: Missing component name");
         help();
@@ -184,7 +239,11 @@ if (process.argv.length >= 3) {
       help();
       break;
     default:
-      console.log(`Invalid command: ${command}`);
+      console.log(
+        chalk.red(
+          "Invalid command: did you mean `npx hexta-ui add component_name1 component_name2 ...`?"
+        )
+      );
       help();
       break;
   }
