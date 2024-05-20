@@ -3,6 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const cn = (...args: any[]) => {
   return twMerge(clsx(args));
@@ -31,8 +32,23 @@ export const Menu = ({
   isOpen,
   className,
 }: MenuProps) => {
+  const node = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen === true) {
+      const handleClickOutside = (e: MouseEvent) => {
+        if (node.current && !node.current.contains(e.target as Node)) {
+          onClose();
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, [onClose]);
   return (
-    <div className="relative">
+    <div className="relative" ref={node}>
       <AnimatePresence>
         {isOpen && (
           <motion.div
