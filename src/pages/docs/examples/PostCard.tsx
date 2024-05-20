@@ -140,7 +140,7 @@ const postcard = () => {
       <DocsSEO
         title="Post Card - HextaUI ✨"
         description="An Example card component of social media post."
-        image="d"
+        image="https://i.imgur.com/EWt5cSf.png"
       />
       <DocsLayout>
         <main>
