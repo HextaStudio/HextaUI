@@ -257,6 +257,7 @@ export const Sidebar = () => {
         <Input
           type="text"
           placeholder="Search Components..."
+          className="m-0"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           ref={searchInputRef}
