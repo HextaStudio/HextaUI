@@ -3,6 +3,7 @@ import { CodeBlock } from "./CodeBlock";
 interface InstallationStepsProps {
   component: any[] | string;
   imports?: any[];
+  title?: string;
 }
 
 function capitalizeFirstLetter(string: string) {
@@ -12,6 +13,7 @@ function capitalizeFirstLetter(string: string) {
 export const InstallationSteps = ({
   component,
   imports,
+  title = "Installation",
 }: InstallationStepsProps) => {
   const generateImportStatements = (components: any[]) => {
     return components
@@ -29,7 +31,7 @@ export const InstallationSteps = ({
   return (
     <>
       <div className="installation">
-        <h2 className="text-3xl font-bold">Installation</h2>
+        <h2 className="text-3xl font-bold">{title}</h2>
         <CodeBlock
           lang="bash"
           filename="bash"
