@@ -8,6 +8,7 @@ import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const badge = () => {
   const data = [
@@ -97,16 +98,11 @@ const badge = () => {
             title="Badges"
             description="Collection of multiple badges/chips with multiple variants."
           />
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">Preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                  <Badge>Latest version</Badge>
-                </div>
-              </div>
+          <DocsPreview>
+            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
+              <Badge>Latest version</Badge>
             </div>
-          </div>
+          </DocsPreview>
           <InstallationSteps component="badge" />
           <div className="installation">
             <div>
