@@ -1,9 +1,13 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
-import { AlertDialog } from "@/components/hexta-ui/AlertDialog";
+import {
+  AlertDialog,
+  AlertDialogButtons,
+  AlertDialogContent,
+  AlertDialogTitle,
+} from "@/components/hexta-ui/AlertDialog";
 
-import { Table } from "@/components/hexta-ui/Table";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
@@ -22,62 +26,7 @@ const alertdialog = () => {
     console.log("Action canceled");
     setShowDialog(false);
   };
-  const data = [
-    {
-      propName: "title",
-      propType: "string",
-      defaultValue: "null",
-      description: "Title of the dialog.",
-    },
-    {
-      propName: "message",
-      propType: "string",
-      defaultValue: "null",
-      description: "Message of the dialog.",
-    },
-    {
-      propName: "onConfirm",
-      propType: "function",
-      defaultValue: "null",
-      description: "Function to be called on confirm.",
-    },
-    {
-      propName: "onCancel",
-      propType: "function",
-      defaultValue: "null",
-      description: "Function to be called on cancel.",
-    },
-    {
-      propName: "isOpen",
-      propType: "boolean",
-      defaultValue: "false",
-      description: "State to open the dialog.",
-    },
-    {
-      propName: "className",
-      propType: "string",
-      defaultValue: "null",
-      description: "Custom class name for the dialog.",
-    },
-  ];
-  const columns = [
-    {
-      label: "Prop Name",
-      key: "propName",
-    },
-    {
-      label: "Prop Type",
-      key: "propType",
-    },
-    {
-      label: "Default Value",
-      key: "defaultValue",
-    },
-    {
-      label: "Description",
-      key: "description",
-    },
-  ];
+
   return (
     <>
       <DocsSEO
@@ -97,25 +46,91 @@ const alertdialog = () => {
               className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border border-zinc-900"
               onClick={() => setShowDialog(true)}
             >
-              Show Dialog
+              Books Tickets
             </button>
 
-            <AlertDialog
-              title="Are you sure?"
-              message="Rethink, This action cannot be undone."
-              onConfirm={handleConfirm}
-              onCancel={handleCancel}
-              isOpen={showDialog}
-            />
+            <AlertDialog isOpen={showDialog}>
+              <AlertDialogTitle>Confirm booking?</AlertDialogTitle>
+              <AlertDialogContent>
+                This Action is irreversible. Are you sure you want to book the
+                tickets?
+              </AlertDialogContent>
+              <AlertDialogButtons
+                buttons={[
+                  {
+                    label: "Confirm",
+                    action: handleConfirm,
+                    variant: "primary",
+                  },
+                  {
+                    label: "Cancel",
+                    action: handleCancel,
+                    variant: "secondary",
+                  },
+                ]}
+              />
+            </AlertDialog>
           </DocsPreview>
-          <div>
-            <InstallationSteps component="AlertDialog" />
-            <div className="installation">
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="home.tsx"
-                code={`import { useState } from "react";
+          <InstallationSteps
+            component={["AlertDialog"]}
+            imports={[
+              "AlertDialog, AlertDialogButtons, AlertDialogContent, AlertDialogTitle",
+            ]}
+          />
+          <CodeBlock
+            title="Usage"
+            lang="tsx"
+            code={`
+import {
+  AlertDialog,
+  AlertDialogButtons,
+  AlertDialogContent,
+  AlertDialogTitle,
+} from "@/components/hexta-ui/AlertDialog";
+
+<button
+  className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border border-zinc-900"
+  onClick={() => setShowDialog(true)}
+  >
+  Book Tickets
+</button>
+
+
+<AlertDialog isOpen={showDialog}>
+  <AlertDialogTitle>Confirm booking?</AlertDialogTitle>
+  <AlertDialogContent>
+    This Action is irreversible. Are you sure you want to book the tickets?
+  </AlertDialogContent>
+  <AlertDialogButtons
+    buttons={[
+      {
+        label: "Confirm",
+        action: handleConfirm,
+        variant: "primary",
+      },
+      {
+        label: "Cancel",
+        action: handleCancel,
+        variant: "secondary",
+      },
+    ]}
+  />
+</AlertDialog>
+
+`}
+          />
+          <CodeBlock
+            title="Example"
+            lang="tsx"
+            code={`import {
+  AlertDialog,
+  AlertDialogButtons,
+  AlertDialogContent,
+  AlertDialogTitle,
+} from "@/components/hexta-ui/AlertDialog";
+
+import { useState } from "react";
+
 
 export const Home = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -123,42 +138,40 @@ export const Home = () => {
   const handleConfirm = () => {
     console.log("Action confirmed");
     setShowDialog(false);
-  };
+  }
 
   const handleCancel = () => {
     console.log("Action canceled");
     setShowDialog(false);
-  };
+  }
 
   return (
     <>
-      <button
-        className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border border-zinc-900"
-        onClick={() => setShowDialog(true)}
-      >
-        Show Dialog
-      </button>
+      <button onClick={() => setShowDialog(true)}>Books Tickets</button>
 
-      <AlertDialog
-        title="Are you sure?"
-        message="Rethink, This action cannot be undone."
-        onConfirm={handleConfirm}
-        onCancel={handleCancel}
-        isOpen={showDialog}
-      />
+      <AlertDialog isOpen={showDialog}>
+        <AlertDialogTitle>Confirm booking?</AlertDialogTitle>
+        <AlertDialogContent>
+          This Action is irreversible. Are you sure you want to book the tickets?
+        <AlertDialogButtons
+          buttons={[
+            {
+              label: "Confirm",
+              action: handleConfirm,
+              variant: "primary",
+            },
+            {
+              label: "Cancel",
+              action: handleCancel,
+              variant: "secondary",
+            },
+          ]}
+        />
+      </AlertDialog>
     </>
   );
-};`}
-              />
-            </div>
-          </div>
-          <div className="mt-[5rem]">
-            <Table
-              columns={columns}
-              data={data}
-              tableTitle="Props Information"
-            />
-          </div>{" "}
+}`}
+          />
         </main>
       </DocsLayout>
     </>
