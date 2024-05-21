@@ -145,6 +145,11 @@ const exampleComponentsLinks = [
     new: true,
     hidden: false,
   },
+  {
+    name: "Navbar",
+    new: true,
+    hidden: false,
+  },
 ];
 
 export const Sidebar = () => {
