@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef, RefObject } from "react";
 import { useRouter } from "next/router";
 
 import { Input } from "../hexta-ui/Input";
-import { url } from "inspector";
 
 const layoutComponentLinks = [
   {
@@ -39,7 +38,6 @@ const layoutComponentLinks = [
   },
   {
     name: "Card",
-    new: true,
     hidden: false,
   },
   {
@@ -94,10 +92,7 @@ const layoutComponentLinks = [
     name: "Tooltip",
     hidden: false,
   },
-  {
-    name: "Card",
-    hidden: false,
-  },
+
   {
     name: "Alert Dialog",
     hidden: false,
