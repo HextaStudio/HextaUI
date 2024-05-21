@@ -132,8 +132,13 @@
   --background-color: #000;
   --code-background-color: rgba(255, 255, 255, 0.057);
   --text-color: #fff;
-  --inter-fonts: "Inter", sans-serif;
+  --inter-fonts: "Geist", "Inter", sans-serif;
   --purple-color: rgb(128, 89, 255);
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(./GeistVF.ttf);
 }
 
 * {
