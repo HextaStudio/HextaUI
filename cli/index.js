@@ -23,7 +23,6 @@ const components = [
   "Datepicker",
   "DragAndDrop",
   "FileUpload",
-  "Hero",
   "Input",
   "Loader",
   "Menu",
@@ -36,8 +35,6 @@ const components = [
   "Toast",
   "Toggle",
   "Tooltip",
-  "Footer",
-  "Navbar",
   "InputOTP",
   "TreeView",
 ].sort();

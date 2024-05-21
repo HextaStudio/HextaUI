@@ -101,18 +101,6 @@ const layoutComponentLinks = [
     name: "Breadcrumb",
     hidden: false,
   },
-  {
-    name: "Hero",
-    hidden: false,
-  },
-  {
-    name: "Navbar",
-    hidden: false,
-  },
-  {
-    name: "Footer",
-    hidden: false,
-  },
 ].sort();
 
 const getStartedLinks = [
