@@ -73,7 +73,7 @@ export const TooltipContent: React.FC<TooltipContentProps> = ({
         `absolute z-10 px-3 py-2 text-xs font-medium text-black bg-white rounded-md whitespace-nowrap border-zinc-800 border transform transition-all duration-[0.2s] flex   ${
           directionClasses[direction]
         } ${isVisible ? "opacity-100" : "opacity-0"} ${
-          isVisible ? "scale-[1]" : "scale-[0.9]"
+          isVisible ? "scale-[1]" : "scale-[0.95]"
         }`,
         className
       )}
