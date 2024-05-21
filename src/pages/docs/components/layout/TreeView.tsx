@@ -49,7 +49,7 @@ const data = [
     propType: "string",
     defaultValue: "null",
     description: "Id to specific root.",
-  }
+  },
 ];
 
 const treeview = () => {
