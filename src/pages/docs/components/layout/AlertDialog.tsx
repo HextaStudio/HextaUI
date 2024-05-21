@@ -93,22 +93,20 @@ const alertdialog = () => {
               expects a response."
           />
           <DocsPreview>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-              <button
-                className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border border-zinc-900"
-                onClick={() => setShowDialog(true)}
-              >
-                Show Dialog
-              </button>
+            <button
+              className="px-[20px] py-[8px] text-white rounded-lg flex items-center font-[600] text-[14px] hover:bg-zinc-950 transition-all duration-[0.4s] border border-zinc-900"
+              onClick={() => setShowDialog(true)}
+            >
+              Show Dialog
+            </button>
 
-              <AlertDialog
-                title="Are you sure?"
-                message="Rethink, This action cannot be undone."
-                onConfirm={handleConfirm}
-                onCancel={handleCancel}
-                isOpen={showDialog}
-              />
-            </div>
+            <AlertDialog
+              title="Are you sure?"
+              message="Rethink, This action cannot be undone."
+              onConfirm={handleConfirm}
+              onCancel={handleCancel}
+              isOpen={showDialog}
+            />
           </DocsPreview>
           <div>
             <InstallationSteps component="AlertDialog" />
