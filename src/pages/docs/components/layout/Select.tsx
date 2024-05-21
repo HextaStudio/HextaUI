@@ -316,8 +316,8 @@ export const Home = () => {
                 {Array.isArray(selectedOption)
                   ? selectedOption.map((option) => option.label).join(", ")
                   : selectedOption
-                  ? selectedOption.label
-                  : "No option selected"}
+                    ? selectedOption.label
+                    : "No option selected"}
               </p>
             </div>
             <h3 className="h3">Usage</h3>

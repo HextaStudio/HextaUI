@@ -33,7 +33,7 @@ export const Checkbox = ({
         className={cn(
           "form-checkbox h-5 w-5 text-zinc-900 rounded focus:outline-none",
           "accent-white",
-          className
+          className,
         )}
         {...props}
       />

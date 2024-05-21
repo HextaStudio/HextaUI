@@ -375,7 +375,7 @@ export const Sidebar = () => {
                     }`}
                     href={`/docs/components/layout/${link.name.replace(
                       " ",
-                      ""
+                      "",
                     )}`}
                   >
                     {link.name}{" "}

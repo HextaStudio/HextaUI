@@ -20,7 +20,7 @@ export const DocsPreview = ({ children, className }: DocsPreviewProps) => {
             <div
               className={cn(
                 "relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container min-h-[15rem]",
-                className
+                className,
               )}
             >
               {children}

@@ -25,7 +25,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       placeholder,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <input
@@ -36,11 +36,11 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         placeholder={placeholder}
         className={cn(
           "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none border border-white border-opacity-10 focus:border-opacity-30 focus:outline-2 ",
-          className
+          className,
         )}
         ref={ref}
         {...props}
       />
     );
-  }
+  },
 );

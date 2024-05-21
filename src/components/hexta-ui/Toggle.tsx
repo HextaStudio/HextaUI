@@ -33,7 +33,7 @@ export const Toggle = ({
           `relative inline-block w-[60px] h-[32px] rounded-full cursor-pointer transition-colors ease-in-out duration-100 ${
             enabled ? enabledColor : disabledColor
           }`,
-          className
+          className,
         )}
         onClick={handleToggle}
       >

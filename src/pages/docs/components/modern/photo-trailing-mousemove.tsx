@@ -65,7 +65,7 @@ const photoTrailingOnMousemove = () => {
 
     useEffect(() => {
       const isMobile = /iPhone|iPad|iPod|Android/i.test(
-        window.navigator.userAgent
+        window.navigator.userAgent,
       );
       if (isMobile) {
         setIsMobile(true);

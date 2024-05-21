@@ -55,7 +55,7 @@ export const WaterDropGridPreview = ({
               className="w-2 h-2 rounded-full opacity-50 dot-point bg-gradient-to-b from-slate-700 to-slate-400 group-hover:from-indigo-600 group-hover:to-white"
               data-index={index}
             />
-          </div>
+          </div>,
         );
         index++;
       }

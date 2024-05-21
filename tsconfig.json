@@ -16,6 +16,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/docs/components/layout/Carousel.js", "src/pages/docs/components/layout/Select.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/docs/components/layout/Carousel.js",
+    "src/pages/docs/components/layout/Select.tsx"
+  ],
   "exclude": ["node_modules"]
 }

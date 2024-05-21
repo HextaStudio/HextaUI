@@ -11,7 +11,7 @@ interface TooltipContextProps {
 }
 
 const TooltipContext = createContext<TooltipContextProps | undefined>(
-  undefined
+  undefined,
 );
 
 interface TooltipProviderProps {
@@ -75,7 +75,7 @@ export const TooltipContent: React.FC<TooltipContentProps> = ({
         } ${isVisible ? "opacity-100" : "opacity-0"} ${
           isVisible ? "scale-[1]" : "scale-[0.95]"
         }`,
-        className
+        className,
       )}
       {...props}
     >

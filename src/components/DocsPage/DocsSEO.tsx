@@ -14,12 +14,12 @@ export const DocsSEO = ({ title, description, image }: DocsSEOProps) => {
         description={description}
         canonical={`https://ui.hextastudio.in/docs/components/layout/${title.replace(
           " ",
-          ""
+          "",
         )}`}
         openGraph={{
           url: `https://ui.hextastudio.in/docs/components/layout/${title.replace(
             " ",
-            ""
+            "",
           )}`,
           title: `${title}`,
           description: `${description}`,

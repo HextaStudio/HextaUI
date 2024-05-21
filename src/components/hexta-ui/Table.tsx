@@ -27,7 +27,7 @@ export const Table = ({
   cellClassName,
 }: TableProps) => {
   const [visibleColumns, setVisibleColumns] = React.useState(
-    columns.map((column) => column.key)
+    columns.map((column) => column.key),
   );
   const [searchTerm, setSearchTerm] = React.useState("");
   const [sortOrder, setSortOrder] = React.useState("asc");
@@ -42,8 +42,8 @@ export const Table = ({
   useEffect(() => {
     let filteredData = data.filter((item) =>
       Object.values(item).some((val) =>
-        String(val).toLowerCase().includes(searchTerm.toLowerCase())
-      )
+        String(val).toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
     );
 
     if (sortColumn) {
@@ -60,8 +60,8 @@ export const Table = ({
   useEffect(() => {
     const filteredData = data.filter((item) =>
       Object.values(item).some((val) =>
-        String(val).toLowerCase().includes(searchTerm.toLowerCase())
-      )
+        String(val).toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
     );
     setLimitedData(filteredData);
   }, [data, searchTerm]);
@@ -70,7 +70,7 @@ export const Table = ({
     setVisibleColumns((prevVisibleColumns) =>
       prevVisibleColumns.includes(key)
         ? prevVisibleColumns.filter((column) => column !== key)
-        : [...prevVisibleColumns, key]
+        : [...prevVisibleColumns, key],
     );
   };
 
@@ -124,7 +124,7 @@ export const Table = ({
                     key={column.key}
                     className={cn(
                       "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
-                      headerClassName
+                      headerClassName,
                     )}
                     onClick={() => toggleSortOrder(column.key)}
                   >
@@ -143,7 +143,7 @@ export const Table = ({
                       key={`${index}-${column.key}`}
                       className={cn(
                         "px-4 py-3 text-md opacity-90 text-left text-[14px]",
-                        cellClassName
+                        cellClassName,
                       )}
                     >
                       {row[column.key]}

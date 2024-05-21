@@ -32,7 +32,7 @@ export const Avatar = ({
         height={size}
         className={cn(
           "rounded-full shadow-sm pointer-events-none object-cover",
-          className
+          className,
         )}
       />
     );
@@ -43,7 +43,7 @@ export const Avatar = ({
       <span
         className={cn(
           "absolute bottom-[4px] right-[4px] block w-4 h-4 rounded-full ring ring-white",
-          offline ? "bg-red-500" : "bg-green-500"
+          offline ? "bg-red-500" : "bg-green-500",
         )}
       />
     );

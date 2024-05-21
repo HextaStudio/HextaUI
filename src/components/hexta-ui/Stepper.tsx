@@ -25,7 +25,7 @@ export const Stepper = ({ steps, activeStep, className }: StepperProps) => {
             className={cn(
               "flex items-center flex-col relative gap-2",
               index !== steps.length - 1 &&
-                "after:content-[''] after:absolute after:w-full after:h-1 after:border-t after:border-gray-300 after:mt-2 after:left-[50%] after:translate-x-[40%] after:top-[15%]"
+                "after:content-[''] after:absolute after:w-full after:h-1 after:border-t after:border-gray-300 after:mt-2 after:left-[50%] after:translate-x-[40%] after:top-[15%]",
             )}
           >
             <div
@@ -34,8 +34,8 @@ export const Stepper = ({ steps, activeStep, className }: StepperProps) => {
                 activeStep === index
                   ? "bg-blue-500 text-white"
                   : index < activeStep
-                  ? "bg-green-500 text-white"
-                  : "bg-gray-200 text-gray-600"
+                    ? "bg-green-500 text-white"
+                    : "bg-gray-200 text-gray-600",
               )}
             >
               {index + 1}

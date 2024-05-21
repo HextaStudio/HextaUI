@@ -118,7 +118,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
-  box-shadow: #1010102f 0px 30px 60px -12px inset,
+  box-shadow:
+    #1010102f 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.796) 0px 18px 36px -18px inset;
 }
 
@@ -465,7 +466,8 @@ h2 {
     position: absolute;
     mask-image: linear-gradient(to top, rgb(0, 0, 0) 0%, transparent 100%);
     opacity: 5%;
-    background: conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0),
+    background:
+      conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0),
       conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(1 * 20px)
         calc(3 * 20px),
       conic-gradient(at 10% 50%, #0000 75%, #f0f0f0 0) calc(2 * 20px)

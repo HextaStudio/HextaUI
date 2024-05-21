@@ -74,7 +74,7 @@ export const Badge = ({
     glowingStyle,
     animatedStyle,
     segmentedStyle,
-    className
+    className,
   );
 
   return (

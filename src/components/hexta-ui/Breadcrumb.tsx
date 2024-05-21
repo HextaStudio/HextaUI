@@ -30,7 +30,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
                   className={cn(
                     `text-[14px] opacity-60 hover:opacity-90 transition-all cursor-pointer  font-medium ${
                       item.active && "opacity-100"
-                    }`
+                    }`,
                   )}
                 >
                   {item.title}
@@ -38,7 +38,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
               ) : (
                 <span
                   className={cn(
-                    "text-[14px] opacity-60 hover:opacity-90 transition-all"
+                    "text-[14px] opacity-60 hover:opacity-90 transition-all",
                   )}
                 >
                   {item.title}

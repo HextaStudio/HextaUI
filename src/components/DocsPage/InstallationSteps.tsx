@@ -20,10 +20,10 @@ export const InstallationSteps = ({
       .map(
         (component) =>
           `import { ${capitalizeFirstLetter(
-            component
+            component,
           )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
-            component
-          )}";`
+            component,
+          )}";`,
       )
       .join("\n");
   };
@@ -49,9 +49,9 @@ export const InstallationSteps = ({
             Array.isArray(imports)
               ? generateImportStatements(imports)
               : `import { ${capitalizeFirstLetter(
-                  String(component)
+                  String(component),
                 )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
-                  String(component)
+                  String(component),
                 )}";`
           }
         />

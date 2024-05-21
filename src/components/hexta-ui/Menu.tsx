@@ -58,7 +58,7 @@ export const Menu = ({
             transition={{ duration: 0.2, ease: "anticipate" }}
             className={cn(
               "absolute right-0 w-48 mt-2 border border-white border-opacity-10 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5",
-              className
+              className,
             )}
           >
             <div

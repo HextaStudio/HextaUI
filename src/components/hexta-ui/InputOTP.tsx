@@ -32,7 +32,7 @@ export const OTP = ({ setValue }: OTPProps) => {
 
   const handleKeyDown = (
     index: number,
-    event: React.KeyboardEvent<HTMLInputElement>
+    event: React.KeyboardEvent<HTMLInputElement>,
   ) => {
     if (event.key === "Backspace" && !event.currentTarget.value && index > 0) {
       inputRefs.current[index - 1].focus();
@@ -76,7 +76,7 @@ export const OTP = ({ setValue }: OTPProps) => {
               className={cn(
                 "w-10 h-12 text-center text-lg font-semibold border border-zinc-900 focus:outline-none focus:border-2 focus:border-white bg-zinc-950",
                 `${index === 0 && "rounded-l-xl"}`,
-                `${index === 5 && "rounded-r-xl"}`
+                `${index === 5 && "rounded-r-xl"}`,
               )}
             />
             {index === 2 && (

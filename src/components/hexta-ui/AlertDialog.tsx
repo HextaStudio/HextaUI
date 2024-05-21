@@ -31,7 +31,7 @@ export const AlertDialog = ({
             <div
               className={cn(
                 "flex flex-col gap-3 px-10 bg-black border border-b-2 rounded-lg alert-dialog p-7 border-zinc-900  max-w-[20rem] mx-2",
-                className
+                className,
               )}
             >
               {children}

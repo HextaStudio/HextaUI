@@ -106,7 +106,7 @@ const Calendar = ({ value, onChange }: CalendarProps) => {
               isSameMonth(date, currentDate) &&
                 !isSameDay(date, value) &&
                 "hover:bg-zinc-900",
-              isToday(date) && "bg-white text-black font-semibold"
+              isToday(date) && "bg-white text-black font-semibold",
             )}
             onClick={() => handleDateClick(date)}
           >
@@ -134,7 +134,7 @@ export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
           value={value ? format(value, "dd/MM/yyyy") : "Pick a date"}
           onClick={() => setShowCalendar(!showCalendar)}
           className={cn(
-            "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50 relative cursor-pointer bg-zinc-950 border border-white border-opacity-10"
+            "flex px-4 py-3 my-4 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50 relative cursor-pointer bg-zinc-950 border border-white border-opacity-10",
           )}
           readOnly
         />

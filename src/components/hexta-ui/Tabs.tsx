@@ -28,7 +28,7 @@ export const Tabs = ({ tabs, className }: TabsProps) => {
               "py-2 px-4 font-medium text-sm rounded-t-lg focus:outline-none transition-all ease-linear duration-100",
               activeTab === index
                 ? "bg-neutral-100 text-neutral-700"
-                : "text-neutral-500 hover:bg-neutral-800 hover:text-zinc-500"
+                : "text-neutral-500 hover:bg-neutral-800 hover:text-zinc-500",
             )}
             onClick={() => handleTabClick(index)}
           >

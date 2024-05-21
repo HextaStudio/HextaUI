@@ -73,7 +73,7 @@ export const Select: React.FC<SelectProps> = ({
 
   const filteredOptions = isSearchable
     ? (options as Option[]).filter((option) =>
-        option.label.toLowerCase().includes(searchTerm.toLowerCase())
+        option.label.toLowerCase().includes(searchTerm.toLowerCase()),
       )
     : (options as Option[]);
 
@@ -127,7 +127,7 @@ export const Select: React.FC<SelectProps> = ({
               </button>
             ))}
           </div>
-        )
+        ),
       );
     } else {
       return filteredOptions.length > 0 ? (
@@ -209,7 +209,7 @@ export const Select: React.FC<SelectProps> = ({
           type="button"
           className={cn(
             "flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-gray-100 border rounded-md border-zinc-900 bg-zinc-950 focus:outline-none focus:border-zinc-700  min-w-[10rem]",
-            isAnimated ? "transition-all duration-300" : ""
+            isAnimated ? "transition-all duration-300" : "",
           )}
           onClick={handleDropdownToggle}
         >
@@ -226,7 +226,7 @@ export const Select: React.FC<SelectProps> = ({
           <svg
             className={cn(
               "w-5 h-5 ml-2 -mr-1",
-              isAnimated ? "transition-transform duration-300" : ""
+              isAnimated ? "transition-transform duration-300" : "",
             )}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -250,7 +250,7 @@ export const Select: React.FC<SelectProps> = ({
             "absolute z-10 flex flex-col w-full mt-2 border rounded-md shadow-lg bg-zinc-950 border-zinc-900",
             isAnimated
               ? "transition-all duration-300 origin-top transform scale-y-100 opacity-100"
-              : ""
+              : "",
           )}
         >
           <div className="">{renderOptions()}</div>

@@ -8,7 +8,7 @@ type TreeNodeContextType = {
 };
 
 const TreeNodeContext = createContext<TreeNodeContextType | undefined>(
-  undefined
+  undefined,
 );
 
 type TreeHeaderProps = {
@@ -33,7 +33,7 @@ export const TreeHeader: React.FC<TreeHeaderProps> = ({
       <div
         className={clsx(
           "flex items-center  cursor-pointer text-md py-1 px-3 hover:bg-white rounded hover:bg-opacity-5 transition-all text-[15px] my-1 gap-1",
-          className
+          className,
         )}
         onClick={() => toggleNode && toggleNode(id)}
       >

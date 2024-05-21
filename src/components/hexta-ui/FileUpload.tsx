@@ -73,7 +73,7 @@ export const FileUpload = ({
               "flex items-center justify-center w-fit mx-auto px-4 py-3 my-4 text-sm rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
               disabled
                 ? "bg-zinc-950 text-gray-500 cursor-not-allowed"
-                : "bg-zinc-950 text-zinc-200 border border-white border-opacity-10 hover:bg-neutral-900"
+                : "bg-zinc-950 text-zinc-200 border border-white border-opacity-10 hover:bg-neutral-900",
             )}
             onClick={handleUploadClick}
             onDrop={handleDrop}
