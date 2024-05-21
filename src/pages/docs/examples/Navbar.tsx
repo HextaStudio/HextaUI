@@ -105,7 +105,7 @@ const navbar = () => {
       <DocsSEO
         title="Navbar - HextaUI ✨"
         description="A navbar component for navigation through website."
-        image=".s"
+        image="https://i.imgur.com/PepLjQG.png"
       />
       <DocsLayout>
         <main>
