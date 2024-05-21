@@ -13,6 +13,7 @@ import {
   addMonths,
 } from "date-fns";
 import { FaCalendar } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 
 const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
@@ -141,15 +142,24 @@ export const Datepicker = ({ className, value, onChange }: DatePickerProps) => {
           <FaCalendar />
         </span>
       </div>
-      {showCalendar && (
-        <div className="absolute z-10 w-64 mt-2 translate-x-[-50%] left-[50%] bg-white rounded-lg shadow-lg">
-          {" "}
-          <Calendar
-            value={value ?? new Date()}
-            onChange={handleDateChange}
-          />{" "}
-        </div>
-      )}{" "}
+      <AnimatePresence>
+        {showCalendar && (
+          <div className="absolute z-10 w-64 mt-2 translate-x-[-50%] left-[50%] rounded-lg shadow-lg">
+            {" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "anticipate" }}
+            >
+              <Calendar
+                value={value ?? new Date()}
+                onChange={handleDateChange}
+              />{" "}
+            </motion.div>
+          </div>
+        )}{" "}
+      </AnimatePresence>
     </div>
   );
 };
