@@ -10,6 +10,11 @@ const layoutComponentLinks = [
     hidden: false,
   },
   {
+    name: "Accordion",
+    hidden: false,
+    new: true,
+  },
+  {
     name: "Input OTP",
     new: true,
     hidden: false,
@@ -375,7 +380,7 @@ export const Sidebar = () => {
                     }`}
                     href={`/docs/components/layout/${link.name.replace(
                       " ",
-                      "",
+                      ""
                     )}`}
                   >
                     {link.name}{" "}
