@@ -14,7 +14,7 @@ export const DocsHeader = ({ title, description }: DocsHeaderProps) => {
     <>
       <div className="flex flex-col gap-2 header">
         <Breadcrumb items={items} />
-        <h1 className="h1">{title}</h1>
+        <h1 className="text-4xl font-black leading-10">{title}</h1>
         <p className="text-md opacity-80">{description}</p>
       </div>
     </>
