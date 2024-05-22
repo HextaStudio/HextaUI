@@ -18,39 +18,27 @@ export const Accordion: React.FC<AccordionProps> = ({ children, id }) => {
   const childrenArray = Array.isArray(children) ? children : [children];
 
   return (
-    <div className="rounded shadow-sm min-w-[30rem] max-w-[30rem] my-2">
+    <div className="rounded shadow-sm min-w-full sm:min-w-[20rem] md:min-w-[30rem] max-w-full sm:max-w-[20rem] md:max-w-[30rem] my-2">
       <div
         className="flex items-center justify-between px-4 py-2 overflow-hidden cursor-pointer hover:underline"
         onClick={toggleAccordion}
       >
         <p>{childrenArray[0]}</p>
-        <span>
-          {isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              className="rotate-180"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"
-              />
-            </svg>
-          )}
+        <span className="flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            className={`${
+              isOpen ? "" : "rotate-[45deg]"
+            } transition-all duration-[0.2s]`}
+          >
+            <path
+              fill="currentColor"
+              d="m8.382 17.025l-1.407-1.4L10.593 12L6.975 8.4L8.382 7L12 10.615L15.593 7L17 8.4L13.382 12L17 15.625l-1.407 1.4L12 13.41z"
+            />
+          </svg>
         </span>
       </div>
       <AnimatePresence>
