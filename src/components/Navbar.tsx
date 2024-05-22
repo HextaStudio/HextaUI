@@ -64,7 +64,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </li>
               <li>
                 <Link
-                  href="/docs/components/layout/AlertDialog"
+                  href="/docs/components/layout/Accordion"
                   className="opacity-80 hover:opacity-100 hover:underline transition-all"
                 >
                   Components
