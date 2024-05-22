@@ -2,6 +2,7 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import {
   Accordion,
@@ -12,6 +13,11 @@ import {
 const accordion = () => {
   return (
     <>
+      <DocsSEO
+        title="Accordion - HextaUI ✨"
+        description="The Accordion component lets users show and hide sections of related content on a page."
+        image="https://i.imgur.com/qDyvQBa.png"
+      />
       <DocsLayout>
         <main>
           <DocsHeader
