@@ -7,20 +7,19 @@ interface DocsSEOProps {
 }
 
 export const DocsSEO = ({ title, description, image }: DocsSEOProps) => {
+  const titleWithOutSpace = title.replace(" ", "");
+  const canonical = `https://ui.hextastudio.in/docs/components/layout/${titleWithOutSpace.replace(
+    " - HextaUI ✨",
+    ""
+  )}`;
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={`https://ui.hextastudio.in/docs/components/layout/${title.replace(
-          " ",
-          "",
-        )}`}
+        canonical={canonical}
         openGraph={{
-          url: `https://ui.hextastudio.in/docs/components/layout/${title.replace(
-            " ",
-            "",
-          )}`,
+          url: `${canonical}`,
           title: `${title}`,
           description: `${description}`,
           images: [
