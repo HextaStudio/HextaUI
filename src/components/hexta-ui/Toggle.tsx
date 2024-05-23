@@ -18,8 +18,8 @@ interface ToggleProps {
 export const Toggle = ({
   enabled,
   onChange,
-  enabledColor = "bg-green-500",
-  disabledColor = "bg-red-500",
+  enabledColor = "bg-white",
+  disabledColor = "bg-zinc-800",
   className,
 }: ToggleProps) => {
   const handleToggle = () => {
@@ -30,15 +30,15 @@ export const Toggle = ({
     <div className="flex flex-col items-center gap-4">
       <div
         className={cn(
-          `relative inline-block w-[60px] h-[32px] rounded-full cursor-pointer transition-colors ease-in-out duration-100 ${
+          `relative inline-block w-[55px] h-[27px] rounded-full cursor-pointer transition-colors ease-in-out duration-100 ${
             enabled ? enabledColor : disabledColor
           }`,
-          className,
+          className
         )}
         onClick={handleToggle}
       >
         <span
-          className={`absolute left-[3px] top-[50%] translate-y-[-50%] bg-white w-[25px] h-[25px] rounded-full transition ease-in-out duration-100 ${
+          className={`absolute left-[3px] top-[50%] translate-y-[-50%] bg-zinc-950 w-[20px] h-[20px] rounded-full transition ease-in-out duration-100 ${
             enabled ? "translate-x-[29px]" : "translate-x-0"
           }`}
         ></span>
