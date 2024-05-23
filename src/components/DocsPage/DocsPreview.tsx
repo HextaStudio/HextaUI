@@ -19,8 +19,8 @@ export const DocsPreview = ({ children, className }: DocsPreviewProps) => {
             <h3 className="text-2xl font-bold">Preview</h3>
             <div
               className={cn(
-                "relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container min-h-[15rem]",
-                className,
+                "relative flex items-center justify-center my-3  flex-col  overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container min-h-[15rem]",
+                className
               )}
             >
               {children}
