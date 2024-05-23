@@ -2,7 +2,6 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import React from "react";
-import { useState } from "react";
 
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
@@ -10,6 +9,7 @@ import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -60,20 +60,10 @@ const progressbar = () => {
             title="Progress Bar"
             description="Progress Bar allows user to display progress of specific operation."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              {" "}
-              <ProgressBar value={50} max={100} />
-            </div>
-          </div>
+          <DocsPreview>
+            <ProgressBar value={50} max={100} />
+          </DocsPreview>
           <InstallationSteps component="ProgressBar" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Progress Bar</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              {" "}
-              <ProgressBar value={50} max={100} />
-            </div>
-          </div>
           <CodeBlock
             lang="tsx"
             filename="Home.tsx"
