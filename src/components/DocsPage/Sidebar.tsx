@@ -146,13 +146,18 @@ const templateComponentsLinks = [
 
 const exampleComponentsLinks = [
   {
-    name: "Post Card",
+    name: "Pricing",
     new: true,
     hidden: false,
   },
   {
+    name: "Post Card",
+    new: false,
+    hidden: false,
+  },
+  {
     name: "Navbar",
-    new: true,
+    new: false,
     hidden: false,
   },
 ];
