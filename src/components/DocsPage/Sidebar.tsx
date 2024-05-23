@@ -146,7 +146,7 @@ const templateComponentsLinks = [
 
 const exampleComponentsLinks = [
   {
-    name: "Pricing",
+    name: "PricingCards",
     new: true,
     hidden: false,
   },
