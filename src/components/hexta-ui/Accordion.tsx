@@ -18,9 +18,9 @@ export const Accordion: React.FC<AccordionProps> = ({ children, id }) => {
   const childrenArray = Array.isArray(children) ? children : [children];
 
   return (
-    <div className="rounded shadow-sm min-w-full sm:min-w-[20rem] md:min-w-[30rem] max-w-full sm:max-w-[20rem] md:max-w-[30rem] my-2">
+    <div className="rounded shadow-sm min-w-full sm:min-w-[20rem] md:min-w-[30rem] sm:max-w-[30rem] md:max-w-[30rem] my-2">
       <div
-        className="flex items-center justify-between px-4 py-2 overflow-hidden cursor-pointer hover:underline"
+        className="flex items-center justify-between px-4 py-2 overflow-hidden cursor-pointer hover:underline gap-4 grow"
         onClick={toggleAccordion}
       >
         <p>{childrenArray[0]}</p>
