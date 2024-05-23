@@ -33,12 +33,12 @@ const tooltip = () => {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <p className="px-3 py-1 border-2 border-white rounded-full cursor-default text-md border-opacity-30">
+                  <p className="px-3 py-1 hover:underline underline-offset-3 rounded-full cursor-default text-md border-opacity-30">
                     Hover me
                   </p>
                 </TooltipTrigger>
                 <TooltipContent direction="top">
-                  <p className="text-sm">This is content of tooltip</p>
+                  <p className="text-sm">hextastudio/ui is best UI library.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -52,25 +52,22 @@ const tooltip = () => {
               "TooltipContent",
             ]}
           />
-          <div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<TooltipProvider>
+          <CodeBlock
+            lang="tsx"
+            filename="Home.tsx"
+            code={`<TooltipProvider>
   <Tooltip>
     <TooltipTrigger>
-      <p className="px-3 py-1 border-2 border-white rounded-full cursor-default text-md border-opacity-30">
-      Hover me
+      <p className="px-3 py-1 hover:underline underline-offset-3 rounded-full cursor-default text-md border-opacity-30">
+        Hover me
       </p>
     </TooltipTrigger>
     <TooltipContent direction="top">
-      <p className="text-sm">This is content of tooltip</p>
+      <p className="text-sm">hextastudio/ui is best UI library.</p>
     </TooltipContent>
   </Tooltip>
 </TooltipProvider>`}
-            />
-          </div>
+          />
         </main>
       </DocsLayout>
     </>
