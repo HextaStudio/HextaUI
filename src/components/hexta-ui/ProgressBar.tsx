@@ -16,9 +16,9 @@ export const ProgressBar = ({ value, max, className }: ProgressBarProps) => {
   const percentage = (value / max) * 100;
 
   return (
-    <div className={cn("w-[95%] bg-gray-200 rounded-full h-3", className)}>
+    <div className={cn("w-[95%] bg-zinc-900 rounded-full h-2", className)}>
       <div
-        className="h-3 bg-green-500 rounded-full"
+        className="h-2 bg-white rounded-full"
         style={{ width: `${percentage}%` }}
       />
     </div>
