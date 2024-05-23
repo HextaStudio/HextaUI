@@ -10,6 +10,7 @@ import { Input } from "@/components/hexta-ui/Input";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -66,26 +67,15 @@ const input = () => {
             title="Input"
             description="Collection of Input components with different variants."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Input
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                placeholder="Enter your name..."
-              />
-            </div>
-          </div>
+          <DocsPreview>
+            <Input
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              placeholder="Enter your name..."
+            />
+          </DocsPreview>
           <InstallationSteps component="Input" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Text Input</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Input
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                placeholder="Enter your name..."
-              />
-            </div>
-          </div>
+
           <CodeBlock
             lang="tsx"
             filename="Home.tsx"
