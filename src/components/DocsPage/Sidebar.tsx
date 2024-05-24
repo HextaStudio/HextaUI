@@ -147,6 +147,11 @@ const templateComponentsLinks = [
 const exampleComponentsLinks = [
   {
     name: "Pricing Cards",
+    new: false,
+    hidden: false,
+  },
+  {
+    name: "Features Section",
     new: true,
     hidden: false,
   },
