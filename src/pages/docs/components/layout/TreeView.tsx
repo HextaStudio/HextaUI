@@ -91,15 +91,13 @@ const treeview = () => {
           </DocsPreview>
           <InstallationSteps
             component="TreeView"
-            imports={["TreeView", "TreeChild", "TreeHeader"]}
+            imports={["TreeView, TreeChild, TreeHeader"]}
           />{" "}
-          <div className="installation">
-            <h2 className="text-3xl font-bold">Example Usage</h2>
-
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<TreeView>
+          <CodeBlock
+            lang="tsx"
+            title="Usage"
+            filename="Home.tsx"
+            code={`<TreeView>
   <TreeHeader id="1" title="src">
     <TreeHeader id="2" title="components">
       <TreeHeader id="3" title="hexta-ui">
@@ -120,8 +118,7 @@ const treeview = () => {
     <TreeChild>logo.png</TreeChild>
   </TreeHeader>
 </TreeView>`}
-            />
-          </div>
+          />
           <Table columns={columns} data={data} tableTitle="Props Information" />
         </main>
       </DocsLayout>
