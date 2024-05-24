@@ -9,21 +9,18 @@ interface InstallationStepsProps {
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
 export const InstallationSteps = ({
   component,
   imports,
   title = "Installation",
 }: InstallationStepsProps) => {
-  const generateImportStatements = (components: any[]) => {
+  const generateImportStatements = (components: any[], imports: any[]) => {
     return components
       .map(
-        (component) =>
-          `import { ${capitalizeFirstLetter(
-            component,
-          )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
-            component,
-          )}";`,
+        (component, index) =>
+          `import { ${imports[index]} } from "${capitalizeFirstLetter(
+            component
+          )}";`
       )
       .join("\n");
   };
@@ -46,12 +43,12 @@ export const InstallationSteps = ({
           lang="tsx"
           filename="tsx"
           code={
-            Array.isArray(imports)
-              ? generateImportStatements(imports)
+            Array.isArray(imports) && Array.isArray(component)
+              ? generateImportStatements(component, imports)
               : `import { ${capitalizeFirstLetter(
-                  String(component),
+                  String(component)
                 )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
-                  String(component),
+                  String(component)
                 )}";`
           }
         />
