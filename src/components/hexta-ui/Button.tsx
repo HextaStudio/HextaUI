@@ -17,7 +17,7 @@ interface ButtonProps {
   outline?: boolean;
   animated?: boolean;
   rest?: any;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const Button = ({
@@ -30,7 +30,7 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   const baseClasses = twMerge(
-    "px-[20px] py-[8px] rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90",
+    "px-[20px] py-[8px] rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90"
   );
 
   const variantClasses = clsx({
@@ -59,7 +59,7 @@ export const Button = ({
     disabledClasses,
     outlineClasses,
     animatedClasses,
-    className,
+    className
   );
 
   return (
