@@ -6,6 +6,13 @@ import React, {
   useEffect,
 } from "react";
 
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+const cn = (...args: any[]) => {
+  return clsx(twMerge(...args));
+};
+
 interface TabContextType {
   activeTab: string | null;
   setActiveTab: (id: string) => void;
@@ -49,28 +56,35 @@ export const useTabContext = (): TabContextType => {
 
 interface TabProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export const Tab: React.FC<TabProps> = ({ children }) => {
-  return <div className="tab">{children}</div>;
+export const Tab: React.FC<TabProps> = ({ children, className }) => {
+  return <div className={cn("tab", className)}>{children}</div>;
 };
 
 interface TabHeaderProps {
   id: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-export const TabHeader: React.FC<TabHeaderProps> = ({ id, children }) => {
+export const TabHeader: React.FC<TabHeaderProps> = ({
+  id,
+  children,
+  className,
+}) => {
   const { activeTab, setActiveTab } = useTabContext();
 
   return (
     <button
       onClick={() => setActiveTab(id)}
-      className={`px-4 grow py-1 focus:outline-none focus:border-none text-[14px] rounded-md shadow-md ${
+      className={cn("px-4 grow py-1 focus:outline-none focus:border-none text-[14px] rounded-md shadow-md",
         activeTab === id
           ? "font-bold bg-zinc-900 "
-          : "font-normal text-white text-opacity-50"
-      }`}
+          : "font-normal text-white text-opacity-50",
+        className
+      )}
     >
       {children}
     </button>
@@ -80,13 +94,23 @@ export const TabHeader: React.FC<TabHeaderProps> = ({ id, children }) => {
 interface TabContentProps {
   id: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-export const TabContent: React.FC<TabContentProps> = ({ id, children }) => {
+export const TabContent: React.FC<TabContentProps> = ({
+  id,
+  children,
+  className,
+}) => {
   const { activeTab } = useTabContext();
 
   return activeTab === id ? (
-    <div className="p-4  border border-white border-opacity-10 rounded-md shadow-md">
+    <div
+      className={cn(
+        "p-4  border border-white border-opacity-10 rounded-md shadow-md",
+        className
+      )}
+    >
       {children}
     </div>
   ) : null;
