@@ -6,36 +6,16 @@ import React from "react";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { Table } from "@/components/hexta-ui/Table";
-import { Tabs } from "@/components/hexta-ui/Tabs";
+import {
+  TabProvider,
+  Tab,
+  TabHeader,
+  TabContent,
+} from "@/components/hexta-ui/Tabs";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
-const data = [
-  {
-    propName: "tabs",
-    propType: "Array",
-    defaultValue: "[]",
-    description: "Array of tabs",
-  },
-  {
-    propName: "tabs.label",
-    propType: "String",
-    defaultValue: "null",
-    description: "Label for the tab",
-  },
-  {
-    propName: "tabs.content",
-    propType: "Node",
-    defaultValue: "null",
-    description: "Content for the tab",
-  },
-  {
-    propName: "className",
-    propType: "String",
-    defaultValue: "null",
-    description: "className for the tabs",
-  },
-];
 const columns = [
   {
     label: "Prop Name",
@@ -55,21 +35,22 @@ const columns = [
   },
 ];
 
+const data = [
+  {
+    propName: "defaultActiveTab",
+    propType: "string",
+    defaultValue: "null",
+    description: "Default active tab id.",
+  },
+  {
+    propName: "id",
+    propType: "string",
+    defaultValue: "null",
+    description: "Tab id.",
+  },
+];
+
 const tabs = () => {
-  const tabContent = [
-    {
-      label: "Tab 1",
-      content: <div>Content for Tab 1</div>,
-    },
-    {
-      label: "Tab 2",
-      content: <div>Content for Tab 2</div>,
-    },
-    {
-      label: "Tab 3",
-      content: <div>Content for Tab 3</div>,
-    },
-  ];
   return (
     <>
       <DocsSEO
@@ -83,50 +64,50 @@ const tabs = () => {
             title="Tabs"
             description="Tabs allows users to navigate between different sections of a component"
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Tabs tabs={tabContent} />
-            </div>
-          </div>
-          <InstallationSteps component="Tabs" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Tabs</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Tabs tabs={tabContent} />
-            </div>
-          </div>
-          <CodeBlock
-            lang="tsx"
-            filename="Home.tsx"
-            code={`import { Tabs } from "@/components/hexta-ui/Tabs";
-
-export const Home = () => {
-  
-  const tabContent = [
-    {
-      label: "Tab 1",
-      content: <div>Content for Tab 1</div>,
-    },
-    {
-      label: "Tab 2",
-      content: <div>Content for Tab 2</div>,
-    },
-    {
-      label: "Tab 3",
-      content: <div>Content for Tab 3</div>,
-    },
-  ];
-  
-  return (
-    <>
-      <Tabs tabs={tabContent} />
-    </>
-  )
-}
-
-`}
+          <DocsPreview>
+            <TabProvider defaultActiveTab="1">
+              <div className="flex flex-col space-y-4">
+                <div className="flex gap-1 bg-zinc-950  rounded-md p-1">
+                  <TabHeader id="1">Tab 1</TabHeader>
+                  <TabHeader id="2">Tab 2</TabHeader>
+                </div>
+                <Tab>
+                  <TabContent id="1">
+                    <p>This is the content for Tab 1.</p>
+                  </TabContent>
+                  <TabContent id="2">
+                    <p>This is the content for Tab 2.</p>
+                  </TabContent>
+                </Tab>
+              </div>
+            </TabProvider>
+          </DocsPreview>
+          <InstallationSteps
+            component="Tabs"
+            imports={["Tab, TabProvider, TabHeader, TabContent"]}
           />
           <Table data={data} columns={columns} tableTitle="Props Information" />
+          <CodeBlock
+            title="Usage"
+            lang="tsx"
+            filename="Home.tsx"
+            code={`<TabProvider defaultActiveTab="1">
+  <div className="flex flex-col space-y-4">
+    <div className="flex gap-1 bg-zinc-950  rounded-md p-1">
+      <TabHeader id="1">Tab 1</TabHeader>
+      <TabHeader id="2">Tab 2</TabHeader>
+    </div>
+    <Tab>
+      <TabContent id="1">
+        <p>This is the content for Tab 1.</p>
+      </TabContent>
+      <TabContent id="2">
+        <p>This is the content for Tab 2.</p>
+      </TabContent>
+    </Tab>
+  </div>
+</TabProvider>`}
+          />
         </main>
       </DocsLayout>
     </>
