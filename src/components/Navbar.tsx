@@ -18,7 +18,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
   const menuItems = [
     { href: "/docs/resources/install-next", label: "Docs", icon: <FaHome /> },
     {
-      href: "/docs/components/layout/AlertDialog",
+      href: "/docs/components/layout/Accordion",
       label: "Components",
       icon: <BsGrid1X2Fill />,
     },

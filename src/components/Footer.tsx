@@ -53,7 +53,10 @@ export const Footer = ({ docs }: FooterProps) => {
         <div className="footer-section2">
           <ul className="flex flex-col gap-2 text-[14px] list-none">
             <li>
-              <Link href="/components" className="opacity-75 hover:opacity-100">
+              <Link
+                href="/docs/components/layout/Accordion"
+                className="opacity-75 hover:opacity-100"
+              >
                 Components
               </Link>
             </li>

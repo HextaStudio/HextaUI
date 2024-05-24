@@ -53,7 +53,6 @@ That's it! HextaUI makes it easy to enhance your user interface with modern, cus
 
 ### Support
 
-- [Documentation](https://ui.hextastudio.in/docs/components/layout/alertDialog)
 - [GitHub Issues](https://github.com/HextaStudio/HextaUI/issues)
 - [Discord](https://dsc.gg/hextastudio)
 - [Email](mailto:hi@hextastudio.in)

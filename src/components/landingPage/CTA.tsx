@@ -56,7 +56,7 @@ export const CTA = () => {
             },
           }}
         >
-          <Link href="/components">
+          <Link href="/docs/components/layout/Accordion">
             <span className="relative transition-all hover:text-purple-400 cursor-pointer m-0 text-white text-[8rem] font-[800]  w-full grow">
               Let's Get Started - Let's Get Started - Let's Get Started - Let's
               Get Started - Let's Get Started - Let's Get Started -

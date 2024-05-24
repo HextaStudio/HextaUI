@@ -25,7 +25,7 @@ export const Hero = () => {
             website 10x stunning and modern.
           </p>
           <div className="flex flex-wrap gap-3 p-2 z-[99]">
-            <Link href="/components" className="rounded-md primary-button grow">
+            <Link href="/docs/components/layout/Accordion" className="rounded-md primary-button grow">
               Browse Components
             </Link>
             <Link href="#pricing" className="rounded-md secondary-button grow">
