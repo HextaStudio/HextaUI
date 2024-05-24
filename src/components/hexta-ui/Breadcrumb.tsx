@@ -22,15 +22,15 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
     <nav className="flex" aria-label="Breadcrumb">
       <ol className="flex flex-wrap items-center gap-2">
         {items.map((item, index) => (
-          <>
-            <li key={index}>
+          <ul key={index} className="flex flex-wrap items-center gap-2">
+            <li className="flex items-center">
               {item.href ? (
                 <Link
                   href={item.href}
                   className={cn(
-                    `text-[14px] opacity-60 hover:opacity-90 transition-all cursor-pointer  font-medium ${
+                    `text-[14px] opacity-60 hover:opacity-90 transition-all cursor-pointer flex items-center  font-medium ${
                       item.active && "opacity-100"
-                    }`,
+                    }`
                   )}
                 >
                   {item.title}
@@ -38,7 +38,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
               ) : (
                 <span
                   className={cn(
-                    "text-[14px] opacity-60 hover:opacity-90 transition-all",
+                    "text-[14px] opacity-60 hover:opacity-90 transition-all flex items-center"
                   )}
                 >
                   {item.title}
@@ -46,7 +46,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
               )}
             </li>
             {index !== items.length - 1 && (
-              <li>
+              <li className="flex items-center">
                 <span className="text-[14px] flex items-center cursor-default font-medium">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
                 </span>
               </li>
             )}
-          </>
+          </ul>
         ))}
       </ol>
     </nav>
