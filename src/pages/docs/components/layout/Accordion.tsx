@@ -25,7 +25,7 @@ const accordion = () => {
             description="The Accordion component lets users show and hide sections of related content on a page."
           />
           <DocsPreview className="h-[30rem]">
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <Accordion>
                 <AccordionHeader>What is hextastudio/ui?</AccordionHeader>
                 <AccordionContent>
