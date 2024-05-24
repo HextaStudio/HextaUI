@@ -86,7 +86,6 @@ const tabs = () => {
             component="Tabs"
             imports={["Tab, TabProvider, TabHeader, TabContent"]}
           />
-          <Table data={data} columns={columns} tableTitle="Props Information" />
           <CodeBlock
             title="Usage"
             lang="tsx"
@@ -108,6 +107,7 @@ const tabs = () => {
   </div>
 </TabProvider>`}
           />
+          <Table data={data} columns={columns} tableTitle="Props Information" />
         </main>
       </DocsLayout>
     </>
