@@ -21,7 +21,6 @@ export interface Data {
 
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const [data, setData] = useState<Data | null>(null);
 
@@ -43,19 +42,6 @@ export const Sidebar = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.matchMedia("(max-width: 900px)").matches);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
-  }, []);
 
   return (
     <>
@@ -79,8 +65,8 @@ export const Sidebar = () => {
       </div>
       <aside
         className={`z-10 fixed flex flex-col gap-2 p-10 pb-20   max-[1092px]:ml-[1.2rem] max-[600px]:ml-0 bg-black border-r-2 docs-sidebar h-full max-[900px]:fixed overflow-auto  ${
-          sidebarOpen ? "translate-x-0" : "translate-x-[-60rem] "
-        } ${!isMobile && "translate-x-[0rem]"}`}
+          sidebarOpen && "open"
+        } `}
         style={{
           borderRight: "1px solid #ffffff20",
           minWidth: "16rem",

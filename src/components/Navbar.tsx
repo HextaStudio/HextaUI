@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import logo from "../../public/hexta-studio.svg";
@@ -87,15 +87,15 @@ export const Navbar = ({ docs }: NavbarProps) => {
   return (
     <>
       <nav
-        className={`flex bg-black items-center justify-between px-10 py-4 navbar z-[9999999] fixed top-0  w-full border-b-zinc-800  ${
+        className={`flex bg-black items-center justify-between px-[1rem] py-4 navbar z-[9999999] fixed top-0  w-full border-b-zinc-800  ${
           docs && "ml-auto max-w-7xl "
         }`}
         style={{
           borderBottom: "1px solid #ffffff20",
         }}
       >
-        <div className="flex items-center gap-7 justify-between">
-          <Link href="/" className="flex items-center gap-3 max-[465px]:hidden">
+        <div className="flex items-center gap-7 max-[700px]:gap-1 justify-between">
+          <Link href="/" className="flex items-center gap-3 ">
             <Image src={logo} alt="HextaUI" width={35} height={35} />
             <span className="max-[823px]:hidden">
               <p className="font-bold">hextastudio/ui</p>
@@ -140,26 +140,21 @@ export const Navbar = ({ docs }: NavbarProps) => {
         </div>
         <div className="flex items-center gap-1">
           <Button
-            className="text-white bg-zinc-950 px-4 py-2 rounded-md relative w-[15rem] grow max-[937px]:w-[8rem] max-[700px]:w-[13rem] max-[465px]:w-[9rem] max-[329px]:w-[5rem] overflow-clip "
+            className="text-white bg-zinc-950 px-4 py-2 rounded-md relative w-[15rem] grow max-[937px]:w-[8rem] max-[700px]:w-[13rem]  overflow-clip max-[365px]:w-auto "
             onClick={toggleSearch}
           >
             <span className="text-sm font-normal text-nowrap opacity-60 flex gap-1 text-ellipsis ">
               Search
-              <span className="max-[937px]:hidden max-[700px]:block max-[465px]:hidden">
+              <span className="max-[937px]:hidden max-[700px]:block max-[330px]:hidden">
                 documentation
               </span>
+              ...
             </span>
             <kbd className="pointer-events-none absolute right-[0.3rem]  top-1/2 -translate-y-1/2 hidden h-5 select-none items-center gap-1 rounded border  px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex text-white bg-zinc-900 border-opacity-5 border-white">
               <span className="text-xs">⌘</span>K
             </kbd>
           </Button>
-          <Link
-            href="https://github.com/hextastudio/hextaui"
-            className="p-2 rounded hover:bg-white hover:bg-opacity-10 transition-all duration-[0.2s]"
-            target="_blank"
-          >
-            <FaGithub size={17} />
-          </Link>
+
           <Link
             href="https://x.com/preetsuthar17"
             className="p-2 rounded hover:bg-white hover:bg-opacity-10 transition-all duration-[0.2s]"

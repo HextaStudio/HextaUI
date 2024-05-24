@@ -255,6 +255,10 @@ pre {
 .docs-sidebar {
   background-color: black;
   z-index: 99999;
+  transform: translateX(0rem);
+  @media screen and (max-width:900px) {
+    transform: translateX(-60rem);
+  }
   &::-webkit-scrollbar {
     background: black;
     width: 5px;
@@ -263,9 +267,10 @@ pre {
     border-radius: 10rem;
     background-color: #18181b;
   }
-  @media screen and (max-width: 900px) {
-    width: 20rem;
-  }
+
+}
+.docs-sidebar.open{
+  transform: translate(0);
 }
 
 .footer-div {
