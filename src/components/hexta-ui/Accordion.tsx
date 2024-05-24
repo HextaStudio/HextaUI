@@ -39,7 +39,7 @@ export const Accordion: React.FC<AccordionProps> = ({
         className="flex items-center justify-between px-4 py-2 overflow-hidden cursor-pointer hover:underline gap-4 grow"
         onClick={toggleAccordion}
       >
-        <p>{childrenArray[0]}</p>
+        <div>{childrenArray[0]}</div>
         <span className="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,5 +95,5 @@ interface AccordionContentProps {
 
 export const AccordionContent: React.FC<AccordionContentProps> = ({
   children,
-  className
+  className,
 }) => <div className={cn(className)}>{children}</div>;
