@@ -3,6 +3,7 @@ import { Input } from "../hexta-ui/Input";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { Loader } from "../hexta-ui/Loader";
+import { Skeleton } from "../hexta-ui/Skeleton";
 
 export interface Item {
   name: string;
@@ -57,13 +58,13 @@ export const Search: React.FC = () => {
 
   return (
     <div className=" bg-zinc-950 rounded-md w-[90%] mx-auto flex flex-col gap-3 min-h-[15rem] max-h-[20rem] overflow-auto relative overscroll-y-contain">
-      <div className="sticky top-0 -mb-3 -translate-y-[1px]">
+      <div className="sticky top-0 -mb-3 -translate-y-[1px] z-[9999999]">
         <Input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a component..."
-          className="m-0 rounded-none  border-t-0 border-r-0 border-l-0 py-4 focus:outline-0 focus:ring-0 border-b border-b-white border-opacity-10 relative"
+          className="m-0 rounded-none  border-t-0 border-r-0 border-l-0 py-4 focus:outline-0 focus:ring-0 border-b border-b-white border-opacity-10 relative z-[9999999]"
         />
         <span className="absolute flex items-center top-1/2 -translate-y-1/2 right-6">
           <FaSearch size={15} />
@@ -71,7 +72,7 @@ export const Search: React.FC = () => {
       </div>
       <div>
         <div>
-          {filteredData ? (
+          {!filteredData ? (
             <>
               <ul className="flex flex-col -space-y-3 w-full">
                 <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
@@ -139,8 +140,13 @@ export const Search: React.FC = () => {
               </ul>
             </>
           ) : (
-            <div className="flex gap-3 items-center justify-center h-full min-h-[15rem] max-h-[20rem] opacity-80">
-              <Loader size={20} /> Loading...
+            <div className="flex flex-col gap-5 m-3">
+              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton width="100%" className="mx-auto" height="40px" />
             </div>
           )}
         </div>

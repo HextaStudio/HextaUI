@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Badge } from "../hexta-ui/Badge";
 import { Loader } from "../hexta-ui/Loader";
+import { Skeleton } from "../hexta-ui/Skeleton";
 
 export interface Item {
   name: string;
@@ -144,8 +145,13 @@ export const Sidebar = () => {
                 ))}
               </>
             ) : (
-              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
-                <Loader size={20} /> Loading...
+              <div className="flex flex-col gap-2">
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
               </div>
             )}
           </ul>
@@ -178,8 +184,13 @@ export const Sidebar = () => {
                 ))}
               </>
             ) : (
-              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
-                <Loader size={20} /> Loading...
+              <div className="flex flex-col gap-2">
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
               </div>
             )}
           </ul>
@@ -212,8 +223,13 @@ export const Sidebar = () => {
                 ))}
               </>
             ) : (
-              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
-                <Loader size={20} /> Loading...
+              <div className="flex flex-col gap-2">
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
               </div>
             )}
           </ul>
@@ -246,8 +262,13 @@ export const Sidebar = () => {
                 ))}
               </>
             ) : (
-              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
-                <Loader size={20} /> Loading...
+              <div className="flex flex-col gap-2">
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
+                <Skeleton width="100%" height="20px" />
               </div>
             )}
           </ul>
