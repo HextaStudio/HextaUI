@@ -72,7 +72,7 @@ export const Search: React.FC = () => {
       </div>
       <div>
         <div>
-          {!filteredData ? (
+          {filteredData ? (
             <>
               <ul className="flex flex-col -space-y-3 w-full">
                 <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
