@@ -85,7 +85,7 @@ export const Menu = ({
 
 interface MenuItemProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 export const MenuItem = ({
