@@ -18,9 +18,9 @@ export const InstallationSteps = ({
     return components
       .map(
         (component, index) =>
-          `import { ${imports[index]} } from "${capitalizeFirstLetter(
-            component
-          )}";`
+          `import { ${
+            imports[index]
+          } } from "@/components/hexta-ui/${capitalizeFirstLetter(component)}";`
       )
       .join("\n");
   };
