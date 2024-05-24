@@ -86,7 +86,7 @@ export const PostCard = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col gap-6">
           <p className="whitespace-pre-wrap">
             HextaUI - Gorgeous web components without any efforts! ✨<br />
             <br />
