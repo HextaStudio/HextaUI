@@ -35,7 +35,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         onChange={onChange}
         placeholder={placeholder}
         className={cn(
-          "flex px-4 py-3 bg-zinc-950 my-4 text-sm rounded-lg focus:outline-none border border-white border-opacity-10 focus:border-opacity-30 focus:outline-2 ",
+          "w-full flex px-4 py-2 bg-zinc-950 my-4 text-sm rounded-lg focus:outline-none border border-white border-opacity-10 focus:ring-white focus:ring-1",
           className
         )}
         ref={ref}
