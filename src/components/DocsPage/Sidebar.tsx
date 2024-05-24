@@ -101,6 +101,16 @@ export const Sidebar = () => {
                 @preetsuthar17
               </Link>
             </li>
+            <li>
+              <span className="text-sm opacity-90">🙏 Support </span>
+              <Link
+                className="text-sm blue-link w-fit"
+                href="https://donate.stripe.com/fZeaGJeU23Cn9u8288"
+                target="_blank"
+              >
+                hextastudio/ui
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="sidebar-section">
