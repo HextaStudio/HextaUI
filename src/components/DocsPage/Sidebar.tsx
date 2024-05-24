@@ -1,186 +1,41 @@
 import Link from "next/link";
-import React, { useState, useEffect, useRef, RefObject } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { Badge } from "../hexta-ui/Badge";
 
-import { Input } from "../hexta-ui/Input";
+export interface Item {
+  name: string;
+  url: string;
+  type: string;
+  new: string;
+}
 
-const layoutComponentLinks = [
-  {
-    name: "Badge",
-    hidden: false,
-  },
-  {
-    name: "Accordion",
-    hidden: false,
-    new: true,
-  },
-  {
-    name: "Input OTP",
-    new: true,
-    hidden: false,
-  },
-  {
-    name: "Input",
-    hidden: false,
-  },
-  {
-    name: "TreeView",
-    new: true,
-    hidden: false,
-  },
-  {
-    name: "Checkbox",
-    hidden: false,
-  },
-  {
-    name: "Date Picker",
-    hidden: false,
-  },
-
-  {
-    name: "Tabs",
-    hidden: false,
-  },
-  {
-    name: "Card",
-    hidden: false,
-  },
-  {
-    name: "Stepper",
-    hidden: false,
-  },
-  {
-    name: "Progress Bar",
-    hidden: false,
-  },
-  {
-    name: "Slider",
-    hidden: false,
-  },
-  {
-    name: "Select",
-    hidden: false,
-  },
-  {
-    name: "File Upload",
-    hidden: false,
-  },
-  {
-    name: "Button",
-    hidden: false,
-  },
-  {
-    name: "Table",
-    hidden: false,
-  },
-  {
-    name: "Avatar",
-    hidden: false,
-  },
-  {
-    name: "Loader",
-    hidden: false,
-  },
-  {
-    name: "Toast",
-    hidden: false,
-  },
-  {
-    name: "Menu",
-    hidden: false,
-  },
-  {
-    name: "Toggle",
-    hidden: false,
-  },
-  {
-    name: "Tooltip",
-    hidden: false,
-  },
-
-  {
-    name: "Alert Dialog",
-    hidden: false,
-  },
-  {
-    name: "Breadcrumb",
-    hidden: false,
-  },
-].sort();
-
-const getStartedLinks = [
-  {
-    name: "Install Next.js",
-    url: "install-next",
-  },
-  {
-    name: "CLI",
-    url: "install-hexta-ui",
-  },
-  {
-    name: "Install Tailwind CSS",
-    url: "install-tailwind",
-  },
-  {
-    name: "Install GSAP",
-    url: "install-gsap",
-  },
-  {
-    name: "Install Framer Motion",
-    url: "install-framer-motion",
-  },
-];
-
-const templateComponentsLinks = [
-  {
-    name: "Startup (SaaS)",
-    url: "startup-saas",
-    new: false,
-  },
-  {
-    name: "Portfolio v1",
-    url: "portfolio-v1",
-    new: false,
-  },
-];
-
-const exampleComponentsLinks = [
-  {
-    name: "Pricing Cards",
-    new: false,
-    hidden: false,
-  },
-  {
-    name: "Features Section",
-    new: true,
-    hidden: false,
-  },
-  {
-    name: "Registration Form",
-    new: true,
-    hidden: false,
-  },
-  {
-    name: "Post Card",
-    new: false,
-    hidden: false,
-  },
-  {
-    name: "Navbar",
-    new: false,
-    hidden: false,
-  },
-];
+export interface Data {
+  components: Item[];
+  resources: Item[];
+  examples: Item[];
+  templates: Item[];
+}
 
 export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-  const searchInputRef = useRef<HTMLInputElement>(null!);
 
-  const filteredLayoutComponentLinks = layoutComponentLinks.filter((link) => {
-    return link.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+  const [data, setData] = useState<Data | null>(null);
+
+  useEffect(() => {
+    fetch("/components.json")
+      .then((response) => response.json())
+      .then((data) => {
+        for (let category in data) {
+          data[category].sort((a: { name: string }, b: { name: any }) =>
+            a.name.localeCompare(b.name)
+          );
+        }
+        setData(data);
+      });
+  }, []);
+
   const router = useRouter();
 
   const toggleSidebar = () => {
@@ -200,38 +55,6 @@ export const Sidebar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleShortcut = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-        e.preventDefault();
-        searchInputRef.current?.focus();
-      }
-    };
-
-    window.addEventListener("keydown", handleShortcut);
-
-    return () => {
-      window.removeEventListener("keydown", handleShortcut);
-    };
-  }, []);
-
-  useEffect(() => {
-    const inputElement = searchInputRef.current;
-    if (inputElement) {
-      const handleShortcut = (e: KeyboardEvent) => {
-        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-          e.preventDefault();
-          inputElement.focus();
-        }
-      };
-
-      inputElement.addEventListener("keydown", handleShortcut);
-
-      return () => {
-        inputElement.removeEventListener("keydown", handleShortcut);
-      };
-    }
-  }, []);
   return (
     <>
       <div
@@ -261,15 +84,6 @@ export const Sidebar = () => {
           minWidth: "16rem",
         }}
       >
-        {" "}
-        <Input
-          type="text"
-          placeholder="Search Components..."
-          className="m-0"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          ref={searchInputRef}
-        />
         <div
           className="absolute w-fit justify-end items-end ml-auto right-[1rem] p-[9px] cursor-pointer top-[1rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[9999999999]"
           onClick={toggleSidebar}
@@ -306,20 +120,29 @@ export const Sidebar = () => {
             Getting Started
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {getStartedLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                    router.pathname === `/docs/resources/${link.url}`
-                      ? "opacity-100"
-                      : "opacity-60"
-                  }`}
-                  href={`/docs/resources/${link.url}`}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            {data && (
+              <>
+                {data.resources.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                        router.pathname === `${item.url}`
+                          ? "opacity-100"
+                          : "opacity-60"
+                      }`}
+                      href={`${item.url}`}
+                    >
+                      {item.name}
+                      {item.new === "true" && (
+                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                          new
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </>
+            )}
           </ul>
         </div>
         <div className="sidebar-section">
@@ -327,25 +150,29 @@ export const Sidebar = () => {
             Templates (pro)
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {templateComponentsLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                    router.pathname === `/docs/templates/${link.url}`
-                      ? "opacity-100"
-                      : "opacity-60"
-                  }`}
-                  href={`/docs/templates/${link.url}`}
-                >
-                  {link.name}
-                  {link.new && (
-                    <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
-                      new
-                    </span>
-                  )}
-                </Link>
-              </li>
-            ))}
+            {data && (
+              <>
+                {data.templates.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                        router.pathname === `${item.url}`
+                          ? "opacity-100"
+                          : "opacity-60"
+                      }`}
+                      href={`${item.url}`}
+                    >
+                      {item.name}
+                      {item.new === "true" && (
+                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                          new
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </>
+            )}
           </ul>
         </div>
         <div className="sidebar-section">
@@ -353,28 +180,29 @@ export const Sidebar = () => {
             Examples
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {exampleComponentsLinks
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((link, index) => (
-                <li key={index} className={` ${link.hidden && "hidden"} `}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                      router.pathname ===
-                      `/docs/examples/${link.name.replace(" ", "")}`
-                        ? "opacity-100"
-                        : "opacity-60"
-                    }`}
-                    href={`/docs/examples/${link.name.replace(" ", "")}`}
-                  >
-                    {link.name}{" "}
-                    {link.new && (
-                      <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
-                        new
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
+            {data && (
+              <>
+                {data.examples.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                        router.pathname === `${item.url}`
+                          ? "opacity-100"
+                          : "opacity-60"
+                      }`}
+                      href={`${item.url}`}
+                    >
+                      {item.name}
+                      {item.new === "true" && (
+                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                          new
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </>
+            )}
           </ul>
         </div>
         <div className="sidebar-section">
@@ -382,31 +210,29 @@ export const Sidebar = () => {
             Components
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {filteredLayoutComponentLinks
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((link, index) => (
-                <li key={index} className={` ${link.hidden && "hidden"} `}>
-                  <Link
-                    className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                      router.pathname ===
-                      `/docs/components/layout/${link.name.replace(" ", "")}`
-                        ? "opacity-100"
-                        : "opacity-60"
-                    }`}
-                    href={`/docs/components/layout/${link.name.replace(
-                      " ",
-                      ""
-                    )}`}
-                  >
-                    {link.name}{" "}
-                    {link.new && (
-                      <span className=" bg-green-400 border border-green-900 text-black rounded-full flex items-center font-[600] text-[10px] py-[0.3px] px-[8px] decoration-none">
-                        new
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
+            {data && (
+              <>
+                {data.components.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                        router.pathname === `${item.url}`
+                          ? "opacity-100"
+                          : "opacity-60"
+                      }`}
+                      href={`${item.url}`}
+                    >
+                      {item.name}
+                      {item.new === "true" && (
+                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                          new
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </>
+            )}
           </ul>
         </div>
       </aside>

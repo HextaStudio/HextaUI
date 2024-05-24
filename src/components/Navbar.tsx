@@ -2,19 +2,68 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 
 import logo from "../../public/hexta-studio.svg";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { Menu } from "@/components/hexta-ui/Menu";
 
-interface NavbarProps {
-  docs?: boolean;
-}
 import { FaGithub, FaHome, FaRocket } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 import { BsGrid1X2Fill } from "react-icons/bs";
+import { Search } from "./utils/Search";
+import { Button } from "./hexta-ui/Button";
+import { AnimatePresence, motion } from "framer-motion";
+
+interface NavbarProps {
+  docs?: boolean;
+}
 
 export const Navbar = ({ docs }: NavbarProps) => {
+  const [showSearch, setShowSearch] = useState(false);
+  const searchRef = useRef(null!);
+
+  useEffect(() => {
+    const handleClickOutside = (event: { target: any }) => {
+      if (
+        (searchRef.current as HTMLElement) &&
+        !(searchRef.current as HTMLElement).contains(event.target)
+      ) {
+        setShowSearch(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+  };
+
+  useEffect(() => {
+    const handleShortcut = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        setShowSearch(true);
+      }
+    };
+    const handleClose = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setShowSearch(false);
+      }
+    };
+    window.addEventListener("keydown", handleClose);
+    window.addEventListener("keydown", handleShortcut);
+
+    return () => {
+      window.removeEventListener("keydown", handleShortcut);
+    };
+  }, []);
+
   const menuItems = [
     { href: "/docs/resources/install-next", label: "Docs", icon: <FaHome /> },
     {
@@ -46,14 +95,14 @@ export const Navbar = ({ docs }: NavbarProps) => {
         }}
       >
         <div className="flex items-center gap-7 justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 max-[465px]:hidden">
             <Image src={logo} alt="HextaUI" width={35} height={35} />
-            <span className="max-[650px]:hidden">
+            <span className="max-[823px]:hidden">
               <p className="font-bold">hextastudio/ui</p>
             </span>
           </Link>
           <div className="flex items-center">
-            <ul className="flex items-center justify-center text-[14px] gap-7 max-[650px]:hidden">
+            <ul className="flex items-center justify-center text-[14px] gap-7 max-[700px]:hidden">
               <li>
                 <Link
                   href="/docs/resources/install-next"
@@ -89,7 +138,21 @@ export const Navbar = ({ docs }: NavbarProps) => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
+          <Button
+            className="text-white bg-zinc-950 px-4 py-2 rounded-md relative w-[15rem] grow max-[937px]:w-[8rem] max-[700px]:w-[13rem] max-[465px]:w-[9rem] max-[329px]:w-[5rem] overflow-clip "
+            onClick={toggleSearch}
+          >
+            <span className="text-sm font-normal text-nowrap opacity-60 flex gap-1 text-ellipsis ">
+              Search
+              <span className="max-[937px]:hidden max-[700px]:block max-[465px]:hidden">
+                documentation
+              </span>
+            </span>
+            <kbd className="pointer-events-none absolute right-[0.3rem]  top-1/2 -translate-y-1/2 hidden h-5 select-none items-center gap-1 rounded border  px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex text-white bg-zinc-900 border-opacity-5 border-white">
+              <span className="text-xs">⌘</span>K
+            </kbd>
+          </Button>
           <Link
             href="https://github.com/hextastudio/hextaui"
             className="p-2 rounded hover:bg-white hover:bg-opacity-10 transition-all duration-[0.2s]"
@@ -106,7 +169,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
           </Link>
           <div className="relative">
             <button
-              className="p-2 hover:bg-white hover:bg-opacity-10 items-center justify-center transition-all  rounded hidden  max-[650px]:flex"
+              className="p-2 hover:bg-white hover:bg-opacity-10 items-center justify-center transition-all  rounded hidden  max-[700px]:flex"
               onClick={toggleMenu}
             >
               <svg
@@ -124,7 +187,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </svg>
             </button>
             <Menu
-              className="max-[650px]:flex hidden w-fit"
+              className="max-[700px]:flex hidden w-fit"
               items={menuItems}
               onOpen={toggleMenu}
               onClose={toggleMenu}
@@ -132,6 +195,26 @@ export const Navbar = ({ docs }: NavbarProps) => {
             />
           </div>
         </div>
+        {showSearch && (
+          <>
+            <div className="w-dvw h-dvw bg-black bg-opacity-40 fixed top-0 bottom-0 left-0 right-0">
+              <div className="z-[9999999999] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-black bg-opacity-90 flex items-center justify-center">
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.1, ease: "easeIn" }}
+                    ref={searchRef}
+                    className="w-full"
+                  >
+                    <Search />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+          </>
+        )}
       </nav>
     </>
   );
