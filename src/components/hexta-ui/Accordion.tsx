@@ -1,12 +1,23 @@
 import React, { useState, ReactNode } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+
+const cn = (...args: any[]) => {
+  return twMerge(clsx(args));
+};
 
 interface AccordionProps {
   children: ReactNode;
   id?: string;
+  className?: string;
 }
 
-export const Accordion: React.FC<AccordionProps> = ({ children, id }) => {
+export const Accordion: React.FC<AccordionProps> = ({
+  children,
+  id,
+  className,
+}) => {
   const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
 
   const isOpen = openAccordionId === id;
@@ -18,7 +29,12 @@ export const Accordion: React.FC<AccordionProps> = ({ children, id }) => {
   const childrenArray = Array.isArray(children) ? children : [children];
 
   return (
-    <div className="rounded shadow-sm max-w-[30rem] w-[95%] mx-auto my-2">
+    <div
+      className={cn(
+        "rounded shadow-sm max-w-[30rem] w-[95%] mx-auto my-2",
+        className
+      )}
+    >
       <div
         className="flex items-center justify-between px-4 py-2 overflow-hidden cursor-pointer hover:underline gap-4 grow"
         onClick={toggleAccordion}
@@ -64,16 +80,20 @@ export const Accordion: React.FC<AccordionProps> = ({ children, id }) => {
 
 interface AccordionHeaderProps {
   children: ReactNode;
+  className?: string;
 }
 
 export const AccordionHeader: React.FC<AccordionHeaderProps> = ({
   children,
-}) => <>{children}</>;
+  className,
+}) => <div className={cn(className)}>{children}</div>;
 
 interface AccordionContentProps {
   children: ReactNode;
+  className?: string;
 }
 
 export const AccordionContent: React.FC<AccordionContentProps> = ({
   children,
-}) => <>{children}</>;
+  className
+}) => <div className={cn(className)}>{children}</div>;
