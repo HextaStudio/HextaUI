@@ -8,21 +8,10 @@ import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const loader = () => {
   const data = [
-    {
-      propName: "variant",
-      propType: "string",
-      defaultValue: "circleLoader",
-      description: "Variant of the loader.",
-    },
-    {
-      propName: "color",
-      propType: "string",
-      defaultValue: "white",
-      description: "Color of the loader.",
-    },
     {
       propName: "size",
       propType: "number",
@@ -67,58 +56,11 @@ const loader = () => {
             title="Loader"
             description="Collection of Loaders components with different variants."
           />
-          <div>
-            <div className="flex flex-col gap-4 py-10 preview">
-              <div>
-                <h3 className="h3">preview</h3>
-                <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[13rem]">
-                  <Loader variant="circleLoader" />
-                </div>
-              </div>
-            </div>
-            <InstallationSteps component="Loader" />
-          </div>{" "}
-          <div>
-            <h3 className="h3">Basic loader</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="circleLoader" />
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<Loader variant="circleLoader" />`}
-            />
-          </div>
-          <div>
-            <h3 className="h3">Colored loader</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader variant="coloredLoader" color="indigo" />
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<Loader variant="coloredLoader" color="indigo" />`}
-            />
-          </div>
-          <div>
-            <h3 className="h3">Loader with custom size and color</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Loader
-                variant="circleLoader"
-                color="red"
-                size={40}
-                className="border-t-red-500"
-              />
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`<Loader variant="circleLoader" color="red" size={40} className="border-t-red-500"/>`}
-            />
-          </div>
+          <DocsPreview>
+            <Loader size={40} />
+          </DocsPreview>
+          <InstallationSteps component="Loader" imports="Loader" />
+          <CodeBlock lang="tsx" filename="tsx" code={`<Loader size={40} />`} />
           <div className="mt-[5rem]">
             <Table
               columns={columns}

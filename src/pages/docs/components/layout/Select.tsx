@@ -167,7 +167,7 @@ const select = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import { Option } from "@/components/hexta-ui/Select";
 
@@ -217,7 +217,7 @@ export const Home = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import { Option } from "@/components/hexta-ui/Select";
 
@@ -270,7 +270,7 @@ export const Home = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";   
 import { Option } from "@/components/hexta-ui/Select";
 
@@ -316,14 +316,14 @@ export const Home = () => {
                 {Array.isArray(selectedOption)
                   ? selectedOption.map((option) => option.label).join(", ")
                   : selectedOption
-                    ? selectedOption.label
-                    : "No option selected"}
+                  ? selectedOption.label
+                  : "No option selected"}
               </p>
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import { Option } from "@/components/hexta-ui/Select";
 
@@ -375,7 +375,7 @@ export const Home = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import { Option } from "@/components/hexta-ui/Select";
 
@@ -424,7 +424,7 @@ export const Home = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import { Option } from "@/components/hexta-ui/Select";
 

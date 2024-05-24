@@ -54,7 +54,7 @@ const tooltip = () => {
           />
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`<TooltipProvider>
   <Tooltip>
     <TooltipTrigger>

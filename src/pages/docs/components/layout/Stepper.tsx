@@ -123,7 +123,7 @@ const stepper = () => {
           </div>
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { Stepper } from "@/components/hexta-ui/Stepper";
 
 export const Home = () => {

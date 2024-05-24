@@ -1,32 +1,29 @@
-import React from "react";
+import React, {
+  useEffect,
+  useRef,
+  Children,
+  cloneElement,
+  isValidElement,
+} from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 
 const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface MenuItem {
-  label: string;
-  href: string;
-  icon?: JSX.Element;
-}
-
 interface MenuProps {
-  items: MenuItem[];
-  dividedItems?: MenuItem[];
   onOpen: () => void;
   onClose: () => void;
   isOpen: boolean;
+  children: React.ReactNode;
   className?: string;
 }
 
 export const Menu = ({
-  items,
-  dividedItems,
+  children,
   onOpen,
   onClose,
   isOpen,
@@ -47,6 +44,7 @@ export const Menu = ({
       };
     }
   }, [onClose]);
+
   return (
     <div className="relative" ref={node}>
       <AnimatePresence>
@@ -58,7 +56,7 @@ export const Menu = ({
             transition={{ duration: 0.2, ease: "anticipate" }}
             className={cn(
               "absolute right-0 w-48 mt-2 border border-white border-opacity-10 rounded-lg shadow-lg bg-zinc-950 ring-1 ring-black ring-opacity-5",
-              className,
+              className
             )}
           >
             <div
@@ -67,36 +65,39 @@ export const Menu = ({
               aria-orientation="vertical"
               aria-labelledby="options-menu"
             >
-              {items.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="px-4 py-2 mx-2 text-[14px] font-medium transition-all rounded hover:bg-zinc-800 flex items-center gap-3"
-                  role="menuitem"
-                >
-                  {item.icon}
-                  {item.label}
-                </Link>
-              ))}
-              {dividedItems && dividedItems.length > 0 && (
-                <hr className="opacity-30" />
-              )}
-              {dividedItems &&
-                dividedItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="px-4 py-2 mx-2 text-[14px] font-medium transition-all rounded hover:bg-zinc-800 flex items-center gap-3"
-                    role="menuitem"
-                  >
-                    {item.icon}
-                    {item.label}
-                  </Link>
-                ))}
+              {Children.map(children, (child, index) => {
+                if (isValidElement(child) && child.type === MenuItem) {
+                  return cloneElement(child, { key: index });
+                } else if (
+                  isValidElement(child) &&
+                  child.type === MenuDivider
+                ) {
+                  return cloneElement(child, { key: index });
+                }
+                return null;
+              })}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
+};
+
+interface MenuItemProps {
+  children: React.ReactNode;
+}
+
+export const MenuItem = ({
+  children,
+}: React.PropsWithChildren<MenuItemProps>) => {
+  return (
+    <div className="px-4 py-2 mx-2 text-[14px] font-medium transition-all rounded hover:bg-zinc-800 flex items-center gap-3">
+      {children}
+    </div>
+  );
+};
+
+export const MenuDivider = () => {
+  return <hr className="opacity-30" />;
 };

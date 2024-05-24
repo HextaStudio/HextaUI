@@ -96,7 +96,7 @@ const treeview = () => {
           <CodeBlock
             lang="tsx"
             title="Usage"
-            filename="Home.tsx"
+            filename="tsx"
             code={`<TreeView>
   <TreeHeader id="1" title="src">
     <TreeHeader id="2" title="components">

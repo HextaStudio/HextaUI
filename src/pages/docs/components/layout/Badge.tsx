@@ -99,137 +99,83 @@ const badge = () => {
             description="Collection of multiple badges/chips with multiple variants."
           />
           <DocsPreview>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-              <Badge>Latest version</Badge>
-            </div>
+            <Badge>Latest version</Badge>
           </DocsPreview>
           <InstallationSteps component="badge" />
-          <div className="installation">
-            <div>
-              <h3 className="h3">Basic Badge</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <Badge>Latest version</Badge>
-              </div>
-              <h3 className="h3">Usage</h3>
+          <DocsPreview>
+            <Badge>Latest version</Badge>
+            <DocsPreview>
               <CodeBlock
                 lang="tsx"
-                filename="Home.tsx"
+                filename="tsx"
                 code={`<Badge>Latest version</Badge>`}
               />
+            </DocsPreview>
+            <Badge variant="info" outlined>
+              Info
+            </Badge>
+            <CodeBlock
+              lang="tsx"
+              filename="tsx"
+              code={`<Badge variant="info" outlined>Info</Badge>`}
+            />
+          </DocsPreview>
+          <DocsPreview>
+            <Badge pill icon>
+              Success
+            </Badge>
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge pill icon>Success</Badge>`}
+          />
+          <DocsPreview>
+            <Badge counter={5}>Notifications</Badge>
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge counter={5}>Notifications</Badge>`}
+          />
+          <DocsPreview>
+            <Badge variant="secondary" glowing>
+              Glowing Secondary
+            </Badge>
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge variant="secondary" glowing>Glowing Secondary</Badge>`}
+          />
+          <DocsPreview>
+            <Badge variant="primary" animated>
+              Pulsing Primary
+            </Badge>
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge variant="primary" animated>Pulsing Primary</Badge>`}
+          />
+          <DocsPreview>
+            <div className="inline-flex overflow-hidden rounded-lg">
+              <Badge segmented className="rounded-e-sm">
+                Primary
+              </Badge>
+              <Badge variant="secondary" segmented className="rounded-s-sm">
+                Secondary
+              </Badge>
             </div>
-
-            <div>
-              <h3 className="h3">Outlined Badge</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Badge variant="info" outlined>
-                    Info
-                  </Badge>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Badge variant="info" outlined>Info</Badge>`}
-              />
-            </div>
-
-            <div>
-              <h3 className="h3">Badge with Icon</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Badge pill icon>
-                    Success
-                  </Badge>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Badge pill icon>Success</Badge>`}
-              />
-            </div>
-
-            <div>
-              <h3 className="h3">Badge with Counter</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Badge counter={5}>Notifications</Badge>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Badge counter={5}>Notifications</Badge>`}
-              />
-            </div>
-
-            <div>
-              <h3 className="h3">Glowing Badge</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Badge variant="secondary" glowing>
-                    Glowing Secondary
-                  </Badge>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Badge variant="secondary" glowing>Glowing Secondary</Badge>`}
-              />
-            </div>
-
-            <div>
-              <h3 className="h3">Pulsing Animated Badge</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Badge variant="primary" animated>
-                    Pulsing Primary
-                  </Badge>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Badge variant="primary" animated>Pulsing Primary</Badge>`}
-              />
-            </div>
-
-            <div>
-              <h3 className="h3">Segmented Badge</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <div className="inline-flex overflow-hidden rounded-lg">
-                    <Badge segmented className="rounded-e-sm">
-                      Primary
-                    </Badge>
-                    <Badge
-                      variant="secondary"
-                      segmented
-                      className="rounded-s-sm"
-                    >
-                      Secondary
-                    </Badge>
-                  </div>
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<div className="inline-flex overflow-hidden rounded-lg">
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<div className="inline-flex overflow-hidden rounded-lg">
   <Badge segmented className="rounded-e-sm">Primary</Badge>
   <Badge variant="secondary" segmented className="rounded-s-sm">Secondary</Badge>
 </div>`}
-              />
-            </div>
-          </div>
+          />
           <div className="mt-[5rem]">
             <Table
               columns={columns}

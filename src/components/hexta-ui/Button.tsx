@@ -47,7 +47,7 @@ export const Button = ({
     ? twMerge("opacity-50 cursor-not-allowed")
     : "";
   const outlineClasses = outline
-    ? twMerge("bg-transparent border border-zinc-100 text-white")
+    ? twMerge("bg-transparent border border-white border-opacity-20 text-white")
     : "";
   const animatedClasses = animated
     ? twMerge("transition-all duration-[0.2s] hover:scale-105")

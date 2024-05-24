@@ -2,7 +2,7 @@ import { CodeBlock } from "./CodeBlock";
 
 interface InstallationStepsProps {
   component: any[] | string;
-  imports?: any[];
+  imports?: any[] | string;
   title?: string;
 }
 
@@ -46,7 +46,7 @@ export const InstallationSteps = ({
             Array.isArray(imports) && Array.isArray(component)
               ? generateImportStatements(component, imports)
               : `import { ${capitalizeFirstLetter(
-                  String(component)
+                  String(imports)
                 )} } from "@/components/hexta-ui/${capitalizeFirstLetter(
                   String(component)
                 )}";`

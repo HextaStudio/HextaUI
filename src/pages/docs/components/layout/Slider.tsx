@@ -111,7 +111,7 @@ const slider = () => {
           </div>
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
 
 export const Home = () => {

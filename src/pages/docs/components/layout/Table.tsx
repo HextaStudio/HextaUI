@@ -101,7 +101,7 @@ const table = () => {
             <h3 className="h3">Usage</h3>
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`export const Home = () => {
     const data = [
         { id: 1, name: "Whiskers", age: 2 },

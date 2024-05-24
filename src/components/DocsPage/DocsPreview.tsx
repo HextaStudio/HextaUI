@@ -8,15 +8,20 @@ const cn = (...args: any[]) => {
 interface DocsPreviewProps {
   children: React.ReactNode;
   className?: string;
+  title?: string;
 }
 
-export const DocsPreview = ({ children, className }: DocsPreviewProps) => {
+export const DocsPreview = ({
+  children,
+  className,
+  title = "Preview",
+}: DocsPreviewProps) => {
   return (
     <>
       <div>
         <div className="flex flex-col gap-4 py-10 preview">
           <div>
-            <h3 className="text-2xl font-bold">Preview</h3>
+            {title && <h3 className="text-2xl font-bold">{title}</h3>}
             <div
               className={cn(
                 "relative flex items-center justify-center my-3  flex-col  overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container min-h-[15rem]",

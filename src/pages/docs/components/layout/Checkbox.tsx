@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/hexta-ui/Checkbox";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -73,29 +74,18 @@ const checkbox = () => {
             title="Checkbox"
             description="Checkboxes allow the user to select one or more items from a set."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Checkbox
-                checked={checked}
-                onChange={(e) => setChecked(e.target.checked)}
-                label="Accept Terms and Conditions"
-              />
-            </div>
-          </div>
+          <DocsPreview title="Preview">
+            <Checkbox
+              checked={checked}
+              onChange={(e) => setChecked(e.target.checked)}
+              label="Accept Terms and Conditions"
+            />
+          </DocsPreview>
           <InstallationSteps component="Checkbox" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Checkbox</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <Checkbox
-                checked={checked}
-                onChange={(e) => setChecked(e.target.checked)}
-                label="Accept Terms and Conditions"
-              />
-            </div>
-          </div>
+
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { useState } from "react";
 import { Checkbox } from "@/components/hexta-ui/Checkbox";
 

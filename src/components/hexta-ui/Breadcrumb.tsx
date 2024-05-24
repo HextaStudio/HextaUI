@@ -7,64 +7,61 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface BreadcrumbItem {
-  title: string;
-  href?: string;
-  active?: boolean;
-}
+export const BreadcrumbLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <Link
+    href={href}
+    className={cn(
+      "text-[14px] opacity-60 hover:opacity-90 transition-all cursor-pointer flex items-center font-medium"
+    )}
+  >
+    {children}
+  </Link>
+);
 
-interface BreadcrumbProps {
-  items: BreadcrumbItem[];
-}
+export const BreadcrumbPage = ({ children }: { children: React.ReactNode }) => (
+  <span
+    className={cn(
+      "text-[14px] opacity-100 transition-all flex items-center font-medium"
+    )}
+  >
+    {children}
+  </span>
+);
 
-export const Breadcrumb = ({ items }: BreadcrumbProps) => {
+export const BreadcrumbSeparator = () => (
+  <span className="text-[14px] flex items-center cursor-default font-medium">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"
+      />
+    </svg>
+  </span>
+);
+
+export const BreadcrumbItem = ({ children }: { children: React.ReactNode }) => (
+  <li className="flex items-center">{children}</li>
+);
+
+export const BreadcrumbList = ({ children }: { children: React.ReactNode }) => (
+  <ol className="flex flex-wrap items-center gap-2">{children}</ol>
+);
+
+export const Breadcrumb = ({ children }: { children: React.ReactNode }) => {
   return (
     <nav className="flex" aria-label="Breadcrumb">
-      <ol className="flex flex-wrap items-center gap-2">
-        {items.map((item, index) => (
-          <ul key={index} className="flex flex-wrap items-center gap-2">
-            <li className="flex items-center">
-              {item.href ? (
-                <Link
-                  href={item.href}
-                  className={cn(
-                    `text-[14px] opacity-60 hover:opacity-90 transition-all cursor-pointer flex items-center  font-medium ${
-                      item.active && "opacity-100"
-                    }`
-                  )}
-                >
-                  {item.title}
-                </Link>
-              ) : (
-                <span
-                  className={cn(
-                    "text-[14px] opacity-60 hover:opacity-90 transition-all flex items-center"
-                  )}
-                >
-                  {item.title}
-                </span>
-              )}
-            </li>
-            {index !== items.length - 1 && (
-              <li className="flex items-center">
-                <span className="text-[14px] flex items-center cursor-default font-medium">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"
-                    />
-                  </svg>
-                </span>
-              </li>
-            )}
-          </ul>
-        ))}
-      </ol>
+      {children}
     </nav>
   );
 };

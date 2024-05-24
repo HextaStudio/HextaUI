@@ -101,7 +101,7 @@ const toast = () => {
           <div className="installation">
             <CodeBlock
               lang="tsx"
-              filename="Home.tsx"
+              filename="tsx"
               code={`import { useState } from "react";
 import Toast from "@/components/hexta-ui/Toast";
 

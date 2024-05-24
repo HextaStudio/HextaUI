@@ -4,9 +4,9 @@ import Link from "next/link";
 import logo from "../../public/hexta-studio.svg";
 import { useState, useEffect, useRef } from "react";
 
-import { Menu } from "@/components/hexta-ui/Menu";
+import { Menu, MenuItem, MenuDivider } from "@/components/hexta-ui/Menu";
 
-import { FaGithub, FaHome, FaRocket } from "react-icons/fa";
+import { FaDonate, FaGithub, FaHome, FaRocket } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 import { BsGrid1X2Fill } from "react-icons/bs";
@@ -183,11 +183,54 @@ export const Navbar = ({ docs }: NavbarProps) => {
             </button>
             <Menu
               className="max-[700px]:flex hidden w-fit"
-              items={menuItems}
               onOpen={toggleMenu}
               onClose={toggleMenu}
               isOpen={menuOpen}
-            />
+            >
+              <MenuItem>
+                <Link
+                  href="/"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaHome /> Home
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/docs/components/layout/Accordion"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <BsGrid1X2Fill /> Components
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/docs/examples/Navbar"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaRocket /> Examples
+                </Link>
+              </MenuItem>
+              <MenuDivider />
+              <MenuItem>
+                <Link
+                  href="https://github.com/hextastudio/hextaui"
+                  target="_blank"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaGithub /> GitHub
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="https://donate.stripe.com/fZeaGJeU23Cn9u8288"
+                  target="_blank"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaDonate /> Support Us
+                </Link>
+              </MenuItem>
+            </Menu>
           </div>
         </div>
         {showSearch && (

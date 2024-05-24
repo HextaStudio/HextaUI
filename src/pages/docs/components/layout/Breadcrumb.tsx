@@ -2,7 +2,14 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
 
-import { Breadcrumb } from "@/components/hexta-ui/Breadcrumb";
+import {
+  Breadcrumb,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbItem,
+} from "@/components/hexta-ui/Breadcrumb";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
@@ -59,45 +66,48 @@ const breadcrumb = () => {
             title="Breadcrumb"
             description="Displays the path to the current resource using a hierarchy of links."
           />
-
           <DocsPreview>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <Breadcrumb items={items} />
-            </div>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
           </DocsPreview>
-          <InstallationSteps component="Breadcrumb" />
-          <div>
-            <h3 className="h3">Breadcrumb</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem] text-center">
-              <div>
-                <Breadcrumb items={items} />
-              </div>
-            </div>
-            <h3 className="h3">Usage</h3>
-            <CodeBlock
-              lang="tsx"
-              filename="Home.tsx"
-              code={`
-import { Breadcrumb } from "@/components/hexta-ui/Breadcrumb";
-
-
-export const Home = () => {
-  const items = [
-    { title: "Home", href: "#" },
-    { title: "Docs", href: "#" },
-    { title: "Components", href: "#" },
-    { title: "Layout", href: "#" },
-    { title: "Breadcrumb", href: "#", active: true },
-  ];
-  
-  return (
-    <>
-      <Breadcrumb items={items} />
-    </>
-  );
-}`}
-            />
-          </div>
+          <InstallationSteps
+            component="Breadcrumb"
+            imports={[
+              "Breadcrumb, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbItem",
+            ]}
+          />
+          <CodeBlock
+            lang="tsx"
+            filename="tsx"
+            code={`<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>`}
+          />
           <div className="mt-[5rem]">
             <Table
               columns={columns}

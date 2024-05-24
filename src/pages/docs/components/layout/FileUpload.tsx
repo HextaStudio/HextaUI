@@ -9,6 +9,7 @@ import { FileUpload } from "@/components/hexta-ui/FileUpload";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -67,28 +68,17 @@ const fileupload = () => {
             title="File Upload"
             description="File upload allows users to upload files."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <FileUpload onChange={handleFileChange} multiple accept="image/*">
-                Drop or Click Upload Images
-              </FileUpload>
-            </div>
-          </div>
-          <InstallationSteps component="FileUpload" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">File Upload</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <FileUpload onChange={handleFileChange} multiple accept="image/*">
-                Drop or Click Upload Images
-              </FileUpload>
-            </div>
-          </div>
+          <DocsPreview>
+            <FileUpload onChange={handleFileChange} multiple accept="image/*">
+              Drop or Click Upload Images
+            </FileUpload>
+          </DocsPreview>
+          <InstallationSteps component="FileUpload" imports="FileUpload" />
+
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
-            code={`import { FileUpload } from "@/components/hexta-ui/FileUpload";
-
-export const Home = () => {
+            filename="tsx"
+            code={`export const Home = () => {
   
   const handleFileChange = (e: { target: { files: any } }) => {
     console.log(e.target.files);

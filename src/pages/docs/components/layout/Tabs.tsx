@@ -272,7 +272,7 @@ const tabs = () => {
           <CodeBlock
             title="Usage"
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`<TabProvider defaultActiveTab="1">
   <div className="flex flex-col space-y-4">
     <div className="flex gap-1 bg-zinc-950  rounded-md p-1">

@@ -228,7 +228,7 @@ export const PricingCard = ({
           <CodeBlock
             lang="tsx"
             title="Usage"
-            filename="Home.tsx"
+            filename="tsx"
             code={`<div className="flex flex-row flex-wrap min-h-[30rem] p-2 items-end">
     <PricingCard
         title="Basic"

@@ -73,7 +73,7 @@ const toggle = () => {
           <InstallationSteps component="Toggle" />
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { useState } from "react";
 
 export const Home = () => {

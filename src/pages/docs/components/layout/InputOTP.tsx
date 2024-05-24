@@ -45,10 +45,10 @@ const otp = () => {
               <OTP setValue={handleOTPChange} />
             </div>
           </div>
-          <InstallationSteps component="InputOTP" />
+          <InstallationSteps component="InputOTP" imports="InputOTP" />
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { useState } from "react";
           
 export const Home = () => {

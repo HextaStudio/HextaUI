@@ -78,75 +78,62 @@ const avatar = () => {
             <Avatar avatarUrl="https://placeholder.co/80" size={80} />
           </DocsPreview>
           <InstallationSteps component="Avatar" />
-          <div className="installation">
-            <div>
-              <h3 className="h3">Preview</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <Avatar avatarUrl="https://placeholder.co/80" size={80} />
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Avatar avatarUrl="/path/to/avatar.jpg" />`}
+          <DocsPreview>
+            <Avatar avatarUrl="https://placeholder.co/80" size={80} />
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            title="Usage"
+            filename="tsx"
+            code={`<Avatar avatarUrl="/path/to/avatar.jpg" />`}
+          />
+          <DocsPreview>
+            <div className="flex gap-4 ">
+              <Avatar
+                variant="withStatus"
+                avatarUrl="https://placeholder.co/80"
+                size={80}
+              />
+              <Avatar
+                variant="withStatus"
+                avatarUrl="https://placeholder.co/80"
+                size={80}
+                offline
               />
             </div>
-
-            <div>
-              <h3 className="h3">Preview</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Avatar
-                    variant="withStatus"
-                    avatarUrl="https://placeholder.co/80"
-                    size={80}
-                  />
-                  <Avatar
-                    variant="withStatus"
-                    avatarUrl="https://placeholder.co/80"
-                    size={80}
-                    offline
-                  />
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={`<Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} />
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            title="Usage"
+            filename="tsx"
+            code={`<Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} />
 
                 
 <Avatar variant="withStatus" avatarUrl="https://placeholder.co/80" size={80} offline/>`}
+          />
+          <DocsPreview>
+            <div className="flex gap-4 ">
+              <Avatar
+                variant="withBadge"
+                avatarUrl="https://placeholder.co/80"
+                size={80}
+                badgeNumber={5}
               />
             </div>
-
-            <div>
-              <h3 className="h3">Preview</h3>
-              <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[15rem]">
-                <div className="flex gap-4 ">
-                  <Avatar
-                    variant="withBadge"
-                    avatarUrl="https://placeholder.co/80"
-                    size={80}
-                    badgeNumber={5}
-                  />
-                </div>
-              </div>
-              <h3 className="h3">Usage</h3>
-              <CodeBlock
-                lang="tsx"
-                filename="Home.tsx"
-                code={` <Avatar variant="withBadge" avatarUrl="https://placeholder.co/80" size={80} badgeNumber={5} />`}
-              />
-            </div>
-          </div>
+          </DocsPreview>
+          <CodeBlock
+            lang="tsx"
+            title="Usage"
+            filename="tsx"
+            code={` <Avatar variant="withBadge" avatarUrl="https://placeholder.co/80" size={80} badgeNumber={5} />`}
+          />
           <div className="mt-[5rem]">
             <Table
               columns={columns}
               data={data}
               tableTitle="Props Information"
             />
-          </div>{" "}
+          </div>
         </main>
       </DocsLayout>
     </>

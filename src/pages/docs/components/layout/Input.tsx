@@ -74,13 +74,12 @@ const input = () => {
               placeholder="Enter your name..."
             />
           </DocsPreview>
-          <InstallationSteps component="Input" />
+          <InstallationSteps component="Input" imports="Input" />
 
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { useState } from "react";
-import { Input } from "@/components/hexta-ui/Input";
 
 export const Home = () => {
     const [value, setValue] = useState("");

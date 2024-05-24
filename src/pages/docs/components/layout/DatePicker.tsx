@@ -10,6 +10,7 @@ import { Datepicker } from "@/components/hexta-ui/Datepicker";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -72,33 +73,19 @@ const datepicker = () => {
             title="Date Picker"
             description="The Date Picker component lets users select a date."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-start justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem]">
-              <div className="flex flex-col gap-1">
-                <Datepicker value={selectedDate} onChange={handleDateChange} />
-                <p className="text-sm text-center opacity-80">
-                  Selected Date:{" "}
-                  {selectedDate ? format(selectedDate, "dd/MM/yyyy") : "None"}
-                </p>
-              </div>
+          <DocsPreview className="h-[30rem] items-center justify-start">
+            <div className="flex flex-col gap-1">
+              <Datepicker value={selectedDate} onChange={handleDateChange} />
+              <p className="text-sm text-center opacity-80">
+                Selected Date:{" "}
+                {selectedDate ? format(selectedDate, "dd/MM/yyyy") : "None"}
+              </p>
             </div>
-          </div>
-          <InstallationSteps component="Datepicker" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Datepicker</h3>
-            <div className="relative flex items-start justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem]">
-              <div className="flex flex-col gap-1">
-                <Datepicker value={selectedDate} onChange={handleDateChange} />
-                <p className="text-sm text-center opacity-80">
-                  Selected Date:{" "}
-                  {selectedDate ? format(selectedDate, "dd/MM/yyyy") : "None"}
-                </p>
-              </div>
-            </div>
-          </div>
+          </DocsPreview>
+          <InstallationSteps component="Datepicker" imports={["Datepicker"]} />
           <CodeBlock
             lang="tsx"
-            filename="Home.tsx"
+            filename="tsx"
             code={`import { useState } from "react";
 import { Datepicker } from "@/components/hexta-ui/Datepicker";
 
