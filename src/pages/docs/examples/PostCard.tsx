@@ -4,7 +4,7 @@ import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 import { Avatar } from "@/components/hexta-ui/Avatar";
-import { Menu } from "@/components/hexta-ui/Menu";
+import { Menu, MenuItem } from "@/components/hexta-ui/Menu";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
@@ -15,11 +15,9 @@ import Image from "next/legacy/image";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
+import Link from "next/link";
 
 export const PostCard = () => {
-  const menuItems = [
-    { href: "#", label: "Share post", icon: <FaRegPaperPlane /> },
-  ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [liked, setLiked] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
@@ -78,12 +76,16 @@ export const PostCard = () => {
                 />
               </svg>
             </button>
-            <Menu
-              items={menuItems}
-              onOpen={toggleMenu}
-              onClose={toggleMenu}
-              isOpen={menuOpen}
-            />
+            <Menu onOpen={toggleMenu} onClose={toggleMenu} isOpen={menuOpen}>
+              <MenuItem>
+                <Link
+                  href="#"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaRegPaperPlane /> Share Post
+                </Link>
+              </MenuItem>
+            </Menu>
           </div>
         </div>
         <div className="flex flex-col gap-6">
@@ -138,7 +140,7 @@ const postcard = () => {
   return (
     <>
       <DocsSEO
-        title="Post Card - HextaUI ✨"
+        title="Post Card - hextastudio/ui"
         description="An Example card component of social media post."
         image="https://i.imgur.com/EWt5cSf.png"
       />
@@ -155,7 +157,7 @@ const postcard = () => {
           <InstallationSteps
             title="Complete Code"
             component={["Avatar", "Menu"]}
-            imports={["Avatar", "Menu"]}
+            imports={["Avatar", "Menu, MenuItem"]}
           />
           <CodeBlock
             filename="PostCard.tsx"
@@ -168,12 +170,9 @@ import { FaBookmark } from "react-icons/fa";
             
 import Image from "next/legacy/image";
 import { useState } from "react";
-
+import Link from "next/link";
 
 export const PostCard = () => {
-  const menuItems = [
-    { href: "#", label: "Share post", icon: <FaRegPaperPlane /> },
-  ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [liked, setLiked] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
@@ -232,15 +231,19 @@ export const PostCard = () => {
                 />
               </svg>
             </button>
-            <Menu
-              items={menuItems}
-              onOpen={toggleMenu}
-              onClose={toggleMenu}
-              isOpen={menuOpen}
-            />
+            <Menu onOpen={toggleMenu} onClose={toggleMenu} isOpen={menuOpen}>
+              <MenuItem>
+                <Link
+                  href="#"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaRegPaperPlane /> Share Post
+                </Link>
+              </MenuItem>
+            </Menu>
           </div>
         </div>
-        <div>
+        <div className="flex flex-col gap-6">
           <p className="whitespace-pre-wrap">
             HextaUI - Gorgeous web components without any efforts! ✨<br />
             <br />

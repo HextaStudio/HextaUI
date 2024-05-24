@@ -234,7 +234,7 @@ const tabs = () => {
   return (
     <>
       <DocsSEO
-        title="Tabs - HextaUI ✨"
+        title="Tabs - hextastudio/ui"
         description="Tabs allows users to navigate between different sections of a component"
         image="https://i.imgur.com/GCHQpRl.png"
       />

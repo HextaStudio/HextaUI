@@ -30,7 +30,7 @@ const alertdialog = () => {
   return (
     <>
       <DocsSEO
-        title="Alert Dialog - HextaUI ✨"
+        title="Alert Dialog - hextastudio/ui"
         description="A modal dialog that interrupts the user with important content and expects a response."
         image="https://i.imgur.com/KKUqpjL.png"
       />

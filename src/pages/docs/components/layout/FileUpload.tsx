@@ -58,7 +58,7 @@ const fileupload = () => {
   return (
     <>
       <DocsSEO
-        title="File Upload - HextaUI ✨"
+        title="File Upload - hextastudio/ui"
         description="File upload allows users to upload files."
         image="https://i.imgur.com/TTpD2Jr.png"
       />

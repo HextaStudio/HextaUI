@@ -197,7 +197,7 @@ const registrationform = () => {
   return (
     <>
       <DocsSEO
-        title="Registration Form - HextaUI ✨"
+        title="Registration Form - hextastudio/ui"
         description="A login and signup form example with Tabs."
         image="https://i.imgur.com/ZLF7nOH.png"
       />

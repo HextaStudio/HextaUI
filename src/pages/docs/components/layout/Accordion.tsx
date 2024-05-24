@@ -14,7 +14,7 @@ const accordion = () => {
   return (
     <>
       <DocsSEO
-        title="Accordion - HextaUI ✨"
+        title="Accordion - hextastudio/ui"
         description="The Accordion component lets users show and hide sections of related content on a page."
         image="https://i.imgur.com/qDyvQBa.png"
       />

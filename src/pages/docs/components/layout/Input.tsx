@@ -57,7 +57,7 @@ const input = () => {
   return (
     <>
       <DocsSEO
-        title="Input - HextaUI ✨"
+        title="Input - hextastudio/ui"
         description="Collection of Input components with different variants."
         image="https://i.imgur.com/znkNh7x.png"
       />

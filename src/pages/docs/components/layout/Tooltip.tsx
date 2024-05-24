@@ -19,7 +19,7 @@ const tooltip = () => {
   return (
     <>
       <DocsSEO
-        title="Tooltip - HextaUI ✨"
+        title="Tooltip - hextastudio/ui"
         description="An awesome component to display tooltip for information."
         image="https://i.imgur.com/TQAInIK.png"
       />

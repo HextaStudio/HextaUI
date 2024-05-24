@@ -11,7 +11,7 @@ const portfolioV1 = () => {
   return (
     <>
       <DocsSEO
-        title="Portfolio v1 - HextaUI ✨"
+        title="Portfolio v1 - hextastudio/ui"
         description="Beautiful portfolio template built with Next.js, Tailwind CSS, and TypeScript."
         image="https://i.imgur.com/21NWXra.png"
       />
@@ -46,21 +46,21 @@ const portfolioV1 = () => {
                 <div className="relative flex flex-col items-center justify-center gap-4 my-3 overflow-hidden preview-container">
                   <Image
                     src="https://i.imgur.com/21NWXra.png"
-                    alt="Portfolio v1 - HextaUI ✨"
+                    alt="Portfolio v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}
                   />
                   <Image
                     src="https://i.imgur.com/nR2BtA3.png"
-                    alt="Portfolio v1 - HextaUI ✨"
+                    alt="Portfolio v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}
                   />
                   <Image
                     src="https://i.imgur.com/npQ8dCl.png"
-                    alt="Portfolio v1 - HextaUI ✨"
+                    alt="Portfolio v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}

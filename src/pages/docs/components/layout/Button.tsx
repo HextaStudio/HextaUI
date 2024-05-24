@@ -57,7 +57,7 @@ const button = () => {
   return (
     <>
       <DocsSEO
-        title="Buttons - HextaUI ✨"
+        title="Buttons - hextastudio/ui"
         description="Collection of multiple buttons with multiple variants."
         image="https://i.imgur.com/eOlyvkH.png"
       />

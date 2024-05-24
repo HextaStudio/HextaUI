@@ -119,7 +119,7 @@ const select = () => {
   return (
     <>
       <DocsSEO
-        title="Select - HextaUI ✨"
+        title="Select - hextastudio/ui"
         description="Used for collecting user provided information from a list of options."
         image="https://i.imgur.com/6lS5lCy.png"
       />

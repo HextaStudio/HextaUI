@@ -9,8 +9,8 @@ const hextaUIinstallation = () => {
   return (
     <>
       <DocsSEO
-        title="Install HextaUI - HextaUI ✨"
-        description="Elevate your projects with stunning, modern components. Simply copy and paste these responsive, beautiful elements for instant awesomeness."
+        title="Install HextaUI - hextastudio/ui"
+        description="Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source."
         image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>

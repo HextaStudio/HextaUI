@@ -64,7 +64,7 @@ const checkbox = () => {
   return (
     <>
       <DocsSEO
-        title="Checkbox - HextaUI ✨"
+        title="Checkbox - hextastudio/ui"
         description="Checkboxes allow the user to select one or more items from a set."
         image="https://i.imgur.com/iynaQcS.png"
       />

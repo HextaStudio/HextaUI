@@ -69,7 +69,7 @@ const table = () => {
   return (
     <>
       <DocsSEO
-        title="Table"
+        title="Table - hextastudio/ui"
         description="Responsive Table component used to display information in table format."
         image="https://i.imgur.com/Vd0QX6d.png"
       />

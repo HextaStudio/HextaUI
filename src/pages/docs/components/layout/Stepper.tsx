@@ -82,7 +82,7 @@ const stepper = () => {
   return (
     <>
       <DocsSEO
-        title="Stepper - HextaUI ✨"
+        title="Stepper - hextastudio/ui"
         description="Stepper is used to display progress in a linear sequence of tasks."
         image="https://i.imgur.com/2XmpMHU.png"
       />

@@ -62,7 +62,7 @@ const datepicker = () => {
   return (
     <>
       <DocsSEO
-        title="Date Picker - HextaUI ✨"
+        title="Date Picker - hextastudio/ui"
         description="The Date Picker component lets users select a date."
         image="https://i.imgur.com/nqWHqng.png"
       />

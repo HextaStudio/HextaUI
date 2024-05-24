@@ -54,7 +54,7 @@ const toggle = () => {
   return (
     <>
       <DocsSEO
-        title="Toggle - HextaUI ✨"
+        title="Toggle - hextastudio/ui"
         description="Toggle switch component with enabled and disabled state."
         image="https://i.imgur.com/L9bkOYd.png"
       />

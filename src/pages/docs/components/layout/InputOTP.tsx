@@ -30,7 +30,7 @@ const otp = () => {
   return (
     <>
       <DocsSEO
-        title="Input OTP - HextaUI ✨"
+        title="Input OTP - hextastudio/ui"
         description="An Input component for OTP."
         image="https://i.imgur.com/3RiTZRk.png"
       />

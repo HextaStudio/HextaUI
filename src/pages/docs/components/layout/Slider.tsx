@@ -69,7 +69,7 @@ const slider = () => {
   return (
     <>
       <DocsSEO
-        title="Slider - HextaUI ✨"
+        title="Slider - hextastudio/ui"
         description="Slider allows user to select a value from range of specific values."
         image="https://i.imgur.com/rkYrlmH.png"
       />

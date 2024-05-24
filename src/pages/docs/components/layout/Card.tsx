@@ -13,7 +13,7 @@ const cards = () => {
   return (
     <>
       <DocsSEO
-        title="Card - HextaUI ✨"
+        title="Card - hextastudio/ui"
         description="Collection of multiple reusable card components with props."
         image="https://i.imgur.com/5S1wN8p.png"
       />

@@ -82,7 +82,7 @@ const pricing = () => {
   return (
     <>
       <DocsSEO
-        title="Pricing Cards"
+        title="Pricing Cards - hextastudio/ui"
         description="A ready to use pricing section with modern and reponsive pricing cards."
         image="https://i.imgur.com/TQqIiSH.png"
       />

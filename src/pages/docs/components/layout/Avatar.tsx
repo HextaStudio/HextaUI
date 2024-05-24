@@ -64,7 +64,7 @@ const avatar = () => {
   return (
     <>
       <DocsSEO
-        title="Avatars - HextaUI ✨"
+        title="Avatars - hextastudio/ui"
         description="Collection of Avatar components with multiple variants."
         image="https://i.imgur.com/Wm4aBoc.png"
       />

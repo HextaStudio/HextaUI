@@ -88,7 +88,7 @@ const badge = () => {
   return (
     <>
       <DocsSEO
-        title="Badges - HextaUI ✨"
+        title="Badges - hextastudio/ui"
         description="Collection of multiple badges/chips with multiple variants."
         image="https://i.imgur.com/T4CpygK.png"
       />

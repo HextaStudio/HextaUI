@@ -66,7 +66,7 @@ const toast = () => {
   return (
     <>
       <DocsSEO
-        title="Toasts - HextaUI ✨"
+        title="Toasts - hextastudio/ui"
         description="Some awesome toasts component with different variants."
         image="https://i.imgur.com/5P0bFAB.png"
       />

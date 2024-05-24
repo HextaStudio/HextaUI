@@ -56,7 +56,7 @@ const breadcrumb = () => {
   return (
     <>
       <DocsSEO
-        title="Breadcrumb - HextaUI ✨"
+        title="Breadcrumb - hextastudio/ui"
         description="Displays the path to the current resource using a hierarchy of links."
         image="https://i.imgur.com/oDya0tl.png"
       />

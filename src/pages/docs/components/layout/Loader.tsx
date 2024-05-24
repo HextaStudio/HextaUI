@@ -46,7 +46,7 @@ const loader = () => {
   return (
     <>
       <DocsSEO
-        title="Loaders - HextaUI ✨"
+        title="Loaders - hextastudio/ui"
         description="Collection of Loaders components with different variants."
         image="https://i.imgur.com/TQAInIK.png"
       />

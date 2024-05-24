@@ -49,7 +49,7 @@ const progressbar = () => {
   return (
     <>
       <DocsSEO
-        title="Progress Bar - HextaUI ✨"
+        title="Progress Bar - hextastudio/ui"
         description="Progress Bar allows user to display progress of specific operation."
         image="https://i.imgur.com/wIeGLVv.png"
       />

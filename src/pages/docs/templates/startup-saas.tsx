@@ -11,7 +11,7 @@ const SaaSorStartup = () => {
   return (
     <>
       <DocsSEO
-        title="Startup/SaaS Template - HextaUI ✨"
+        title="Startup/SaaS Template - hextastudio/ui"
         description="Awesome and modern template for Startup or SaaS websites built with Next.js, Typescript and Tailwind CSS."
         image="https://i.imgur.com/3ntQrYF.png"
       />
@@ -46,28 +46,28 @@ const SaaSorStartup = () => {
                 <div className="relative flex flex-col items-center justify-center gap-4 my-3 overflow-hidden preview-container">
                   <Image
                     src="https://i.imgur.com/3ntQrYF.png"
-                    alt="Startup/SaaS Template v1 - HextaUI ✨"
+                    alt="Startup/SaaS Template v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}
                   />
                   <Image
                     src="https://i.imgur.com/7oa88RR.png"
-                    alt="Startup/SaaS Template v1 - HextaUI ✨"
+                    alt="Startup/SaaS Template v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}
                   />
                   <Image
                     src="https://i.imgur.com/3xY9tnA.png"
-                    alt="Startup/SaaS Template v1 - HextaUI ✨"
+                    alt="Startup/SaaS Template v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}
                   />
                   <Image
                     src="https://i.imgur.com/xGulxTb.png"
-                    alt="Startup/SaaS Template v1 - HextaUI ✨"
+                    alt="Startup/SaaS Template v1 - hextastudio/ui"
                     className="object-cover rounded-2xl"
                     width={1920}
                     height={1080}

@@ -56,7 +56,7 @@ const treeview = () => {
   return (
     <>
       <DocsSEO
-        title="TreeView - HextaUI ✨"
+        title="TreeView - hextastudio/ui"
         description="A TreeView component is used to display hierarchical data in a tree-like structure."
         image="https://i.imgur.com/dHVkUIz.png"
       />

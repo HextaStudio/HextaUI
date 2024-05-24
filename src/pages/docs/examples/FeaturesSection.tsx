@@ -37,7 +37,7 @@ export const featuresection = () => {
   return (
     <>
       <DocsSEO
-        title="Features Section - HextaUI ✨"
+        title="Features Section - hextastudio/ui"
         description="A section to showcase features of your product."
         image="https://i.imgur.com/vHHS0HQ.png"
       />

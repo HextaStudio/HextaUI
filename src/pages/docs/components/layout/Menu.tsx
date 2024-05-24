@@ -64,7 +64,7 @@ const menu = () => {
   return (
     <>
       <DocsSEO
-        title="Menu - HextaUI ✨"
+        title="Menu - hextastudio/ui"
         description="A menu component for navigation."
         image="https://i.imgur.com/oe8BqaV.png"
       />

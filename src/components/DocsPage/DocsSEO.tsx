@@ -9,7 +9,7 @@ interface DocsSEOProps {
 export const DocsSEO = ({ title, description, image }: DocsSEOProps) => {
   const titleWithOutSpace = title.replace(" ", "");
   const canonical = `https://ui.hextastudio.in/docs/components/layout/${titleWithOutSpace.replace(
-    "- HextaUI ✨",
+    "- hextastudio/ui",
     ""
   )}`;
   return (
