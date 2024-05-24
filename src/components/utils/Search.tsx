@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Input } from "../hexta-ui/Input";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
+import { Loader } from "../hexta-ui/Loader";
 
 export interface Item {
   name: string;
@@ -69,9 +70,8 @@ export const Search: React.FC = () => {
         </span>
       </div>
       <div>
-        <p></p>
         <div>
-          {filteredData && (
+          {filteredData ? (
             <>
               <ul className="flex flex-col -space-y-3 w-full">
                 <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
@@ -138,6 +138,10 @@ export const Search: React.FC = () => {
                 ))}
               </ul>
             </>
+          ) : (
+            <div className="flex gap-3 items-center justify-center h-full min-h-[15rem] max-h-[20rem] opacity-80">
+              <Loader size={20} /> Loading...
+            </div>
           )}
         </div>
       </div>

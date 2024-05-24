@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Badge } from "../hexta-ui/Badge";
+import { Loader } from "../hexta-ui/Loader";
 
 export interface Item {
   name: string;
@@ -120,7 +121,7 @@ export const Sidebar = () => {
             Getting Started
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {data && (
+            {data ? (
               <>
                 {data.resources.map((item, index) => (
                   <li key={index}>
@@ -142,6 +143,10 @@ export const Sidebar = () => {
                   </li>
                 ))}
               </>
+            ) : (
+              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
+                <Loader size={20} /> Loading...
+              </div>
             )}
           </ul>
         </div>
@@ -150,7 +155,7 @@ export const Sidebar = () => {
             Templates (pro)
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {data && (
+            {data ? (
               <>
                 {data.templates.map((item, index) => (
                   <li key={index}>
@@ -172,6 +177,10 @@ export const Sidebar = () => {
                   </li>
                 ))}
               </>
+            ) : (
+              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
+                <Loader size={20} /> Loading...
+              </div>
             )}
           </ul>
         </div>
@@ -180,7 +189,7 @@ export const Sidebar = () => {
             Examples
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {data && (
+            {data ? (
               <>
                 {data.examples.map((item, index) => (
                   <li key={index}>
@@ -202,6 +211,10 @@ export const Sidebar = () => {
                   </li>
                 ))}
               </>
+            ) : (
+              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
+                <Loader size={20} /> Loading...
+              </div>
             )}
           </ul>
         </div>
@@ -210,7 +223,7 @@ export const Sidebar = () => {
             Components
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
-            {data && (
+            {data ? (
               <>
                 {data.components.map((item, index) => (
                   <li key={index}>
@@ -232,6 +245,10 @@ export const Sidebar = () => {
                   </li>
                 ))}
               </>
+            ) : (
+              <div className="flex gap-3 items-center justify-center h-full text-sm opacity-80">
+                <Loader size={20} /> Loading...
+              </div>
             )}
           </ul>
         </div>
