@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import { useEffect, useRef, useState } from "react";
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
@@ -85,7 +85,7 @@ const photoTrailingOnMousemove = () => {
             alt="image"
             key={index}
             data-status="inactive"
-            ref={(el) => {
+            ref={(el: any) => {
               imageRefs.current[index] = el;
             }}
             className="absolute w-[20rem] rounded-xl data-[status=active]:block data-[status=inactive]:hidden"
