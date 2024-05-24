@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { NextSeo } from "next-seo";
 
 interface CardComponentProps {

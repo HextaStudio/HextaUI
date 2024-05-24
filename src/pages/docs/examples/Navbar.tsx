@@ -3,7 +3,7 @@ import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 import { FaHome, FaPhone, FaRocket, FaUser } from "react-icons/fa";
@@ -45,9 +45,9 @@ const Navbar = () => {
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75M2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8m6 4.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </button>
@@ -125,7 +125,7 @@ const navbar = () => {
             filename="Navbar.tsx"
             lang="tsx"
             code={`import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 import { FaHome, FaPhone, FaRocket, FaUser } from "react-icons/fa";
@@ -163,9 +163,9 @@ const Navbar = () => {
                 >
                   <path
                     fill="currentColor"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75M2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8m6 4.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </button>

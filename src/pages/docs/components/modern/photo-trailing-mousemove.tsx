@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import { useEffect, useRef, useState } from "react";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 import { NextSeo } from "next-seo";
@@ -65,7 +65,7 @@ const photoTrailingOnMousemove = () => {
 
     useEffect(() => {
       const isMobile = /iPhone|iPad|iPod|Android/i.test(
-        window.navigator.userAgent,
+        window.navigator.userAgent
       );
       if (isMobile) {
         setIsMobile(true);

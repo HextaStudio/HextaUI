@@ -11,7 +11,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
@@ -166,7 +166,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaRegBookmark } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
             
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 
 

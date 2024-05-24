@@ -146,7 +146,12 @@ const templateComponentsLinks = [
 
 const exampleComponentsLinks = [
   {
-    name: "PricingCards",
+    name: "Pricing Cards",
+    new: true,
+    hidden: false,
+  },
+  {
+    name: "Registration Form",
     new: true,
     hidden: false,
   },
@@ -243,7 +248,7 @@ export const Sidebar = () => {
         </svg>
       </div>
       <aside
-        className={`z-10 fixed flex flex-col gap-2 p-10 pb-20   max-[1092px]:ml-[1.9rem] max-[600px]:ml-0 bg-black border-r-2 docs-sidebar h-full max-[900px]:fixed overflow-auto  ${
+        className={`z-10 fixed flex flex-col gap-2 p-10 pb-20   max-[1092px]:ml-[1.2rem] max-[600px]:ml-0 bg-black border-r-2 docs-sidebar h-full max-[900px]:fixed overflow-auto  ${
           sidebarOpen ? "translate-x-0" : "translate-x-[-60rem] "
         } ${!isMobile && "translate-x-[0rem]"}`}
         style={{
