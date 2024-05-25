@@ -20,7 +20,7 @@ import Link from "next/link";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
-const CheckoutSection = () => {
+const BillingSection = () => {
   interface FormData {
     email: string;
     cardholderName: string;
@@ -528,18 +528,18 @@ const checkoutpage = () => {
   return (
     <>
       <DocsSEO
-        title="Checkout Page"
-        description="An example page for product checkout page."
+        title="Billing page - hextastudio/ui"
+        description="An example page for product Billing page."
         image="https://i.imgur.com/sdf0ffM.png"
       />
       <DocsLayout>
         <main>
           <DocsHeader
-            title="Checkout Page"
-            description="An example page for product checkout page."
+            title="Billing page"
+            description="An example page for product Billing page."
           />
           <DocsPreview className="min-h-[50rem] h-auto">
-            <CheckoutSection />
+            <BillingSection />
           </DocsPreview>
           <InstallationSteps
             title="Complete Code"

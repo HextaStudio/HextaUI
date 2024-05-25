@@ -171,8 +171,8 @@
       "new": "true"
     },
     {
-      "name": "Checkout Page",
-      "url": "/docs/examples/CheckoutPage",
+      "name": "Billing Page",
+      "url": "/docs/examples/BillingPage",
       "type": "example",
       "new": "true"
     }
