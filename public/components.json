@@ -169,6 +169,12 @@
       "url": "/docs/examples/RegistrationForm",
       "type": "example",
       "new": "true"
+    },
+    {
+      "name": "Checkout Page",
+      "url": "/docs/examples/CheckoutPage",
+      "type": "example",
+      "new": "true"
     }
   ],
   "templates": [

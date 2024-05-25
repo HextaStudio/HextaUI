@@ -13,6 +13,7 @@ interface InputProps {
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  name?: string;
 }
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
