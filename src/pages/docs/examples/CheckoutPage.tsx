@@ -18,6 +18,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { useState, ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const CheckoutSection = () => {
   interface FormData {
@@ -526,6 +527,11 @@ const CheckoutSection = () => {
 const checkoutpage = () => {
   return (
     <>
+      <DocsSEO
+        title="Checkout Page"
+        description="An example page for product checkout page."
+        image="https://i.imgur.com/sdf0ffM.png"
+      />
       <DocsLayout>
         <main>
           <DocsHeader
