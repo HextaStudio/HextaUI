@@ -5,7 +5,6 @@ import React, {
   cloneElement,
   isValidElement,
 } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
@@ -86,13 +85,20 @@ export const Menu = ({
 
 interface MenuItemProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 export const MenuItem = ({
   children,
+  className,
 }: React.PropsWithChildren<MenuItemProps>) => {
   return (
-    <div className="px-4 py-2 mx-2 text-[14px] font-medium transition-all rounded hover:bg-zinc-800 flex items-center gap-3">
+    <div
+      className={cn(
+        "px-4 py-2 mx-2 text-[14px] font-medium transition-all rounded hover:bg-zinc-800 flex items-center gap-3",
+        className
+      )}
+    >
       {children}
     </div>
   );
