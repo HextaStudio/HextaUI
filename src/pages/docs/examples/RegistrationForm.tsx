@@ -52,7 +52,7 @@ const Login = () => {
             <span className="text-[15px] opacity-80">Email*</span>
             <Input
               type="email"
-              className={`m-0 py-3 ${
+              className={`m-0 py-3 w-full  ${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }`}
@@ -66,7 +66,7 @@ const Login = () => {
             <div className="relative">
               <Input
                 type={`${isPasswordVisible ? "text" : "password"}`}
-                className={`m-0 py-3 ${
+                className={`m-0 py-3 w-full ${
                   warning &&
                   "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
                 } `}
@@ -134,7 +134,7 @@ const SignUp = () => {
             <span className="text-[15px] opacity-80">Username*</span>
             <Input
               type="text"
-              className={`m-0 py-3 ${
+              className={`m-0 py-3 w-full  ${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }`}
@@ -147,7 +147,7 @@ const SignUp = () => {
             <span className="text-[15px] opacity-80">Email*</span>
             <Input
               type="email"
-              className={`m-0 py-3 ${
+              className={`m-0 py-3  w-full ${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }`}
@@ -161,7 +161,7 @@ const SignUp = () => {
             <div className="relative">
               <Input
                 type={`${isPasswordVisible ? "text" : "password"}`}
-                className={`m-0 py-3 ${
+                className={`m-0 py-3 w-full  ${
                   warning &&
                   "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
                 } `}
@@ -239,11 +239,7 @@ const registrationform = () => {
             title="Login Component"
             lang="tsx"
             filename="tsx"
-            code={`import { useState } from "react";
-import { IoEyeOff } from "react-icons/io5";
-import { IoEye } from "react-icons/io5";
-            
-const Login = () => {
+            code={`const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -276,7 +272,7 @@ const Login = () => {
             <span className="text-[15px] opacity-80">Email*</span>
             <Input
               type="email"
-              className={\`m-0 py-3 \${
+              className={\`m-0 py-3 w-full  \${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }\`}
@@ -290,7 +286,7 @@ const Login = () => {
             <div className="relative">
               <Input
                 type={\`\${isPasswordVisible ? "text" : "password"}\`}
-                className={\`m-0 py-3 \${
+                className={\`m-0 py-3 w-full \${
                   warning &&
                   "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
                 } \`}
@@ -326,11 +322,7 @@ const Login = () => {
             title="SignUp Component"
             lang="tsx"
             filename="tsx"
-            code={`import { useState } from "react";
-import { IoEyeOff } from "react-icons/io5";
-import { IoEye } from "react-icons/io5";
-
-const SignUp = () => {
+            code={`const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -366,7 +358,7 @@ const SignUp = () => {
             <span className="text-[15px] opacity-80">Username*</span>
             <Input
               type="text"
-              className={\`m-0 py-3 \${
+              className={\`m-0 py-3 w-full  \${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }\`}
@@ -379,7 +371,7 @@ const SignUp = () => {
             <span className="text-[15px] opacity-80">Email*</span>
             <Input
               type="email"
-              className={\`m-0 py-3 \${
+              className={\`m-0 py-3  w-full \${
                 warning &&
                 "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
               }\`}
@@ -393,7 +385,7 @@ const SignUp = () => {
             <div className="relative">
               <Input
                 type={\`\${isPasswordVisible ? "text" : "password"}\`}
-                className={\`m-0 py-3 \${
+                className={\`m-0 py-3 w-full  \${
                   warning &&
                   "border border-opacity-70 border-red-500 focus:border-white focus:border-opacity-100"
                 } \`}
