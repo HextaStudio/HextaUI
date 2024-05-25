@@ -13,11 +13,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
-        title="- hextastudio/ui -  Gorgeous Web Components, Zero Effort"
+        title="hextastudio/ui"
         description="Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source."
         openGraph={{
           url: "https://ui.hextastudio.in",
-          title: "- hextastudio/ui -  Gorgeous Web Components, Zero Effort",
+          title: "hextastudio/ui",
           description:
             "Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source.",
           images: [
@@ -25,11 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
               url: "https://i.imgur.com/xlCPzQc.png",
               width: 1920,
               height: 1080,
-              alt: "- hextastudio/ui -  Gorgeous Web Components, Zero Effort",
+              alt: "hextastudio/ui",
               type: "image/png",
             },
           ],
-          siteName: "- hextastudio/ui -  Gorgeous Web Components, Zero Effort",
+          siteName: "hextastudio/ui",
         }}
         canonical="https://ui.hextastudio.in/"
         twitter={{
@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
           { property: "author", content: "Preet Suthar" },
           {
             name: "application-name",
-            content: "HextaUI",
+            content: "hextastudio/ui",
           },
           {
             property: "keywords",
