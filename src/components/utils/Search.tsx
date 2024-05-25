@@ -64,9 +64,9 @@ export const Search: React.FC = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a component..."
-          className="m-0 rounded-none  border-t-0 border-r-0 border-l-0 py-4 focus:outline-0 focus:ring-0 border-b border-b-white border-opacity-10 relative z-[9999999]"
+          className="w-full m-0 rounded-none  border-t-0 border-r-0 border-l-0 py-4 focus:outline-0 focus:ring-0 border-b border-b-white border-opacity-10 relative z-[999999]"
         />
-        <span className="absolute flex items-center top-1/2 -translate-y-1/2 right-6">
+        <span className="absolute flex items-center top-1/2 -translate-y-1/2 right-6  z-[9999999]">
           <FaSearch size={15} />
         </span>
       </div>
