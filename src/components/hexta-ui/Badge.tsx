@@ -1,4 +1,9 @@
 import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+const cn = (...args: any[]) => {
+  return twMerge(clsx(args));
+};
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -65,7 +70,7 @@ export const Badge = ({
     : "";
   const segmentedStyle = segmented ? "rounded-none" : "rounded-full";
 
-  const badgeClasses = clsx(
+  const badgeClasses = cn(
     baseStyle,
     variantStyles[variant],
     pillStyle,
@@ -73,12 +78,11 @@ export const Badge = ({
     counterStyle,
     glowingStyle,
     animatedStyle,
-    segmentedStyle,
-    className,
+    segmentedStyle
   );
 
   return (
-    <span className={badgeClasses} {...rest}>
+    <span className={cn(badgeClasses, className)} {...rest}>
       {icon && (
         <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
           <path
