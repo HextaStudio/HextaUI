@@ -142,12 +142,12 @@ export const Sidebar = () => {
               </>
             ) : (
               <div className="flex flex-col gap-2">
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
               </div>
             )}
           </ul>
@@ -181,12 +181,12 @@ export const Sidebar = () => {
               </>
             ) : (
               <div className="flex flex-col gap-2">
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
               </div>
             )}
           </ul>
@@ -220,12 +220,14 @@ export const Sidebar = () => {
               </>
             ) : (
               <div className="flex flex-col gap-2">
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
               </div>
             )}
           </ul>
@@ -259,12 +261,24 @@ export const Sidebar = () => {
               </>
             ) : (
               <div className="flex flex-col gap-2">
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
-                <Skeleton width="100%" height="20px" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
               </div>
             )}
           </ul>
