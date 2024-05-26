@@ -38,6 +38,7 @@ const components = [
   "Tooltip",
   "InputOTP",
   "TreeView",
+  "Notification",
 ].sort();
 
 const help = () => {
