@@ -141,12 +141,18 @@ export const Search: React.FC = () => {
             </>
           ) : (
             <div className="flex flex-col gap-5 m-3">
-              <Skeleton width="100%" className="mx-auto" height="40px" />
-              <Skeleton width="100%" className="mx-auto" height="40px" />
-              <Skeleton width="100%" className="mx-auto" height="40px" />
-              <Skeleton width="100%" className="mx-auto" height="40px" />
-              <Skeleton width="100%" className="mx-auto" height="40px" />
-              <Skeleton width="100%" className="mx-auto" height="40px" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
+              <Skeleton className="mx-auto w-full h-[40px]" />
             </div>
           )}
         </div>
