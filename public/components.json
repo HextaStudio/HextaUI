@@ -121,6 +121,12 @@
       "name": "Alert Dialog",
       "url": "/docs/components/layout/AlertDialog",
       "type": "component"
+    },
+    {
+      "name": "Notification",
+      "url": "/docs/components/layout/Notification",
+      "type": "component",
+      "new": "true"
     }
   ],
   "resources": [
