@@ -154,8 +154,7 @@
     {
       "name": "Features Section",
       "url": "/docs/examples/FeaturesSection",
-      "type": "example",
-      "new": "true"
+      "type": "example"
     },
     { "name": "Navbar", "url": "/docs/examples/Navbar", "type": "example" },
     { "name": "PostCard", "url": "/docs/examples/PostCard", "type": "example" },
@@ -173,6 +172,12 @@
     {
       "name": "Billing Page",
       "url": "/docs/examples/BillingPage",
+      "type": "example",
+      "new": "true"
+    },
+    {
+      "name": "Bento Grid",
+      "url": "/docs/examples/BentoGrid",
       "type": "example",
       "new": "true"
     }
