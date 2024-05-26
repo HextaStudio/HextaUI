@@ -4,24 +4,12 @@ import { Toggle } from "../hexta-ui/Toggle";
 import { Button } from "../hexta-ui/Button";
 import { Toast } from "../hexta-ui/Toast";
 import { OTP } from "../hexta-ui/InputOTP";
-import { Select, Option } from "../hexta-ui/Select";
 
 export const Features = () => {
   const canvasRef = useRef(null!);
   const [isEnabled, setIsEnabled] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [otpValue, setOtpValue] = useState("");
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
-
-  const options = [
-    { value: 1, label: "Option 1" },
-    { value: 2, label: "Option 2" },
-    { value: 3, label: "Option 3" },
-  ];
-
-  const handleChange = (option: Option | null) => {
-    setSelectedOption(option);
-  };
 
   const toggleToast = () => {
     setShowToast(!showToast);
