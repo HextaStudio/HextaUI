@@ -3,6 +3,7 @@ import { CTA } from "@/components/landingPage/CTA";
 import { Features } from "@/components/landingPage/Features";
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
+import { Testimonials } from "@/components/landingPage/Testimonials";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <Features />
+        <Testimonials />
         <CTA />
       </Layout>
     </>
