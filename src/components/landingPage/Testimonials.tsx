@@ -29,6 +29,9 @@ export const Testimonials = () => {
         <div className="testimonial-item item7">
           <Tweet id="1787163815987007863" />
         </div>
+        <div className="testimonial-item item8">
+          <Tweet id="1787088566025122186" />
+        </div>
       </div>
     </>
   );

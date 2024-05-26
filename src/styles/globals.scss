@@ -520,7 +520,7 @@ h2 {
   position: absolute;
   width: 420px;
   height: 300px;
-  left: max(calc(420px * 7), 100%);
+  left: max(calc(420px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 40s;
   animation-timing-function: linear;
@@ -529,29 +529,32 @@ h2 {
 }
 
 .item1 {
-  animation-delay: calc(40s / 7 * (7 - 1) * -1);
+  animation-delay: calc(40s / 8 * (8 - 1) * -1);
 }
 
 .item2 {
-  animation-delay: calc(40s / 7 * (7 - 2) * -1);
+  animation-delay: calc(40s / 8 * (8 - 2) * -1);
 }
 
 .item3 {
-  animation-delay: calc(40s / 7 * (7 - 3) * -1);
+  animation-delay: calc(40s / 8 * (8 - 3) * -1);
 }
 
 .item4 {
-  animation-delay: calc(40s / 7 * (7 - 4) * -1);
+  animation-delay: calc(40s / 8 * (8 - 4) * -1);
 }
 
 .item5 {
-  animation-delay: calc(40s / 7 * (7 - 5) * -1);
+  animation-delay: calc(40s / 8 * (8 - 5) * -1);
 }
 
 .item6 {
-  animation-delay: calc(40s / 7 * (7 - 6) * -1);
+  animation-delay: calc(40s / 8 * (8 - 6) * -1);
 }
 
 .item7 {
-  animation-delay: calc(40s / 7 * (7 - 7) * -1);
+  animation-delay: calc(40s / 8 * (8 - 7) * -1);
+}
+.item8 {
+  animation-delay: calc(40s / 8 * (8 - 8) * -1);
 }
