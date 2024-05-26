@@ -57,7 +57,9 @@ export const Features = () => {
 
   return (
     <>
-      <section className="max-w-[70rem] w-[95%] mx-auto my-[10rem]">
+      <section className="max-w-[70rem] w-[95%] mx-auto my-[10rem] relative">
+        {" "}
+        <div className="rounded-[inherit] [border:calc(1.9*1px)_solid_transparent] ![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)]  absolute inset-0 rounded-inherit border-2 border-transparent !mask-clip-padding-box-border-box after:absolute after:aspect-square after:w-[250px] after:animate-animatedBeam after:bg-gradient-to-l after:from-purple-500 after:via-purple-950 after:to-transparent after:[offset-anchor:90%_50%] after:[offset-path:rect(0_auto_auto_0_round_250px)] z-[999] "></div>
         <div className="grid auto-rows-[150px] grid-cols-3 gap-4 max-[900px]:grid-cols-2">
           <div className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-400/10 bg-opacity-5 backdrop-blur-lg">
             <div className="flex flex-col gap-2">
@@ -93,7 +95,6 @@ export const Features = () => {
             />
           </div>
           <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5 backdrop-blur-lg p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center text-center relative">
-            {" "}
             <div className="flex flex-col gap-2">
               <h2 className="text-4xl leading-10 ">Your project, Your code</h2>
               <p className="text-sm opacity-80">
