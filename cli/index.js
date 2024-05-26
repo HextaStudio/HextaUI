@@ -39,6 +39,7 @@ const components = [
   "InputOTP",
   "TreeView",
   "Notification",
+  "Skeleton",
 ].sort();
 
 const help = () => {
