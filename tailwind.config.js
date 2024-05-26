@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        animatedBeam: {
+          "100%": { offsetDistance: "100%" },
+        },
+      },
+      animation: {
+        animatedBeam: "animatedBeam 7s linear infinite",
+      },
       boxShadow: {
         "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",
         "glow-blue": "0 0 10px rgba(59, 130, 246, 0.5)",
