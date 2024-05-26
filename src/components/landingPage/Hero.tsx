@@ -21,8 +21,8 @@ export const Hero = () => {
             Level up your Design Game with HextaUI
           </h1>
           <p className="text-md opacity-80 max-w-[40rem] w-full relative">
-            Easy to use copy and paste components in your website and make your
-            website 10x stunning and modern.
+            Easy to use copy and paste components for your website. Make your
+            website 10x more stunning and modern.
           </p>
           <div className="flex flex-wrap gap-3 p-2 z-[99]">
             <Link
