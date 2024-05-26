@@ -7,20 +7,17 @@ const cn = (...args: any[]) => {
 };
 
 interface SkeletonProps {
-  width: string;
-  height: string;
   className?: string;
 }
 
-export const Skeleton = ({ width, height, className }: SkeletonProps) => {
+export const Skeleton = ({ className }: SkeletonProps) => {
   return (
     <>
       <div
         className={cn(
-          `skeleton animate-pulse bg-white bg-opacity-10 rounded`,
+          `skeleton animate-pulse bg-white bg-opacity-10  w-12 h-12 rounded-md`,
           className
         )}
-        style={{ width, height }}
       ></div>
     </>
   );

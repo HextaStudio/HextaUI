@@ -33,6 +33,12 @@
       "type": "component"
     },
     {
+      "name": "Skeleton",
+      "url": "/docs/components/layout/Skeleton",
+      "type": "component",
+      "new": "true"
+    },
+    {
       "name": "Toast",
       "url": "/docs/components/layout/Toast",
       "type": "component"
