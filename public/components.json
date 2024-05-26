@@ -180,6 +180,12 @@
       "url": "/docs/examples/BentoGrid",
       "type": "example",
       "new": "true"
+    },
+    {
+      "name": "Profile Card",
+      "url": "/docs/examples/ProfileCard",
+      "type": "example",
+      "new": "true"
     }
   ],
   "templates": [
