@@ -73,9 +73,11 @@ const ProfileCard = () => {
             alt="User profile image"
             src="https://images.unsplash.com/photo-1524666041070-9d87656c25bb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             width={300}
-            height={800}
+            height={500}
             objectFit="cover"
             className="rounded-md group-hover:rounded-r-none transition-all duration-200  max-[768px]:rounded-t-none border border-t-0 border-white border-opacity-10 max-[768px]:brightness-[0.3]"
+            placeholder="blur"
+            blurDataURL="https://placeholder.co/300x500"
           />
         </div>
         <div className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200  absolute top-2 left-2  max-[768px]:opacity-100 max-[768px]:translate-y-0">
