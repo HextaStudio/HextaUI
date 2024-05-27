@@ -88,12 +88,6 @@ const getInstalledVersion = () => {
 
 const handleAdd = (componentNames) => {
   const installedVersion = getInstalledVersion();
-  if (!installedVersion) {
-    console.log(
-      "Error: @hextastudio/ui package not found. Please install it first."
-    );
-    return;
-  }
 
   getLatestVersion()
     .then((latestVersion) => {
@@ -162,7 +156,7 @@ const handleAdd = (componentNames) => {
       }
 
       const downloadPromises = validComponentNames.map((validComponentName) => {
-        const url = `https://raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${validComponentName}.tsx`;
+        const url = `https://USERNAME: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@raw.githubusercontent.com/HextaStudio/HextaUI/main/src/components/hexta-ui/${validComponentName}.tsx`;
         const componentLoader = ora(
           `Downloading ${validComponentName} component`
         ).start();
