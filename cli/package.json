@@ -1,15 +1,17 @@
 {
   "name": "@hextastudio/ui",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Easily use modern pre-built components in your website without any efforts.",
   "main": "index.js",
+  "homepage": "https://ui.hexatstudio.in",
   "bin": {
     "hexta-ui": "./index.js"
   },
   "scripts": {
     "build:css": "postcss styles.css -o dist/output.css"
   },
-  "author": "Preet Suthar",
+  "email": "hi@hextastudio.in",
+  "url": "http://ui.hextastudio.in",
   "type": "module",
   "keywords": [
     "ui",

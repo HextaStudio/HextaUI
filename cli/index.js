@@ -40,6 +40,7 @@ const components = [
   "TreeView",
   "Notification",
   "Skeleton",
+  "Countdown",
 ].sort();
 
 const help = () => {
@@ -47,6 +48,7 @@ const help = () => {
   console.log("");
   console.log("Commands:");
   console.log("  add <component_name>   Add a component to your project");
+  console.log("  add all                Add all components to your project");
   console.log("  list                   List all available components");
   console.log("  help                   Show this help message");
 };
@@ -106,6 +108,10 @@ const handleAdd = (componentNames) => {
       const validComponentNames = [];
       const invalidComponentNames = [];
       const existingComponentNames = [];
+
+      if (componentNames.includes("all")) {
+        componentNames = components;
+      }
 
       componentNames.forEach((componentName) => {
         const normalizedComponentName = componentName.toLowerCase();
@@ -207,17 +213,6 @@ const handleAdd = (componentNames) => {
       console.error(chalk.red("Error fetching latest version:", error));
     });
 };
-if (process.argv.length >= 4 && process.argv[2] === "add") {
-  const componentNamesString = process.argv.slice(3).join(" ");
-  const componentNames = componentNamesString.split(" ");
-  handleAdd(componentNames);
-} else {
-  console.log(
-    chalk.red(
-      "Invalid command: did you mean `npx hexta-ui add component_name1 component_name2 ...`?"
-    )
-  );
-}
 
 if (process.argv.length >= 3) {
   const command = process.argv[2];
