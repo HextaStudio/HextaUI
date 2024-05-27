@@ -1,13 +1,14 @@
 import createGlobe from "cobe";
 import { useEffect, useRef, useState } from "react";
-import { Toggle } from "../hexta-ui/Toggle";
 import { Button } from "../hexta-ui/Button";
 import { Toast } from "../hexta-ui/Toast";
 import { OTP } from "../hexta-ui/InputOTP";
+import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { AnimatedDock } from "@/pages/docs/examples/AnimatedDock";
 
 export const Features = () => {
   const canvasRef = useRef(null!);
-  const [isEnabled, setIsEnabled] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [otpValue, setOtpValue] = useState("");
 
@@ -24,9 +25,6 @@ export const Features = () => {
     console.log("OTP Value:", value);
   };
 
-  const handleToggle = (value: boolean | ((prevState: boolean) => boolean)) => {
-    setIsEnabled(value);
-  };
   useEffect(() => {
     let phi = 0;
 
@@ -109,11 +107,30 @@ export const Features = () => {
               Click me!
             </Button>
           </div>
-          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center">
-            <Toggle
-              enabled={isEnabled}
-              onChange={handleToggle}
-              className="scale-[1.1]"
+          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden">
+            <AnimatedDock
+              items={[
+                {
+                  link: "https://github.com/preetsuthar17",
+                  target: "_blank",
+                  Icon: <FaGithub size={22} />,
+                },
+                {
+                  link: "https://x.com/preetsuthar17",
+                  target: "_blank",
+                  Icon: <FaXTwitter size={22} />,
+                },
+                {
+                  link: "https://dsc.gg/hextastudio",
+                  target: "_blank",
+                  Icon: <FaDiscord size={22} />,
+                },
+                {
+                  link: "https://linkedin.com/in/preetsuthar17",
+                  target: "_blank",
+                  Icon: <FaLinkedin size={22} />,
+                },
+              ]}
             />
           </div>
         </div>{" "}
