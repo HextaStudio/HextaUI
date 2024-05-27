@@ -46,7 +46,8 @@
     {
       "name": "Countdown",
       "url": "/docs/components/layout/Countdown",
-      "type": "component"
+      "type": "component",
+      "new": "true"
     },
     {
       "name": "Slider",

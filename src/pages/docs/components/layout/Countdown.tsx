@@ -2,6 +2,7 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 import { Countdown } from "@/components/hexta-ui/Countdown";
 import { Table } from "@/components/hexta-ui/Table";
@@ -55,6 +56,11 @@ const data = [
 const countdown = () => {
   return (
     <>
+      <DocsSEO
+        title="Countdown"
+        description="A simple animated countdown component."
+        image="https://i.imgur.com/Le3MNlj.png"
+      />
       <DocsLayout>
         <main>
           <DocsHeader
