@@ -7,12 +7,13 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, MenuItem, MenuDivider } from "@/components/hexta-ui/Menu";
 
 import { FaDonate, FaGithub, FaHome, FaRocket } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaArrowUpRightDots, FaXTwitter } from "react-icons/fa6";
 
 import { BsGrid1X2Fill } from "react-icons/bs";
 import { Search } from "./utils/Search";
 import { Button } from "./hexta-ui/Button";
 import { AnimatePresence, motion } from "framer-motion";
+import { Auth } from "./auth/Auth";
 
 interface NavbarProps {
   docs?: boolean;
@@ -64,20 +65,6 @@ export const Navbar = ({ docs }: NavbarProps) => {
     };
   }, []);
 
-  const menuItems = [
-    { href: "/docs/resources/install-next", label: "Docs", icon: <FaHome /> },
-    {
-      href: "/docs/components/layout/Accordion",
-      label: "Components",
-      icon: <BsGrid1X2Fill />,
-    },
-    { href: "/docs/examples/Navbar", label: "Examples", icon: <FaRocket /> },
-    {
-      href: "https://github.com/hextastudio/hextaui",
-      label: "GitHub",
-      icon: <FaGithub />,
-    },
-  ];
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -127,6 +114,14 @@ export const Navbar = ({ docs }: NavbarProps) => {
                   Examples
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/pro"
+                  className="opacity-80 hover:opacity-100 hover:underline transition-all"
+                >
+                  Pro
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -146,14 +141,6 @@ export const Navbar = ({ docs }: NavbarProps) => {
               <span className="text-xs">⌘</span>K
             </kbd>
           </Button>
-
-          <Link
-            href="https://x.com/preetsuthar17"
-            className="p-2 rounded hover:bg-white hover:bg-opacity-10 transition-all duration-[0.2s]"
-            target="_blank"
-          >
-            <FaXTwitter size={17} />
-          </Link>
           <div className="relative">
             <button
               className="p-2 hover:bg-white hover:bg-opacity-10 items-center justify-center transition-all  rounded hidden  max-[700px]:flex"
@@ -203,6 +190,14 @@ export const Navbar = ({ docs }: NavbarProps) => {
                   <FaRocket /> Examples
                 </Link>
               </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/pro"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaArrowUpRightDots /> Pro
+                </Link>
+              </MenuItem>
               <MenuDivider />
               <MenuItem>
                 <Link
@@ -211,6 +206,15 @@ export const Navbar = ({ docs }: NavbarProps) => {
                   className="flex items-center gap-3 h-full w-full"
                 >
                   <FaDonate /> Support Us
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="https://x.com/preetsuthar17"
+                  target="_blank"
+                  className="flex items-center gap-3 h-full w-full"
+                >
+                  <FaXTwitter /> X (Twitter)
                 </Link>
               </MenuItem>
             </Menu>

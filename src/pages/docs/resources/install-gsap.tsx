@@ -9,7 +9,7 @@ const gsapInstallation = () => {
     <>
       <DocsSEO
         title="Install GSAP - hextastudio/ui"
-        description="Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source."
+        description="Easy to use, modern, animated, and responsive UI library to skyrocket your next project impression."
         image="https://i.imgur.com/xlCPzQc.png"
       />
       <DocsLayout>

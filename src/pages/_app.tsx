@@ -14,12 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <NextSeo
         title="hextastudio/ui"
-        description="Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source."
+        description="Easy to use, modern, animated, and responsive UI library to skyrocket your next project impression."
         openGraph={{
           url: "https://ui.hextastudio.in",
           title: "hextastudio/ui",
           description:
-            "Beautifully crafed highly customizable components that you can copy and paste in your apps. Open Source.",
+            "Easy to use, modern, animated, and responsive UI library to skyrocket your next project impression.",
           images: [
             {
               url: "https://i.imgur.com/xlCPzQc.png",
