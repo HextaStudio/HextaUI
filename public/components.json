@@ -44,11 +44,6 @@
       "type": "component"
     },
     {
-      "name": "Stepper",
-      "url": "/docs/components/layout/Stepper",
-      "type": "component"
-    },
-    {
       "name": "Slider",
       "url": "/docs/components/layout/Slider",
       "type": "component"
