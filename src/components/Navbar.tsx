@@ -127,14 +127,6 @@ export const Navbar = ({ docs }: NavbarProps) => {
                   Examples
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="opacity-80 hover:opacity-100 hover:underline transition-all"
-                >
-                  GitHub
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
@@ -212,15 +204,6 @@ export const Navbar = ({ docs }: NavbarProps) => {
                 </Link>
               </MenuItem>
               <MenuDivider />
-              <MenuItem>
-                <Link
-                  href="https://github.com/hextastudio/hextaui"
-                  target="_blank"
-                  className="flex items-center gap-3 h-full w-full"
-                >
-                  <FaGithub /> GitHub
-                </Link>
-              </MenuItem>
               <MenuItem>
                 <Link
                   href="https://donate.stripe.com/fZeaGJeU23Cn9u8288"
