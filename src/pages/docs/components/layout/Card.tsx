@@ -47,7 +47,10 @@ const cards = () => {
               </Card>
             </DocsPreview>
           </div>
-          <InstallationSteps component="Card" />
+          <InstallationSteps
+            component={["Card", "Button"]}
+            imports={["Card", "Button"]}
+          />
           <div>
             <DocsPreview title="Basic card">
               <Card variant="primary">

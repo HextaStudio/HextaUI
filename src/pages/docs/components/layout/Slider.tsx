@@ -3,7 +3,6 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 import React from "react";
 
-import { NextSeo } from "next-seo";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { useState } from "react";
@@ -11,6 +10,7 @@ import { Slider } from "@/components/hexta-ui/Slider";
 import { Table } from "@/components/hexta-ui/Table";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
+import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 
 const data = [
   {
@@ -64,7 +64,7 @@ const columns = [
   },
 ];
 const slider = () => {
-  const [value, setValue] = useState(50);
+  const [value, setValue] = useState(23);
 
   return (
     <>
@@ -80,44 +80,35 @@ const slider = () => {
             title="Slider"
             description="Slider allows user to select a value from range of specific values."
           />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              {" "}
-              <div>
-                <Slider
-                  value={value}
-                  onChange={(e) => setValue(Number(e.target.value))}
-                  min={0}
-                  max={100}
-                />
-                <p className="text-sm opacity-80">Value: {value}</p>
-              </div>
+          <DocsPreview>
+            <div>
+              <Slider
+                value={value}
+                onChange={(e) => setValue(Number(e.target.value))}
+                min={0}
+                max={100}
+              />
+              <p className="text-sm opacity-80">Value: {value}</p>
             </div>
-          </div>
-          <InstallationSteps component="ProgressBar" />
-          <div className="flex flex-col gap-4 py-10 preview">
-            <h3 className="h3">Slider</h3>
-            <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[10rem]">
-              <div>
-                <Slider
-                  value={value}
-                  onChange={(e) => setValue(Number(e.target.value))}
-                  min={0}
-                  max={100}
-                />
-                <p className="text-sm opacity-80">Value: {value}</p>
-              </div>
-            </div>
-          </div>
+          </DocsPreview>
+          <InstallationSteps component="Slider" imports="Slider" />
           <CodeBlock
             lang="tsx"
             filename="tsx"
-            code={`import { ProgressBar } from "@/components/hexta-ui/ProgressBar";
+            code={`import React from "react";
+import { useState } from "react";          
 
 export const Home = () => {
+    const [value, setValue] = useState(23);
     return (
         <>
-            <ProgressBar value={50} max={100} />   
+             <Slider
+                value={value}
+                onChange={(e) => setValue(Number(e.target.value))}
+                min={0}
+                max={100}
+              />
+              <p className="text-sm opacity-80">Value: {value}</p> 
         </>
     )
 }

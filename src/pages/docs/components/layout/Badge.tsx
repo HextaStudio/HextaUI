@@ -101,7 +101,7 @@ const badge = () => {
           <DocsPreview>
             <Badge>Latest version</Badge>
           </DocsPreview>
-          <InstallationSteps component="badge" />
+          <InstallationSteps component="badge" imports="Badge" />
           <DocsPreview>
             <Badge>Latest version</Badge>
             <DocsPreview>

@@ -71,7 +71,7 @@ const button = () => {
             <DocsPreview>
               <Button>Hexta UI Button</Button>
             </DocsPreview>
-            <InstallationSteps component="Button" />
+            <InstallationSteps component="Button" imports="Button" />
 
             <DocsPreview>
               <Button variant="secondary">Secondary Button</Button>

@@ -77,7 +77,7 @@ const avatar = () => {
           <DocsPreview>
             <Avatar avatarUrl="https://placeholder.co/80" size={80} />
           </DocsPreview>
-          <InstallationSteps component="Avatar" />
+          <InstallationSteps component="Avatar" imports="Avatar" />
           <DocsPreview>
             <Avatar avatarUrl="https://placeholder.co/80" size={80} />
           </DocsPreview>

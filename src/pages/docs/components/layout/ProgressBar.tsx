@@ -63,7 +63,7 @@ const progressbar = () => {
           <DocsPreview>
             <ProgressBar value={50} max={100} />
           </DocsPreview>
-          <InstallationSteps component="ProgressBar" />
+          <InstallationSteps component="ProgressBar" imports="ProgressBar" />
           <CodeBlock
             lang="tsx"
             filename="tsx"

@@ -151,7 +151,7 @@ const select = () => {
               </div>
             </div>
           </div>{" "}
-          <InstallationSteps component="Select" />
+          <InstallationSteps component="Select" imports={"Select"} />
           <div>
             <h3 className="h3">Basic Select</h3>
             <div className="relative flex items-center justify-center my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container h-[30rem] flex-col gap-2">

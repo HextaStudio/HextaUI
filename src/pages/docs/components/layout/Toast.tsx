@@ -97,7 +97,7 @@ const toast = () => {
               </div>
             </div>
           </div>
-          <InstallationSteps component="Toast" />
+          <InstallationSteps imports="Toast" component="Toast" />
           <div className="installation">
             <CodeBlock
               lang="tsx"

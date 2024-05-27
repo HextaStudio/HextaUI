@@ -91,7 +91,7 @@ const table = () => {
               </div>
             </div>
           </div>
-          <InstallationSteps component="Table" />
+          <InstallationSteps component="Table" imports="Table" />
           <div>
             <div className="relative flex items-center justify-center p-6 my-3 overflow-hidden border border-white border-opacity-10 rounded-2xl preview-container">
               <div>

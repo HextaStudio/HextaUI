@@ -81,13 +81,12 @@ const checkbox = () => {
               label="Accept Terms and Conditions"
             />
           </DocsPreview>
-          <InstallationSteps component="Checkbox" />
+          <InstallationSteps component="Checkbox" imports="Checkbox" />
 
           <CodeBlock
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";
-import { Checkbox } from "@/components/hexta-ui/Checkbox";
 
 export const Home = () => {
     const [checked, setChecked] = useState(false);
