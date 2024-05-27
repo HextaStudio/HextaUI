@@ -44,6 +44,11 @@
       "type": "component"
     },
     {
+      "name": "Countdown",
+      "url": "/docs/components/layout/Countdown",
+      "type": "component"
+    },
+    {
       "name": "Slider",
       "url": "/docs/components/layout/Slider",
       "type": "component"
