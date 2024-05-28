@@ -270,6 +270,7 @@ const tabs = () => {
             imports={["Tab, TabProvider, TabHeader, TabContent"]}
           />
           <CodeBlock
+            free
             title="Usage"
             lang="tsx"
             filename="tsx"

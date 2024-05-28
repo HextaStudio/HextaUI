@@ -107,6 +107,7 @@ const notification = () => {
             ]}
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";

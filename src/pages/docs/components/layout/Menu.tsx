@@ -128,6 +128,7 @@ const menu = () => {
             imports="Menu, MenuItem, MenuDivider"
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`

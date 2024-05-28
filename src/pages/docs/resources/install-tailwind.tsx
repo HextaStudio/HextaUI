@@ -23,6 +23,7 @@ const InstallTailwind = () => {
             <div>
               <h3 className="h3">Create Next.Js Project</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npx create-next-app@latest my-project --typescript --eslint
@@ -32,6 +33,7 @@ cd my-project`}
             <div>
               <h3 className="h3">Install Tailwind CSS</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npm install -D tailwindcss postcss autoprefixer
@@ -41,6 +43,7 @@ npx tailwindcss init -p`}
             <div>
               <h3 className="h3">Configure your template paths</h3>
               <CodeBlock
+                free
                 lang="jsx"
                 filename="tailwind.config.ts"
                 code={`/** @type {import('tailwindcss').Config} */
@@ -63,6 +66,7 @@ module.exports = {
             <div>
               <h3 className="h3">Add the Tailwind directives to your CSS</h3>
               <CodeBlock
+                free
                 lang="css"
                 filename="globals.css"
                 code={`@tailwind base;
@@ -72,11 +76,13 @@ module.exports = {
             </div>
             <div>
               <h3 className="h3">Start the build process</h3>
+              free
               <CodeBlock lang="bash" filename="bash" code={`npm run dev`} />
             </div>
             <div>
               <h3 className="h3">Have fun with Tailwind 🎉</h3>
               <CodeBlock
+                free
                 lang="jsx"
                 filename="index.tsx"
                 code={`export default function Home() {

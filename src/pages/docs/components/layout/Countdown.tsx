@@ -75,6 +75,7 @@ const countdown = () => {
             component={["countdown"]}
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Countdown end={50} duration={20} />`}

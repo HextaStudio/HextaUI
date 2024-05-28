@@ -236,6 +236,7 @@ const registrationform = () => {
             ]}
           />
           <CodeBlock
+            free
             title="Login Component"
             lang="tsx"
             filename="tsx"
@@ -319,6 +320,7 @@ const registrationform = () => {
 };`}
           />
           <CodeBlock
+            free
             title="SignUp Component"
             lang="tsx"
             filename="tsx"
@@ -418,6 +420,7 @@ const registrationform = () => {
 };`}
           />
           <CodeBlock
+            free
             title="Registration Form"
             lang="tsx"
             filename="tsx"

@@ -22,6 +22,7 @@ const gsapInstallation = () => {
             <div>
               <h3 className="h3">Installing GSAP</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npm install gsap`}
@@ -30,6 +31,7 @@ const gsapInstallation = () => {
             <div>
               <h3 className="h3">Setup GSAP ScrollTrigger</h3>
               <CodeBlock
+                free
                 lang="jsx"
                 filename="index.tsx"
                 code={`import gsap from 'gsap'
@@ -41,6 +43,7 @@ gsap.registerPlugin(ScrollTrigger);`}
             <div>
               <h3 className="h3">GSAP Example</h3>
               <CodeBlock
+                free
                 lang="jsx"
                 filename="index.tsx"
                 code={`import gsap from 'gsap';

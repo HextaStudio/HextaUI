@@ -77,6 +77,7 @@ const button = () => {
               <Button variant="secondary">Secondary Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button variant="secondary">Secondary Button</Button>`}
@@ -86,6 +87,7 @@ const button = () => {
               <Button variant="fail">Fail Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button variant="fail">Fail Button</Button>`}
@@ -95,6 +97,7 @@ const button = () => {
               <Button variant="ghost">Ghost Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button variant="ghost">Ghost Button</Button>`}
@@ -104,6 +107,7 @@ const button = () => {
               <Button variant="link">Link Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button variant="link">Link Button</Button>`}
@@ -113,6 +117,7 @@ const button = () => {
               <Button disabled>Disabled Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button disabled>Disabled Button</Button>`}
@@ -122,6 +127,7 @@ const button = () => {
               <Button outline>Outline Button</Button>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Button outline>Outline Button</Button>`}

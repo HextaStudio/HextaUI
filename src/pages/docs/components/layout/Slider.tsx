@@ -93,6 +93,7 @@ const slider = () => {
           </DocsPreview>
           <InstallationSteps component="Slider" imports="Slider" />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import React from "react";

@@ -27,6 +27,7 @@ const framerMotionInstallation = () => {
             <div>
               <h3 className="h3">Installing Framer Motion</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npm install framer-motion`}
@@ -35,6 +36,7 @@ const framerMotionInstallation = () => {
             <div>
               <h3 className="h3">Framer Motion Example</h3>
               <CodeBlock
+                free
                 lang="jsx"
                 filename="index.tsx"
                 code={`import { motion, useScroll, useTransform } from "framer-motion";

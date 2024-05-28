@@ -90,6 +90,7 @@ const breadcrumb = () => {
             ]}
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Breadcrumb>

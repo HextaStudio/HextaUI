@@ -30,6 +30,7 @@ export const InstallationSteps = ({
       <div className="installation">
         <h2 className="text-2xl font-bold">{title}</h2>
         <CodeBlock
+          free
           lang="bash"
           filename="bash"
           code={`npx hexta-ui add ${
@@ -40,6 +41,7 @@ export const InstallationSteps = ({
         />
 
         <CodeBlock
+          free
           lang="tsx"
           filename="tsx"
           code={

@@ -24,6 +24,7 @@ const installNext = () => {
             <div>
               <h3 className="h3">Create new project</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npx create-next-app@latest`}
@@ -32,6 +33,7 @@ const installNext = () => {
             <div>
               <h3 className="h3">On installation You'll see these prompts</h3>
               <CodeBlock
+                free
                 filename="bash"
                 lang="bash"
                 code={`What is your project named? my-app
@@ -47,6 +49,7 @@ Would you like to customize the default import alias (@/*)? No
             <div>
               <h3 className="h3">Start the app</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`cd my-app

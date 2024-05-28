@@ -84,6 +84,7 @@ const datepicker = () => {
           </DocsPreview>
           <InstallationSteps component="Datepicker" imports={["Datepicker"]} />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";

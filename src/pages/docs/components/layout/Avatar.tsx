@@ -82,6 +82,7 @@ const avatar = () => {
             <Avatar avatarUrl="https://placeholder.co/80" size={80} />
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             title="Usage"
             filename="tsx"
@@ -103,6 +104,7 @@ const avatar = () => {
             </div>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             title="Usage"
             filename="tsx"
@@ -122,6 +124,7 @@ const avatar = () => {
             </div>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             title="Usage"
             filename="tsx"

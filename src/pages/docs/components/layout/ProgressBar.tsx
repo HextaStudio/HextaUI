@@ -65,6 +65,7 @@ const progressbar = () => {
           </DocsPreview>
           <InstallationSteps component="ProgressBar" imports="ProgressBar" />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { ProgressBar } from "@/components/hexta-ui/ProgressBar";

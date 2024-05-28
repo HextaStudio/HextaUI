@@ -60,7 +60,12 @@ const loader = () => {
             <Loader size={40} />
           </DocsPreview>
           <InstallationSteps component="Loader" imports="Loader" />
-          <CodeBlock lang="tsx" filename="tsx" code={`<Loader size={40} />`} />
+          <CodeBlock
+            free
+            lang="tsx"
+            filename="tsx"
+            code={`<Loader size={40} />`}
+          />
           <div className="mt-[5rem]">
             <Table
               columns={columns}

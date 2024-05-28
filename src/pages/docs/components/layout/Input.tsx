@@ -77,6 +77,7 @@ const input = () => {
           <InstallationSteps component="Input" imports="Input" />
 
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";

@@ -78,6 +78,7 @@ const alertdialog = () => {
             ]}
           />
           <CodeBlock
+            free
             title="Usage"
             lang="tsx"
             code={`
@@ -120,6 +121,7 @@ import {
 `}
           />
           <CodeBlock
+            free
             title="Example"
             lang="tsx"
             code={`import {

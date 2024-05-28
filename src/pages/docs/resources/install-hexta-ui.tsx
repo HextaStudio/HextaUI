@@ -24,6 +24,7 @@ const hextaUIinstallation = () => {
             <div>
               <h3 className="h3">Step 1: Installing HextaUI</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npm install @hextastudio/ui`}
@@ -36,6 +37,7 @@ const hextaUIinstallation = () => {
             <div>
               <h3 className="h3">Step 2: Usage</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npx hexta-ui add <component_name>`}
@@ -63,6 +65,7 @@ const hextaUIinstallation = () => {
             <div>
               <h3 className="h3">Example</h3>
               <CodeBlock
+                free
                 lang="bash"
                 filename="bash"
                 code={`npx hexta-ui add button`}

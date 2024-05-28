@@ -76,6 +76,7 @@ const fileupload = () => {
           <InstallationSteps component="FileUpload" imports="FileUpload" />
 
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`export const Home = () => {

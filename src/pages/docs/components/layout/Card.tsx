@@ -62,6 +62,7 @@ const cards = () => {
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Card variant="primary">
@@ -84,6 +85,7 @@ const cards = () => {
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Card variant="outline">
@@ -109,6 +111,7 @@ const cards = () => {
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Card
@@ -137,6 +140,7 @@ const cards = () => {
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<Card
@@ -170,6 +174,7 @@ const cards = () => {
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`
@@ -217,6 +222,7 @@ import { Button } from "@/components/hexta-ui/Button";
               </Card>
             </DocsPreview>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`

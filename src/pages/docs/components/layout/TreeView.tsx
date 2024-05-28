@@ -94,6 +94,7 @@ const treeview = () => {
             imports={["TreeView, TreeChild, TreeHeader"]}
           />{" "}
           <CodeBlock
+            free
             lang="tsx"
             title="Usage"
             filename="tsx"

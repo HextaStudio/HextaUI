@@ -47,6 +47,7 @@ const otp = () => {
           </div>
           <InstallationSteps component="InputOTP" imports="InputOTP" />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";

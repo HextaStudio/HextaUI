@@ -53,6 +53,7 @@ const tooltip = () => {
             ]}
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<TooltipProvider>

@@ -100,6 +100,7 @@ const table = () => {
             </div>
             <h3 className="h3">Usage</h3>
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`export const Home = () => {

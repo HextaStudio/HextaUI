@@ -104,28 +104,31 @@ const badge = () => {
           <InstallationSteps component="badge" imports="Badge" />
           <DocsPreview>
             <Badge>Latest version</Badge>
-            <DocsPreview>
-              <CodeBlock
-                lang="tsx"
-                filename="tsx"
-                code={`<Badge>Latest version</Badge>`}
-              />
-            </DocsPreview>
+          </DocsPreview>
+          <CodeBlock
+            free
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge>Latest version</Badge>`}
+          />
+          <DocsPreview>
             <Badge variant="info" outlined>
               Info
             </Badge>
-            <CodeBlock
-              lang="tsx"
-              filename="tsx"
-              code={`<Badge variant="info" outlined>Info</Badge>`}
-            />
           </DocsPreview>
+          <CodeBlock
+            free
+            lang="tsx"
+            filename="tsx"
+            code={`<Badge variant="info" outlined>Info</Badge>`}
+          />
           <DocsPreview>
             <Badge pill icon>
               Success
             </Badge>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Badge pill icon>Success</Badge>`}
@@ -134,6 +137,7 @@ const badge = () => {
             <Badge counter={5}>Notifications</Badge>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Badge counter={5}>Notifications</Badge>`}
@@ -144,6 +148,7 @@ const badge = () => {
             </Badge>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Badge variant="secondary" glowing>Glowing Secondary</Badge>`}
@@ -154,6 +159,7 @@ const badge = () => {
             </Badge>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Badge variant="primary" animated>Pulsing Primary</Badge>`}
@@ -169,6 +175,7 @@ const badge = () => {
             </div>
           </DocsPreview>
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<div className="inline-flex overflow-hidden rounded-lg">

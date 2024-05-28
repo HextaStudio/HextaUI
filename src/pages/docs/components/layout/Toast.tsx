@@ -100,6 +100,7 @@ const toast = () => {
           <InstallationSteps imports="Toast" component="Toast" />
           <div className="installation">
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`import { useState } from "react";

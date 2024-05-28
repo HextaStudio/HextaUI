@@ -84,6 +84,7 @@ const checkbox = () => {
           <InstallationSteps component="Checkbox" imports="Checkbox" />
 
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`import { useState } from "react";

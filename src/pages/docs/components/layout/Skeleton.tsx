@@ -37,6 +37,7 @@ const skeleton = () => {
               component={["Skeleton"]}
             />
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<div className="flex items-center justify-center gap-3">
@@ -63,6 +64,7 @@ const skeleton = () => {
               </div>
             </DocsPreview>{" "}
             <CodeBlock
+              free
               lang="tsx"
               filename="tsx"
               code={`<div className="flex items-center justify-center gap-3 flex-col">

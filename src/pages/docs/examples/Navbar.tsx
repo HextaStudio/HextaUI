@@ -150,6 +150,7 @@ const navbar = () => {
             imports={["Menu, MenuItem, MenuDivider"]}
           />
           <CodeBlock
+            free
             filename="Navbar.tsx"
             lang="tsx"
             code={`import { useState } from "react";

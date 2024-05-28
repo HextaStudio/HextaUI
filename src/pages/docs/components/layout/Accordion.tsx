@@ -57,6 +57,7 @@ const accordion = () => {
             imports={["Accordion, AccordionHeader, AccordionContent"]}
           />
           <CodeBlock
+            free
             lang="tsx"
             filename="tsx"
             code={`<Accordion>
