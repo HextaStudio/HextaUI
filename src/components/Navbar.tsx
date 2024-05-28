@@ -13,7 +13,6 @@ import { BsGrid1X2Fill } from "react-icons/bs";
 import { Search } from "./utils/Search";
 import { Button } from "./hexta-ui/Button";
 import { AnimatePresence, motion } from "framer-motion";
-import { Auth } from "./auth/Auth";
 
 interface NavbarProps {
   docs?: boolean;
