@@ -125,7 +125,7 @@ export const CodeBlock = ({
           <>
             <DocsPreview title="" className="m-0">
               <Link
-                href="https://pro.hextastudio.in/pricing"
+                href="https://pro.ui.hextastudio.in/pricing"
                 className="text-[14px] text-white text-oapcity-80 px-4 py-2 bg-zinc-900 rounded-full flex gap-2 items-center hover:brightness-75"
               >
                 <FaLock /> Get Pro <FaArrowRight />
