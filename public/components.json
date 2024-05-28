@@ -1,141 +1,4 @@
 {
-  "components": [
-    {
-      "name": "Accordion",
-      "url": "/docs/components/layout/Accordion",
-      "type": "component",
-      "new": "true"
-    },
-    {
-      "name": "Tabs",
-      "url": "/docs/components/layout/Tabs",
-      "type": "component",
-      "new": "true"
-    },
-    {
-      "name": "Table",
-      "url": "/docs/components/layout/Table",
-      "type": "component"
-    },
-    {
-      "name": "Tooltip",
-      "url": "/docs/components/layout/Tooltip",
-      "type": "component"
-    },
-    {
-      "name": "Tree View",
-      "url": "/docs/components/layout/TreeView",
-      "type": "component"
-    },
-    {
-      "name": "Toggle",
-      "url": "/docs/components/layout/Toggle",
-      "type": "component"
-    },
-    {
-      "name": "Skeleton",
-      "url": "/docs/components/layout/Skeleton",
-      "type": "component",
-      "new": "true"
-    },
-    {
-      "name": "Toast",
-      "url": "/docs/components/layout/Toast",
-      "type": "component"
-    },
-    {
-      "name": "Countdown",
-      "url": "/docs/components/layout/Countdown",
-      "type": "component",
-      "new": "true"
-    },
-    {
-      "name": "Slider",
-      "url": "/docs/components/layout/Slider",
-      "type": "component"
-    },
-    {
-      "name": "Select",
-      "url": "/docs/components/layout/Select",
-      "type": "component"
-    },
-    {
-      "name": "Progress Bar",
-      "url": "/docs/components/layout/ProgressBar",
-      "type": "component"
-    },
-    {
-      "name": "Menu",
-      "url": "/docs/components/layout/Menu",
-      "type": "component"
-    },
-    {
-      "name": "Loader",
-      "url": "/docs/components/layout/Loader",
-      "type": "component"
-    },
-    {
-      "name": "Input OTP",
-      "url": "/docs/components/layout/InputOTP",
-      "type": "component"
-    },
-    {
-      "name": "Input",
-      "url": "/docs/components/layout/Input",
-      "type": "component"
-    },
-    {
-      "name": "File Upload",
-      "url": "/docs/components/layout/FileUpload",
-      "type": "component"
-    },
-    {
-      "name": "Date Picker",
-      "url": "/docs/components/layout/DatePicker",
-      "type": "component"
-    },
-    {
-      "name": "Checkbox",
-      "url": "/docs/components/layout/Checkbox",
-      "type": "component"
-    },
-    {
-      "name": "Card",
-      "url": "/docs/components/layout/Card",
-      "type": "component"
-    },
-    {
-      "name": "Button",
-      "url": "/docs/components/layout/Button",
-      "type": "component"
-    },
-    {
-      "name": "Breadcrumb",
-      "url": "/docs/components/layout/Breadcrumb",
-      "type": "component"
-    },
-    {
-      "name": "Badge",
-      "url": "/docs/components/layout/Badge",
-      "type": "component"
-    },
-    {
-      "name": "Avatar",
-      "url": "/docs/components/layout/Avatar",
-      "type": "component"
-    },
-    {
-      "name": "Alert Dialog",
-      "url": "/docs/components/layout/AlertDialog",
-      "type": "component"
-    },
-    {
-      "name": "Notification",
-      "url": "/docs/components/layout/Notification",
-      "type": "component",
-      "new": "true"
-    }
-  ],
   "resources": [
     {
       "name": "Install Framer Motion",
@@ -182,11 +45,6 @@
       "type": "example"
     },
     {
-      "name": "Pricing Cards",
-      "url": "/docs/examples/PricingCards",
-      "type": "example"
-    },
-    {
       "name": "Registration Form",
       "url": "/docs/examples/RegistrationForm",
       "type": "example"
@@ -205,6 +63,11 @@
     {
       "name": "Profile Card",
       "url": "/docs/examples/ProfileCard",
+      "type": "example"
+    },
+    {
+      "name": "Masked Intro",
+      "url": "/docs/examples/MaskedIntro",
       "type": "example",
       "new": "true"
     }
