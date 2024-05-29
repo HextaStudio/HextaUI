@@ -219,27 +219,27 @@ export const Navbar = ({ docs }: NavbarProps) => {
             </Menu>
           </div>
         </div>
-        {showSearch && (
-          <>
-            <div className="w-dvw h-dvw bg-black bg-opacity-40 fixed top-0 bottom-0 left-0 right-0">
-              <div className="z-[9999999999] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-black bg-opacity-90 flex items-center justify-center">
-                <AnimatePresence>
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.1, ease: "easeIn" }}
-                    ref={searchRef}
-                    className="w-full"
-                  >
-                    <Search />
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
-          </>
-        )}
       </nav>
+      {showSearch && (
+        <>
+          <div className="w-dvw h-dvw bg-black bg-opacity-40 fixed top-0 bottom-0 left-0 right-0 z-[9999999999]">
+            <div className="z-[9999999999] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-black bg-opacity-90 flex items-center justify-center">
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.1, ease: "easeIn" }}
+                  ref={searchRef}
+                  className="w-full"
+                >
+                  <Search />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };
