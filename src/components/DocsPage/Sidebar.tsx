@@ -1,15 +1,15 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Badge } from "../hexta-ui/Badge";
-import { Loader } from "../hexta-ui/Loader";
 import { Skeleton } from "../hexta-ui/Skeleton";
+import { FiLock } from "react-icons/fi";
 
 export interface Item {
   name: string;
   url: string;
   type: string;
-  new: string;
+  new?: string;
+  locked?: string;
 }
 
 export interface Data {
@@ -208,6 +208,11 @@ export const Sidebar = () => {
                       }`}
                       href={`${item.url}`}
                     >
+                      {item.locked === "true" && (
+                        <span>
+                          <FiLock />
+                        </span>
+                      )}{" "}
                       {item.name}
                       {item.new === "true" && (
                         <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">

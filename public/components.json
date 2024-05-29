@@ -168,19 +168,22 @@
     {
       "name": "Features Section",
       "url": "/docs/examples/FeaturesSection",
-      "type": "example"
+      "type": "example",
+      "locked": "true"
     },
     {
       "name": "Animated Dock",
       "url": "/docs/examples/AnimatedDock",
       "type": "example",
-      "new": "true"
+      "new": "true",
+      "locked": "true"
     },
     { "name": "Navbar", "url": "/docs/examples/Navbar", "type": "example" },
     {
       "name": "Post Card",
       "url": "/docs/examples/PostCard",
-      "type": "example"
+      "type": "example",
+      "locked": "true"
     },
     {
       "name": "Registration Form",
@@ -190,18 +193,21 @@
     {
       "name": "Billing Page",
       "url": "/docs/examples/BillingPage",
-      "type": "example"
+      "type": "example",
+      "locked": "true"
     },
     {
       "name": "Bento Grid",
       "url": "/docs/examples/BentoGrid",
       "type": "example",
-      "new": "true"
+      "new": "true",
+      "locked": "true"
     },
     {
       "name": "Profile Card",
       "url": "/docs/examples/ProfileCard",
-      "type": "example"
+      "type": "example",
+      "locked": "true"
     },
     {
       "name": "Masked Intro",
