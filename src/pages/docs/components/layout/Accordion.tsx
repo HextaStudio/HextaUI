@@ -8,6 +8,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionHeader,
+  AccordionProvider,
 } from "@/components/hexta-ui/Accordion";
 
 const accordion = () => {
@@ -26,66 +27,70 @@ const accordion = () => {
           />
           <DocsPreview className="h-[30rem]">
             <div className="flex flex-col w-full">
-              <Accordion>
-                <AccordionHeader>What is hextastudio/ui?</AccordionHeader>
-                <AccordionContent>
-                  hextastudio/ui is a collection of highly customizable web
-                  components.
-                </AccordionContent>
-              </Accordion>
-              <Accordion>
-                <AccordionHeader>
-                  How do I install hextastudio/ui?
-                </AccordionHeader>
-                <AccordionContent>
-                  You can install hextastudio/ui using npm or yarn.
-                </AccordionContent>
-              </Accordion>
-              <Accordion>
-                <AccordionHeader>
-                  How do I use hextastudio/ui components?
-                </AccordionHeader>
-                <AccordionContent>
-                  You can use hextastudio/ui components by importing them into
-                  your project.
-                </AccordionContent>
-              </Accordion>
+              <AccordionProvider>
+                <Accordion>
+                  <AccordionHeader>What is hextastudio/ui?</AccordionHeader>
+                  <AccordionContent>
+                    hextastudio/ui is a collection of highly customizable web
+                    components.
+                  </AccordionContent>
+                </Accordion>
+                <Accordion>
+                  <AccordionHeader>
+                    How do I install hextastudio/ui?
+                  </AccordionHeader>
+                  <AccordionContent>
+                    You can install hextastudio/ui using npm or yarn.
+                  </AccordionContent>
+                </Accordion>
+                <Accordion>
+                  <AccordionHeader>
+                    How do I use hextastudio/ui components?
+                  </AccordionHeader>
+                  <AccordionContent>
+                    You can use hextastudio/ui components by importing them into
+                    your project.
+                  </AccordionContent>
+                </Accordion>
+              </AccordionProvider>
             </div>
           </DocsPreview>
           <InstallationSteps
             component={["Accordion"]}
-            imports={["Accordion, AccordionHeader, AccordionContent"]}
+            imports={[
+              "Accordion, AccordionHeader, AccordionContent,  AccordionProvider",
+            ]}
           />
           <CodeBlock
             free
             lang="tsx"
             filename="tsx"
-            code={`<Accordion>
-  <AccordionHeader>What is hextastudio/ui?</AccordionHeader>
-  <AccordionContent>
-    hextastudio/ui is a collection of highly customizable web
-    components.
-  </AccordionContent>
-</Accordion>
-
-<Accordion>
-  <AccordionHeader>
-    How do I install hextastudio/ui?
-  </AccordionHeader>
-  <AccordionContent>
-    You can install hextastudio/ui using npm or yarn.
-  </AccordionContent>
-</Accordion>
-
-<Accordion>
-  <AccordionHeader>
-    How do I use hextastudio/ui components?
-  </AccordionHeader>
-  <AccordionContent>
-    You can use hextastudio/ui components by importing them into
-    your project.
-  </AccordionContent>
-</Accordion>`}
+            code={`<AccordionProvider>
+  <Accordion>
+    <AccordionHeader>What is hextastudio/ui?</AccordionHeader>
+    <AccordionContent>
+      hextastudio/ui is a collection of highly customizable web
+      components.
+    </AccordionContent>
+  </Accordion>
+  <Accordion>
+    <AccordionHeader>
+      How do I install hextastudio/ui?
+    </AccordionHeader>
+    <AccordionContent>
+      You can install hextastudio/ui using npm or yarn.
+    </AccordionContent>
+  </Accordion>
+  <Accordion>
+    <AccordionHeader>
+      How do I use hextastudio/ui components?
+    </AccordionHeader>
+    <AccordionContent>
+      You can use hextastudio/ui components by importing them into
+      your project.
+    </AccordionContent>
+  </Accordion>
+</AccordionProvider>`}
           />
         </main>
       </DocsLayout>

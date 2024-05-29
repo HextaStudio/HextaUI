@@ -7,26 +7,56 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface AccordionProps {
+interface AccordionProviderProps {
   children: ReactNode;
-  id?: string;
   className?: string;
 }
 
-export const Accordion: React.FC<AccordionProps> = ({
+interface AccordionProps {
+  children: ReactNode;
+  index?: number;
+  className?: string;
+  isOpen?: boolean;
+  toggleAccordion?: () => void;
+}
+
+const AccordionProvider: React.FC<AccordionProviderProps> = ({
   children,
-  id,
   className,
 }) => {
-  const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
+  const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(
+    null
+  );
 
-  const isOpen = openAccordionId === id;
-
-  const toggleAccordion = () => {
-    setOpenAccordionId(isOpen ? null : id!);
+  const toggleAccordion = (index: number) => {
+    if (openAccordionIndex === index) {
+      setOpenAccordionIndex(null);
+    } else {
+      setOpenAccordionIndex(index);
+    }
   };
 
-  const childrenArray = Array.isArray(children) ? children : [children];
+  const childrenArray = React.Children.map(children, (child, index) => {
+    if (React.isValidElement<AccordionProps>(child)) {
+      return React.cloneElement(child, {
+        index,
+        isOpen: openAccordionIndex === index,
+        toggleAccordion: () => toggleAccordion(index),
+      });
+    }
+    return child;
+  });
+
+  return <div className={className}>{childrenArray}</div>;
+};
+
+const Accordion: React.FC<AccordionProps> = ({
+  children,
+  className,
+  isOpen,
+  toggleAccordion,
+}) => {
+  const childrenArray = React.Children.toArray(children);
 
   return (
     <div
@@ -60,7 +90,6 @@ export const Accordion: React.FC<AccordionProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            key={id}
             initial={{ height: 0 }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
@@ -83,7 +112,7 @@ interface AccordionHeaderProps {
   className?: string;
 }
 
-export const AccordionHeader: React.FC<AccordionHeaderProps> = ({
+const AccordionHeader: React.FC<AccordionHeaderProps> = ({
   children,
   className,
 }) => <div className={cn(className)}>{children}</div>;
@@ -93,7 +122,9 @@ interface AccordionContentProps {
   className?: string;
 }
 
-export const AccordionContent: React.FC<AccordionContentProps> = ({
+const AccordionContent: React.FC<AccordionContentProps> = ({
   children,
   className,
 }) => <div className={cn(className)}>{children}</div>;
+
+export { AccordionProvider, Accordion, AccordionHeader, AccordionContent };
