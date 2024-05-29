@@ -208,6 +208,12 @@
       "url": "/docs/examples/MaskedIntro",
       "type": "example",
       "new": "true"
+    },
+    {
+      "name": "Settings Section",
+      "url": "/docs/examples/SettingsSection",
+      "type": "example",
+      "new": "true"
     }
   ],
   "templates": [
