@@ -3,19 +3,20 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
+      <div className="left-1/2 -translate-x-1/2 hero-glow  fading-out-2 absolute top-0"></div>
       <section
-        className="flex items-center justify-center flex-col pt-[14rem] px-[1rem]relative max-w-full  overflow-hidden"
+        className="flex items-center justify-center flex-col pt-[14rem] px-[1rem]relative max-w-full  overflow-hidden backdrop-blur-[6rem]"
         style={{
           perspective: "1000px",
         }}
       >
-        <div
+        {/* <div
           className="grid-lines absolute top-[-34rem] -z-0 opacity-[75%] fading-out"
           style={{
             transformStyle: "preserve-3d",
             transform: "rotateX(71deg)",
           }}
-        ></div>
+        ></div> */}
         <div className="flex flex-col items-center justify-center gap-4 text-center px-4">
           <h1 className="text-7xl font-bold tracking-tight max-w-[60rem] max-[482px]:text-6xl max-[372px]:text-5xl relative">
             Level up your Design Game with HextaUI

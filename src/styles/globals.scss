@@ -595,3 +595,10 @@ h2 {
     animation-delay: calc(20s / 5 * (5 - 10) * -1);
   }
 }
+
+.hero-glow {
+  width: calc(100dvw - 10rem);
+  border-radius: 100%;
+  background-color: #30304d;
+  height: 10rem;
+}

@@ -73,7 +73,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
   return (
     <>
       <nav
-        className={`flex bg-black items-center justify-between px-[1rem] py-4 navbar z-[9999999] fixed top-0  w-full border-b-zinc-800  ${
+        className={`flex  backdrop-blur-3xl  items-center justify-between px-[1rem] py-4 navbar z-[9999999] fixed top-0  w-full border-b-zinc-800  ${
           docs && "ml-auto max-w-7xl "
         }`}
         style={{
