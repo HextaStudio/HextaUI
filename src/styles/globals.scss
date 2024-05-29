@@ -602,3 +602,11 @@ h2 {
   background-color: #30304d;
   height: 10rem;
 }
+
+.hero-heading {
+  background: linear-gradient(to bottom, white 70%, rgb(89, 89, 89) 100%);
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
