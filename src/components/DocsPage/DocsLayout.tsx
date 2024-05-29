@@ -36,6 +36,7 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
           </div>
           {children}
         </main>
+        <span className="w-[10rem] h-[40rem] opacity-50 blur-[10rem] fixed right-10 top-[10rem] -rotate-45 bg-gradient-to-t from-rose-500 to-blue-700 z-[0]"></span>
       </div>
       <div
         className="footer-div"
