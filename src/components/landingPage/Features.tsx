@@ -67,7 +67,7 @@ export const Features = () => {
               </p>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] scale-[1.3]  max-[420px]:scale-[1] text-center">
-              <p className="text-[10px] mb-1">Guess the correct OTP</p>
+              <p className="text-[10px] mb-1">Try guessing the correct OTP</p>
 
               <OTP setValue={handleOTPChange} />
               <small className="text-[9px] opacity-60">
