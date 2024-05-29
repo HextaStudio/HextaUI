@@ -220,6 +220,12 @@
       "url": "/docs/examples/SettingsSection",
       "type": "example",
       "new": "true"
+    },
+    {
+      "name": "Notification",
+      "url": "/docs/examples/Notification",
+      "type": "example",
+      "new": "true"
     }
   ],
   "templates": [
