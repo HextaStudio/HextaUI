@@ -226,6 +226,20 @@
       "url": "/docs/examples/Notification",
       "type": "example",
       "new": "true"
+    },
+    {
+      "name": "Feedback Ratings",
+      "url": "/docs/examples/FeedbackRatings",
+      "type": "example",
+      "new": "true",
+      "locked": "true"
+    },
+    {
+      "name": "Pricing Cards",
+      "url": "/docs/examples/PricingCards",
+      "type": "example",
+      "new": "true",
+      "locked": "true"
     }
   ],
   "templates": [
