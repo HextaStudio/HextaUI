@@ -191,7 +191,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </MenuItem>
               <MenuItem>
                 <Link
-                  href="/pro"
+                  href="https://pro.ui.hextastudio.in/docs/examples/AnimatedDock"
                   className="flex items-center gap-3 h-full w-full"
                 >
                   <FaArrowUpRightDots /> Pro

@@ -3,6 +3,7 @@ import { Footer } from "../Footer";
 import { Sidebar } from "./Sidebar";
 
 import gsap from "gsap";
+import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,7 +22,18 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         <aside className="pt-16">
           <Sidebar />
         </aside>
-        <main className="flex flex-wrap justify-center flex-grow p-[5rem] mt-[2rem] ml-[18rem] max-[900px]:ml-0 max-[900px]:mt-[4rem] max-[600px]:px-[2rem]">
+        <main className="flex flex-wrap justify-center flex-grow p-[5rem] mt-[5rem] ml-[17em] max-[900px]:ml-0 max-[900px]:mt-[5rem] max-[600px]:px-[2rem] relative">
+          <div className="w-full ml-auto h-[2.5rem] bg-gradient-to-r from-green-900 to-teal-900  absolute top-[-0.6rem] left-0 right-0 flex items-center justify-center  max-[598px]:justify-end max-sm:hidden p-4">
+            <p className="font-medium flex items-center gap-3  p-4">
+              Build faster hextastudio/ui premium components 🚀{" "}
+              <Link
+                className="underline flex items-center gap-1"
+                href="https://pro.ui.hextastudio.in/"
+              >
+                Learn more
+              </Link>
+            </p>
+          </div>
           {children}
         </main>
       </div>
