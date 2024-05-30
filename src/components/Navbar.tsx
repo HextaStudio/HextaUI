@@ -115,7 +115,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </li>
               <li>
                 <Link
-                  href="/pro"
+                  href="https://pro.ui.hextastudio.in/docs/examples/AnimatedDock"
                   className="opacity-80 hover:opacity-100 hover:underline transition-all"
                 >
                   Pro
