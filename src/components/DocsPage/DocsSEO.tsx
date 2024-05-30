@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 interface DocsSEOProps {
   title: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 export const DocsSEO = ({ title, description, image }: DocsSEOProps) => {
