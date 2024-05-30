@@ -240,6 +240,13 @@
       "type": "example",
       "new": "true",
       "locked": "true"
+    },
+    {
+      "name": "Stats Section",
+      "url": "/docs/examples/StatsSection",
+      "type": "example",
+      "new": "true",
+      "locked": "true"
     }
   ],
   "templates": [
