@@ -247,6 +247,13 @@
       "type": "example",
       "new": "true",
       "locked": "true"
+    },
+    {
+      "name": "Hero",
+      "url": "/docs/examples/Hero",
+      "type": "example",
+      "new": "true",
+      "locked": "true"
     }
   ],
   "templates": [
