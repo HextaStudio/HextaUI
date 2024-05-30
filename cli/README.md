@@ -1,4 +1,4 @@
-Sure, I've updated the documentation based on the new changes:
+I've updated the documentation based on the new changes:
 
 ## HextaUI - Modern UI Library
 
