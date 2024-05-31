@@ -58,7 +58,7 @@ export const CodeBlock = ({
                     : "collapsed"
                 }`}
               >
-                <div className="flex items-center justify-between codeblock-header">
+                <div className="flex items-center justify-between codeblock-header relative z-[999]">
                   {filename && (
                     <small
                       style={{
