@@ -1,6 +1,7 @@
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
+import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { Button } from "@/components/hexta-ui/Button";
 import { Input } from "@/components/hexta-ui/Input";
@@ -112,6 +113,10 @@ const searchbar = () => {
           <DocsPreview className="p-4" title="Modern Searchbar">
             <ModernSearchBar />
           </DocsPreview>
+          <InstallationSteps
+            component={["Button", "Input"]}
+            imports={["Button", "Input"]}
+          />
           <CodeBlock
             lang="tsx"
             filename="tsx"
