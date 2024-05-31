@@ -174,9 +174,7 @@
     {
       "name": "Animated Dock",
       "url": "/docs/examples/AnimatedDock",
-      "type": "example",
-      "new": "true",
-      "locked": "true"
+      "type": "example"
     },
     { "name": "Navbar", "url": "/docs/examples/Navbar", "type": "example" },
     {
@@ -199,9 +197,7 @@
     {
       "name": "Bento Grid",
       "url": "/docs/examples/BentoGrid",
-      "type": "example",
-      "new": "true",
-      "locked": "true"
+      "type": "example"
     },
     {
       "name": "Profile Card",
@@ -212,20 +208,17 @@
     {
       "name": "Masked Intro",
       "url": "/docs/examples/MaskedIntro",
-      "type": "example",
-      "new": "true"
+      "type": "example"
     },
     {
       "name": "Settings Section",
       "url": "/docs/examples/SettingsSection",
-      "type": "example",
-      "new": "true"
+      "type": "example"
     },
     {
       "name": "Notification",
       "url": "/docs/examples/Notification",
-      "type": "example",
-      "new": "true"
+      "type": "example"
     },
     {
       "name": "Feedback Ratings",
@@ -238,7 +231,6 @@
       "name": "Pricing Cards",
       "url": "/docs/examples/PricingCards",
       "type": "example",
-      "new": "true",
       "locked": "true"
     },
     {
@@ -251,6 +243,13 @@
     {
       "name": "Hero",
       "url": "/docs/examples/Hero",
+      "type": "example",
+      "new": "true",
+      "locked": "true"
+    },
+    {
+      "name": "Search Bar",
+      "url": "/docs/examples/SearchBar",
       "type": "example",
       "new": "true",
       "locked": "true"
