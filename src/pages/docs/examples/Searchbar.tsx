@@ -1,6 +1,8 @@
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
+import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { Button } from "@/components/hexta-ui/Button";
@@ -108,8 +110,17 @@ const ListSearchbar = ({ items }: ListSearchbarProps) => {
 const searchbar = () => {
   return (
     <>
+      <DocsSEO
+        title="Search Bar - hextastudio/ui"
+        description="A modern searchbar component."
+        image="https://i.imgur.com/npji6q5.png"
+      />
       <DocsLayout>
         <main>
+          <DocsHeader
+            title="Searchbar"
+            description="A modern searchbar component."
+          />
           <DocsPreview className="p-4" title="Modern Searchbar">
             <ModernSearchBar />
           </DocsPreview>
@@ -166,7 +177,7 @@ const ModernSearchBar = () => {
                 "SCSS",
               ]}
             />
-          </DocsPreview>
+          </DocsPreview>{" "}
           <CodeBlock
             lang="tsx"
             filename="tsx"
