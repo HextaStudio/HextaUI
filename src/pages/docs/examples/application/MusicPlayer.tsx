@@ -7,6 +7,7 @@ import { RxLoop } from "react-icons/rx";
 import { MdPlayArrow, MdSkipNext } from "react-icons/md";
 import { MdSkipPrevious } from "react-icons/md";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const MusicPlayer = () => {
   return (
@@ -104,6 +105,11 @@ const MusicPlayer = () => {
 const musicplayer = () => {
   return (
     <>
+      <DocsSEO
+        title="Music Player"
+        description="A simple yet modern music player component."
+        image="https://i.imgur.com/ZSzr16k.png"
+      />
       <DocsLayout>
         <main>
           <DocsHeader

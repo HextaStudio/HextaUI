@@ -2,6 +2,7 @@ import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
+import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 import { BsGoogle, BsMicrosoft } from "react-icons/bs";
 import { SiRuby, SiTypescript } from "react-icons/si";
 
@@ -188,6 +189,11 @@ const VerticalBrandScroller = () => {
 const brandscroller = () => {
   return (
     <>
+      <DocsSEO
+        title="Brand Scroller"
+        description="A scroller for brand logos."
+        image="https://i.imgur.com/qRTYCad.png"
+      />
       <DocsLayout>
         <main>
           <DocsHeader
