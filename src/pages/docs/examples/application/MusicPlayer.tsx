@@ -106,7 +106,7 @@ const musicplayer = () => {
   return (
     <>
       <DocsSEO
-        title="Music Player"
+        title="Music Player - hextastudio/ui"
         description="A simple yet modern music player component."
         image="https://i.imgur.com/ZSzr16k.png"
       />

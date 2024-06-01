@@ -11,7 +11,7 @@ const animatedbeams = () => {
       <DocsLayout>
         <main>
           <DocsHeader
-            title="Animated Beams"
+            title="Animated Beams - hextastudio/ui"
             description="Animated beams using SVG and CSS."
           />
           <DocsPreview className="flex items-center justify-center h-[30rem] ">

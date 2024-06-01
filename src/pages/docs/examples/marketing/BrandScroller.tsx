@@ -190,7 +190,7 @@ const brandscroller = () => {
   return (
     <>
       <DocsSEO
-        title="Brand Scroller"
+        title="Brand Scroller - hextastudio/ui"
         description="A scroller for brand logos."
         image="https://i.imgur.com/qRTYCad.png"
       />
