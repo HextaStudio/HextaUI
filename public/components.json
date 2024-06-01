@@ -191,6 +191,11 @@
       "locked": "true"
     },
     {
+      "name": "Footer",
+      "url": "/docs/examples/marketing/Footer",
+      "type": "marketing"
+    },
+    {
       "name": "Brand Scroller",
       "url": "/docs/examples/marketing/BrandScroller",
       "type": "marketing",
