@@ -62,7 +62,7 @@ export const Footer = ({ docs }: FooterProps) => {
             </li>
             <li>
               <Link
-                href="/docs/examples/PostCard"
+                href="https://pro.ui.hextastudio.in/docs/examples/application.AnimatedDock"
                 className="opacity-75 hover:opacity-100"
               >
                 Examples

@@ -107,7 +107,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </li>
               <li>
                 <Link
-                  href="/docs/examples/Navbar"
+                  href="https://pro.ui.hextastudio.in/docs/examples/application.AnimatedDock"
                   className="opacity-80 hover:opacity-100 hover:underline transition-all"
                 >
                   Examples
@@ -183,7 +183,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </MenuItem>
               <MenuItem>
                 <Link
-                  href="/docs/examples/Navbar"
+                  href="https://pro.ui.hextastudio.in/docs/examples/application.AnimatedDock"
                   className="flex items-center gap-3 h-full w-full"
                 >
                   <FaRocket /> Examples
