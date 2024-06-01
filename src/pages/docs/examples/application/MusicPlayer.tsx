@@ -121,7 +121,6 @@ const musicplayer = () => {
 import { RxLoop } from "react-icons/rx";
 import { MdPlayArrow, MdSkipNext } from "react-icons/md";
 import { MdSkipPrevious } from "react-icons/md";
-import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 
 const MusicPlayer = () => {
   return (
