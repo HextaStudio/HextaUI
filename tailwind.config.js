@@ -15,10 +15,28 @@ module.exports = {
           from: { x: "-100%" },
           to: { x: "100%" },
         },
+        "brand-scroller": {
+          from: {
+            transform: "translateX(0%)",
+          },
+          to: {
+            transform: "translateX(-55%)",
+          },
+        },
+        "brand-scroller-vertical": {
+          from: {
+            transform: "translateY(0%)",
+          },
+          to: {
+            transform: "translateY(-55%)",
+          },
+        },
       },
       animation: {
         animatedBeam: "animatedBeam 7s linear infinite",
         beamMask: "beamMask 1s linear infinite",
+        brandScroller: "brand-scroller 30s linear infinite",
+        brandScrollerVertical: "brand-scroller-vertical 30s linear infinite",
       },
       boxShadow: {
         "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",
