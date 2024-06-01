@@ -164,96 +164,121 @@
       "type": "resource"
     }
   ],
-  "examples": [
-    {
-      "name": "Features Section",
-      "url": "/docs/examples/FeaturesSection",
-      "type": "example",
-      "locked": "true"
-    },
-    {
-      "name": "Animated Dock",
-      "url": "/docs/examples/AnimatedDock",
-      "type": "example"
-    },
-    { "name": "Navbar", "url": "/docs/examples/Navbar", "type": "example" },
-    {
-      "name": "Post Card",
-      "url": "/docs/examples/PostCard",
-      "type": "example",
-      "locked": "true"
-    },
-    {
-      "name": "Registration Form",
-      "url": "/docs/examples/RegistrationForm",
-      "type": "example"
-    },
-    {
-      "name": "Billing Page",
-      "url": "/docs/examples/BillingPage",
-      "type": "example",
-      "locked": "true"
-    },
-    {
-      "name": "Bento Grid",
-      "url": "/docs/examples/BentoGrid",
-      "type": "example",
-      "locked": "true"
-    },
-    {
-      "name": "Profile Card",
-      "url": "/docs/examples/ProfileCard",
-      "type": "example",
-      "locked": "true"
-    },
-    {
-      "name": "Masked Intro",
-      "url": "/docs/examples/MaskedIntro",
-      "type": "example"
-    },
-    {
-      "name": "Settings Section",
-      "url": "/docs/examples/SettingsSection",
-      "type": "example"
-    },
-    {
-      "name": "Notification",
-      "url": "/docs/examples/Notification",
-      "type": "example"
-    },
-    {
-      "name": "Feedback Ratings",
-      "url": "/docs/examples/FeedbackRatings",
-      "type": "example",
-      "new": "true",
-      "locked": "true"
-    },
+  "marketing": [
     {
       "name": "Pricing Cards",
-      "url": "/docs/examples/PricingCards",
-      "type": "example",
+      "url": "/docs/examples/marketing/PricingCards",
+      "type": "marketing",
       "locked": "true"
     },
     {
       "name": "Stats Section",
-      "url": "/docs/examples/StatsSection",
-      "type": "example",
+      "url": "/docs/examples/marketing/StatsSection",
+      "type": "marketing",
       "new": "true",
       "locked": "true"
     },
     {
+      "name": "Navbar",
+      "url": "/docs/examples/marketing/Navbar",
+      "type": "application"
+    },
+    {
       "name": "Hero",
-      "url": "/docs/examples/Hero",
-      "type": "example",
+      "url": "/docs/examples/marketing/Hero",
+      "type": "marketing",
       "new": "true",
+      "locked": "true"
+    }
+  ],
+
+  "application": [
+    {
+      "name": "Animated Dock",
+      "url": "/docs/examples/application/AnimatedDock",
+      "type": "application"
+    },
+    {
+      "name": "Features Section",
+      "url": "/docs/examples/application/FeaturesSection",
+      "type": "application",
+      "locked": "true"
+    },
+    {
+      "name": "Music Player",
+      "url": "/docs/examples/application/MusicPlayer",
+      "new": "true",
+      "type": "application"
+    },
+
+    {
+      "name": "Registration Form",
+      "url": "/docs/examples/application/RegistrationForm",
+      "type": "application"
+    },
+    {
+      "name": "Profile Card",
+      "url": "/docs/examples/application/ProfileCard",
+      "type": "application",
+      "locked": "true"
+    },
+    {
+      "name": "Settings Section",
+      "url": "/docs/examples/application/SettingsSection",
+      "type": "application"
+    },
+    {
+      "name": "Notification",
+      "url": "/docs/examples/application/Notification",
+      "type": "application"
+    },
+    {
+      "name": "Feedback Ratings",
+      "url": "/docs/examples/application/FeedbackRatings",
+      "type": "application",
       "locked": "true"
     },
     {
       "name": "Search Bar",
-      "url": "/docs/examples/Searchbar",
-      "type": "example",
+      "url": "/docs/examples/application/SearchBar",
+      "type": "application",
       "new": "true",
       "locked": "true"
+    },
+    {
+      "name": "Bento Grid",
+      "url": "/docs/examples/application/BentoGrid",
+      "type": "application",
+      "locked": "true"
+    },
+    {
+      "name": "Post Card",
+      "url": "/docs/examples/application/PostCard",
+      "type": "application",
+      "locked": "true"
+    }
+  ],
+
+  "ecommerce": [
+    {
+      "name": "Billing Page",
+      "url": "/docs/examples/ecommerce/BillingPage",
+      "type": "ecommerce",
+      "locked": "true"
+    }
+  ],
+
+  "general": [
+    {
+      "name": "Masked Intro",
+      "url": "/docs/examples/general/MaskedIntro",
+      "type": "general"
+    },
+    {
+      "name": "Animated Beam",
+      "url": "/docs/examples/general/AnimatedBeams",
+      "type": "general",
+      "new": "true"
     }
   ],
   "templates": [

@@ -5,7 +5,7 @@ import { Toast } from "../hexta-ui/Toast";
 import { OTP } from "../hexta-ui/InputOTP";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { AnimatedDock } from "@/pages/docs/examples/AnimatedDock";
+import { AnimatedDock } from "@/pages/docs/examples/application/AnimatedDock";
 
 export const Features = () => {
   const canvasRef = useRef(null!);

@@ -17,6 +17,10 @@ export interface Data {
   resources: Item[];
   examples: Item[];
   templates: Item[];
+  marketing: Item[];
+  application: Item[];
+  ecommerce: Item[];
+  general: Item[];
 }
 
 export const Sidebar = () => {
@@ -193,35 +197,177 @@ export const Sidebar = () => {
         </div>
         <div className="sidebar-section">
           <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
-            Examples
+            Application
           </p>
           <ul className="flex flex-col gap-[8px] p-2">
             {data ? (
               <>
-                {data.examples.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                        router.pathname === `${item.url}`
-                          ? "opacity-100"
-                          : "opacity-60"
-                      }`}
-                      href={`${item.url}`}
-                    >
-                      {item.locked === "true" && (
-                        <span>
-                          <FiLock />
-                        </span>
-                      )}{" "}
-                      {item.name}
-                      {item.new === "true" && (
-                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
-                          new
-                        </span>
-                      )}
-                    </Link>
-                  </li>
-                ))}
+                {data &&
+                  data.application.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                          router.pathname === `${item.url}`
+                            ? "opacity-100"
+                            : "opacity-60"
+                        }`}
+                        href={`${item.url}`}
+                      >
+                        {item.locked === "true" && (
+                          <span>
+                            <FiLock />
+                          </span>
+                        )}{" "}
+                        {item.name}
+                        {item.new === "true" && (
+                          <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                            new
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+              </>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+              </div>
+            )}
+          </ul>
+        </div>{" "}
+        <div className="sidebar-section">
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            E-Commerce
+          </p>
+          <ul className="flex flex-col gap-[8px] p-2">
+            {data ? (
+              <>
+                {data &&
+                  data.ecommerce.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                          router.pathname === `${item.url}`
+                            ? "opacity-100"
+                            : "opacity-60"
+                        }`}
+                        href={`${item.url}`}
+                      >
+                        {item.locked === "true" && (
+                          <span>
+                            <FiLock />
+                          </span>
+                        )}{" "}
+                        {item.name}
+                        {item.new === "true" && (
+                          <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                            new
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+              </>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+              </div>
+            )}
+          </ul>
+        </div>
+        <div className="sidebar-section">
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            Marketing
+          </p>
+          <ul className="flex flex-col gap-[8px] p-2">
+            {data ? (
+              <>
+                {data &&
+                  data.marketing.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                          router.pathname === `${item.url}`
+                            ? "opacity-100"
+                            : "opacity-60"
+                        }`}
+                        href={`${item.url}`}
+                      >
+                        {item.locked === "true" && (
+                          <span>
+                            <FiLock />
+                          </span>
+                        )}{" "}
+                        {item.name}
+                        {item.new === "true" && (
+                          <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                            new
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+              </>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+                <Skeleton className="w-full h-[20px]" />
+              </div>
+            )}
+          </ul>
+        </div>
+        <div className="sidebar-section">
+          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
+            General
+          </p>
+          <ul className="flex flex-col gap-[8px] p-2">
+            {data ? (
+              <>
+                {data &&
+                  data.general.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
+                          router.pathname === `${item.url}`
+                            ? "opacity-100"
+                            : "opacity-60"
+                        }`}
+                        href={`${item.url}`}
+                      >
+                        {item.locked === "true" && (
+                          <span>
+                            <FiLock />
+                          </span>
+                        )}{" "}
+                        {item.name}
+                        {item.new === "true" && (
+                          <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
+                            new
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
               </>
             ) : (
               <div className="flex flex-col gap-2">

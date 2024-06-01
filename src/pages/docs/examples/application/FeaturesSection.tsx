@@ -67,6 +67,7 @@ export const featuresection = () => {
             </div>
           </DocsPreview>
           <CodeBlock
+            free
             title="Feature Card Component"
             lang="tsx"
             filename="tsx"

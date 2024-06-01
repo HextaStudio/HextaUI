@@ -111,7 +111,7 @@ const profilecard = () => {
   return (
     <>
       <DocsSEO
-        title="Profile Card"
+        title="Profile Card - hextastudio/ui"
         description="An example component to showcase a user profile card."
         image="https://i.imgur.com/qMYYvFM.png"
       />

@@ -9,8 +9,17 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-[8rem] text-center px-4">
-      <div className="w-full h-[10rem] bg-zinc-950 mx-auto absolute top-[-4rem] blur-[100px] opacity-30 z-[1]"></div>
+    <div className="flex flex-col items-center justify-center gap-[8rem] text-center px-4 ">
+      <div
+        className={`absolute right-0 top-0 z-0 size-[50vw]`}
+        style={{
+          backgroundImage: `url(
+            "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='rgb(30 58 138 / 0.5)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+        }}
+      >
+        <div className="absolute inset-0 [background-image:radial-gradient(100%_100%_at_100%_0%,_rgba(9,9,11,0),_rgba(0,0,0))]"></div>
+      </div>
+      <div className="w-full h-[10rem] bg-zinc-950 mx-auto absolute top-[-4rem] blur-[100px] opacity-20 z-[1]"></div>
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <h1 className="text-6xl font-bold tracking-tight max-w-[40rem] max-[372px]:text-5xl relative hero-heading">
           Modern & Stunning Website Components
@@ -21,7 +30,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-wrap gap-3 p-2 z-[99]">
           <Link
-            href="/docs/examples/AnimatedDock"
+            href="/docs/examples/application/AnimatedDock"
             className="px-4 py-2 bg-white rounded-md text-black font-medium text-[14px] grow"
           >
             Browse Examples
@@ -109,7 +118,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-wrap gap-3 p-2 z-[99]">
           <Link
-            href="/docs/examples/AnimatedDock"
+            href="/docs/examples/application/AnimatedDock"
             className="px-4 py-2 bg-white rounded-md text-black font-medium text-[14px] grow"
           >
             Browse Examples
