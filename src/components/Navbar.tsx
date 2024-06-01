@@ -115,7 +115,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </li>
               <li>
                 <Link
-                  href="https://pro.ui.hextastudio.in/docs/examples/AnimatedDock"
+                  href="https://pro.ui.hextastudio.in/docs/examples/application.AnimatedDock"
                   className="opacity-80 hover:opacity-100 hover:underline transition-all"
                 >
                   Pro
@@ -191,7 +191,7 @@ export const Navbar = ({ docs }: NavbarProps) => {
               </MenuItem>
               <MenuItem>
                 <Link
-                  href="https://pro.ui.hextastudio.in/docs/examples/AnimatedDock"
+                  href="https://pro.ui.hextastudio.in/docs/examples/application.AnimatedDock"
                   className="flex items-center gap-3 h-full w-full"
                 >
                   <FaArrowUpRightDots /> Pro
