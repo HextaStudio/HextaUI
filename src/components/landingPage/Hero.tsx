@@ -72,6 +72,8 @@ export const Hero = () => {
                 height={792450}
                 alt="component preview"
                 loading="eager"
+                placeholder="blur"
+                blurDataURL="/hero-image-placeholder.png"
                 quality={100}
                 className="max-w-full  w-full h-auto object-cover animate-heroScroller "
               />
@@ -81,6 +83,8 @@ export const Hero = () => {
                 height={792450}
                 alt="component preview"
                 loading="eager"
+                placeholder="blur"
+                blurDataURL="/hero-image-placeholder.png"
                 quality={100}
                 className="max-w-full  w-full h-auto object-cover animate-heroScroller "
                 aria-hidden="true"
