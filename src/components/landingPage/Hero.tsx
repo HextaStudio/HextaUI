@@ -71,7 +71,7 @@ export const Hero = () => {
                 width={3738340}
                 height={792450}
                 alt="component preview"
-                loading="eager"
+                loading="lazy"
                 placeholder="blur"
                 blurDataURL="/hero-image-placeholder.png"
                 quality={100}
@@ -82,7 +82,7 @@ export const Hero = () => {
                 width={3738340}
                 height={792450}
                 alt="component preview"
-                loading="eager"
+                loading="lazy"
                 placeholder="blur"
                 blurDataURL="/hero-image-placeholder.png"
                 quality={100}
