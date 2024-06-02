@@ -67,27 +67,31 @@ export const Hero = () => {
           <div className="max-w-[45rem] max-h-[50rem] max-[1462px]:max-w-[40rem]  max-[1362px]:max-w-[35rem] max-xl:hidden features-div overflow-hidden">
             <div className="flex flex-col ">
               <Image
-                src="/hero-image.webp"
+                src="/hero-image-1.png"
                 width={3738340}
                 height={792450}
                 alt="component preview"
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL="/hero-image-placeholder.png"
                 quality={100}
                 className="max-w-full  w-full h-auto object-cover animate-heroScroller "
               />
               <Image
-                src="/hero-image.webp"
+                src="/hero-image-2.png"
                 width={3738340}
                 height={792450}
                 alt="component preview"
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL="/hero-image-placeholder.png"
                 quality={100}
                 className="max-w-full  w-full h-auto object-cover animate-heroScroller "
-                aria-hidden="true"
+              />
+              <Image
+                src="/hero-image-3.png"
+                width={3738340}
+                height={792450}
+                alt="component preview"
+                loading="lazy"
+                quality={100}
+                className="max-w-full  w-full h-auto object-cover animate-heroScroller "
               />
             </div>
           </div>
