@@ -11,6 +11,14 @@ module.exports = {
         animatedBeam: {
           "100%": { offsetDistance: "100%" },
         },
+        heroScroller: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-100%)",
+          },
+        },
         beamMask: {
           from: { x: "-100%" },
           to: { x: "100%" },
@@ -33,6 +41,7 @@ module.exports = {
         },
       },
       animation: {
+        heroScroller: "heroScroller 170s linear infinite",
         animatedBeam: "animatedBeam 7s linear infinite",
         beamMask: "beamMask 1s linear infinite",
         brandScroller: "brand-scroller 30s linear infinite",

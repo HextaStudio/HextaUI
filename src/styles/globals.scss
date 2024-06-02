@@ -610,3 +610,9 @@ h2 {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+@media screen and (max-width: 1200px) {
+  .features-div {
+    display: none;
+  }
+}
