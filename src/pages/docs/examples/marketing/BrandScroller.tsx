@@ -3,182 +3,139 @@ import { DocsHeader } from "@/components/DocsPage/DocsHeader";
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { DocsPreview } from "@/components/DocsPage/DocsPreview";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
-import { BsGoogle, BsMicrosoft } from "react-icons/bs";
-import { SiRuby, SiTypescript } from "react-icons/si";
 
-const BrandScroller = () => {
+import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
+
+const HorizontalScroller1 = () => {
   return (
     <>
-      <div className="flex space-x-16 [mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%]">
-        <div className="flex space-x-16 animate-brandScroller opacity-80">
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-        </div>
-        <div
-          className="flex space-x-16 animate-brandScroller opacity-80"
-          aria-hidden="true"
-        >
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-        </div>
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-bold">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-bold">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-bold">Amazon</p>
+              </div>
+
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-bold">Google</p>
+              </div>
+            </div>
+          ))}
       </div>
     </>
   );
 };
 
-const BrandScrollerReverse = () => {
+const HorizontalScroller2 = () => {
   return (
     <>
-      <div className="flex space-x-16 [mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%]">
-        <div className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]">
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-        </div>
-        <div
-          className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]"
-          aria-hidden="true"
-        >
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-          <BsGoogle size={30} className="aspect-square max-w-none" />
-          <BsMicrosoft size={30} className="aspect-square max-w-none" />
-          <SiTypescript size={30} className="aspect-square max-w-none" />
-          <SiRuby size={30} className="aspect-square max-w-none" />
-        </div>
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] [animation-direction:reverse] animate-marquee flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-bold">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-bold">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-bold">Amazon</p>
+              </div>
+
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-bold">Google</p>
+              </div>
+            </div>
+          ))}
       </div>
     </>
   );
 };
 
-const TwoBrandScroller = () => {
+const HorizontalScroller3 = () => {
   return (
     <>
-      <div className="[mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%] flex flex-col space-y-16">
-        <div className="flex space-x-16 ">
-          <div className="flex space-x-16 animate-brandScroller opacity-80">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-          <div
-            className="flex space-x-16 animate-brandScroller opacity-80"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-        </div>
-        <div className="flex space-x-16 ">
-          <div className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-          <div
-            className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        <div className="flex flex-col [gap:var(--gap)]">
+          <div className="flex [gap:var(--gap)]">
+            {Array(4)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+                  key={i}
+                >
+                  <div className="flex items-center w-28 gap-3">
+                    <BsSpotify size={24} />
+                    <p className="text-lg font-bold">Spotify</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsYoutube size={24} />
+                    <p className="text-lg font-bold">YouTube</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsAmazon size={24} />
+                    <p className="text-lg font-bold">Amazon</p>
+                  </div>
 
-const VerticalBrandScroller = () => {
-  return (
-    <>
-      <div className="flex  space-x-16 [mask-image:linear-gradient(to_top,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-h-[20rem] h-full">
-        <div className="flex space-y-16 flex-col">
-          <div className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 ">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
+                  <div className="flex items-center w-28 gap-3">
+                    <BsGoogle size={24} />
+                    <p className="text-lg font-bold">Google</p>
+                  </div>
+                </div>
+              ))}
           </div>
-          <div
-            className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-        </div>
-        <div className="flex space-y-16 flex-col">
-          <div className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 [animation-direction:reverse]">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-          </div>
-          <div
-            className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 [animation-direction:reverse]"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
+          <div className="flex [gap:var(--gap)]">
+            {Array(4)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  className="flex shrink-0 justify-around [animation-direction:reverse] [gap:var(--gap)] animate-marquee flex-row"
+                  key={i}
+                >
+                  <div className="flex items-center w-28 gap-3">
+                    <BsSpotify size={24} />
+                    <p className="text-lg font-bold">Spotify</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsYoutube size={24} />
+                    <p className="text-lg font-bold">YouTube</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsAmazon size={24} />
+                    <p className="text-lg font-bold">Amazon</p>
+                  </div>
+
+                  <div className="flex items-center w-28 gap-3">
+                    <BsGoogle size={24} />
+                    <p className="text-lg font-bold">Google</p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -200,8 +157,8 @@ const brandscroller = () => {
             title="Brand Scroller"
             description="A scroller for brand logos."
           />
-          <DocsPreview title="Brand Scroller">
-            <BrandScroller />
+          <DocsPreview title="Brand Scroller 1">
+            <HorizontalScroller1 />
           </DocsPreview>
           <CodeBlock
             lang="tsx"
@@ -217,29 +174,19 @@ module.exports = {
     extend: {
       keyframes: {
         // ...
-        "brand-scroller": {
-          from: {
+        marquee: {
+          "0%": {
             transform: "translateX(0%)",
           },
-          to: {
-            transform: "translateX(-55%)",
-          },
-        },
-        "brand-scroller-vertical": {
-          from: {
-            transform: "translateY(0%)",
-          },
-          to: {
-            transform: "translateY(-55%)",
+          "100%": {
+            transform: "translateX(calc(-100% - var(--gap)))",
           },
         },
       },
       animation: {
+        marquee: "marquee 30s linear infinite",
         // ...
-        brandScroller: "brand-scroller 30s linear infinite",
-        brandScrollerVertical: "brand-scroller-vertical 30s linear infinite",
       },
-     
     },
   },
   plugins: [],
@@ -249,223 +196,162 @@ module.exports = {
           <CodeBlock
             lang="tsx"
             filename="tsx"
-            code={`import { BsGoogle, BsMicrosoft } from "react-icons/bs";
-import { SiRuby, SiTypescript } from "react-icons/si";
+            code={`import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
+const HorizontalScroller1 = () => {
+  return (
+    <>
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-bold">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-bold">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-bold">Amazon</p>
+              </div>
 
-const BrandScroller = () => {
-    return (
-      <>
-        <div className="flex space-x-16 [mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%]">
-          <div className="flex space-x-16 animate-brandScroller opacity-80">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-          <div
-            className="flex space-x-16 animate-brandScroller opacity-80"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-        </div>
-      </>
-    );
-  };
-`}
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-bold">Google</p>
+              </div>
+            </div>
+          ))}
+      </div>
+    </>
+  );
+};`}
           />
-          <DocsPreview title="Reverse Brand Scroller">
-            <BrandScrollerReverse />
+
+          <DocsPreview title="Brand Scroller 2">
+            <HorizontalScroller2 />
           </DocsPreview>
           <CodeBlock
             lang="tsx"
             filename="tsx"
-            code={`import { BsGoogle, BsMicrosoft } from "react-icons/bs";
-import { SiRuby, SiTypescript } from "react-icons/si";
+            code={`import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
+const HorizontalScroller2 = () => {
+  return (
+    <>
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] [animation-direction:reverse] animate-marquee flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-bold">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-bold">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-bold">Amazon</p>
+              </div>
 
-const BrandScrollerReverse = () => {
-    return (
-      <>
-        <div className="flex space-x-16 [mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%]">
-          <div className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]">
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-          <div
-            className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]"
-            aria-hidden="true"
-          >
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-            <BsGoogle size={30} className="aspect-square max-w-none" />
-            <BsMicrosoft size={30} className="aspect-square max-w-none" />
-            <SiTypescript size={30} className="aspect-square max-w-none" />
-            <SiRuby size={30} className="aspect-square max-w-none" />
-          </div>
-        </div>
-      </>
-    );
-  };
-`}
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-bold">Google</p>
+              </div>
+            </div>
+          ))}
+      </div>
+    </>
+  );
+};`}
           />
-          <DocsPreview title="Two Brand Scrollers">
-            <TwoBrandScroller />
+
+          <DocsPreview title="Brand Scroller 3">
+            <HorizontalScroller3 />
           </DocsPreview>
           <CodeBlock
             lang="tsx"
             filename="tsx"
-            code={`import { BsGoogle, BsMicrosoft } from "react-icons/bs";
-import { SiRuby, SiTypescript } from "react-icons/si";
+            code={`import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
+const HorizontalScroller3 = () => {
+  return (
+    <>
+      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        <div className="flex flex-col [gap:var(--gap)]">
+          <div className="flex [gap:var(--gap)]">
+            {Array(4)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+                  key={i}
+                >
+                  <div className="flex items-center w-28 gap-3">
+                    <BsSpotify size={24} />
+                    <p className="text-lg font-bold">Spotify</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsYoutube size={24} />
+                    <p className="text-lg font-bold">YouTube</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsAmazon size={24} />
+                    <p className="text-lg font-bold">Amazon</p>
+                  </div>
 
-const TwoBrandScroller = () => {
-    return (
-      <>
-        <div className="[mask-image:linear-gradient(to_right,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-w-[90%] flex flex-col space-y-16">
-          <div className="flex space-x-16 ">
-            <div className="flex space-x-16 animate-brandScroller opacity-80">
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
-            <div
-              className="flex space-x-16 animate-brandScroller opacity-80"
-              aria-hidden="true"
-            >
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsGoogle size={24} />
+                    <p className="text-lg font-bold">Google</p>
+                  </div>
+                </div>
+              ))}
           </div>
-          <div className="flex space-x-16 ">
-            <div className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]">
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
-            <div
-              className="flex space-x-16 animate-brandScroller opacity-80 [animation-direction:reverse]"
-              aria-hidden="true"
-            >
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  };
-`}
-          />
-          <DocsPreview title="Vertical Brand Scroller">
-            <VerticalBrandScroller />
-          </DocsPreview>
-          <CodeBlock
-            lang="tsx"
-            filename="tsx"
-            code={`import { BsGoogle, BsMicrosoft } from "react-icons/bs";
-import { SiRuby, SiTypescript } from "react-icons/si";
+          <div className="flex [gap:var(--gap)]">
+            {Array(4)
+              .fill(0)
+              .map((_, i) => (
+                <div
+                  className="flex shrink-0 justify-around [animation-direction:reverse] [gap:var(--gap)] animate-marquee flex-row"
+                  key={i}
+                >
+                  <div className="flex items-center w-28 gap-3">
+                    <BsSpotify size={24} />
+                    <p className="text-lg font-bold">Spotify</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsYoutube size={24} />
+                    <p className="text-lg font-bold">YouTube</p>
+                  </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsAmazon size={24} />
+                    <p className="text-lg font-bold">Amazon</p>
+                  </div>
 
-
-const VerticalBrandScroller = () => {
-    return (
-      <>
-        <div className="flex  space-x-16 [mask-image:linear-gradient(to_top,rgba(0,0,0,0),_rgba(0,0,0,1)_20%,_rgba(0,0,0,1)_80%,_rgba(0,0,0,0))] max-h-[20rem] h-full">
-          <div className="flex space-y-16 flex-col">
-            <div className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 ">
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
-            <div
-              className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80"
-              aria-hidden="true"
-            >
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-            </div>
-          </div>
-          <div className="flex space-y-16 flex-col">
-            <div className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 [animation-direction:reverse]">
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-            </div>
-            <div
-              className="flex space-y-16 animate-brandScrollerVertical flex-col opacity-80 [animation-direction:reverse]"
-              aria-hidden="true"
-            >
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-              <SiRuby size={30} className="aspect-square max-w-none" />
-              <BsGoogle size={30} className="aspect-square max-w-none" />
-              <BsMicrosoft size={30} className="aspect-square max-w-none" />
-              <SiTypescript size={30} className="aspect-square max-w-none" />
-            </div>
+                  <div className="flex items-center w-28 gap-3">
+                    <BsGoogle size={24} />
+                    <p className="text-lg font-bold">Google</p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
-      </>
-    );
-  };
-`}
+      </div>
+    </>
+  );
+};`}
           />
         </main>
       </DocsLayout>

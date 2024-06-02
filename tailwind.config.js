@@ -39,6 +39,14 @@ module.exports = {
             transform: "translateY(-55%)",
           },
         },
+        marquee: {
+          "0%": {
+            transform: "translateX(0%)",
+          },
+          "100%": {
+            transform: "translateX(calc(-100% - var(--gap)))",
+          },
+        },
       },
       animation: {
         heroScroller: "heroScroller 170s linear infinite",
@@ -46,6 +54,7 @@ module.exports = {
         beamMask: "beamMask 1s linear infinite",
         brandScroller: "brand-scroller 30s linear infinite",
         brandScrollerVertical: "brand-scroller-vertical 30s linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
       boxShadow: {
         "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",

@@ -17,7 +17,7 @@ export const Hero = () => {
           <div>
             <div className="flex -space-x-3 max-xl:justify-center">
               <Avatar
-                avatarUrl="https://via.placeholder.com/40"
+                avatarUrl="https://pbs.twimg.com/profile_images/1763148592137519104/50gzixtJ_400x400.jpg"
                 className="ring-4 ring-black"
                 size={40}
               />
