@@ -55,13 +55,13 @@ export const Features = () => {
 
   return (
     <>
-      <section className="max-w-[70rem] w-[95%] mx-auto my-[10rem] relative">
+      <section className="max-w-[70rem] w-[95%] mx-auto my-[10rem] relative rounded-xl">
         {" "}
         <div className="rounded-[inherit] [border:calc(1.9*1px)_solid_transparent] ![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)]  absolute inset-0 rounded-inherit border-2 border-transparent !mask-clip-padding-box-border-box after:absolute after:aspect-square after:w-[250px] after:animate-animatedBeam after:bg-gradient-to-l after:from-purple-500 after:via-purple-950 after:to-transparent after:[offset-anchor:90%_50%] after:[offset-path:rect(0_auto_auto_0_round_250px)]"></div>
         <div className="grid auto-rows-[150px] grid-cols-3 gap-4 max-[900px]:grid-cols-2">
           <div className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-400/10 bg-opacity-5 ">
             <div className="flex flex-col gap-2">
-              <h2 className="text-4xl leading-10 w-min">Customization</h2>
+              <h2 className="text-3xl leading-9 w-min">Customization</h2>
               <p className="text-sm opacity-80">
                 Customize any components with your own style seamlessly!
               </p>
@@ -77,7 +77,7 @@ export const Features = () => {
           </div>
           <div className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5  max-[900px]:col-span-2 overflow-hidden flex relative">
             <div className="flex flex-col gap-2">
-              <h2 className="text-4xl leading-10 w-min">Stunning Components</h2>
+              <h2 className="text-3xl leading-9 w-min">Stunning Components</h2>
               <p className="text-sm opacity-80">
                 Copy and Paste Modern components without any efforts.
               </p>
@@ -93,9 +93,9 @@ export const Features = () => {
               }}
             />
           </div>
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center text-center relative">
+          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative">
             <div className="flex flex-col gap-2">
-              <h2 className="text-4xl leading-10 ">Your project, Your code</h2>
+              <h2 className="text-3xl leading-9 ">Your project, Your code</h2>
               <p className="text-sm opacity-80">
                 The components added to working directory, instead of
                 node_modules.
@@ -134,13 +134,13 @@ export const Features = () => {
             />
           </div>
         </div>{" "}
-        <Toast
-          text={otpValue === "012345" ? "🥳 Whohooo!!" : "❌ Nope!!"}
-          description="Copy and paste code for this Toast"
-          showToast={showToast}
-          onCancel={toggleToast}
-        />
       </section>
+      <Toast
+        text={otpValue === "012345" ? "🥳 Whohooo!!" : "❌ Nope!!"}
+        description="Copy and paste code for this Toast"
+        showToast={showToast}
+        onCancel={toggleToast}
+      />
     </>
   );
 };

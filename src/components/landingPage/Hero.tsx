@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Avatar } from "../hexta-ui/Avatar";
-import Image from "next/image";
+import { Features } from "./Features";
 
 export const Hero = () => {
   return (
     <>
       <div className="left-1/2 -translate-x-1/2 hero-glow  fading-out-2 absolute top-0 z-[1]"></div>
       <section
-        className="flex items-center justify-between max-xl:justify-center max-xl:text-center pt-[13rem] pb-[20rem] px-[7rem] relative max-w-full max-xl:px-[1rem] overflow-hidden backdrop-blur-[6rem] z-[999]"
+        className="flex items-center justify-between max-xl:justify-center max-xl:text-center pt-[11rem] pb-[20rem] px-[4rem] relative max-w-full max-xl:px-[1rem] overflow-hidden backdrop-blur-[6rem] z-[999]"
         style={{
           perspective: "1000px",
         }}
@@ -63,37 +63,9 @@ export const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="features absolute right-[7rem] -top-3 fading-out-2 -skew-x-[5deg] overflow-hiddens flex items-center justify-center max-[1532px]:right-[2rem]">
-          <div className="max-w-[45rem] max-h-[50rem] max-[1462px]:max-w-[40rem]  max-[1362px]:max-w-[35rem] max-xl:hidden features-div overflow-hidden">
-            <div className="flex flex-col ">
-              <Image
-                src="/hero-image-1.png"
-                width={3738340}
-                height={792450}
-                alt="component preview"
-                loading="lazy"
-                quality={100}
-                className="max-w-full  w-full h-auto object-cover animate-heroScroller "
-              />
-              <Image
-                src="/hero-image-2.png"
-                width={3738340}
-                height={792450}
-                alt="component preview"
-                loading="lazy"
-                quality={100}
-                className="max-w-full  w-full h-auto object-cover animate-heroScroller "
-              />
-              <Image
-                src="/hero-image-3.png"
-                width={3738340}
-                height={792450}
-                alt="component preview"
-                loading="lazy"
-                quality={100}
-                className="max-w-full  w-full h-auto object-cover animate-heroScroller "
-              />
-            </div>
+        <div className="features absolute right-[4rem] -top-6 fading-out-2 overflow-hiddens flex items-center justify-center max-[1532px]:right-[2rem] scale-[0.9]">
+          <div className="max-w-[50rem] max-h-[50rem] max-[1462px]:max-w-[40rem]  max-[1362px]:max-w-[35rem] max-xl:hidden features-div overflow-hidden">
+            <Features />
           </div>
         </div>
       </section>
