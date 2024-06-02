@@ -287,10 +287,22 @@
       "type": "general"
     },
     {
+      "name": "About Section",
+      "url": "/docs/examples/general/AboutSection",
+      "type": "general"
+    },
+    {
+      "name": "Custom Cursor",
+      "url": "/docs/examples/general/CustomCursor",
+      "type": "general",
+      "new": "true"
+    },
+    {
       "name": "Animated Beam",
       "url": "/docs/examples/general/AnimatedBeams",
       "type": "general",
-      "new": "true"
+      "new": "true",
+      "locked": "true"
     }
   ],
   "templates": [
