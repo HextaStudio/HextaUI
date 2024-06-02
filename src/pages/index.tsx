@@ -31,7 +31,6 @@ export default function Home() {
       />
       <Layout>
         <Hero />
-        <Features />
         <Testimonials />
         <CTA />
       </Layout>
