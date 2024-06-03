@@ -292,6 +292,13 @@
       "type": "general"
     },
     {
+      "name": "Block Reveal",
+      "url": "/docs/examples/general/BlockReveal",
+      "type": "general",
+      "new": "true",
+      "locked": "true"
+    },
+    {
       "name": "Custom Cursor",
       "url": "/docs/examples/general/CustomCursor",
       "type": "general",
