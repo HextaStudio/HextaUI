@@ -305,6 +305,12 @@
       "new": "true"
     },
     {
+      "name": "Sparkle Text Effect",
+      "url": "/docs/examples/general/SparkleTextEffect",
+      "type": "general",
+      "new": "true"
+    },
+    {
       "name": "Custom Cursor",
       "url": "/docs/examples/general/CustomCursor",
       "type": "general"

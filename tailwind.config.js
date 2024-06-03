@@ -47,6 +47,17 @@ module.exports = {
             transform: "translateX(calc(-100% - var(--gap)))",
           },
         },
+        starScale: {
+          "from, to": {
+            transform: "rotate(0) scale(0)",
+            opacity: 0,
+          },
+
+          "50%": {
+            transform: "rotate(180deg) scale(1)",
+            opacity: 1,
+          },
+        },
       },
       animation: {
         heroScroller: "heroScroller 170s linear infinite",
@@ -55,6 +66,7 @@ module.exports = {
         brandScroller: "brand-scroller 30s linear infinite",
         brandScrollerVertical: "brand-scroller-vertical 30s linear infinite",
         marquee: "marquee 30s linear infinite",
+        starScale: "starScale 800ms ease infinite",
       },
       boxShadow: {
         "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",
