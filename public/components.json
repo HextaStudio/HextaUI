@@ -300,7 +300,7 @@
     },
     {
       "name": "Magical Hover Card",
-      "url": "/docs/examples/general/CustomCursor",
+      "url": "/docs/examples/general/MagicHoverCard",
       "type": "general",
       "new": "true"
     },
