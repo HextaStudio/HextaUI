@@ -299,10 +299,15 @@
       "locked": "true"
     },
     {
-      "name": "Custom Cursor",
+      "name": "Magical Hover Card",
       "url": "/docs/examples/general/CustomCursor",
       "type": "general",
       "new": "true"
+    },
+    {
+      "name": "Custom Cursor",
+      "url": "/docs/examples/general/CustomCursor",
+      "type": "general"
     },
     {
       "name": "Animated Beam",
