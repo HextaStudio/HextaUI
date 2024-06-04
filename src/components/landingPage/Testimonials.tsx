@@ -7,7 +7,7 @@ export const Testimonials = () => {
         <h2 className="text-4xl">What people are saying</h2>
         <p>
           Don't just take our word for it. Here's what real people are saying
-          about Magic UI on X.
+          about hextastudio/ui on X.
         </p>
       </div>
 
