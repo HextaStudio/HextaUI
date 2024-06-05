@@ -14,8 +14,11 @@ export interface Item {
 export interface Data {
   components: Item[];
   resources: Item[];
-  examples: Item[];
   templates: Item[];
+  marketing: Item[];
+  application: Item[];
+  ecommerce: Item[];
+  general: Item[];
 }
 
 export const Search: React.FC = () => {
@@ -26,7 +29,14 @@ export const Search: React.FC = () => {
   useEffect(() => {
     fetch("/components.json")
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        for (let category in data) {
+          data[category].sort((a: { name: string }, b: { name: any }) =>
+            a.name.localeCompare(b.name)
+          );
+        }
+        setData(data);
+      });
   }, []);
 
   useEffect(() => {
@@ -42,12 +52,28 @@ export const Search: React.FC = () => {
             item.name.toLowerCase().includes(query.toLowerCase()) ||
             item.type.toLowerCase().includes(query.toLowerCase())
         ),
-        examples: data.examples.filter(
+
+        templates: data.templates.filter(
           (item) =>
             item.name.toLowerCase().includes(query.toLowerCase()) ||
             item.type.toLowerCase().includes(query.toLowerCase())
         ),
-        templates: data.templates.filter(
+        marketing: data.marketing.filter(
+          (item) =>
+            item.name.toLowerCase().includes(query.toLowerCase()) ||
+            item.type.toLowerCase().includes(query.toLowerCase())
+        ),
+        application: data.application.filter(
+          (item) =>
+            item.name.toLowerCase().includes(query.toLowerCase()) ||
+            item.type.toLowerCase().includes(query.toLowerCase())
+        ),
+        ecommerce: data.ecommerce.filter(
+          (item) =>
+            item.name.toLowerCase().includes(query.toLowerCase()) ||
+            item.type.toLowerCase().includes(query.toLowerCase())
+        ),
+        general: data.general.filter(
           (item) =>
             item.name.toLowerCase().includes(query.toLowerCase()) ||
             item.type.toLowerCase().includes(query.toLowerCase())
@@ -90,6 +116,75 @@ export const Search: React.FC = () => {
                   </li>
                 ))}
               </ul>
+
+              <ul className="flex flex-col -space-y-3 w-full">
+                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
+                  General
+                </p>
+                {filteredData.general.map((item, index) => (
+                  <li key={index} className="w-full grow flex">
+                    <Link
+                      key={index}
+                      href={item.url}
+                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
+                    >
+                      ✨ {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="flex flex-col -space-y-3 w-full">
+                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
+                  Marketing
+                </p>
+                {filteredData.marketing.map((item, index) => (
+                  <li key={index} className="w-full grow flex">
+                    <Link
+                      key={index}
+                      href={item.url}
+                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
+                    >
+                      🎙️ {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="flex flex-col -space-y-3 w-full">
+                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
+                  Application
+                </p>
+                {filteredData.application.map((item, index) => (
+                  <li key={index} className="w-full grow flex">
+                    <Link
+                      key={index}
+                      href={item.url}
+                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
+                    >
+                      📱 {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="flex flex-col -space-y-3 w-full">
+                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
+                  E-commerce
+                </p>
+                {filteredData.ecommerce.map((item, index) => (
+                  <li key={index} className="w-full grow flex">
+                    <Link
+                      key={index}
+                      href={item.url}
+                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
+                    >
+                      🛒 {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
               <ul className="flex flex-col -space-y-3 w-full">
                 <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
                   Getting Started
@@ -106,22 +201,7 @@ export const Search: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <ul className="flex flex-col -space-y-3 w-full">
-                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
-                  Examples
-                </p>
-                {filteredData.examples.map((item, index) => (
-                  <li key={index} className="w-full grow flex">
-                    <Link
-                      key={index}
-                      href={item.url}
-                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
-                    >
-                      🚀 {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+
               <ul className="flex flex-col -space-y-3 w-full">
                 <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
                   Templates
