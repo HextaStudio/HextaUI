@@ -348,12 +348,6 @@
       "type": "template"
     },
     {
-      "name": "About Section",
-      "url": "/docs/examples/general/AboutSection",
-      "type": "general",
-      "new": "true"
-    },
-    {
       "name": "Startup/SaaS",
       "url": "/docs/templates/startup-saas",
       "type": "template"
