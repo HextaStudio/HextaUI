@@ -311,6 +311,24 @@
       "new": "true"
     },
     {
+      "name": "3D Globe",
+      "url": "/docs/examples/general/Globe",
+      "type": "general",
+      "new": "true"
+    },
+    {
+      "name": "Background Particles",
+      "url": "/docs/examples/general/BackgroundParticles",
+      "type": "general",
+      "new": "true"
+    },
+    {
+      "name": "Meteor Shower",
+      "url": "/docs/examples/general/Meteors",
+      "type": "general",
+      "new": "true"
+    },
+    {
       "name": "Custom Cursor",
       "url": "/docs/examples/general/CustomCursor",
       "type": "general"
