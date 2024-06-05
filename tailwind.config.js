@@ -58,6 +58,14 @@ module.exports = {
             opacity: 1,
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
       },
       animation: {
         heroScroller: "heroScroller 170s linear infinite",
@@ -67,6 +75,7 @@ module.exports = {
         brandScrollerVertical: "brand-scroller-vertical 30s linear infinite",
         marquee: "marquee 30s linear infinite",
         starScale: "starScale 800ms ease infinite",
+        meteor: "meteor 0.2s linear infinite",
       },
       boxShadow: {
         "glow-white": "0 0 10px rgba(255, 255, 255, 0.5)",
