@@ -53,13 +53,13 @@ export const Hero = () => {
               href="/docs/components/layout/Accordion"
               className="primary-button "
             >
-              Browse Components
+              Components
             </Link>
             <Link
-              href="https://pro.ui.hextastudio.in"
+              href="/docs/examples/application/AnimatedDock"
               className="secondary-button "
             >
-              Pricing
+              Examples
             </Link>
           </div>
         </div>

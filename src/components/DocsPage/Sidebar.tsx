@@ -106,10 +106,10 @@ export const Sidebar = () => {
               </Link>
             </li>
             <li>
-              <span className="text-sm opacity-90">🙏 Support </span>
+              <span className="text-sm opacity-90">🫶 Support </span>
               <Link
                 className="text-sm blue-link w-fit"
-                href="https://donate.stripe.com/fZeaGJeU23Cn9u8288"
+                href="https://buy.stripe.com/7sI1693bkdcXayc8wE"
                 target="_blank"
               >
                 hextastudio/ui

@@ -19,7 +19,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-4">
           <Link
-            href="https://pro.ui.hextastudio.in/pricing"
+            href="https://ui.hextastudio.in"
             className="text-sm px-4 py-2 bg-white text-black rounded-lg font-semibold"
           >
             Get started
@@ -139,7 +139,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-4">
           <Link
-            href="https://pro.ui.hextastudio.in/pricing"
+            href="https://hextastudio.in"
             className="text-sm px-4 py-2 bg-white text-black rounded-lg font-semibold"
           >
             Get started

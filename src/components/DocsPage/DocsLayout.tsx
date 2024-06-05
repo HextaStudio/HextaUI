@@ -25,12 +25,12 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         <main className="flex flex-wrap justify-center flex-grow p-[5rem] mt-[5rem] ml-[17em] max-[900px]:ml-0 max-[900px]:mt-[5rem] max-[600px]:px-[2rem] relative">
           <div className="w-full ml-auto h-[2.5rem] bg-gradient-to-r from-green-900 to-teal-900  absolute top-[-0.6rem] left-0 right-0 flex items-center justify-center  max-[598px]:justify-end max-sm:hidden p-4">
             <p className="font-medium flex items-center gap-3  p-4">
-              Build faster hextastudio/ui premium components 🚀{" "}
+              hextastudio/ui needs your support to stay running 🫶{" "}
               <Link
                 className="underline flex items-center gap-1"
-                href="https://pro.ui.hextastudio.in/"
+                href="https://buy.stripe.com/7sI1693bkdcXayc8wE"
               >
-                Learn more
+                Help us
               </Link>
             </p>
           </div>

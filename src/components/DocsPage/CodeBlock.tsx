@@ -46,94 +46,77 @@ export const CodeBlock = ({
 
   return (
     <>
-      <>
-        {plan === "pro" || free ? (
-          <>
-            <div>
-              <h2 className="text-2xl font-bold">{title}</h2>
-              <div
-                className={`my-4 code-block relative ${
-                  isExpanded || code.split("\n").length <= 10
-                    ? "expanded"
-                    : "collapsed"
-                }`}
+      <div>
+        <h2 className="text-2xl font-bold">{title}</h2>
+        <div
+          className={`my-4 code-block relative ${
+            isExpanded || code.split("\n").length <= 10
+              ? "expanded"
+              : "collapsed"
+          }`}
+        >
+          <div className="flex items-center justify-between codeblock-header relative z-[999]">
+            {filename && (
+              <small
+                style={{
+                  padding: "3px 6px",
+                  fontFamily: "Fira Mono",
+                  fontSize: "13px",
+                  background: "#ffffff10",
+                  borderRadius: "5px",
+                }}
               >
-                <div className="flex items-center justify-between codeblock-header relative z-[999]">
-                  {filename && (
-                    <small
-                      style={{
-                        padding: "3px 6px",
-                        fontFamily: "Fira Mono",
-                        fontSize: "13px",
-                        background: "#ffffff10",
-                        borderRadius: "5px",
-                      }}
+                {filename}
+              </small>
+            )}
+            <CopyToClipboard text={code} onCopy={onCopyText}>
+              <div>
+                {copyStatus ? (
+                  <div className="flex items-center justify-center gap-1 copy-to-clipboard-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
                     >
-                      {filename}
-                    </small>
-                  )}
-                  <CopyToClipboard text={code} onCopy={onCopyText}>
-                    <div>
-                      {copyStatus ? (
-                        <div className="flex items-center justify-center gap-1 copy-to-clipboard-button">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="17"
-                            height="17"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"
-                            />
-                          </svg>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-1 copy-to-clipboard-button">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="17"
-                            height="17"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M7 18V2h13v16zm2-2h9V4H9zm-6 6V6h2v14h11v2zm6-6V4z"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                  </CopyToClipboard>
-                </div>
-
-                {shouldShowExpandButton && (
-                  <button
-                    className="absolute top-[15rem] left-[50%] translate-x-[-50%] primary-button"
-                    onClick={handleExpand}
-                  >
-                    Expand
-                  </button>
+                      <path
+                        fill="currentColor"
+                        d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"
+                      />
+                    </svg>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1 copy-to-clipboard-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M7 18V2h13v16zm2-2h9V4H9zm-6 6V6h2v14h11v2zm6-6V4z"
+                      />
+                    </svg>
+                  </div>
                 )}
-                <SyntaxHighlighter language={lang} style={oneDark}>
-                  {displayedCode}
-                </SyntaxHighlighter>
               </div>
-            </div>
-          </>
-        ) : (
-          <>
-            <DocsPreview title="" className="m-0">
-              <Link
-                href="https://pro.ui.hextastudio.in/pricing"
-                className="text-[14px] text-white text-oapcity-80 px-4 py-2 bg-zinc-900 rounded-full flex gap-2 items-center hover:brightness-75"
-              >
-                <FaLock /> Get Pro <FaArrowRight />
-              </Link>
-            </DocsPreview>
-          </>
-        )}
-      </>
+            </CopyToClipboard>
+          </div>
+
+          {shouldShowExpandButton && (
+            <button
+              className="absolute top-[15rem] left-[50%] translate-x-[-50%] primary-button"
+              onClick={handleExpand}
+            >
+              Expand
+            </button>
+          )}
+          <SyntaxHighlighter language={lang} style={oneDark}>
+            {displayedCode}
+          </SyntaxHighlighter>
+        </div>
+      </div>
     </>
   );
 };
