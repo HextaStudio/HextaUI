@@ -213,11 +213,7 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-                        {item.locked === "true" && (
-                          <span>
-                            <FiLock />
-                          </span>
-                        )}{" "}
+                      
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -260,11 +256,7 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-                        {item.locked === "true" && (
-                          <span>
-                            <FiLock />
-                          </span>
-                        )}{" "}
+                        
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -307,11 +299,7 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-                        {item.locked === "true" && (
-                          <span>
-                            <FiLock />
-                          </span>
-                        )}{" "}
+                      
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -354,11 +342,7 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-                        {item.locked === "true" && (
-                          <span>
-                            <FiLock />
-                          </span>
-                        )}{" "}
+                       
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
