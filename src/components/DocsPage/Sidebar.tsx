@@ -173,10 +173,6 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-<<<<<<< HEAD
-=======
-                      
->>>>>>> 01c57673fe917872a9348504a131a3f33d16cb8a
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -219,10 +215,6 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-<<<<<<< HEAD
-=======
-                        
->>>>>>> 01c57673fe917872a9348504a131a3f33d16cb8a
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -265,10 +257,6 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-<<<<<<< HEAD
-=======
-                      
->>>>>>> 01c57673fe917872a9348504a131a3f33d16cb8a
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
@@ -311,10 +299,6 @@ export const Sidebar = () => {
                         }`}
                         href={`${item.url}`}
                       >
-<<<<<<< HEAD
-=======
-                       
->>>>>>> 01c57673fe917872a9348504a131a3f33d16cb8a
                         {item.name}
                         {item.new === "true" && (
                           <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
