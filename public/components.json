@@ -168,15 +168,13 @@
     {
       "name": "Pricing Cards",
       "url": "/docs/examples/marketing/PricingCards",
-      "type": "marketing",
-      "locked": "true"
+      "type": "marketing"
     },
     {
       "name": "Stats Section",
       "url": "/docs/examples/marketing/StatsSection",
       "type": "marketing",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     },
     {
       "name": "Navbar",
@@ -184,11 +182,16 @@
       "type": "application"
     },
     {
+      "name": "Bottom Navigation",
+      "url": "/docs/examples/marketing/BottomNavigation",
+      "type": "application",
+      "new": "true"
+    },
+    {
       "name": "Hero",
       "url": "/docs/examples/marketing/Hero",
       "type": "marketing",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     },
     {
       "name": "Footer",
@@ -199,8 +202,7 @@
       "name": "Brand Scroller",
       "url": "/docs/examples/marketing/BrandScroller",
       "type": "marketing",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     }
   ],
 
@@ -213,8 +215,7 @@
     {
       "name": "Features Section",
       "url": "/docs/examples/application/FeaturesSection",
-      "type": "application",
-      "locked": "true"
+      "type": "application"
     },
     {
       "name": "Music Player",
@@ -231,8 +232,7 @@
     {
       "name": "Profile Card",
       "url": "/docs/examples/application/ProfileCard",
-      "type": "application",
-      "locked": "true"
+      "type": "application"
     },
     {
       "name": "Settings Section",
@@ -247,27 +247,23 @@
     {
       "name": "Feedback Ratings",
       "url": "/docs/examples/application/FeedbackRatings",
-      "type": "application",
-      "locked": "true"
+      "type": "application"
     },
     {
       "name": "Search Bar",
       "url": "/docs/examples/application/SearchBar",
       "type": "application",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     },
     {
       "name": "Bento Grid",
       "url": "/docs/examples/application/BentoGrid",
-      "type": "application",
-      "locked": "true"
+      "type": "application"
     },
     {
       "name": "Post Card",
       "url": "/docs/examples/application/PostCard",
-      "type": "application",
-      "locked": "true"
+      "type": "application"
     }
   ],
 
@@ -275,8 +271,7 @@
     {
       "name": "Billing Page",
       "url": "/docs/examples/ecommerce/BillingPage",
-      "type": "ecommerce",
-      "locked": "true"
+      "type": "ecommerce"
     }
   ],
 
@@ -295,8 +290,7 @@
       "name": "Block Reveal",
       "url": "/docs/examples/general/BlockReveal",
       "type": "general",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     },
     {
       "name": "Magical Hover Card",
@@ -337,8 +331,7 @@
       "name": "Animated Beam",
       "url": "/docs/examples/general/AnimatedBeams",
       "type": "general",
-      "new": "true",
-      "locked": "true"
+      "new": "true"
     }
   ],
   "templates": [
