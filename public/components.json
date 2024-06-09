@@ -3,14 +3,12 @@
     {
       "name": "Accordion",
       "url": "/docs/components/layout/Accordion",
-      "type": "component",
-      "new": "true"
+      "type": "component"
     },
     {
       "name": "Tabs",
       "url": "/docs/components/layout/Tabs",
-      "type": "component",
-      "new": "true"
+      "type": "component"
     },
     {
       "name": "Table",
@@ -35,8 +33,7 @@
     {
       "name": "Skeleton",
       "url": "/docs/components/layout/Skeleton",
-      "type": "component",
-      "new": "true"
+      "type": "component"
     },
     {
       "name": "Toast",
@@ -132,8 +129,7 @@
     {
       "name": "Notification",
       "url": "/docs/components/layout/Notification",
-      "type": "component",
-      "new": "true"
+      "type": "component"
     }
   ],
 
@@ -173,8 +169,7 @@
     {
       "name": "Stats Section",
       "url": "/docs/examples/marketing/StatsSection",
-      "type": "marketing",
-      "new": "true"
+      "type": "marketing"
     },
     {
       "name": "Navbar",
@@ -190,8 +185,7 @@
     {
       "name": "Hero",
       "url": "/docs/examples/marketing/Hero",
-      "type": "marketing",
-      "new": "true"
+      "type": "marketing"
     },
     {
       "name": "Footer",
@@ -201,8 +195,7 @@
     {
       "name": "Brand Scroller",
       "url": "/docs/examples/marketing/BrandScroller",
-      "type": "marketing",
-      "new": "true"
+      "type": "marketing"
     }
   ],
 
@@ -220,7 +213,7 @@
     {
       "name": "Music Player",
       "url": "/docs/examples/application/MusicPlayer",
-      "new": "true",
+
       "type": "application"
     },
 
@@ -247,13 +240,13 @@
     {
       "name": "Feedback Ratings",
       "url": "/docs/examples/application/FeedbackRatings",
-      "type": "application"
+      "type": "application",
+      "new": "true"
     },
     {
       "name": "Search Bar",
       "url": "/docs/examples/application/SearchBar",
-      "type": "application",
-      "new": "true"
+      "type": "application"
     },
     {
       "name": "Bento Grid",
@@ -289,8 +282,7 @@
     {
       "name": "Block Reveal",
       "url": "/docs/examples/general/BlockReveal",
-      "type": "general",
-      "new": "true"
+      "type": "general"
     },
     {
       "name": "Magical Hover Card",
@@ -301,26 +293,22 @@
     {
       "name": "Sparkle Text Effect",
       "url": "/docs/examples/general/SparkleTextEffect",
-      "type": "general",
-      "new": "true"
+      "type": "general"
     },
     {
       "name": "3D Globe",
       "url": "/docs/examples/general/Globe",
-      "type": "general",
-      "new": "true"
+      "type": "general"
     },
     {
       "name": "Background Particles",
       "url": "/docs/examples/general/BackgroundParticles",
-      "type": "general",
-      "new": "true"
+      "type": "general"
     },
     {
       "name": "Meteor Shower",
       "url": "/docs/examples/general/Meteors",
-      "type": "general",
-      "new": "true"
+      "type": "general"
     },
     {
       "name": "Custom Cursor",
@@ -330,20 +318,7 @@
     {
       "name": "Animated Beam",
       "url": "/docs/examples/general/AnimatedBeams",
-      "type": "general",
-      "new": "true"
-    }
-  ],
-  "templates": [
-    {
-      "name": "Portfolio",
-      "url": "/docs/templates/portfolio-v1",
-      "type": "template"
-    },
-    {
-      "name": "Startup/SaaS",
-      "url": "/docs/templates/startup-saas",
-      "type": "template"
+      "type": "general"
     }
   ]
 }
