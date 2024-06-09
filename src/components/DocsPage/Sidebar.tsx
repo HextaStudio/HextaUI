@@ -16,7 +16,6 @@ export interface Data {
   components: Item[];
   resources: Item[];
   examples: Item[];
-  templates: Item[];
   marketing: Item[];
   application: Item[];
   ecommerce: Item[];
@@ -125,45 +124,6 @@ export const Sidebar = () => {
             {data ? (
               <>
                 {data.resources.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
-                        router.pathname === `${item.url}`
-                          ? "opacity-100"
-                          : "opacity-60"
-                      }`}
-                      href={`${item.url}`}
-                    >
-                      {item.name}
-                      {item.new === "true" && (
-                        <span className="text-xs p-0 bg-green-500 px-2 hover:no-underline rounded-full text-black font-medium">
-                          new
-                        </span>
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </>
-            ) : (
-              <div className="flex flex-col gap-2">
-                <Skeleton className="w-full h-[20px]" />
-                <Skeleton className="w-full h-[20px]" />
-                <Skeleton className="w-full h-[20px]" />
-                <Skeleton className="w-full h-[20px]" />
-                <Skeleton className="w-full h-[20px]" />
-                <Skeleton className="w-full h-[20px]" />
-              </div>
-            )}
-          </ul>
-        </div>
-        <div className="sidebar-section">
-          <p className="flex items-center justify-between gap-1 p-2 text-sm font-bold uppercase ">
-            Templates (pro)
-          </p>
-          <ul className="flex flex-col gap-[8px] p-2">
-            {data ? (
-              <>
-                {data.templates.map((item, index) => (
                   <li key={index}>
                     <Link
                       className={`flex items-center gap-1 text-sm transition-all  hover:opacity-90 hover:underline w-fit ${
