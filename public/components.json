@@ -310,11 +310,7 @@
       "url": "/docs/examples/general/Meteors",
       "type": "general"
     },
-    {
-      "name": "Custom Cursor",
-      "url": "/docs/examples/general/CustomCursor",
-      "type": "general"
-    },
+
     {
       "name": "Animated Beam",
       "url": "/docs/examples/general/AnimatedBeams",
