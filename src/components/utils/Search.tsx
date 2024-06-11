@@ -14,7 +14,6 @@ export interface Item {
 export interface Data {
   components: Item[];
   resources: Item[];
-  templates: Item[];
   marketing: Item[];
   application: Item[];
   ecommerce: Item[];
@@ -53,11 +52,6 @@ export const Search: React.FC = () => {
             item.type.toLowerCase().includes(query.toLowerCase())
         ),
 
-        templates: data.templates.filter(
-          (item) =>
-            item.name.toLowerCase().includes(query.toLowerCase()) ||
-            item.type.toLowerCase().includes(query.toLowerCase())
-        ),
         marketing: data.marketing.filter(
           (item) =>
             item.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -197,23 +191,6 @@ export const Search: React.FC = () => {
                       className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
                     >
                       📄 {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <ul className="flex flex-col -space-y-3 w-full">
-                <p className="text-white px-4 my-2   mx-2 text-sm opacity-60 font-medium">
-                  Templates
-                </p>
-                {filteredData.templates.map((item, index) => (
-                  <li key={index} className="w-full grow flex">
-                    <Link
-                      key={index}
-                      href={item.url}
-                      className="px-4 py-2  hover:bg-white w-full hover:bg-opacity-10 flex items-center gap-2 text-[14px] m-2 rounded"
-                    >
-                      👀 {item.name}
                     </Link>
                   </li>
                 ))}
