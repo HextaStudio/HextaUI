@@ -9,7 +9,7 @@ const cn = (...args: any[]) => {
 
 interface ToggleProps {
   enabled: boolean;
-  onChange: (value: boolean) => void;
+  onChange: (enabled: boolean) => void;
   enabledColor?: string;
   disabledColor?: string;
   className?: string;

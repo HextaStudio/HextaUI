@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface ToastProps {
+interface ToastProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   text: string;
   description: string;
   showToast: boolean;
@@ -20,6 +24,7 @@ export const Toast = ({
   showToast,
   onCancel,
   className,
+  ...rest
 }: ToastProps) => {
   return (
     <AnimatePresence>
@@ -31,10 +36,10 @@ export const Toast = ({
           exit={{ translateY: 100, opacity: 0 }}
           className={cn(
             "flex items-center justify-between h-fit py-3 px-5 m-4 rounded-lg border-b-2 gap-3 border border-zinc-800 bg-zinc-950 fixed bottom-0 right-0 z-[99999999]",
-            className,
+            className
           )}
         >
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4" {...rest}>
             <div className="flex flex-col ">
               <p className="text-[15px] font-medium items-center flex tracking-normal opacity-90">
                 {text}

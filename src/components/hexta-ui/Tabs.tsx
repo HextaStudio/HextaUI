@@ -54,16 +54,28 @@ export const useTabContext = (): TabContextType => {
   return context;
 };
 
-interface TabProps {
+interface TabProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: React.ReactNode;
   className?: string;
 }
 
-export const Tab: React.FC<TabProps> = ({ children, className }) => {
-  return <div className={cn("tab", className)}>{children}</div>;
+export const Tab: React.FC<TabProps> = ({ children, className, ...rest }) => {
+  return (
+    <div className={cn("tab", className)} {...rest}>
+      {children}
+    </div>
+  );
 };
 
-interface TabHeaderProps {
+interface TabHeaderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   id: string;
   children: React.ReactNode;
   className?: string;
@@ -73,13 +85,16 @@ export const TabHeader: React.FC<TabHeaderProps> = ({
   id,
   children,
   className,
+  ...rest
 }) => {
   const { activeTab, setActiveTab } = useTabContext();
 
   return (
     <button
+      {...rest}
       onClick={() => setActiveTab(id)}
-      className={cn("px-4 grow py-1 focus:outline-none focus:border-none text-[14px] rounded-md shadow-md",
+      className={cn(
+        "px-4 grow py-1 focus:outline-none focus:border-none text-[14px] rounded-md shadow-md",
         activeTab === id
           ? "font-bold bg-zinc-900 "
           : "font-normal text-white text-opacity-50",
@@ -91,7 +106,11 @@ export const TabHeader: React.FC<TabHeaderProps> = ({
   );
 };
 
-interface TabContentProps {
+interface TabContentProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   id: string;
   children: React.ReactNode;
   className?: string;
@@ -101,6 +120,7 @@ export const TabContent: React.FC<TabContentProps> = ({
   id,
   children,
   className,
+  ...rest
 }) => {
   const { activeTab } = useTabContext();
 
@@ -110,6 +130,7 @@ export const TabContent: React.FC<TabContentProps> = ({
         "p-4  border border-white border-opacity-10 rounded-md shadow-md",
         className
       )}
+      {...rest}
     >
       {children}
     </div>

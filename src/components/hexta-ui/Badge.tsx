@@ -5,7 +5,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface BadgeProps {
+interface BadgeProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLSpanElement>,
+    HTMLSpanElement
+  > {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "info" | "success" | "warning" | "danger";
   outlined?: boolean;

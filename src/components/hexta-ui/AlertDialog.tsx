@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface AlertDialogProps {
+interface AlertDialogProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   isOpen: boolean;
   className?: string;
   children?: React.ReactNode;
@@ -16,6 +20,7 @@ export const AlertDialog = ({
   isOpen,
   className,
   children,
+  ...rest
 }: AlertDialogProps) => {
   return (
     <>
@@ -33,6 +38,7 @@ export const AlertDialog = ({
                 "flex flex-col gap-3 px-10 bg-black border border-b-2 rounded-lg alert-dialog p-7 border-zinc-900  max-w-[20rem] mx-2",
                 className
               )}
+              {...rest}
             >
               {children}
             </div>
@@ -43,7 +49,11 @@ export const AlertDialog = ({
   );
 };
 
-interface AlertDialogTitleProps {
+interface AlertDialogTitleProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   children: React.ReactNode;
   className?: string;
 }
@@ -51,15 +61,23 @@ interface AlertDialogTitleProps {
 export const AlertDialogTitle = ({
   children,
   className,
+  ...rest
 }: AlertDialogTitleProps) => {
   return (
-    <p className={cn("text-2xl font-bold tracking-tight leading-6", className)}>
+    <p
+      className={cn("text-2xl font-bold tracking-tight leading-6", className)}
+      {...rest}
+    >
       {children}
     </p>
   );
 };
 
-interface AlertDialogContentProps {
+interface AlertDialogContentProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   children: React.ReactNode;
   className?: string;
 }
@@ -67,11 +85,20 @@ interface AlertDialogContentProps {
 export const AlertDialogContent = ({
   children,
   className,
+  ...rest
 }: AlertDialogContentProps) => {
-  return <p className={cn("text-[14px] opacity-80", className)}>{children}</p>;
+  return (
+    <p className={cn("text-[14px] opacity-80", className)} {...rest}>
+      {children}
+    </p>
+  );
 };
 
-interface AlertDialogButtonProps {
+interface AlertDialogButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   label: string;
   action: () => void;
   variant?: "primary" | "secondary";
@@ -81,6 +108,7 @@ export const AlertDialogButton = ({
   label,
   action,
   variant = "primary",
+  ...rest
 }: AlertDialogButtonProps) => {
   const primaryClasses = `grow  text-center items-center  justify-center px-[20px] py-[8px] bg-white border border-zinc-900 text-black rounded-lg flex items-center font-[600] text-[14px] transition-all duration-[0.1s] hover:brightness-90`;
   const secondaryClasses =
@@ -90,13 +118,18 @@ export const AlertDialogButton = ({
     <button
       className={variant === "primary" ? primaryClasses : secondaryClasses}
       onClick={action}
+      {...rest}
     >
       {label}
     </button>
   );
 };
 
-interface AlertDialogButtonsProps {
+interface AlertDialogButtonsProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   buttons: {
     label: string;
     action: () => void;
@@ -104,11 +137,15 @@ interface AlertDialogButtonsProps {
   }[];
 }
 
-export const AlertDialogButtons = ({ buttons }: AlertDialogButtonsProps) => {
+export const AlertDialogButtons = ({
+  buttons,
+  ...rest
+}: AlertDialogButtonsProps) => {
   return (
     <div className="flex gap-4 flex-wrap">
       {buttons.map((button, index) => (
         <AlertDialogButton
+          {...rest}
           key={index}
           label={button.label}
           action={button.action}

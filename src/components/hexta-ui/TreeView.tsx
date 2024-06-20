@@ -2,22 +2,26 @@ import React, { useState, createContext, useContext } from "react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 
-type TreeNodeContextType = {
+interface TreeNodeContextType {
   expandedNodes: Set<string>;
   toggleNode: (id: string) => void;
-};
+}
 
 const TreeNodeContext = createContext<TreeNodeContextType | undefined>(
-  undefined,
+  undefined
 );
 
-type TreeHeaderProps = {
+interface TreeHeaderProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   id: string;
   title: string;
   icon?: React.ReactNode;
   className?: string;
   children?: React.ReactNode;
-};
+}
 
 export const TreeHeader: React.FC<TreeHeaderProps> = ({
   id,
@@ -25,15 +29,17 @@ export const TreeHeader: React.FC<TreeHeaderProps> = ({
   icon,
   className,
   children,
+  ...rest
 }) => {
   const { expandedNodes, toggleNode } = useContext(TreeNodeContext) || {};
 
   return (
     <div>
       <div
+        {...rest}
         className={clsx(
           "flex items-center  cursor-pointer text-md py-1 px-3 hover:bg-white rounded hover:bg-opacity-5 transition-all text-[15px] my-1 gap-1",
-          className,
+          className
         )}
         onClick={() => toggleNode && toggleNode(id)}
       >
@@ -85,28 +91,41 @@ export const TreeHeader: React.FC<TreeHeaderProps> = ({
   );
 };
 
-type TreeChildProps = {
+interface TreeChildProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   children?: React.ReactNode;
-};
+}
 
 export const TreeChild: React.FC<TreeChildProps> = ({
   className,
   children,
+  ...rest
 }) => {
   return (
-    <div className={clsx(" opacity-90 text-[14px] pl-4", className)}>
+    <div {...rest} className={clsx(" opacity-90 text-[14px] pl-4", className)}>
       {children}
     </div>
   );
 };
 
-type TreeViewProps = {
+interface TreeViewProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   children?: React.ReactNode;
-};
+}
 
-export const TreeView: React.FC<TreeViewProps> = ({ className, children }) => {
+export const TreeView: React.FC<TreeViewProps> = ({
+  className,
+  children,
+  ...rest
+}) => {
   const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set());
 
   const toggleNode = (id: string) => {
@@ -123,7 +142,7 @@ export const TreeView: React.FC<TreeViewProps> = ({ className, children }) => {
 
   return (
     <TreeNodeContext.Provider value={{ expandedNodes, toggleNode }}>
-      <div className={clsx("treeview min-w-[10rem]", className)}>
+      <div {...rest} className={clsx("treeview min-w-[10rem]", className)}>
         {children}
       </div>
     </TreeNodeContext.Provider>

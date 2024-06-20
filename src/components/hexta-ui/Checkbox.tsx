@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-interface CheckboxProps {
+interface CheckboxProps
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   className?: string;
   checked: boolean;
   disabled?: boolean;
@@ -21,7 +25,7 @@ export const Checkbox = ({
   disabled = false,
   onChange,
   label,
-  ...props
+  ...rest
 }: CheckboxProps) => {
   return (
     <div className="flex items-center">
@@ -33,13 +37,13 @@ export const Checkbox = ({
         className={cn(
           "form-checkbox h-5 w-5 text-zinc-900 rounded focus:outline-none",
           "accent-white",
-          className,
+          className
         )}
-        {...props}
+        {...rest}
       />
       {label && (
         <label
-          htmlFor={props.id}
+          htmlFor={rest.id}
           className="ml-2 text-sm font-medium text-zinc-200 opacity-80"
         >
           {label}

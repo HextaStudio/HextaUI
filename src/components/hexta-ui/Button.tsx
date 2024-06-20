@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
   variant?:
@@ -16,7 +16,6 @@ interface ButtonProps {
   disabled?: boolean;
   outline?: boolean;
   animated?: boolean;
-  rest?: any;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-interface CardProps {
+interface CardProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: React.ReactNode;
   className?: string;
   variant?:
@@ -18,7 +22,6 @@ interface CardProps {
     | "hoverGrow";
   image?: string;
   buttons?: React.ReactNode;
-  props?: any;
 }
 
 export const Card = ({
@@ -27,7 +30,7 @@ export const Card = ({
   variant = "default",
   image,
   buttons,
-  ...props
+  ...rest
 }: CardProps) => {
   const cardStyles = {
     default:
@@ -77,7 +80,7 @@ export const Card = ({
   };
 
   return (
-    <div className={cn(cardStyles[variant], className)} {...props}>
+    <div className={cn(cardStyles[variant], className)} {...rest}>
       {image && renderImage()}
       {!image && children}
       {renderButtons()}

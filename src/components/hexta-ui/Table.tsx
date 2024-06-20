@@ -7,7 +7,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface TableProps {
+interface TableProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLTableElement>,
+    HTMLTableElement
+  > {
   data: any[];
   columns: any[];
   tableTitle?: string;
@@ -25,9 +29,10 @@ export const Table = ({
   headerClassName,
   rowClassName,
   cellClassName,
+  ...rest
 }: TableProps) => {
   const [visibleColumns, setVisibleColumns] = React.useState(
-    columns.map((column) => column.key),
+    columns.map((column) => column.key)
   );
   const [searchTerm, setSearchTerm] = React.useState("");
   const [sortOrder, setSortOrder] = React.useState("asc");
@@ -42,8 +47,8 @@ export const Table = ({
   useEffect(() => {
     let filteredData = data.filter((item) =>
       Object.values(item).some((val) =>
-        String(val).toLowerCase().includes(searchTerm.toLowerCase()),
-      ),
+        String(val).toLowerCase().includes(searchTerm.toLowerCase())
+      )
     );
 
     if (sortColumn) {
@@ -60,8 +65,8 @@ export const Table = ({
   useEffect(() => {
     const filteredData = data.filter((item) =>
       Object.values(item).some((val) =>
-        String(val).toLowerCase().includes(searchTerm.toLowerCase()),
-      ),
+        String(val).toLowerCase().includes(searchTerm.toLowerCase())
+      )
     );
     setLimitedData(filteredData);
   }, [data, searchTerm]);
@@ -70,7 +75,7 @@ export const Table = ({
     setVisibleColumns((prevVisibleColumns) =>
       prevVisibleColumns.includes(key)
         ? prevVisibleColumns.filter((column) => column !== key)
-        : [...prevVisibleColumns, key],
+        : [...prevVisibleColumns, key]
     );
   };
 
@@ -114,7 +119,7 @@ export const Table = ({
       </div>
 
       <div className="m-4 overflow-x-auto">
-        <table className={cn("w-full", className)}>
+        <table className={cn("w-full", className)} {...rest}>
           <thead>
             <tr>
               {columns
@@ -124,7 +129,7 @@ export const Table = ({
                     key={column.key}
                     className={cn(
                       "px-4 py-3 text-left bg-gray-100 bg-opacity-5",
-                      headerClassName,
+                      headerClassName
                     )}
                     onClick={() => toggleSortOrder(column.key)}
                   >
@@ -143,7 +148,7 @@ export const Table = ({
                       key={`${index}-${column.key}`}
                       className={cn(
                         "px-4 py-3 text-md opacity-90 text-left text-[14px]",
-                        cellClassName,
+                        cellClassName
                       )}
                     >
                       {row[column.key]}

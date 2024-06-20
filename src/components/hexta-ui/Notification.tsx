@@ -7,7 +7,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface NotificationProps {
+interface NotificationProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   showNotification: boolean;
   onCancel: () => void;
   className?: string;
@@ -21,6 +25,7 @@ const Notification: React.FC<NotificationProps> = ({
   className,
   direction = "bottomRight",
   children,
+  ...rest
 }) => {
   const getPositionClasses = () => {
     switch (direction) {
@@ -51,7 +56,7 @@ const Notification: React.FC<NotificationProps> = ({
               className
             )}
           >
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4" {...rest}>
               <div className="flex flex-col ">{children}</div>
               <div>
                 <button
@@ -79,30 +84,46 @@ const Notification: React.FC<NotificationProps> = ({
   );
 };
 
-interface NotificationHeaderProps {
+interface NotificationHeaderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   children: ReactNode;
 }
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
   children,
+  ...rest
 }) => {
   return (
     <div className="flex flex-col ">
-      <p className="text-[15px] font-medium items-center flex tracking-normal opacity-90">
+      <p
+        className="text-[15px] font-medium items-center flex tracking-normal opacity-90"
+        {...rest}
+      >
         {children}
       </p>
     </div>
   );
 };
 
-interface NotificationDescriptionProps {
+interface NotificationDescriptionProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   children: ReactNode;
 }
 
 export const NotificationDescription: React.FC<
   NotificationDescriptionProps
-> = ({ children }) => {
-  return <small className="text-[12px] opacity-80">{children}</small>;
+> = ({ children, ...rest }) => {
+  return (
+    <small {...rest} className="text-[12px] opacity-80">
+      {children}
+    </small>
+  );
 };
 
 export { Notification };

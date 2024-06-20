@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-interface InputProps {
+interface InputProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   className?: string;
   type?: string;
   disabled?: boolean;
@@ -24,7 +28,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       value,
       onChange,
       placeholder,
-      ...props
+      ...rest
     },
     ref
   ) => {
@@ -40,7 +44,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className
         )}
         ref={ref}
-        {...props}
+        {...rest}
       />
     );
   }

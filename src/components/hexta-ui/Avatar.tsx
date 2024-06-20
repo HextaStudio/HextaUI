@@ -5,7 +5,11 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface AvatarProps {
+interface AvatarProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  > {
   variant?: "default" | "withStatus" | "withBadge";
   size?: number;
   className?: string;
@@ -21,10 +25,12 @@ export const Avatar = ({
   avatarUrl,
   offline = false,
   badgeNumber,
+  ...rest
 }: AvatarProps) => {
   const renderAvatar = () => {
     return (
       <img
+        {...rest}
         src={avatarUrl}
         loading="lazy"
         alt="Avatar"
@@ -32,7 +38,7 @@ export const Avatar = ({
         height={size}
         className={cn(
           "rounded-full shadow-sm pointer-events-none object-cover",
-          className,
+          className
         )}
       />
     );
@@ -43,7 +49,7 @@ export const Avatar = ({
       <span
         className={cn(
           "absolute bottom-[4px] right-[4px] block w-4 h-4 rounded-full ring ring-white",
-          offline ? "bg-red-500" : "bg-green-500",
+          offline ? "bg-red-500" : "bg-green-500"
         )}
       />
     );

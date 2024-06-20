@@ -8,18 +8,22 @@ const cn = (...args: any[]) => {
 
 const OTP_LENGTH = 6;
 
-interface OTPProps {
+interface OTPProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   setValue: (value: string) => void;
 }
 
-export const OTP = ({ setValue }: OTPProps) => {
+export const OTP = ({ setValue, ...rest }: OTPProps) => {
   const [otp, setOtp] = useState(new Array(OTP_LENGTH).fill(""));
   const [error, setError] = useState("");
   const inputRefs = useRef<HTMLInputElement[]>([]);
 
   const handleChange = (index: number, value: string) => {
     const newOtp = [...otp];
-    const regex = /^[0-9]$/; // Only allow numbers
+    const regex = /^[0-9]$/;
     if (regex.test(value) || value === "") {
       newOtp[index] = value;
       setOtp(newOtp);
@@ -32,7 +36,7 @@ export const OTP = ({ setValue }: OTPProps) => {
 
   const handleKeyDown = (
     index: number,
-    event: React.KeyboardEvent<HTMLInputElement>,
+    event: React.KeyboardEvent<HTMLInputElement>
   ) => {
     if (event.key === "Backspace" && !event.currentTarget.value && index > 0) {
       inputRefs.current[index - 1].focus();
@@ -65,6 +69,7 @@ export const OTP = ({ setValue }: OTPProps) => {
         {otp.map((value, index) => (
           <div key={index} className="flex items-center">
             <input
+              {...rest}
               type="text"
               maxLength={1}
               value={value}
@@ -76,7 +81,7 @@ export const OTP = ({ setValue }: OTPProps) => {
               className={cn(
                 "w-10 h-12 text-center text-lg font-semibold border border-zinc-900 focus:outline-none focus:border-2 focus:border-white bg-zinc-950",
                 `${index === 0 && "rounded-l-xl"}`,
-                `${index === 5 && "rounded-r-xl"}`,
+                `${index === 5 && "rounded-r-xl"}`
               )}
             />
             {index === 2 && (

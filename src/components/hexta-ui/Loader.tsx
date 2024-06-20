@@ -5,14 +5,18 @@ const cn = (...args: any[]) => {
   return twMerge(clsx(args));
 };
 
-interface LoaderProps {
+interface LoaderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   size?: number;
   className?: string;
 }
 
-export const Loader = ({ size = 30, className, ...props }: LoaderProps) => {
+export const Loader = ({ size = 30, className, ...rest }: LoaderProps) => {
   return (
-    <div className={cn(" rounded-full", className)} {...props}>
+    <div className={cn(" rounded-full", className)} {...rest}>
       <div role="status">
         <svg
           aria-hidden="true"

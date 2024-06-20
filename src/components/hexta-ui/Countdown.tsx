@@ -11,7 +11,11 @@ const fontSize = 40;
 const padding = 10;
 const height = fontSize + padding;
 
-interface CounterProps {
+interface CounterProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   start?: number;
   end: number;
   duration?: number;
@@ -25,6 +29,7 @@ export const Countdown = ({
   duration = end,
   className,
   fontSize = 30,
+  ...rest
 }: CounterProps) => {
   const [value, setValue] = useState(start);
 
@@ -41,6 +46,7 @@ export const Countdown = ({
   return (
     <div
       style={{ fontSize }}
+      {...rest}
       className={cn(
         "flex overflow-hidden rounded px-2 leading-none text-white font-bold ",
         className

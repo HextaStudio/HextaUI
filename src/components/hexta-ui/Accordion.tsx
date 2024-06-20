@@ -12,7 +12,11 @@ interface AccordionProviderProps {
   className?: string;
 }
 
-interface AccordionProps {
+interface AccordionProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: ReactNode;
   index?: number;
   className?: string;
@@ -55,11 +59,13 @@ const Accordion: React.FC<AccordionProps> = ({
   className,
   isOpen,
   toggleAccordion,
+  ...rest
 }) => {
   const childrenArray = React.Children.toArray(children);
 
   return (
     <div
+      {...rest}
       className={cn(
         "rounded shadow-sm max-w-[30rem] w-[95%] mx-auto my-2",
         className
@@ -107,7 +113,11 @@ const Accordion: React.FC<AccordionProps> = ({
   );
 };
 
-interface AccordionHeaderProps {
+interface AccordionHeaderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: ReactNode;
   className?: string;
 }
@@ -115,7 +125,12 @@ interface AccordionHeaderProps {
 const AccordionHeader: React.FC<AccordionHeaderProps> = ({
   children,
   className,
-}) => <div className={cn(className)}>{children}</div>;
+  ...rest
+}) => (
+  <div className={cn(className)} {...rest}>
+    {children}
+  </div>
+);
 
 interface AccordionContentProps {
   children: ReactNode;

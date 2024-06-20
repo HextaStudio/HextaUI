@@ -11,7 +11,7 @@ interface TooltipContextProps {
 }
 
 const TooltipContext = createContext<TooltipContextProps | undefined>(
-  undefined,
+  undefined
 );
 
 interface TooltipProviderProps {
@@ -31,21 +31,33 @@ export const TooltipProvider = ({ children }: TooltipProviderProps) => {
   );
 };
 
-interface TooltipTriggerProps {
+interface TooltipTriggerProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: React.ReactNode;
 }
 
-export const TooltipTrigger = ({ children }: TooltipTriggerProps) => {
+export const TooltipTrigger = ({ children, ...rest }: TooltipTriggerProps) => {
   const tooltipContext = useContext(TooltipContext);
   const { toggleVisibility } = tooltipContext || {};
   return (
-    <div onMouseEnter={toggleVisibility} onMouseLeave={toggleVisibility}>
+    <div
+      {...rest}
+      onMouseEnter={toggleVisibility}
+      onMouseLeave={toggleVisibility}
+    >
       {children}
     </div>
   );
 };
 
-interface TooltipContentProps {
+interface TooltipContentProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   direction?: "top" | "bottom" | "left" | "right";
   className?: string;
   children: React.ReactNode;
@@ -56,7 +68,8 @@ export const TooltipContent: React.FC<TooltipContentProps> = ({
   direction = "top",
   className,
   children,
-  props,
+
+  ...rest
 }) => {
   const tooltipContext = useContext(TooltipContext);
   const { isVisible } = tooltipContext || {};
@@ -75,20 +88,28 @@ export const TooltipContent: React.FC<TooltipContentProps> = ({
         } ${isVisible ? "opacity-100" : "opacity-0"} ${
           isVisible ? "scale-[1]" : "scale-[0.95]"
         }`,
-        className,
+        className
       )}
-      {...props}
+      {...rest}
     >
       {children}
     </div>
   );
 };
 
-interface TooltipProps {
+interface TooltipProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   children: React.ReactNode;
   className?: string;
 }
 
-export const Tooltip = ({ children, className }: TooltipProps) => {
-  return <div className={cn("relative flex", className)}>{children}</div>;
+export const Tooltip = ({ children, className, ...rest }: TooltipProps) => {
+  return (
+    <div {...rest} className={cn("relative flex", className)}>
+      {children}
+    </div>
+  );
 };

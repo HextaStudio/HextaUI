@@ -6,7 +6,11 @@ const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-interface SliderProps {
+interface SliderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   min?: number;
   max?: number;
   value: number;
@@ -20,7 +24,7 @@ export const Slider = ({
   max = 100,
   value,
   onChange,
-  ...props
+  ...rest
 }: SliderProps) => {
   return (
     <input
@@ -33,7 +37,7 @@ export const Slider = ({
         "w-full h-1 bg-zinc-950  rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50",
         className
       )}
-      {...props}
+      {...rest}
     />
   );
 };

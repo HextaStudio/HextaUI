@@ -6,17 +6,29 @@ const cn = (...args: any[]) => {
   return clsx(twMerge(...args));
 };
 
-interface ProgressBarProps {
+interface ProgressBarProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   value: number;
   max: number;
   className?: string;
 }
 
-export const ProgressBar = ({ value, max, className }: ProgressBarProps) => {
+export const ProgressBar = ({
+  value,
+  max,
+  className,
+  ...rest
+}: ProgressBarProps) => {
   const percentage = (value / max) * 100;
 
   return (
-    <div className={cn("w-[95%] bg-zinc-900 rounded-full h-2", className)}>
+    <div
+      {...rest}
+      className={cn("w-[95%] bg-zinc-900 rounded-full h-2", className)}
+    >
       <div
         className="h-2 bg-white rounded-full"
         style={{ width: `${percentage}%` }}
