@@ -7,12 +7,23 @@ import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
 
 import { Badge } from "@/components/hexta-ui/Badge";
 import { Button } from "@/components/hexta-ui/Button";
+import { motion } from "framer-motion";
+import { FaCheck } from "react-icons/fa";
+
+import { twMerge } from "tailwind-merge";
+import clsx from "clsx";
+
+const cn = (...args: any[]) => {
+  return twMerge(clsx(args));
+};
 
 interface PricingCardProps {
   items: PricingItem[];
   price: string;
   title: string;
   popular?: boolean;
+  className?: string;
+  period?: string;
 }
 
 export interface PricingItem {
@@ -24,57 +35,68 @@ export const PricingCard = ({
   title,
   price,
   popular,
+  className,
+  period = "month",
 }: PricingCardProps) => {
   return (
-    <>
-      <div
-        className={`flex flex-col gap-3 p-4 bg-zinc-950 m-3 grow rounded-lg relative border border-white  ${
-          !popular && "border-opacity-10"
-        }`}
-      >
-        {popular && (
-          <Badge className="w-fit text-xs absolute top-[-13px] left-1/2 -translate-x-1/2">
-            Most Popular
-          </Badge>
-        )}
-        <div>
-          <h4 className="text-xl font-semibold opacity-80">{title}</h4>
-          <p className="text-3xl font-black">{price}</p>
-        </div>
-        <div>
-          {items.map((item, index) => (
-            <div key={index}>
-              <ul className="flex flex-col gap-1">
-                {item.features.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-1 text-[14px]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
-                      />
-                    </svg>
-                    <span className="text-white">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="grow flex">
-          <Button className="grow text-center items-center flex justify-center">
-            Get Started
-          </Button>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -5 }}
+      className={cn(
+        "flex flex-col p-6 bg-zinc-950 rounded-xl relative",
+        "border border-white/10 hover:border-white/20",
+        "transition-all duration-300 grow",
+        popular &&
+          "scale-105 border-purple-500/30 shadow-lg shadow-purple-500/10",
+        "min-w-[300px]",
+        className
+      )}
+    >
+      {popular && (
+        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-300 to-blue-300">
+          Most Popular
+        </Badge>
+      )}
+
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <div className="flex items-baseline gap-1">
+          <span className="text-4xl font-black">{price}</span>
+          {price !== "Free" && (
+            <span className="text-sm text-white/60">/{period}</span>
+          )}
         </div>
       </div>
-    </>
+
+      <div className="flex-grow space-y-4 mb-8">
+        {items[0].features.map((feature, index) => (
+          <div key={index} className="flex items-center gap-3 group">
+            <div
+              className={cn(
+                "p-1 rounded-full",
+                "bg-white/5 group-hover:bg-white/10",
+                "transition-colors duration-200"
+              )}
+            >
+              <FaCheck size={12} className="text-purple-500" />
+            </div>
+            <span className="text-sm text-white/80">{feature}</span>
+          </div>
+        ))}
+      </div>
+
+      <Button
+        className={cn(
+          "w-full justify-center",
+          popular
+            ? "bg-gradient-to-r bg-white/90 hover:bg-white"
+            : "bg-white/80 hover:bg-white"
+        )}
+      >
+        Get Started
+      </Button>
+    </motion.div>
   );
 };
 
@@ -92,7 +114,7 @@ const pricing = () => {
             title="Pricing Cards"
             description="A ready to use pricing section with modern and reponsive pricing cards."
           />
-          <DocsPreview className="flex flex-row flex-wrap min-h-[30rem] p-2 items-end">
+          <DocsPreview className="flex flex-row flex-wrap gap-4 min-h-[30rem] p-2 items-end">
             <PricingCard
               title="Basic"
               price="$199"
@@ -118,10 +140,6 @@ const pricing = () => {
                     "Unlimited Storage",
                     "Unlimited Private Repositories",
                     "24/7 Support",
-                    "One-click Deploy",
-                    "Free Domain",
-                    "Access to All Tutorials",
-                    "Priority Email Support",
                     "Live Chat Support",
                     "Dedicated Account Manager",
                   ],
@@ -135,7 +153,6 @@ const pricing = () => {
                 {
                   features: [
                     "50GB Storage",
-                    "Unlimited Private Repositories",
                     "Dedicated Support",
                     "Access to Premium Tutorials",
                     "Priority Email Support",
@@ -153,11 +170,16 @@ const pricing = () => {
           <CodeBlock
             lang="tsx"
             filename="PricingCard.tsx"
-            code={`interface PricingCardProps {
+            code={`import { motion } from "framer-motion";
+import { FaCheck } from "react-icons/fa";
+
+interface PricingCardProps {
   items: PricingItem[];
   price: string;
   title: string;
   popular?: boolean;
+  className?: string;
+  period?: string;
 }
 
 export interface PricingItem {
@@ -169,61 +191,71 @@ export const PricingCard = ({
   title,
   price,
   popular,
+  className,
+  period = "month",
 }: PricingCardProps) => {
   return (
-    <>
-      <div
-        className={\`flex flex-col gap-3 p-4 bg-zinc-950 m-3 grow rounded-lg relative border border-white  $\{
-          !popular && "border-opacity-10"
-        }\`}
-     className={\`flex flex-col gap-3 p-4 bg-zinc-950 m-3 grow rounded-lg relative border border-white  $\{
-         !popular && "border-opacity-10"
-        }\`}
-        {popular && (
-          <Badge className="w-fit text-xs absolute top-[-13px] left-1/2 -translate-x-1/2">
-            Most Popular
-          </Badge>
-        )}
-        <div>
-          <h4 className="text-xl font-semibold opacity-80">{title}</h4>
-          <p className="text-3xl font-black">{price}</p>
-        </div>
-        <div>
-          {items.map((item, index) => (
-            <div key={index}>
-              <ul className="flex flex-col gap-1">
-                {item.features.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-1 text-[14px]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="m10 16.4l-4-4L7.4 11l2.6 2.6L16.6 7L18 8.4z"
-                      />
-                    </svg>
-                    <span className="text-white">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="grow flex">
-          <Button className="grow text-center items-center flex justify-center">
-            Get Started
-          </Button>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -5 }}
+      className={cn(
+        "flex flex-col p-6 bg-zinc-950 rounded-xl relative",
+        "border border-white/10 hover:border-white/20",
+        "transition-all duration-300 grow",
+        popular &&
+          "scale-105 border-purple-500/30 shadow-lg shadow-purple-500/10",
+        "min-w-[300px]",
+        className
+      )}
+    >
+      {popular && (
+        <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-300 to-blue-300">
+          Most Popular
+        </Badge>
+      )}
+
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <div className="flex items-baseline gap-1">
+          <span className="text-4xl font-black">{price}</span>
+          {price !== "Free" && (
+            <span className="text-sm text-white/60">/{period}</span>
+          )}
         </div>
       </div>
-    </>
+
+      <div className="flex-grow space-y-4 mb-8">
+        {items[0].features.map((feature, index) => (
+          <div key={index} className="flex items-center gap-3 group">
+            <div
+              className={cn(
+                "p-1 rounded-full",
+                "bg-white/5 group-hover:bg-white/10",
+                "transition-colors duration-200"
+              )}
+            >
+              <FaCheck size={12} className="text-purple-500" />
+            </div>
+            <span className="text-sm text-white/80">{feature}</span>
+          </div>
+        ))}
+      </div>
+
+      <Button
+        className={cn(
+          "w-full justify-center",
+          popular
+            ? "bg-gradient-to-r bg-white/90 hover:bg-white"
+            : "bg-white/80 hover:bg-white"
+        )}
+      >
+        Get Started
+      </Button>
+    </motion.div>
   );
-};`}
+};
+`}
           />
           <CodeBlock
             lang="tsx"
