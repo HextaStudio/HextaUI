@@ -1,11 +1,10 @@
 import "@/styles/globals.scss";
 import "@/styles/tokyo-night-dark.css";
-import { LoadingScreen } from "@/components/LoadingScreen";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { useEffect } from "react";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 interface AppProps {
   Component: any;

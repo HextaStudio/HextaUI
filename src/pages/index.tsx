@@ -2,13 +2,11 @@ import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 
-// Prioritize Hero component loading
 const Hero = dynamic(() => import("@/components/landingPage/Hero"), {
   loading: () => <div className="min-h-screen" />,
   ssr: true,
 });
 
-// Load other components with lower priority
 const Features = dynamic(() => import("@/components/landingPage/Features"), {
   loading: () => <div className="h-[500px]" />,
   ssr: false,
