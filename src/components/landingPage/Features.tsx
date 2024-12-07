@@ -58,9 +58,9 @@ export const Features = () => {
     <>
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-2  py-24 mt-[30rem] relative rounded-xl"
+        className="max-w-7xl mx-auto px-2  py-24 relative rounded-xl"
       >
         {/* Title Section */}
         <div className="text-center mb-16 relative">
@@ -76,7 +76,7 @@ export const Features = () => {
         <div className="grid auto-rows-[150px] grid-cols-3 gap-4 max-[900px]:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-600/10 bg-opacity-[3%] "
           >
@@ -97,7 +97,7 @@ export const Features = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="row-span-3 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5  max-[900px]:col-span-2 overflow-hidden flex relative"
           >
@@ -120,7 +120,7 @@ export const Features = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="row-span-2 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative"
           >
@@ -134,7 +134,7 @@ export const Features = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="row-span-2 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2  max-[900px]:row-span-1 flex items-center justify-center"
           >
@@ -144,7 +144,7 @@ export const Features = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="row-span-1 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden"
           >

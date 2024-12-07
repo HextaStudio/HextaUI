@@ -1,24 +1,11 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 
 export const Hero = () => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-35%"]);
-
   return (
-    <div ref={targetRef} className="min-h-[150vh] relative">
-      <motion.section
-        style={{ opacity, y }}
-        className="fixed w-full min-h-screen flex items-center justify-center py-[8rem] px-2"
-      >
+    <div className="min-h-[150vh] relative">
+      <motion.section className="relative w-full min-h-screen flex items-center justify-center py-[8rem] px-2">
         {/* can you add gradient to the background of the section */}
         <div className="relative max-w-7xl mx-auto py-[4rem] px-4 bg-zinc-950 rounded-xl overflow-hidden">
           {/* Enhanced gradient effects with more vibrant colors */}
