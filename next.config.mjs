@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["react-tweet"],
+  sassOptions: {
+    includePaths: ["./src/styles"],
+    prependData: `@use "sass:math";`,
+  },
   images: {
     remotePatterns: [
       {
