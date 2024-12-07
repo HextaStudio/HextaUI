@@ -60,7 +60,7 @@ export const Features = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-2 mt-[40rem] relative rounded-xl"
+        className="max-w-7xl mx-auto px-2  py-24 mt-[30rem] relative rounded-xl"
       >
         {/* Title Section */}
         <div className="text-center mb-16 relative">

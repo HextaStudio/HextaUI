@@ -11,7 +11,7 @@ export const Hero = () => {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-45%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-35%"]);
 
   return (
     <div ref={targetRef} className="min-h-[150vh] relative">

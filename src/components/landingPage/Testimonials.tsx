@@ -26,7 +26,7 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden max-w-[80rem] w-[95%] mx-auto ">
+    <section className="py-24 relative overflow-hidden max-w-[80rem] mx-auto ">
       {/* Background gradient effects */}
       <div className="absolute -z-10 top-0 left-0 w-[800px] h-[600px] bg-purple-500/10 blur-[120px] rotate-12" />
       <div className="absolute -z-10 bottom-0 right-0 w-[600px] h-[400px] bg-blue-500/10 blur-[120px] -rotate-12" />
