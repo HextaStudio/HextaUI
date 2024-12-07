@@ -11,7 +11,7 @@ export const CTASection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative z-10 bg-[#151515] rounded-3xl border border-white/10 p-8"
+            className="relative z-10 bg-[#101010] rounded-3xl border border-white/10 p-8"
           >
             <div className="flex flex-col items-center text-center gap-8">
               <motion.div

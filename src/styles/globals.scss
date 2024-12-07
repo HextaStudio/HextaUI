@@ -332,10 +332,18 @@ h2 {
     font-weight: 600 !important;
     font-family: var(--inter-fonts) !important;
   }
-
+  .quoted-tweet-container_root__92393 {
+    border: 1px solid #151515;
+    padding: 5px;
+  }
   .tweet-header_username__YpX6w {
     color: rgba(255, 255, 255, 0.5) !important;
     font-family: var(--inter-fonts) !important;
+  }
+
+  .tweet-media_image__yoPJg {
+    border-radius: 10px;
+    border: 1px solid #151515;
   }
 
   // Tweet content

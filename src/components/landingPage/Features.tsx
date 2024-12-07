@@ -78,7 +78,7 @@ export const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-400/10 bg-opacity-5 "
+            className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-600/10 bg-opacity-[3%] "
           >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 w-min">Customization</h2>
@@ -99,7 +99,7 @@ export const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5  max-[900px]:col-span-2 overflow-hidden flex relative"
+            className="row-span-3 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5  max-[900px]:col-span-2 overflow-hidden flex relative"
           >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 w-min">Stunning Components</h2>
@@ -122,7 +122,7 @@ export const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative"
+            className="row-span-2 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative"
           >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 ">Your project, Your code</h2>
@@ -136,7 +136,7 @@ export const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2  max-[900px]:row-span-1 flex items-center justify-center"
+            className="row-span-2 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2  max-[900px]:row-span-1 flex items-center justify-center"
           >
             <Button onClick={() => toggleToast()} className="scale-[1.2]">
               Click me!
@@ -146,7 +146,7 @@ export const Features = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden"
+            className="row-span-1 rounded-xl border-2 border-slate-600/10 bg-white bg-opacity-[3%]  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden"
           >
             <AnimatedDock
               items={[

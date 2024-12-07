@@ -61,7 +61,7 @@ export const Testimonials = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-white bg-opacity-5 backdrop-blur-xl rounded-xl px-4 border-2 border-slate-400/10 transition-all duration-300 hover:border-slate-400/20 hover:-translate-y-1 relative group">
+                  <div className="bg-white backdrop-blur-xl rounded-xl px-4 border-2  border-slate-600/10 bg-opacity-[3%]  transition-all duration-300  relative group">
                     <div className="relative z-10">
                       <Tweet id={tweetId} />
                     </div>
@@ -82,7 +82,7 @@ export const Testimonials = () => {
             href="https://twitter.com/intent/tweet?url=&text=%40nott_preett"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-8 py-3 bg-[#151515] hover:bg-[#202020] rounded-xl border-2 border-slate-400/10 transition-all text-sm"
+            className="group inline-flex items-center gap-2 px-8 py-3 bg-[#101010] hover:bg-[#202020] rounded-xl border-2 border-slate-400/10 transition-all text-sm"
           >
             Share Your Experience
             <FaTwitter className="text-[#1DA1F2] transition-transform group-hover:rotate-12" />
