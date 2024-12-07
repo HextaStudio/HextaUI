@@ -1,11 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { useEffect, useState } from "react";
-import { Loader } from "../hexta-ui/Loader";
-import { DocsPreview } from "./DocsPreview";
-import { FaLock } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa6";
-import Link from "next/link";
+import { useState } from "react";
 
 interface CodeBlockProps {
   code: string;
@@ -28,12 +23,28 @@ export const CodeBlock = ({
   const [loading, setLoading] = useState(true);
 
   const onCopyText = () => {
-    setCopyStatus(true);
-    setTimeout(() => {
-      setCopyStatus(false);
-    }, 2000);
+    try {
+      // Try clipboard API first
+      navigator.clipboard.writeText(code).then(() => {
+        setCopyStatus(true);
+        setTimeout(() => {
+          setCopyStatus(false);
+        }, 2000);
+      });
+    } catch (err) {
+      // Fallback for older browsers
+      const textarea = document.createElement("textarea");
+      textarea.value = code;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      setCopyStatus(true);
+      setTimeout(() => {
+        setCopyStatus(false);
+      }, 2000);
+    }
   };
-
   const handleExpand = () => {
     setIsExpanded(true);
   };
@@ -68,7 +79,7 @@ export const CodeBlock = ({
                 {filename}
               </small>
             )}
-            {/* <CopyToClipboard text={code} onCopy={onCopyText}> */}
+            <button onClick={onCopyText} className="copy-button">
               <div>
                 {copyStatus ? (
                   <div className="flex items-center justify-center gap-1 copy-to-clipboard-button">
@@ -100,7 +111,7 @@ export const CodeBlock = ({
                   </div>
                 )}
               </div>
-            </CopyToClipboard>
+            </button>
           </div>
 
           {shouldShowExpandButton && (
