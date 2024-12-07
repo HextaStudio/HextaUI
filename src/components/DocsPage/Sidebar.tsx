@@ -49,7 +49,7 @@ export const Sidebar = () => {
   return (
     <>
       <div
-        className="fixed left-[1rem] p-[9px] cursor-pointer top-[5.3rem] border border-zinc-800 rounded bg-black hidden max-[900px]:flex z-[99] "
+        className="fixed left-[1rem] p-[9px] cursor-pointer top-[5.3rem] border border-zinc-800 rounded  hidden max-[900px]:flex z-[99] "
         onClick={toggleSidebar}
       >
         <svg
@@ -67,7 +67,7 @@ export const Sidebar = () => {
         </svg>
       </div>
       <aside
-        className={`z-10 fixed flex flex-col gap-2 p-10 pb-20   max-[1092px]:ml-[1.2rem] max-[600px]:ml-0 bg-black border-r-2 docs-sidebar h-full max-[900px]:fixed overflow-auto  ${
+        className={`z-10 fixed flex flex-col gap-2 p-10 pb-20   max-[1092px]:ml-[1.2rem] max-[600px]:ml-0  border-r-2 docs-sidebar h-full max-[900px]:fixed overflow-auto  ${
           sidebarOpen && "open"
         } `}
         style={{
@@ -91,7 +91,7 @@ export const Sidebar = () => {
             />
           </svg>
         </div>
-        <div className="relative bg-black sidebar-section">
+        <div className="relative sidebar-section">
           <p className="p-2 text-sm font-bold uppercase rounded-md">INFO</p>
           <ul className="p-2">
             <li>

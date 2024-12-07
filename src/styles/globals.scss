@@ -252,14 +252,13 @@ pre {
 }
 
 .docs-sidebar {
-  background-color: black;
   z-index: 99999;
   transform: translateX(0rem);
   @media screen and (max-width: 900px) {
     transform: translateX(-60rem);
   }
   &::-webkit-scrollbar {
-    background: black;
+    background: transparent;
     width: 5px;
   }
   &::-webkit-scrollbar-thumb {
