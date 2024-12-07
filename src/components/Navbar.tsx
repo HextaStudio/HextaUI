@@ -82,7 +82,16 @@ export const Navbar = ({ docs }: NavbarProps) => {
       >
         <div className="flex items-center gap-7 max-[700px]:gap-1 justify-between">
           <Link href="/" className="flex items-center gap-3 ">
-            <Image src={logo} alt="HextaUI" width={35} height={35} />
+            <Image
+              quality={5}
+              src={logo}
+              alt="HextaUI"
+              width={35}
+              height={35}
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
+            />
             <span className="max-[823px]:hidden">
               <p className="font-bold">hextastudio/ui</p>
             </span>

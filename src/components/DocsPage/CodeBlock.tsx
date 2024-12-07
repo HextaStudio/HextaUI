@@ -1,4 +1,3 @@
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { useEffect, useState } from "react";
@@ -69,7 +68,7 @@ export const CodeBlock = ({
                 {filename}
               </small>
             )}
-            <CopyToClipboard text={code} onCopy={onCopyText}>
+            {/* <CopyToClipboard text={code} onCopy={onCopyText}> */}
               <div>
                 {copyStatus ? (
                   <div className="flex items-center justify-center gap-1 copy-to-clipboard-button">

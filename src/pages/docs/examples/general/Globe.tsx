@@ -12,7 +12,6 @@ const cn = (...args: any[]) => {
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useCallback, useEffect, useRef } from "react";
-import { useSpring } from "react-spring";
 import { DocsSEO } from "@/components/DocsPage/DocsSEO";
 
 const GLOBE_CONFIG: COBEOptions = {
@@ -49,15 +48,7 @@ export const Globe = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
-  const [{ r }, api] = useSpring(() => ({
-    r: 0,
-    config: {
-      mass: 1,
-      tension: 280,
-      friction: 40,
-      precision: 0.001,
-    },
-  }));
+  const rotationRef = useRef(0);
 
   const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value;
@@ -68,18 +59,18 @@ export const Globe = ({
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
-      api.start({ r: delta / 200 });
+      rotationRef.current = delta / 200;
     }
   };
 
   const onRender = useCallback(
     (state: Record<string, any>) => {
       if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi + r.get();
+      state.phi = phi + rotationRef.current;
       state.width = width * 2;
       state.height = width * 2;
     },
-    [pointerInteracting, phi, r]
+    [pointerInteracting, phi]
   );
 
   const onResize = () => {
@@ -152,7 +143,7 @@ const globe = () => {
             lang="bash"
             filename="bash"
             free
-            code={`npm install -D cobe react-spring`}
+            code={`npm install -D cobe`}
           />
           <CodeBlock
             lang="tsx"
@@ -167,7 +158,6 @@ const cn = (...args: any[]) => {
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useCallback, useEffect, useRef } from "react";
-import { useSpring } from "react-spring";
 
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
@@ -203,15 +193,7 @@ export const Globe = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
-  const [{ r }, api] = useSpring(() => ({
-    r: 0,
-    config: {
-      mass: 1,
-      tension: 280,
-      friction: 40,
-      precision: 0.001,
-    },
-  }));
+  const rotationRef = useRef(0);
 
   const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value;
@@ -222,18 +204,18 @@ export const Globe = ({
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
-      api.start({ r: delta / 200 });
+      rotationRef.current = delta / 200;
     }
   };
 
   const onRender = useCallback(
     (state: Record<string, any>) => {
       if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi + r.get();
+      state.phi = phi + rotationRef.current;
       state.width = width * 2;
       state.height = width * 2;
     },
-    [pointerInteracting, phi, r]
+    [pointerInteracting, phi]
   );
 
   const onResize = () => {

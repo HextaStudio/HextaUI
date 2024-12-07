@@ -18,14 +18,14 @@ export const Footer = ({ docs }: FooterProps) => {
         <div className={`flex flex-col gap-2 footer-section1 `}>
           <div className={`flex items-center gap-4`}>
             <Image
+              quality={5}
               src={logo}
-              width={40}
-              height={40}
               alt="HextaUI"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
+              width={35}
+              height={35}
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII="
             />
             <span className="text-xl font-bold bricolage-fonts">HextaUI</span>
           </div>
