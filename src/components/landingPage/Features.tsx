@@ -6,6 +6,7 @@ import { OTP } from "../hexta-ui/InputOTP";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AnimatedDock } from "@/pages/docs/examples/application/AnimatedDock";
+import { motion } from "framer-motion";
 
 export const Features = () => {
   const canvasRef = useRef(null!);
@@ -55,11 +56,30 @@ export const Features = () => {
 
   return (
     <>
-      <section className="max-w-[70rem] w-[95%] mx-auto my-[10rem] relative rounded-xl">
-        {" "}
-        <div className="rounded-[inherit] [border:calc(1.9*1px)_solid_transparent] ![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)]  absolute inset-0 rounded-inherit border-2 border-transparent !mask-clip-padding-box-border-box after:absolute after:aspect-square after:w-[250px] after:animate-animatedBeam after:bg-gradient-to-l after:from-purple-500 after:via-purple-950 after:to-transparent after:[offset-anchor:90%_50%] after:[offset-path:rect(0_auto_auto_0_round_250px)]"></div>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto px-2 mt-[40rem] relative rounded-xl"
+      >
+        {/* Title Section */}
+        <div className="text-center mb-16 relative">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 leading-[2.5rem] md:leading-[3.5rem]">
+            Everything You Need
+          </h2>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            From interactive components to stunning animations, we've got all
+            the tools to make your website stand out.
+          </p>
+        </div>
+        {/* Existing grid content */}
         <div className="grid auto-rows-[150px] grid-cols-3 gap-4 max-[900px]:grid-cols-2">
-          <div className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-400/10 bg-opacity-5 ">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative flex flex-col col-span-2 row-span-2 p-5 bg-white border-2 rounded-xl border-slate-400/10 bg-opacity-5 "
+          >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 w-min">Customization</h2>
               <p className="text-sm opacity-80">
@@ -74,8 +94,13 @@ export const Features = () => {
                 Hint - Count to 5 (this is array)
               </small>
             </div>
-          </div>
-          <div className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5  max-[900px]:col-span-2 overflow-hidden flex relative">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="row-span-3 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5  max-[900px]:col-span-2 overflow-hidden flex relative"
+          >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 w-min">Stunning Components</h2>
               <p className="text-sm opacity-80">
@@ -92,8 +117,13 @@ export const Features = () => {
                 aspectRatio: 1,
               }}
             />
-          </div>
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-left justify-left text-left relative"
+          >
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl leading-9 ">Your project, Your code</h2>
               <p className="text-sm opacity-80">
@@ -101,13 +131,23 @@ export const Features = () => {
                 node_modules.
               </p>
             </div>
-          </div>
-          <div className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2  max-[900px]:row-span-1 flex items-center justify-center">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="row-span-2 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2  max-[900px]:row-span-1 flex items-center justify-center"
+          >
             <Button onClick={() => toggleToast()} className="scale-[1.2]">
               Click me!
             </Button>
-          </div>
-          <div className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="row-span-1 rounded-xl border-2 border-slate-400/10 bg-white bg-opacity-5  p-5 col-span-1 max-[900px]:col-span-2 flex items-center justify-center z-[9999] overflow-hidden"
+          >
             <AnimatedDock
               items={[
                 {
@@ -132,9 +172,9 @@ export const Features = () => {
                 },
               ]}
             />
-          </div>
+          </motion.div>
         </div>{" "}
-      </section>
+      </motion.section>
       <Toast
         text={otpValue === "012345" ? "🥳 Whohooo!!" : "❌ Nope!!"}
         description="Copy and paste code for this Toast"

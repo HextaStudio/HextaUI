@@ -126,7 +126,6 @@ export const Navbar = ({ docs }: NavbarProps) => {
               <span className="max-[937px]:hidden max-[700px]:block max-[330px]:hidden">
                 documentation
               </span>
-              ...
             </span>
             <kbd className="pointer-events-none absolute right-[0.3rem]  top-1/2 -translate-y-1/2 hidden h-5 select-none items-center gap-1 rounded border  px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex text-white bg-zinc-900 border-opacity-5 border-white">
               <span className="text-xs">⌘</span>K

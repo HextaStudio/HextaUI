@@ -129,10 +129,10 @@
 :root {
   --heading-fonts: "Be Vietnam Pro", sans-serif;
   color-scheme: dark;
-  --background-color: #000;
+  --background-color: #080808;
   --code-background-color: rgba(255, 255, 255, 0.057);
   --text-color: #fff;
-  --inter-fonts: "Geist", "Inter", sans-serif;
+  --inter-fonts: "Geist", sans-serif;
   --purple-color: rgb(128, 89, 255);
 }
 
@@ -298,28 +298,75 @@ h2 {
   overflow: hidden;
   margin: 40px 0;
 }
+.tweet-container_root__0rJLq {
+  outline: none !important;
+  border: none !important;
+}
 .react-tweet-theme {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left !important;
-  padding: 1rem;
+  flex-direction: column;
+  background: transparent !important;
+  padding: 0 !important;
+
+  // Tweet container
   .tweet-container_article__0ERPK {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    background: transparent !important;
+    padding: 0 !important;
   }
-  .tweet-header_authorFollow__w_j4h {
-    display: none !important;
+
+  // Author section
+  .tweet-header_header__pRHMj {
+    padding: 0 !important;
+    margin-bottom: 0.75rem;
   }
-  .tweet-actions_actions__UDw7H {
-    display: none;
+  .tweet-body_root__ChzUj {
+    font-size: 15px;
   }
-  .tweet-replies_replies__PUxl8 {
-    display: none;
+  .tweet-header_avatar__3R2nw {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border-radius: 0.75rem !important;
   }
+
+  .tweet-header_name__Ug_Ou {
+    color: white !important;
+    font-weight: 600 !important;
+    font-family: var(--inter-fonts) !important;
+  }
+
+  .tweet-header_username__YpX6w {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-family: var(--inter-fonts) !important;
+  }
+
+  // Tweet content
+  .tweet-body_body__vYUJK {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-family: var(--inter-fonts) !important;
+    font-size: 0.95rem !important;
+  }
+
+  // Links in tweet
+  a {
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  // Media content
+  .tweet-media_media__zFnT3 {
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
+    margin-top: 0.75rem !important;
+  }
+
+  // Hide unnecessary elements
+  .tweet-header_authorFollow__w_j4h,
+  .tweet-actions_actions__UDw7H,
+  .tweet-replies_replies__PUxl8,
   .tweet-info_info__ll_kH {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -613,6 +660,26 @@ h2 {
 
 @media screen and (max-width: 1200px) {
   .features-div {
-    display: none;
+    // Instead of display: none, adjust the layout
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+// Add subtle grain to cards
+body {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 2;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    border-radius: inherit;
   }
 }

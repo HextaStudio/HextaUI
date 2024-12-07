@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input } from "../hexta-ui/Input";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
@@ -24,6 +24,7 @@ export const Search: React.FC = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState<Data | null>(null);
   const [filteredData, setFilteredData] = useState<Data | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     fetch("/components.json")
@@ -36,6 +37,12 @@ export const Search: React.FC = () => {
         }
         setData(data);
       });
+  }, []);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, []);
 
   useEffect(() => {
@@ -80,6 +87,7 @@ export const Search: React.FC = () => {
     <div className=" bg-zinc-950 rounded-md w-[90%] mx-auto flex flex-col gap-3 min-h-[15rem] max-h-[20rem] overflow-auto relative overscroll-y-contain">
       <div className="sticky top-0 -mb-3 -translate-y-[1px] z-[9999999]">
         <Input
+          ref={inputRef}
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

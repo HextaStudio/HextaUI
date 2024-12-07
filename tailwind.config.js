@@ -10,6 +10,7 @@ module.exports = {
       keyframes: {
         animatedBeam: {
           "100%": { offsetDistance: "100%" },
+          "slow-spin": "spin 8s linear infinite",
         },
         heroScroller: {
           "0%": {
