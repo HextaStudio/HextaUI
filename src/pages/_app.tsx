@@ -1,15 +1,28 @@
 import "@/styles/globals.scss";
 import "@/styles/tokyo-night-dark.css";
-
+import { LoadingScreen } from "@/components/LoadingScreen";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { useEffect } from "react";
+import router, { useRouter } from "next/router";
+
 interface AppProps {
   Component: any;
   pageProps: any;
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Prefetch important routes in the background
+    if (router.pathname === "/") {
+      router.prefetch("/docs");
+      router.prefetch("/pro");
+    }
+  }, [router]);
+
   return (
     <>
       <NextSeo
@@ -55,8 +68,8 @@ export default function App({ Component, pageProps }: AppProps) {
         async
         src="https://platform.twitter.com/widgets.js"
         charSet="utf-8"
-      ></Script>
-
+        strategy="lazyOnload"
+      />
       <GoogleAnalytics gaId="G-5HXV7Y3GF4" />
       <Component {...pageProps} />
     </>

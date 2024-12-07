@@ -1,17 +1,32 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Loader } from "./hexta-ui/Loader";
+import { useRouter } from "next/router";
 
 export const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const router = useRouter();
+
+  // Only show loading screen on home page
+  if (router.pathname !== "/") {
+    return null;
+  }
 
   useEffect(() => {
-    // Track page load progress
+    // Track page load progress only for homepage resources
     const calculateProgress = () => {
       const resources = performance.getEntriesByType("resource");
-      const total = resources.length;
-      const loaded = resources.filter((r) => r.duration > 0).length;
+      const homepageResources = resources.filter(r => 
+        // Filter resources that are part of the homepage
+        r.name.includes('landingPage') || 
+        r.name.includes('Hero') ||
+        r.name.includes('Features') ||
+        r.name.includes('Testimonials') ||
+        r.name.includes('CTASection')
+      );
+      const total = homepageResources.length;
+      const loaded = homepageResources.filter((r) => r.duration > 0).length;
       return Math.min(100, Math.round((loaded / total) * 100));
     };
 
@@ -23,6 +38,9 @@ export const LoadingScreen = () => {
     window.addEventListener("load", updateProgress);
     const observer = new PerformanceObserver(updateProgress);
     observer.observe({ entryTypes: ["resource"] });
+
+    // Start with initial progress
+    updateProgress();
 
     return () => {
       window.removeEventListener("load", updateProgress);
@@ -48,8 +66,7 @@ export const LoadingScreen = () => {
     >
       <div className="flex flex-col items-center gap-4">
         <small className="flex items-center gap-4">
-          {" "}
-          <Loader size={20} /> Loading website content
+          <Loader size={20} /> Loading homepage
         </small>
         <div className="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
           <motion.div

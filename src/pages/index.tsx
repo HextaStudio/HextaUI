@@ -2,15 +2,33 @@ import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 
-const Features = dynamic(() => import("@/components/landingPage/Features"), {
-  loading: () => <div className="h-[500px]" />, // Placeholder
+// Prioritize Hero component loading
+const Hero = dynamic(() => import("@/components/landingPage/Hero"), {
+  loading: () => <div className="min-h-screen" />,
+  ssr: true,
 });
 
-const Hero = dynamic(() => import("@/components/landingPage/Hero"));
+// Load other components with lower priority
+const Features = dynamic(() => import("@/components/landingPage/Features"), {
+  loading: () => <div className="h-[500px]" />,
+  ssr: false,
+});
+
 const Testimonials = dynamic(
-  () => import("@/components/landingPage/Testimonials")
+  () => import("@/components/landingPage/Testimonials"),
+  {
+    loading: () => <div className="h-[400px]" />,
+    ssr: false,
+  }
 );
-const CTASection = dynamic(() => import("@/components/landingPage/CTASection"));
+
+const CTASection = dynamic(
+  () => import("@/components/landingPage/CTASection"),
+  {
+    loading: () => <div className="h-[300px]" />,
+    ssr: false,
+  }
+);
 
 export default function Home() {
   return (
