@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 const cn = (...args: any[]) => {
   return twMerge(clsx(args));
@@ -12,40 +13,105 @@ interface AlertDialogProps
     HTMLDivElement
   > {
   isOpen: boolean;
+  onClose?: () => void;
   className?: string;
   children?: React.ReactNode;
+  closeOnOutsideClick?: boolean;
+  closeOnEsc?: boolean;
+  position?: "center" | "top" | "bottom";
+  size?: "sm" | "md" | "lg";
+  showOverlay?: boolean;
+  overlayClassName?: string;
 }
 
 export const AlertDialog = ({
   isOpen,
+  onClose,
   className,
   children,
+  closeOnOutsideClick = true,
+  closeOnEsc = true,
+  position = "center",
+  size = "md",
+  showOverlay = true,
+  overlayClassName,
   ...rest
 }: AlertDialogProps) => {
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && closeOnEsc && onClose) {
+        onClose();
+      }
+    };
+
+    if (isOpen && closeOnEsc) {
+      document.addEventListener("keydown", handleEscKey);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  }, [isOpen, closeOnEsc, onClose]);
+
+  const handleOutsideClick = () => {
+    if (closeOnOutsideClick && onClose) {
+      onClose();
+    }
+  };
+
+  const getPositionClasses = () => {
+    switch (position) {
+      case "top":
+        return "items-start pt-20";
+      case "bottom":
+        return "items-end pb-20";
+      default:
+        return "items-center";
+    }
+  };
+
+  const getSizeClasses = () => {
+    switch (size) {
+      case "sm":
+        return "max-w-[20rem]";
+      case "lg":
+        return "max-w-[40rem]";
+      default:
+        return "max-w-[30rem]";
+    }
+  };
+
   return (
-    <>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.2, ease: "anticipate" }}
-            className="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center w-screen h-screen bg-black alert-dialog-backdrop z-[9999] bg-opacity-80"
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "fixed inset-0 z-[9999] flex justify-center",
+            getPositionClasses(),
+            showOverlay && "bg-black/80",
+            overlayClassName
+          )}
+          onClick={handleOutsideClick}
+        >
+          <div
+            className={cn(
+              "flex flex-col gap-3 p-6 mx-4 bg-black border rounded-lg shadow-lg",
+              "border-zinc-800",
+              getSizeClasses(),
+              className
+            )}
+            onClick={(e) => e.stopPropagation()}
+            {...rest}
           >
-            <div
-              className={cn(
-                "flex flex-col gap-3 px-10 bg-black border border-b-2 rounded-lg alert-dialog p-7 border-zinc-900  max-w-[20rem] mx-2",
-                className
-              )}
-              {...rest}
-            >
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            {children}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

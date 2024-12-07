@@ -27,7 +27,7 @@ const cards = () => {
             <DocsPreview title="Preview">
               <Card
                 variant="imageTop"
-                image="https://source.unsplash.com/random?kitty"
+                image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
                 buttons={
                   <div className="flex gap-2 px-4">
                     <Button variant="primary" className="mt-[-1rem]">
@@ -101,7 +101,7 @@ const cards = () => {
             <DocsPreview title="Card with Top Image">
               <Card
                 variant="imageTop"
-                image="https://source.unsplash.com/random?kitty"
+                image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
               >
                 <p className="text-sm opacity-80">
                   Qui ipsum aliquip in minim do pariatur pariatur sint fugiat
@@ -116,7 +116,7 @@ const cards = () => {
               filename="tsx"
               code={`<Card
   variant="imageTop"
-  image="https://source.unsplash.com/random?kitty"
+  image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
 >
   <p className="text-sm opacity-80">
     Qui ipsum aliquip in minim do pariatur pariatur sint fugiat
@@ -130,7 +130,7 @@ const cards = () => {
             <DocsPreview title="Card with Image Bottom">
               <Card
                 variant="imageBottom"
-                image="https://source.unsplash.com/random?kitty"
+                image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
               >
                 <p className="text-sm opacity-80">
                   Qui ipsum aliquip in minim do pariatur pariatur sint fugiat
@@ -145,7 +145,7 @@ const cards = () => {
               filename="tsx"
               code={`<Card
   variant="imageBottom"
-  image="https://source.unsplash.com/random?kitty"
+  image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
 >
   <p className="text-sm opacity-80">
     Qui ipsum aliquip in minim do pariatur pariatur sint fugiat
@@ -202,7 +202,7 @@ import { Button } from "@/components/hexta-ui/Button";
             <DocsPreview title="Card with Buttons and Image">
               <Card
                 variant="imageTop"
-                image="https://source.unsplash.com/random?kitty"
+                image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
                 buttons={
                   <div className="flex gap-2 px-4">
                     <Button variant="primary" className="mt-[-1rem]">
@@ -231,7 +231,7 @@ import { Button } from "@/components/hexta-ui/Button";
               
 <Card
   variant="imageTop"
-  image="https://source.unsplash.com/random?kitty"
+  image="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg"
   buttons={
     <div className="flex gap-2 px-4">
       <Button variant="primary" className="mt-[-1rem]">

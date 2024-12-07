@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsPage/DocsLayout";
 import { CodeBlock } from "@/components/DocsPage/CodeBlock";
 import React from "react";
-
+import { FaGithub, FaArrowRight } from "react-icons/fa";
 import { Button } from "@/components/hexta-ui/Button";
 import { Table } from "@/components/hexta-ui/Table";
 import { InstallationSteps } from "@/components/DocsPage/InstallationSteps";
@@ -13,27 +13,64 @@ const button = () => {
   const data = [
     {
       propName: "variant",
-      propType: "string",
+      propType:
+        '"primary" | "secondary" | "info" | "success" | "fail" | "ghost" | "link"',
       defaultValue: "primary",
-      description: "Variant of the button.",
+      description: "Visual style variant of the button",
+    },
+    {
+      propName: "size",
+      propType: '"sm" | "md" | "lg"',
+      defaultValue: "md",
+      description: "Size of the button",
     },
     {
       propName: "outline",
       propType: "boolean",
       defaultValue: "false",
-      description: "Outline variant of the button.",
+      description: "Outlined style variant",
     },
     {
       propName: "disabled",
       propType: "boolean",
       defaultValue: "false",
-      description: "Disabled variant of the button.",
+      description: "Disables button interactions",
     },
     {
-      propName: "className",
+      propName: "loading",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Shows loading spinner",
+    },
+    {
+      propName: "loadingText",
       propType: "string",
-      defaultValue: "null",
-      description: "Custom class name for the button.",
+      defaultValue: "undefined",
+      description: "Text shown during loading state",
+    },
+    {
+      propName: "icon",
+      propType: "ReactNode",
+      defaultValue: "undefined",
+      description: "Icon element to display",
+    },
+    {
+      propName: "iconPosition",
+      propType: '"left" | "right"',
+      defaultValue: "left",
+      description: "Position of the icon",
+    },
+    {
+      propName: "fullWidth",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Makes button full width",
+    },
+    {
+      propName: "animated",
+      propType: "boolean",
+      defaultValue: "false",
+      description: "Enables hover animation",
     },
   ];
   const columns = [
@@ -54,91 +91,112 @@ const button = () => {
       key: "description",
     },
   ];
+
   return (
     <>
       <DocsSEO
-        title="Buttons - hextastudio/ui"
-        description="Collection of multiple buttons with multiple variants."
+        title="Button - hextastudio/ui"
+        description="Versatile button component with multiple variants and states."
         image="https://i.imgur.com/eOlyvkH.png"
       />
       <DocsLayout>
         <main>
           <DocsHeader
-            title="Buttons"
-            description="Collection of multiple buttons with multiple variants."
+            title="Button"
+            description="A versatile button component that supports multiple variants, states, and customizations."
           />
-          <div>
-            <DocsPreview>
-              <Button>Hexta UI Button</Button>
-            </DocsPreview>
-            <InstallationSteps component="Button" imports="Button" />
 
+          <InstallationSteps component="Button" imports="Button" />
+
+          {/* Basic Examples */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Basic Usage</h2>
             <DocsPreview>
-              <Button variant="secondary">Secondary Button</Button>
+              <div className="flex gap-4 flex-wrap">
+                <Button>Default Button</Button>
+                <Button variant="secondary">Secondary</Button>
+                <Button variant="info">Info</Button>
+                <Button variant="success">Success</Button>
+                <Button variant="fail">Fail</Button>
+              </div>
             </DocsPreview>
             <CodeBlock
-              free
+              title="Basic Variants"
               lang="tsx"
-              filename="tsx"
-              code={`<Button variant="secondary">Secondary Button</Button>`}
+              code={`<Button>Default Button</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="info">Info</Button>
+<Button variant="success">Success</Button>
+<Button variant="fail">Fail</Button>`}
             />
+          </section>
 
+          {/* States */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">States</h2>
             <DocsPreview>
-              <Button variant="fail">Fail Button</Button>
+              <div className="flex gap-4 flex-wrap">
+                <Button loading loadingText="Loading...">
+                  Submit
+                </Button>
+                <Button disabled>Disabled</Button>
+                <Button outline>Outline</Button>
+                <Button animated>Animated</Button>
+              </div>
             </DocsPreview>
             <CodeBlock
-              free
+              title="Button States"
               lang="tsx"
-              filename="tsx"
-              code={`<Button variant="fail">Fail Button</Button>`}
+              code={`<Button loading loadingText="Loading...">Submit</Button>
+<Button disabled>Disabled</Button>
+<Button outline>Outline</Button>
+<Button animated>Animated</Button>`}
             />
+          </section>
 
+          {/* With Icons */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">With Icons</h2>
             <DocsPreview>
-              <Button variant="ghost">Ghost Button</Button>
+              <div className="flex gap-4 flex-wrap">
+                <Button icon={<FaGithub />}>GitHub</Button>
+                <Button icon={<FaArrowRight />} iconPosition="right">
+                  Next Step
+                </Button>
+              </div>
             </DocsPreview>
             <CodeBlock
-              free
+              title="Icons"
               lang="tsx"
-              filename="tsx"
-              code={`<Button variant="ghost">Ghost Button</Button>`}
+              code={`<Button icon={<FaGithub />}>GitHub</Button>
+<Button icon={<FaArrowRight />} iconPosition="right">Next Step</Button>`}
             />
+          </section>
 
+          {/* Sizes */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Sizes</h2>
             <DocsPreview>
-              <Button variant="link">Link Button</Button>
+              <div className="flex gap-4 items-center flex-wrap">
+                <Button size="sm">Small</Button>
+                <Button size="md">Medium</Button>
+                <Button size="lg">Large</Button>
+                <Button fullWidth>Full Width</Button>
+              </div>
             </DocsPreview>
             <CodeBlock
-              free
+              title="Size Variants"
               lang="tsx"
-              filename="tsx"
-              code={`<Button variant="link">Link Button</Button>`}
+              code={`<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+<Button fullWidth>Full Width</Button>`}
             />
+          </section>
 
-            <DocsPreview>
-              <Button disabled>Disabled Button</Button>
-            </DocsPreview>
-            <CodeBlock
-              free
-              lang="tsx"
-              filename="tsx"
-              code={`<Button disabled>Disabled Button</Button>`}
-            />
-
-            <DocsPreview>
-              <Button outline>Outline Button</Button>
-            </DocsPreview>
-            <CodeBlock
-              free
-              lang="tsx"
-              filename="tsx"
-              code={`<Button outline>Outline Button</Button>`}
-            />
-          </div>
-          <div className="mt-[5rem]">
-            <Table
-              columns={columns}
-              data={data}
-              tableTitle="Props Information"
-            />
+          {/* Props Table */}
+          <div className="mt-16">
+            <Table columns={columns} data={data} tableTitle="Props Reference" />
           </div>
         </main>
       </DocsLayout>
