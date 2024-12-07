@@ -1,10 +1,16 @@
 import { Layout } from "@/components/Layout";
 import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
 
-import { Features } from "@/components/landingPage/Features";
-import { Hero } from "@/components/landingPage/Hero";
-import { Testimonials } from "@/components/landingPage/Testimonials";
-import { CTASection } from "@/components/landingPage/CTASection";
+const Features = dynamic(() => import("@/components/landingPage/Features"), {
+  loading: () => <div className="h-[500px]" />, // Placeholder
+});
+
+const Hero = dynamic(() => import("@/components/landingPage/Hero"));
+const Testimonials = dynamic(
+  () => import("@/components/landingPage/Testimonials")
+);
+const CTASection = dynamic(() => import("@/components/landingPage/CTASection"));
 
 export default function Home() {
   return (

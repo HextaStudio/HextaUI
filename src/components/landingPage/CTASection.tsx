@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaRocket, FaGithub } from "react-icons/fa";
 
-export const CTASection = () => {
+const CTASection = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-2 relative">
@@ -65,3 +65,5 @@ export const CTASection = () => {
     </section>
   );
 };
+
+export default CTASection;

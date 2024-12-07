@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className="min-h-[150vh] relative">
       <motion.section className="relative w-full min-h-screen flex items-center justify-center py-[8rem] px-2">
@@ -66,3 +66,5 @@ export const Hero = () => {
     </div>
   );
 };
+
+export default Hero;

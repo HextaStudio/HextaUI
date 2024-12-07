@@ -13,7 +13,7 @@ const tweetIds = [
   "1785345519033684406",
 ];
 
-export const Testimonials = () => {
+const Testimonials = () => {
   const [columns, setColumns] = useState<string[][]>([[], [], []]);
 
   useEffect(() => {
@@ -92,3 +92,5 @@ export const Testimonials = () => {
     </section>
   );
 };
+
+export default Testimonials;

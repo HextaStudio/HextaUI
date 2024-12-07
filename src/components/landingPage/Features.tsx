@@ -8,7 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { AnimatedDock } from "@/pages/docs/examples/application/AnimatedDock";
 import { motion } from "framer-motion";
 
-export const Features = () => {
+const Features = () => {
   const canvasRef = useRef(null!);
   const [showToast, setShowToast] = useState(false);
   const [otpValue, setOtpValue] = useState("");
@@ -184,3 +184,5 @@ export const Features = () => {
     </>
   );
 };
+
+export default Features;
