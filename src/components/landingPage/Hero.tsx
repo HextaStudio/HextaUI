@@ -46,7 +46,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4 justify-center"
             >
               <Link
-                href="/docs/components"
+                href="docs/components/layout/Accordion"
                 className="group px-8 py-3 rounded-xl bg-white text-black font-medium hover:opacity-90 transition-all flex items-center gap-2"
               >
                 Browse Components

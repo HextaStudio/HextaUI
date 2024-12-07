@@ -37,7 +37,7 @@ const CTASection = () => {
                 className="flex flex-wrap gap-4 justify-center"
               >
                 <Link
-                  href="/docs/components"
+                  href="docs/components/layout/Accordion"
                   className="group relative px-8 py-3 bg-white rounded-xl text-black font-medium hover:opacity-90 transition-all flex items-center gap-2 grow justify-center"
                 >
                   <FaRocket className="transition-transform group-hover:-translate-y-1" />
