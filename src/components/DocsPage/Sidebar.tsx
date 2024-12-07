@@ -22,7 +22,7 @@ export interface Data {
   general: Item[];
 }
 
-export const Sidebar = () => {
+const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [data, setData] = useState<Data | null>(null);
@@ -378,3 +378,5 @@ export const Sidebar = () => {
     </>
   );
 };
+
+export default Sidebar;
